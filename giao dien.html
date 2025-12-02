@@ -12,14 +12,13 @@
         }
 
         :root {
-            --primary-burnt-orange: #B8631A;
-            --secondary-burgundy: #800020;
-            --accent-pale-pink: #F0E6E3;
-            --tertiary-olive: #6B8E23;
-            --light-bg: #FFF9F5;
+            --color-burgundy: #800020;
+            --color-olive: #6B8E23;
+            --color-black: #000000;
+            --bg-light: #FFFFFF;
             --white: #FFFFFF;
-            --text-dark: #333333;
-            --text-light: #666666;
+            --text-on-light: var(--color-black);
+            --text-on-dark: var(--white);
         }
 
         body {
@@ -31,7 +30,7 @@
 
         /* Navigation */
         nav {
-            background: linear-gradient(135deg, var(--primary-burnt-orange) 0%, var(--secondary-burgundy) 100%);
+            background-color: var(--color-burgundy);
             padding: 1rem 0;
             position: sticky;
             top: 0;
@@ -57,9 +56,10 @@
             gap: 10px;
         }
 
-        .logo::before {
-            content: "🌱";
-            font-size: 2rem;
+        .logo img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
         }
 
         .nav-links {
@@ -78,8 +78,8 @@
         }
 
         .nav-links a:hover {
-            background-color: var(--accent-pale-pink);
-            color: var(--secondary-burgundy);
+            background-color: var(--color-olive);
+            color: var(--white);
         }
 
         .cart-icon {
@@ -94,7 +94,7 @@
 
         /* Header */
         .header {
-            background: linear-gradient(135deg, var(--primary-burnt-orange) 0%, var(--tertiary-olive) 100%);
+            background-color: var(--color-olive);
             color: var(--white);
             padding: 4rem 2rem;
             text-align: center;
@@ -192,14 +192,14 @@
         .search-box input {
             flex: 1;
             padding: 0.8rem;
-            border: 2px solid var(--primary-burnt-orange);
+            border: 2px solid var(--color-burgundy);
             border-radius: 5px 0 0 5px;
             font-size: 1rem;
         }
 
         .search-box button {
             padding: 0.8rem 1.5rem;
-            background-color: var(--primary-burnt-orange);
+            background-color: var(--color-burgundy);
             color: var(--white);
             border: none;
             border-radius: 0 5px 5px 0;
@@ -209,22 +209,22 @@
         }
 
         .search-box button:hover {
-            background-color: var(--secondary-burgundy);
+            background-color: var(--color-black);
         }
 
         .filter-btn {
             padding: 0.8rem 1.5rem;
-            background-color: var(--accent-pale-pink);
-            border: 2px solid var(--secondary-burgundy);
+            background-color: var(--bg-light);
+            border: 2px solid var(--color-burgundy);
             border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
-            color: var(--secondary-burgundy);
+            color: var(--color-burgundy);
             transition: all 0.3s ease;
         }
 
         .filter-btn:hover {
-            background-color: var(--secondary-burgundy);
+            background-color: var(--color-burgundy);
             color: var(--white);
         }
 
@@ -235,10 +235,10 @@
 
         .section-title {
             font-size: 2rem;
-            color: var(--secondary-burgundy);
+            color: var(--color-burgundy);
             margin-bottom: 2rem;
             padding-bottom: 1rem;
-            border-bottom: 3px solid var(--primary-burnt-orange);
+            border-bottom: 3px solid var(--color-burgundy);
             display: inline-block;
         }
 
@@ -261,13 +261,13 @@
         .product-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-            border-color: var(--primary-burnt-orange);
+            border-color: var(--color-burgundy);
         }
 
         .product-image {
             width: 100%;
             height: 200px;
-            background: linear-gradient(135deg, var(--accent-pale-pink) 0%, var(--light-bg) 100%);
+            background: var(--bg-light);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -303,21 +303,21 @@
         .price {
             font-size: 1.5rem;
             font-weight: bold;
-            color: var(--primary-burnt-orange);
+            color: var(--color-burgundy);
         }
 
         .quantity {
-            background-color: var(--accent-pale-pink);
+            background-color: var(--bg-light);
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
             font-size: 0.9rem;
-            color: var(--secondary-burgundy);
+            color: var(--color-burgundy);
         }
 
         .add-to-cart {
             width: 100%;
             padding: 0.8rem;
-            background: linear-gradient(135deg, var(--primary-burnt-orange) 0%, var(--tertiary-olive) 100%);
+            background-color: var(--color-olive);
             color: var(--white);
             border: none;
             border-radius: 5px;
@@ -329,12 +329,13 @@
 
         .add-to-cart:hover {
             transform: scale(1.02);
-            box-shadow: 0 4px 12px rgba(184, 99, 26, 0.4);
+            box-shadow: 0 4px 12px rgba(107,142,35,0.28);
         }
 
         /* Special Banner */
+
         .banner {
-            background: linear-gradient(135deg, var(--secondary-burgundy) 0%, var(--accent-pale-pink) 100%);
+            background-color: var(--color-burgundy);
             padding: 3rem;
             border-radius: 10px;
             text-align: center;
@@ -356,7 +357,7 @@
 
         .banner-btn {
             padding: 1rem 2rem;
-            background-color: var(--primary-burnt-orange);
+            background-color: var(--color-olive);
             color: var(--white);
             border: none;
             border-radius: 5px;
@@ -367,7 +368,7 @@
         }
 
         .banner-btn:hover {
-            background-color: var(--tertiary-olive);
+            background-color: var(--color-black);
             transform: scale(1.05);
         }
 
@@ -384,7 +385,7 @@
             padding: 2rem;
             background: var(--white);
             border-radius: 10px;
-            border-left: 4px solid var(--primary-burnt-orange);
+            border-left: 4px solid var(--color-burgundy);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
@@ -404,7 +405,7 @@
 
         /* Footer */
         footer {
-            background: linear-gradient(135deg, var(--secondary-burgundy) 0%, var(--primary-burnt-orange) 100%);
+            background-color: var(--color-burgundy);
             color: var(--white);
             padding: 3rem 0 1rem;
             margin-top: 4rem;
@@ -503,17 +504,60 @@
         .product-card:nth-child(2) { animation-delay: 0.2s; }
         .product-card:nth-child(3) { animation-delay: 0.3s; }
         .product-card:nth-child(n+4) { animation-delay: 0.4s; }
+
+        /* Promo strip */
+        .promo-strip {
+            background: linear-gradient(90deg, var(--accent-pale-pink), rgba(240,230,227,0.85));
+            padding: 1rem 0;
+            border-top: 4px solid var(--primary-burnt-orange);
+            margin-top: 2rem;
+        }
+
+        .promo-inner {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .promo-strip p {
+            color: var(--secondary-burgundy);
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .promo-cta {
+            background: linear-gradient(120deg, var(--primary-burnt-orange), var(--tertiary-olive));
+            color: var(--white);
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 6px 18px rgba(104,70,18,0.18);
+            transition: transform 0.15s ease;
+        }
+
+        .promo-cta:hover { transform: translateY(-3px); }
+
+        @media (max-width: 768px) {
+            .hero-container { grid-template-columns: 1fr; }
+            .promo-inner { flex-direction: column; text-align: center; gap: 0.6rem; }
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav>
         <div class="navbar-container">
-            <div class="logo">HTX Nông Sản</div>
+            <div class="logo"><img src="assets/img/1.png" alt="HTX Nông Sản Logo"> HTX Nông Sản</div>
             <ul class="nav-links">
                 <li><a href="#home">Trang Chủ</a></li>
-                <li><a href="#products">Sản Phẩm</a></li>
-                <li><a href="#about">Về Chúng Tôi</a></li>
+                <li><a href="#capacity">Hồ Sơ Năng Lực</a></li>
+                <li><a href="#members">Thành Viên</a></li>
+                <li><a href="#products">Sản Phẩm & Dịch Vụ</a></li>
+                <li><a href="#projects">Dự Án</a></li>
+                <li><a href="#community">Hoạt Động Cộng Đồng</a></li>
+                <li><a href="#news">Tin Tức & Sự Kiện</a></li>
                 <li><a href="#contact">Liên Hệ</a></li>
             </ul>
             <div class="cart-icon">🛒</div>
@@ -538,6 +582,11 @@
                 🥕🥬🍅
             </div>
         </div>
+    </section>
+
+    <!-- Image Banner -->
+    <section class="image-banner">
+        <img src="assets/img/www-baobinhthuan-com-vn_rau.jpg" alt="Rau củ quả tươi ngon">
     </section>
 
     <!-- Main Content -->
@@ -575,8 +624,45 @@
             </div>
         </div>
 
+        <!-- Hồ Sơ Năng Lực Section -->
+        <section id="capacity" class="content-section">
+            <h2 class="section-title">📋 Hồ Sơ Năng Lực</h2>
+            <div class="content-card">
+                <h3>Thông Tin Chung</h3>
+                <p><strong>Tên HTX:</strong> Hợp Tác Xã Nông Sản Tươi Ngon</p>
+                <p><strong>Năm Thành Lập:</strong> 2015</p>
+                <p><strong>Địa Chỉ:</strong> Thanh Hóa, Việt Nam</p>
+                <p><strong>Lĩnh Vực:</strong> Sản xuất và kinh doanh rau, củ, quả hữu cơ</p>
+                <p><strong>Số Lượng Thành Viên:</strong> 150+ hộ nông dân</p>
+            </div>
+            <div class="content-card">
+                <h3>Năng Lực Sản Xuất</h3>
+                <ul>
+                    <li>Diện tích trồng: 500+ hecta</li>
+                    <li>Sản lượng hàng năm: 5000+ tấn</li>
+                    <li>Quy trình sản xuất tuân thủ tiêu chuẩn hữu cơ quốc tế</li>
+                    <li>Hệ thống kiểm soát chất lượng tự động</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Thành Viên Section -->
+        <section id="members" class="content-section">
+            <h2 class="section-title">👥 Về Các Thành Viên</h2>
+            <div class="content-card">
+                <h3>Ban Quản Lý</h3>
+                <p><strong>Chủ Tịch:</strong> Nguyễn Văn An</p>
+                <p><strong>Phó Chủ Tịch:</strong> Trần Thị Bình</p>
+                <p><strong>Kế Toán Trưởng:</strong> Lê Văn Cường</p>
+            </div>
+            <div class="content-card">
+                <h3>Thành Viên Hợp Tác</h3>
+                <p>Hợp tác xã bao gồm 150+ hộ nông dân từ các xã lân cận, cam kết sản xuất theo tiêu chuẩn hữu cơ và tuân thủ quy tắc ứng xử của HTX.</p>
+            </div>
+        </section>
+
         <!-- Products Section 1 -->
-        <section class="products-section">
+        <section class="products-section" id="products">
             <h2 class="section-title">🥬 Rau Xanh Tươi Mát</h2>
             <div class="products-grid">
                 <div class="product-card">
@@ -755,7 +841,72 @@
                 </div>
             </div>
         </section>
+
+        <!-- Dự Án Section -->
+        <section id="projects" class="content-section">
+            <h2 class="section-title">🏗️ Dự Án</h2>
+            <div class="content-card">
+                <h3>Dự Án Nâng Cao Chất Lượng Sản Phẩm</h3>
+                <p><strong>Thời Gian:</strong> 2023 - 2024</p>
+                <p><strong>Mô Tả:</strong> Nâng cao tiêu chuẩn chất lượng sản phẩm, đạt được chứng nhận hữu cơ quốc tế và mở rộng thị trường xuất khẩu.</p>
+            </div>
+            <div class="content-card">
+                <h3>Dự Án Xây Dựng Kho Lạnh</h3>
+                <p><strong>Thời Gian:</strong> 2024 - 2025</p>
+                <p><strong>Mô Tả:</strong> Xây dựng hệ thống kho lạnh hiện đại để bảo quản sản phẩm, đảm bảo chất lượng từ trang trại đến người tiêu dùng.</p>
+            </div>
+            <div class="content-card">
+                <h3>Dự Án Phát Triển Bền Vững</h3>
+                <p><strong>Thời Gian:</strong> 2025 - 2026</p>
+                <p><strong>Mô Tả:</strong> Triển khai các biện pháp bảo vệ môi trường và phát triển nông nghiệp bền vững cho các thành viên HTX.</p>
+            </div>
+        </section>
+
+        <!-- Hoạt Động Cộng Đồng Section -->
+        <section id="community" class="content-section">
+            <h2 class="section-title">🤝 Hoạt Động Cộng Đồng</h2>
+            <div class="content-card">
+                <h3>Chương Trình Hỗ Trợ Nông Dân</h3>
+                <p>HTX thường xuyên tổ chức các khóa đào tạo miễn phí về kỹ thuật trồng trọt, quản lý cây trồng và bảo vệ môi trường cho các thành viên.</p>
+            </div>
+            <div class="content-card">
+                <h3>Hoạt Động Từ Thiện</h3>
+                <p>Hàng năm, HTX tài trợ để trao tặng rau quả sạch cho các trung tâm bảo trợ xã hội, bệnh viện, và các gia đình khó khăn địa phương.</p>
+            </div>
+            <div class="content-card">
+                <h3>Sự Kiện Giao Lưu</h3>
+                <p>Định kỳ tổ chức các sự kiện giao lưu nông dân, thi đua sản xuất, và các hoạt động vui chơi giải trí cho cộng đồng.</p>
+            </div>
+        </section>
+
+        <!-- Tin Tức & Sự Kiện Section -->
+        <section id="news" class="content-section">
+            <h2 class="section-title">📰 Tin Tức & Sự Kiện</h2>
+            <div class="content-card">
+                <h3>HTX Đạt Chứng Nhận Hữu Cơ Quốc Tế</h3>
+                <p><strong>Ngày Đăng:</strong> 02/12/2025</p>
+                <p>Hợp Tác Xã Nông Sản Tươi Ngon vừa nhận được chứng nhận hữu cơ từ tổ chức quốc tế, khẳng định chất lượng sản phẩm.</p>
+            </div>
+            <div class="content-card">
+                <h3>Khai Mạc Thị Trường Nông Sản Sạch</h3>
+                <p><strong>Ngày Đăng:</strong> 25/11/2025</p>
+                <p>Thị trường nông sản sạch hàng tuần tại Thanh Hóa được khai mạc, nơi các thành viên HTX bán trực tiếp sản phẩm cho người tiêu dùng.</p>
+            </div>
+            <div class="content-card">
+                <h3>Hội Thảo: "Nông Nghiệp Bền Vững - Tương Lai Xanh"</h3>
+                <p><strong>Ngày Đăng:</strong> 15/11/2025</p>
+                <p>HTX tổ chức hội thảo về phát triển nông nghiệp bền vững với sự tham gia của các chuyên gia nông lâm ngư.</p>
+            </div>
+        </section>
     </div>
+
+    <!-- Promo Strip -->
+    <section class="promo-strip">
+        <div class="container promo-inner">
+            <p><strong>🎁 Gói Giỏ Tiết Kiệm:</strong> Mua 5 loại bất kỳ giảm 15% và nhận giao hàng miễn phí cho đơn trên 200k.</p>
+            <a class="promo-cta" href="#products">Nhận Ưu Đãi</a>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer id="contact">
@@ -774,7 +925,14 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Thông Tin</h3>
+                </div>
+                <!-- Promo Strip Banner -->
+                <section class="promo-strip" aria-label="Ưu đãi nhanh">
+                    <div class="container promo-inner">
+                        <p><strong>Gói Giỏ Tiết Kiệm:</strong> Mua 5 loại bất kỳ giảm 15% và nhận giao hàng miễn phí cho đơn trên 200k.</p>
+                        <a class="promo-cta" href="#products">Nhận Ưu Đãi</a>
+                    </div>
+                </section>
                 <ul>
                     <li><a href="#about">Về Chúng Tôi</a></li>
                     <li><a href="#">Chính Sách Bán Hàng</a></li>
