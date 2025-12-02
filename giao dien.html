@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hợp Tác Xã Nông Sản - Rau Củ Quả Tươi Ngon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-burnt-orange: #B8631A;
+            --secondary-burgundy: #800020;
+            --accent-pale-pink: #F0E6E3;
+            --tertiary-olive: #6B8E23;
+            --light-bg: #FFF9F5;
+            --white: #FFFFFF;
+            --text-dark: #333333;
+            --text-light: #666666;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--light-bg);
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, var(--primary-burnt-orange) 0%, var(--secondary-burgundy) 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo::before {
+            content: "🌱";
+            font-size: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .nav-links a:hover {
+            background-color: var(--accent-pale-pink);
+            color: var(--secondary-burgundy);
+        }
+
+        .cart-icon {
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .cart-icon:hover {
+            transform: scale(1.1);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-burnt-orange) 0%, var(--tertiary-olive) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Search and Filter */
+        .search-filter {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+            display: flex;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 2px solid var(--primary-burnt-orange);
+            border-radius: 5px 0 0 5px;
+            font-size: 1rem;
+        }
+
+        .search-box button {
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-burnt-orange);
+            color: var(--white);
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-box button:hover {
+            background-color: var(--secondary-burgundy);
+        }
+
+        .filter-btn {
+            padding: 0.8rem 1.5rem;
+            background-color: var(--accent-pale-pink);
+            border: 2px solid var(--secondary-burgundy);
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--secondary-burgundy);
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover {
+            background-color: var(--secondary-burgundy);
+            color: var(--white);
+        }
+
+        /* Products Grid */
+        .products-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--secondary-burgundy);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--primary-burnt-orange);
+            display: inline-block;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border-color: var(--primary-burnt-orange);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--accent-pale-pink) 0%, var(--light-bg) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            overflow: hidden;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--secondary-burgundy);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-description {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .product-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-burnt-orange);
+        }
+
+        .quantity {
+            background-color: var(--accent-pale-pink);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--secondary-burgundy);
+        }
+
+        .add-to-cart {
+            width: 100%;
+            padding: 0.8rem;
+            background: linear-gradient(135deg, var(--primary-burnt-orange) 0%, var(--tertiary-olive) 100%);
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .add-to-cart:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(184, 99, 26, 0.4);
+        }
+
+        /* Special Banner */
+        .banner {
+            background: linear-gradient(135deg, var(--secondary-burgundy) 0%, var(--accent-pale-pink) 100%);
+            padding: 3rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 3rem 0;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .banner h2 {
+            color: var(--white);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .banner p {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .banner-btn {
+            padding: 1rem 2rem;
+            background-color: var(--primary-burnt-orange);
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .banner-btn:hover {
+            background-color: var(--tertiary-olive);
+            transform: scale(1.05);
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-burnt-orange);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature h3 {
+            color: var(--secondary-burgundy);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature p {
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--secondary-burgundy) 0%, var(--primary-burnt-orange) 100%);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--accent-pale-pink);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-pale-pink);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+
+            .search-filter {
+                flex-direction: column;
+            }
+
+            .search-box {
+                min-width: 100%;
+            }
+
+            .banner {
+                padding: 2rem 1rem;
+            }
+
+            .banner h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .product-card {
+            animation: slideIn 0.5s ease-out forwards;
+        }
+
+        .product-card:nth-child(1) { animation-delay: 0.1s; }
+        .product-card:nth-child(2) { animation-delay: 0.2s; }
+        .product-card:nth-child(3) { animation-delay: 0.3s; }
+        .product-card:nth-child(n+4) { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="navbar-container">
+            <div class="logo">HTX Nông Sản</div>
+            <ul class="nav-links">
+                <li><a href="#home">Trang Chủ</a></li>
+                <li><a href="#products">Sản Phẩm</a></li>
+                <li><a href="#about">Về Chúng Tôi</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+            </ul>
+            <div class="cart-icon">🛒</div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header" id="home">
+        <h1>🌿 Hợp Tác Xã Nông Sản Tươi Ngon</h1>
+        <p>Rau Củ Quả Sạch, Tươi Mỗi Ngày - Giao Hàng Tận Nhà</p>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Search and Filter -->
+        <div class="search-filter">
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <button>Tìm Kiếm</button>
+            </div>
+            <button class="filter-btn">🔽 Lọc Sản Phẩm</button>
+        </div>
+
+        <!-- Features -->
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">✅</div>
+                <h3>100% Tươi Ngon</h3>
+                <p>Thu hoạch mỗi ngày, giao ngay hôm đó</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🌱</div>
+                <h3>Không Hóa Chất</h3>
+                <p>Nông sản hữu cơ, an toàn cho sức khỏe</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🚚</div>
+                <h3>Giao Hàng Nhanh</h3>
+                <p>Miễn phí giao hàng cho đơn trên 500k</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💰</div>
+                <h3>Giá Cạnh Tranh</h3>
+                <p>Giá trực tiếp từ nông trại</p>
+            </div>
+        </div>
+
+        <!-- Products Section 1 -->
+        <section class="products-section">
+            <h2 class="section-title">🥬 Rau Xanh Tươi Mát</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">🥬</div>
+                    <div class="product-info">
+                        <div class="product-name">Cải Xanh</div>
+                        <p class="product-description">Cải xanh tươi, giàu vitamin và chất xơ</p>
+                        <div class="product-price">
+                            <span class="price">15.000đ</span>
+                            <span class="quantity">1 kg</span>
+                        </div>
+                        <button class="add-to-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🥗</div>
+                    <div class="product-info">
+                        <div class="product-name">Rau Mầm Salad</div>
+                        <p class="product-description">Rau mầm tươi, hoàn hảo cho salad</p>
+                        <div class="product-price">
+                            <span class="price">25.000đ</span>
+                            <span class="quantity">500g</span>
+                        </div>
+                        <button class="add-to-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🌿</div>
+                    <div class="product-info">
+                        <div class="product-name">Mùi Tàu</div>
+                        <p class="product-description">Mùi Tàu sạch, thơm ngon</p>
+                        <div class="product-price">
+                            <span class="price">12.000đ</span>
+                            <span class="quantity">100g</span>
+                        </div>
+                        <button class="add-to-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🥦</div>
+                    <div class="product-info">
+                        <div class="product-name">Súp Lơ Xanh</div>
+                        <p class="product-description">Súp lơ tươi, giàu dinh dưỡng</p>
+                        <div class="product-price">
+                            <span class="price">20.000đ</span>
+                            <span class="quantity">500g</span>
+                        </div>
+                        <button class="add-to-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner -->
+        <div class="banner">
+            <h2>🎉 Khuyến Mãi Tuần Này</h2>
+            <p>Mua 2 tặng 1 cho tất cả rau xanh - Chỉ áp dụng đến hết tuần!</p>
+            <button class="banner-btn">Xem Chi Tiết</button>
+        </div>
+
+        <!-- Products Section 2 -->
+        <section class="products-section">
+            <h2 class="section-title">🥕 Củ Quả Ngon Tuyệt</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">🥕</div>
+                    <div class="product-info">
+                        <div class="product-name">Cà Rốt</div>
+                        <p class="product-description">Cà rốt ngọt, đỏ tươi</p>
+                        <div class="product-price">
+                            <span class="price">18.000đ</span>
+                            <span class="quantity">1 kg</span>
+                        </div>
+                        <button class="add-to-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🥔</div>
+                    <div class="product-info">
+                        <div class="product-name">Khoai Tây</div>
+                        <p class="product-description">Khoai tây tươi, bột tính cao</p>
+                        <div class="product-price">
+                            <span class="price">15.000đ</span>
+                            <span class="quantity">1 kg</span>
+                        </div>
+                        <button class="add-to-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🧅</div>
+                    <div class="product-info">
+                        <div class="product-name">Hành Tây</div>
+                        <p class="product-description">Hành tây tím, sắc tố đẹp</p>
+                        <div class="product-price">
+                            <span class="price">22.000đ</span>
+                            <span class="quantity">1 kg</span>
+                        </div>
+                        <button class="add-to-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🍠</div>
+                    <div class="product-info">
+                        <div class="product-name">Khoai Lang</div>
+                        <p class="product-description">Khoai lang ngọt, màu đỏ tự nhiên</p>
+                        <div class="product-price">
+                            <span class="price">20.000đ</span>
+                            <span class="quantity">1 kg</span>
+                        </div>
+                        <button class="add-to-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section 3 -->
+        <section class="products-section">
+            <h2 class="section-title">🍅 Trái Cây Tươi Sạch</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">🍅</div>
+                    <div class="product-info">
+                        <div class="product-name">Cà Chua Tươi</div>
+                        <p class="product-description">Cà chua sạch, màu đỏ tự nhiên</p>
+                        <div class="product-price">
+                            <span class="price">18.000đ</span>
+                            <span class="quantity">1 kg</span>
+                        </div>
+                        <button class="add-to-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🫑</div>
+                    <div class="product-info">
+                        <div class="product-name">Ớt Chuông</div>
+                        <p class="product-description">Ớt chuông nhiều màu, giòn tươi</p>
+                        <div class="product-price">
+                            <span class="price">25.000đ</span>
+                            <span class="quantity">500g</span>
+                        </div>
+                        <button class="add-to-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🥒</div>
+                    <div class="product-info">
+                        <div class="product-name">Dưa Chuột</div>
+                        <p class="product-description">Dưa chuột sạch, giòn ngon</p>
+                        <div class="product-price">
+                            <span class="price">15.000đ</span>
+                            <span class="quantity">1 kg</span>
+                        </div>
+                        <button class="add-to-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🥬</div>
+                    <div class="product-info">
+                        <div class="product-name">Bắp Cải</div>
+                        <p class="product-description">Bắp cải tủa, giàu dinh dưỡng</p>
+                        <div class="product-price">
+                            <span class="price">15.000đ</span>
+                            <span class="quantity">1 kg</span>
+                        </div>
+                        <button class="add-to-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Về Hợp Tác Xã</h3>
+                <p>Hợp Tác Xã Nông Sản chuyên cung cấp rau, củ, quả tươi ngon, sạch từ nông trại trực tiếp đến tay bạn.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Danh Mục</h3>
+                <ul>
+                    <li><a href="#products">Rau Xanh</a></li>
+                    <li><a href="#products">Củ Quả</a></li>
+                    <li><a href="#products">Trái Cây</a></li>
+                    <li><a href="#products">Nông Sản Khác</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Thông Tin</h3>
+                <ul>
+                    <li><a href="#about">Về Chúng Tôi</a></li>
+                    <li><a href="#">Chính Sách Bán Hàng</a></li>
+                    <li><a href="#">Chính Sách Đổi Trả</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Liên Hệ</h3>
+                <p>📞 Điện thoại: 0123 456 789</p>
+                <p>📧 Email: info@htxnongsan.vn</p>
+                <p>📍 Địa chỉ: Thanh Hóa, Việt Nam</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Hợp Tác Xã Nông Sản. Tất Cả Quyền Được Bảo Vệ.</p>
+        </div>
+    </footer>
+</body>
+</html>
