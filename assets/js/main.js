@@ -1,19 +1,21 @@
 // Basic animation helpers: reveal product cards on scroll and smooth scroll for CTAs
 document.addEventListener('DOMContentLoaded', function(){
-  // IntersectionObserver to reveal product cards
-  const cards = document.querySelectorAll('.product-card');
-  const obsOptions = {threshold: 0.12};
+  // IntersectionObserver to reveal elements on scroll
+  const obsOptions = {threshold: 0.15};
   const observer = new IntersectionObserver((entries)=>{
     entries.forEach(entry=>{
       if(entry.isIntersecting){
-        entry.target.classList.add('visible');
+        entry.target.style.animation = entry.target.dataset.animation || 'none';
         observer.unobserve(entry.target);
       }
     });
   }, obsOptions);
-  cards.forEach(c=>observer.observe(c));
 
-  // Smooth scroll for hero-cta and promo-cta
+  // Observe info-banner and other elements
+  const infoBanner = document.querySelector('.info-banner');
+  if(infoBanner) observer.observe(infoBanner);
+
+  // Smooth scroll for CTA buttons
   function smoothTo(selector){
     document.querySelectorAll(selector).forEach(el=>{
       el.addEventListener('click', (e)=>{
@@ -24,12 +26,17 @@ document.addEventListener('DOMContentLoaded', function(){
       });
     });
   }
-  smoothTo('.hero-cta');
-  smoothTo('.promo-cta');
+  smoothTo('.cta-btn');
 
-  // small micro-interaction: pulse hero-cta on load
-  const hero = document.querySelector('.hero-cta');
-  if(hero){
-    hero.animate([{transform:'translateY(0)'},{transform:'translateY(-4px)'},{transform:'translateY(0)'}],{duration:900,iterations:1,easing:'ease-out'});
-  }
+  // Hover effect on product items
+  const productItems = document.querySelectorAll('.product-item');
+  productItems.forEach(item => {
+    item.addEventListener('mouseenter', function(){
+      this.style.transform = 'translateY(-8px) scale(1.02)';
+    });
+    item.addEventListener('mouseleave', function(){
+      this.style.transform = 'none';
+    });
+  });
 });
+
