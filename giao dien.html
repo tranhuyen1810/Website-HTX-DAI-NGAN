@@ -101,6 +101,61 @@
             margin-bottom: 3rem;
         }
 
+        /* Hero Banner */
+        .hero-banner {
+            max-width: none;
+            width: 100%;
+            padding: 3rem 1rem;
+            background: linear-gradient(120deg, rgba(184,99,26,0.95) 0%, rgba(128,0,32,0.95) 60%);
+            color: var(--white);
+            margin-bottom: 2rem;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .hero-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.05rem;
+            margin-bottom: 1.2rem;
+            opacity: 0.95;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            padding: 0.9rem 1.6rem;
+            background-color: var(--accent-pale-pink);
+            color: var(--secondary-burgundy);
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+        }
+
+        .hero-cta:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+
+        .hero-image {
+            background: linear-gradient(135deg, rgba(240,230,227,0.9), rgba(255,255,255,0.5));
+            border-radius: 12px;
+            padding: 1.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4.5rem;
+            color: var(--secondary-burgundy);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+
         .header h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
@@ -470,6 +525,20 @@
         <h1>🌿 Hợp Tác Xã Nông Sản Tươi Ngon</h1>
         <p>Rau Củ Quả Sạch, Tươi Mỗi Ngày - Giao Hàng Tận Nhà</p>
     </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner" aria-label="Khuyến mãi chính">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h2>Ưu Đãi Hôm Nay: Rau Sạch - Giá Hợp Lý</h2>
+                <p>Mua ngay để nhận ưu đãi giao hàng miễn phí cho đơn hàng trên 300k. Sản phẩm được thu hoạch tươi mỗi ngày từ hợp tác xã của chúng tôi.</p>
+                <a class="hero-cta" href="#products">Mua Ngay</a>
+            </div>
+            <div class="hero-image" role="img" aria-label="Ảnh rau củ">
+                🥕🥬🍅
+            </div>
+        </div>
+    </section>
 
     <!-- Main Content -->
     <div class="container">
