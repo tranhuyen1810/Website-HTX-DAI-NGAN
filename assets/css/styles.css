@@ -208,15 +208,14 @@ a { color: inherit; text-decoration: none; }
 }
 
 .logo-img { 
-  height: 50px; 
+  height: 70px; 
   width: auto;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-  animation: float 3s ease-in-out infinite;
   transition: transform 0.3s ease;
 }
 
 .logo-img:hover {
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.05);
 }
 
 @keyframes float {
@@ -389,20 +388,65 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
 }
 
-/* Hero Image Animation */
-.hero-bg {
+/* Hero Image Slider */
+.hero-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-slide {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
-  animation: zoomInSlow 1.2s ease-out forwards;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+/* Slider Indicators */
+.slider-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 4;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: scale(1.2);
+}
+
+.indicator.active {
+  background: var(--white);
+  width: 30px;
+  border-radius: 6px;
 }
 
 /* Info Banner Animation */

@@ -1,5 +1,51 @@
 // Basic animation helpers: reveal product cards on scroll and smooth scroll for CTAs
 document.addEventListener('DOMContentLoaded', function(){
+  // === HERO IMAGE SLIDER ===
+  const slides = document.querySelectorAll('.hero-slide');
+  const indicators = document.querySelectorAll('.indicator');
+  let currentSlide = 0;
+  const slideInterval = 4000; // Chuyển slide mỗi 4 giây
+
+  function showSlide(index) {
+    // Xóa active class khỏi tất cả slides và indicators
+    slides.forEach(slide => slide.classList.remove('active'));
+    indicators.forEach(indicator => indicator.classList.remove('active'));
+    
+    // Thêm active class vào slide và indicator hiện tại
+    slides[index].classList.add('active');
+    indicators[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  // Tự động chuyển slide
+  let autoSlide = setInterval(nextSlide, slideInterval);
+
+  // Xử lý click vào indicators
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      currentSlide = index;
+      showSlide(currentSlide);
+      // Reset interval khi user click
+      clearInterval(autoSlide);
+      autoSlide = setInterval(nextSlide, slideInterval);
+    });
+  });
+
+  // Dừng auto-slide khi hover vào hero section
+  const heroSection = document.querySelector('.hero');
+  if (heroSection) {
+    heroSection.addEventListener('mouseenter', () => {
+      clearInterval(autoSlide);
+    });
+    heroSection.addEventListener('mouseleave', () => {
+      autoSlide = setInterval(nextSlide, slideInterval);
+    });
+  }
+
   // Typewriter effect for hero section
   const typewriterElements = document.querySelectorAll('.typewriter, .typewriter-subtitle');
   typewriterElements.forEach((element, index) => {
