@@ -1,5 +1,24 @@
 // Basic animation helpers: reveal product cards on scroll and smooth scroll for CTAs
 document.addEventListener('DOMContentLoaded', function(){
+  // === HEADER SHRINK ON SCROLL ===
+  const navbar = document.querySelector('.navbar');
+  const ticker = document.querySelector('.ticker-wrapper');
+  const scrollThreshold = 100;
+  
+  window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > scrollThreshold) {
+      // Scrolled down - hide navbar and ticker
+      navbar.classList.add('scrolled');
+      ticker.classList.add('scrolled');
+    } else {
+      // At the top - show navbar and ticker
+      navbar.classList.remove('scrolled');
+      ticker.classList.remove('scrolled');
+    }
+  });
+  
   // === HERO IMAGE SLIDER ===
   const slides = document.querySelectorAll('.hero-slide');
   const indicators = document.querySelectorAll('.indicator');
@@ -834,4 +853,273 @@ function openCommunityDetail(communityId) {
 
   document.getElementById('newsModal').classList.add('show');
   document.body.style.overflow = 'hidden';
+}
+
+// ====== CAPACITY BANNER SLIDER ======
+document.addEventListener('DOMContentLoaded', function() {
+  const capacitySlides = document.querySelectorAll('.capacity-slide');
+  const capacityDots = document.querySelectorAll('.capacity-dot');
+  const capacityPrev = document.querySelector('.capacity-prev');
+  const capacityNext = document.querySelector('.capacity-next');
+  let currentCapacitySlide = 0;
+  const capacitySlideInterval = 5000; // Auto slide every 5 seconds
+
+  function showCapacitySlide(index) {
+    // Remove active class from all slides and dots
+    capacitySlides.forEach(slide => slide.classList.remove('active'));
+    capacityDots.forEach(dot => dot.classList.remove('active'));
+    
+    // Add active class to current slide and dot
+    if (capacitySlides[index]) {
+      capacitySlides[index].classList.add('active');
+    }
+    if (capacityDots[index]) {
+      capacityDots[index].classList.add('active');
+    }
+  }
+
+  function nextCapacitySlide() {
+    currentCapacitySlide = (currentCapacitySlide + 1) % capacitySlides.length;
+    showCapacitySlide(currentCapacitySlide);
+  }
+
+  function prevCapacitySlide() {
+    currentCapacitySlide = (currentCapacitySlide - 1 + capacitySlides.length) % capacitySlides.length;
+    showCapacitySlide(currentCapacitySlide);
+  }
+
+  // Auto slide
+  let autoCapacitySlide = setInterval(nextCapacitySlide, capacitySlideInterval);
+
+  // Next button
+  if (capacityNext) {
+    capacityNext.addEventListener('click', () => {
+      nextCapacitySlide();
+      clearInterval(autoCapacitySlide);
+      autoCapacitySlide = setInterval(nextCapacitySlide, capacitySlideInterval);
+    });
+  }
+
+  // Previous button
+  if (capacityPrev) {
+    capacityPrev.addEventListener('click', () => {
+      prevCapacitySlide();
+      clearInterval(autoCapacitySlide);
+      autoCapacitySlide = setInterval(nextCapacitySlide, capacitySlideInterval);
+    });
+  }
+
+  // Dots navigation
+  capacityDots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      currentCapacitySlide = index;
+      showCapacitySlide(currentCapacitySlide);
+      clearInterval(autoCapacitySlide);
+      autoCapacitySlide = setInterval(nextCapacitySlide, capacitySlideInterval);
+    });
+  });
+
+  // Auto slide without pause - faster (3 seconds)
+  const fastSlideInterval = setInterval(nextCapacitySlide, 3000);
+});
+
+// ====== SCROLL TO TOP ======
+const scrollToTopBtn = document.getElementById('scrollToTop');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollToTopBtn.classList.add('visible');
+  } else {
+    scrollToTopBtn.classList.remove('visible');
+  }
+});
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+// ====== PRODUCT DETAIL MODAL ======
+const productData = {
+  hanhngo: {
+    name: 'Hành Ngò Đà Lạt',
+    price: '10.000đ/kg',
+    image: 'assets/img/HanhNgo.jpg',
+    description: 'Hành ngò Đà Lạt tươi xanh, thơm ngon, được trồng trên cao nguyên Đà Lạt với khí hậu mát mẻ quanh năm. Đây là loại rau gia vị không thể thiếu trong bữa ăn của người Việt.',
+    specs: [
+      'Xuất xứ: Đà Lạt, Lâm Đồng',
+      'Trọng lượng: 1kg',
+      'Bảo quản: Ngăn mát tủ lạnh 5-7 ngày',
+      'Giá trị dinh dưỡng: Giàu vitamin C, K và chất chống oxy hóa',
+      'Tiêu chuẩn: VietGAP'
+    ]
+  },
+  bapcai: {
+    name: 'Bắp Cải Đà Lạt',
+    price: '5.000đ/500g',
+    image: 'assets/img/Bắp cải.jpg',
+    description: 'Bắp cải Đà Lạt tươi ngon, lá xanh đều, chắc nịch. Giàu chất xơ và vitamin, rất tốt cho sức khỏe.',
+    specs: [
+      'Xuất xứ: Đà Lạt, Lâm Đồng',
+      'Trọng lượng: 500g/bắp',
+      'Bảo quản: Ngăn mát tủ lạnh 7-10 ngày',
+      'Giá trị dinh dưỡng: Giàu vitamin C, K, chất xơ',
+      'Tiêu chuẩn: VietGAP'
+    ]
+  },
+  caithao: {
+    name: 'Cải Thảo Đà Lạt',
+    price: '5.000đ',
+    image: 'assets/img/cai-thao.png',
+    description: 'Cải thảo Đà Lạt tươi xanh, giòn ngọt, lá mỏng mềm. Thích hợp cho nhiều món ăn từ xào, nấu canh đến lẩu.',
+    specs: [
+      'Xuất xứ: Đà Lạt, Lâm Đồng',
+      'Trọng lượng: 500g-800g/bắp',
+      'Bảo quản: Ngăn mát tủ lạnh 5-7 ngày',
+      'Giá trị dinh dưỡng: Giàu vitamin A, C, canxi',
+      'Tiêu chuẩn: VietGAP'
+    ]
+  },
+  otchuong: {
+    name: 'Ớt Chuông Đà Lạt',
+    price: '10.000đ/500g',
+    image: 'assets/img/ot chuong.png',
+    description: 'Ớt chuông Đà Lạt nhiều màu sắc, giòn ngọt, không cay. Giàu vitamin C gấp nhiều lần cam, rất tốt cho sức khỏe.',
+    specs: [
+      'Xuất xứ: Đà Lạt, Lâm Đồng',
+      'Trọng lượng: 500g',
+      'Màu sắc: Đỏ, vàng, xanh',
+      'Bảo quản: Ngăn mát tủ lạnh 7-10 ngày',
+      'Giá trị dinh dưỡng: Cực giàu vitamin C, A, chất chống oxy hóa',
+      'Tiêu chuẩn: VietGAP'
+    ]
+  },
+  carot: {
+    name: 'Cà Rốt Đà Lạt',
+    price: '5.000đ/kg',
+    image: 'assets/img/Ca Rot.jpg',
+    description: 'Cà rốt Đà Lạt màu cam đỏ tự nhiên, giòn ngọt. Giàu beta-caroten tốt cho mắt và làn da.',
+    specs: [
+      'Xuất xứ: Đà Lạt, Lâm Đồng',
+      'Trọng lượng: 1kg',
+      'Bảo quản: Ngăn mát tủ lạnh 2-3 tuần',
+      'Giá trị dinh dưỡng: Giàu beta-caroten, vitamin A',
+      'Tiêu chuẩn: VietGAP'
+    ]
+  },
+  khoaitay: {
+    name: 'Khoai Tây Đà Lạt',
+    price: '15.000đ/kg',
+    image: 'assets/img/khoai tay.jpg',
+    description: 'Khoai tây Đà Lạt chất lượng cao, bùi ngon, thịt vàng đều. Thích hợp cho nhiều món ăn.',
+    specs: [
+      'Xuất xứ: Đà Lạt, Lâm Đồng',
+      'Trọng lượng: 1kg',
+      'Bảo quản: Nơi khô ráo, thoáng mát 2-3 tuần',
+      'Giá trị dinh dưỡng: Giàu tinh bột, kali, vitamin C',
+      'Tiêu chuẩn: VietGAP'
+    ]
+  },
+  cucai: {
+    name: 'Củ Cải Đà Lạt',
+    price: '5.000đ/kg',
+    image: 'assets/img/616_cu_cai.png',
+    description: 'Củ cải trắng Đà Lạt tươi ngon, giòn ngọt. Thích hợp nấu canh, làm kim chi hoặc ăn sống.',
+    specs: [
+      'Xuất xứ: Đà Lạt, Lâm Đồng',
+      'Trọng lượng: 1kg',
+      'Bảo quản: Ngăn mát tủ lạnh 1-2 tuần',
+      'Giá trị dinh dưỡng: Giàu vitamin C, chất xơ',
+      'Tiêu chuẩn: VietGAP'
+    ]
+  },
+  khoailang: {
+    name: 'Khoai Lang Đà Lạt',
+    price: '5.000đ/kg',
+    image: 'assets/img/khoai lang.jpg',
+    description: 'Khoai lang Đà Lạt thơm bùi, ngọt tự nhiên. Giàu chất dinh dưỡng, tốt cho sức khỏe.',
+    specs: [
+      'Xuất xứ: Đà Lạt, Lâm Đồng',
+      'Trọng lượng: 1kg',
+      'Bảo quản: Nơi khô ráo, thoáng mát 2-3 tuần',
+      'Giá trị dinh dưỡng: Giàu beta-caroten, chất xơ, vitamin A',
+      'Tiêu chuẩn: VietGAP'
+    ]
+  },
+  chanhday: {
+    name: 'Nước Cốt Chanh Dây Đà Lạt',
+    price: '15.000đ/lọ',
+    image: 'assets/img/chanhday1.jpg',
+    description: 'Nước cốt chanh dây 100% tự nhiên, không đường, không chất bảo quản. Giữ nguyên hương vị thơm ngon đặc trưng của chanh dây Đà Lạt.',
+    specs: [
+      'Xuất xứ: Đà Lạt, Lâm Đồng',
+      'Dung tích: 500ml/lọ',
+      'Thành phần: 100% chanh dây tươi',
+      'Bảo quản: Ngăn mát tủ lạnh sau khi mở',
+      'Hạn sử dụng: 6 tháng',
+      'Tiêu chuẩn: ATTP'
+    ]
+  },
+  taoxoan: {
+    name: 'Tảo Xoăn Thăng Hoa',
+    price: '25.000đ/500g',
+    image: 'assets/img/tao xoan thang hoa.jpg',
+    description: 'Tảo xoăn (Spirulina) thăng hoa chất lượng cao, giàu protein thực vật, vitamin và khoáng chất. Sản phẩm dinh dưỡng tuyệt vời cho sức khỏe.',
+    specs: [
+      'Xuất xứ: Đà Lạt, Lâm Đồng',
+      'Trọng lượng: 500g',
+      'Công nghệ: Sấy thăng hoa',
+      'Bảo quản: Nơi khô ráo, tránh ánh sáng',
+      'Hạn sử dụng: 12 tháng',
+      'Giá trị dinh dưỡng: Giàu protein (60-70%), vitamin B12, sắt',
+      'Tiêu chuẩn: ATTP'
+    ]
+  }
+};
+
+function openProductDetail(productId) {
+  const product = productData[productId];
+  if (!product) return;
+
+  document.getElementById('modalProductTitle').textContent = product.name;
+  document.getElementById('modalProductPrice').textContent = product.price;
+  document.getElementById('modalProductImg').src = product.image;
+  document.getElementById('modalProductDescription').textContent = product.description;
+  
+  const specsList = document.getElementById('modalProductSpecs');
+  specsList.innerHTML = '';
+  product.specs.forEach(spec => {
+    const li = document.createElement('li');
+    li.textContent = spec;
+    specsList.appendChild(li);
+  });
+
+  document.getElementById('productModal').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeProductDetail() {
+  document.getElementById('productModal').classList.remove('show');
+  document.body.style.overflow = 'auto';
+}
+
+function increaseQuantity() {
+  const input = document.getElementById('productQuantity');
+  input.value = parseInt(input.value) + 1;
+}
+
+function decreaseQuantity() {
+  const input = document.getElementById('productQuantity');
+  if (parseInt(input.value) > 1) {
+    input.value = parseInt(input.value) - 1;
+  }
+}
+
+function addToCart() {
+  const quantity = document.getElementById('productQuantity').value;
+  const productName = document.getElementById('modalProductTitle').textContent;
+  alert(`Đã thêm ${quantity} ${productName} vào giỏ hàng!`);
+  closeProductDetail();
 }
