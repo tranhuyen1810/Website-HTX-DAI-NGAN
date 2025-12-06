@@ -514,4 +514,324 @@ document.addEventListener('DOMContentLoaded', function(){
       savedLangBtn.click();
     }, 100);
   }
+
+  // === AUTO ADD VIEW DETAIL BUTTONS ===
+  addViewDetailButtons();
 });
+
+// ====== PRODUCT DETAIL MODAL ======
+const productData = {
+  1: {
+    name: "Hành Ngò Đà Lạt",
+    price: "10.000đ/kg",
+    image: "assets/img/HanhNgo.jpg",
+    description: "Hành ngò Đà Lạt tươi ngon, được trồng tại vùng cao nguyên Đà Lạt với khí hậu mát mẻ, cho hương vị thơm ngon đặc trưng.",
+    features: [
+      "100% tự nhiên, không hóa chất",
+      "Thu hoạch tươi mỗi ngày",
+      "Giàu vitamin và khoáng chất",
+      "Hương vị thơm đặc trưng của Đà Lạt"
+    ]
+  },
+  2: {
+    name: "Bắp Cải Đà Lạt",
+    price: "5.000đ/500g",
+    image: "assets/img/Bắp cải.jpg",
+    description: "Bắp cải Đà Lạt tươi ngon, lá xanh mướt, giòn ngọt tự nhiên. Sản phẩm an toàn vệ sinh thực phẩm.",
+    features: [
+      "Lá xanh mướt, căng mọng",
+      "Giòn ngọt tự nhiên",
+      "Giàu chất xơ và vitamin C",
+      "Trồng theo tiêu chuẩn VietGAP"
+    ]
+  },
+  3: {
+    name: "Cải Thảo Đà Lạt",
+    price: "5.000đ",
+    image: "assets/img/cai-thao.png",
+    description: "Cải thảo Đà Lạt với lá xanh non, mềm mại, thích hợp cho nhiều món ăn từ xào, luộc đến nấu canh.",
+    features: [
+      "Lá mềm, ngọt thanh",
+      "Không dư lượng thuốc trừ sâu",
+      "Giàu vitamin A, C và K",
+      "Phù hợp nhiều món ăn"
+    ]
+  },
+  4: {
+    name: "Ớt Chuông Đà Lạt",
+    price: "10.000đ/500g",
+    image: "assets/img/ot chuong.png",
+    description: "Ớt chuông Đà Lạt nhiều màu sắc, giòn ngọt, giàu dinh dưỡng, thích hợp cho salad và các món xào.",
+    features: [
+      "Nhiều màu sắc đẹp mắt",
+      "Giòn ngọt, không cay",
+      "Giàu vitamin C và chất chống oxi hóa",
+      "Tươi mới, bảo quản tốt"
+    ]
+  }
+};
+
+function openProductDetail(productId) {
+  const product = productData[productId];
+  if (!product) return;
+
+  document.getElementById('modalProductImg').src = product.image;
+  document.getElementById('modalProductName').textContent = product.name;
+  document.getElementById('modalProductPrice').textContent = product.price;
+  document.getElementById('modalProductDesc').textContent = product.description;
+  
+  const featuresList = document.getElementById('modalProductFeatures');
+  featuresList.innerHTML = '';
+  product.features.forEach(feature => {
+    const li = document.createElement('li');
+    li.textContent = feature;
+    featuresList.appendChild(li);
+  });
+
+  document.getElementById('productModal').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeProductDetail() {
+  document.getElementById('productModal').classList.remove('show');
+  document.body.style.overflow = 'auto';
+}
+
+// ====== NEWS DETAIL MODAL ======
+const newsData = {
+  1: {
+    title: "HTX Đạt Chứng Nhận Hữu Cơ Quốc Tế",
+    date: "02/12/2025",
+    image: "assets/img/news1.jpg",
+    content: `
+      <p>Hợp Tác Xã Lâm Đồng Đại Ngàn vinh dự thông báo đã chính thức nhận được chứng nhận hữu cơ quốc tế từ tổ chức uy tín, đánh dấu bước tiến quan trọng trong hành trình phát triển bền vững.</p>
+      
+      <p>Chứng nhận này là minh chứng cho nỗ lực không ngừng của HTX trong việc duy trì quy trình sản xuất nghiêm ngặt, đảm bảo sản phẩm hoàn toàn tự nhiên, an toàn cho người tiêu dùng và thân thiện với môi trường.</p>
+      
+      <p><strong>Những cam kết của HTX:</strong></p>
+      <ul>
+        <li>100% không sử dụng hóa chất độc hại</li>
+        <li>Quy trình canh tác bền vững</li>
+        <li>Kiểm soát chất lượng nghiêm ngặt từ gieo trồng đến thu hoạch</li>
+        <li>Bảo vệ môi trường và đa dạng sinh học</li>
+      </ul>
+      
+      <p>Với chứng nhận này, HTX tự tin mang đến cho khách hàng những sản phẩm nông sản sạch, chất lượng cao, góp phần nâng cao sức khỏe cộng đồng.</p>
+    `
+  },
+  2: {
+    title: "Khai Mạc Thị Trường Nông Sản Sạch",
+    date: "25/11/2025",
+    image: "assets/img/news2.jpg",
+    content: `
+      <p>Sáng ngày 25/11/2025, HTX Lâm Đồng Đại Ngàn đã tổ chức lễ khai mạc Thị trường nông sản sạch hàng tuần tại trung tâm thành phố Đà Lạt, thu hút đông đảo người dân và du khách tham gia.</p>
+      
+      <p>Thị trường là điểm giao lưu trực tiếp giữa người sản xuất và người tiêu dùng, mang đến:</p>
+      <ul>
+        <li>Rau củ quả tươi ngon, đa dạng chủng loại</li>
+        <li>Giá cả hợp lý, trực tiếp từ nông trại</li>
+        <li>Tư vấn dinh dưỡng miễn phí</li>
+        <li>Các hoạt động trải nghiệm nông nghiệp</li>
+      </ul>
+      
+      <p>Thị trường sẽ hoạt động mỗi tuần vào sáng Chủ nhật, tạo không gian mua sắm xanh - sạch - an toàn cho cộng đồng.</p>
+    `
+  },
+  3: {
+    title: "Hội Thảo: Nông Nghiệp Bền Vững",
+    date: "15/11/2025",
+    image: "assets/img/news3.jpg",
+    content: `
+      <p>Ngày 15/11/2025, HTX Lâm Đồng Đại Ngàn phối hợp với Sở Nông nghiệp và Phát triển Nông thôn tỉnh Lâm Đồng tổ chức Hội thảo "Nông nghiệp bền vững - Hướng đi cho tương lai".</p>
+      
+      <p>Hội thảo quy tụ hơn 200 đại biểu là nông dân, chuyên gia, nhà quản lý và doanh nghiệp, cùng thảo luận về:</p>
+      
+      <p><strong>Các chủ đề chính:</strong></p>
+      <ul>
+        <li>Ứng dụng công nghệ cao trong nông nghiệp</li>
+        <li>Canh tác hữu cơ và bảo vệ môi trường</li>
+        <li>Phát triển chuỗi giá trị nông sản bền vững</li>
+        <li>Thích ứng với biến đổi khí hậu</li>
+      </ul>
+      
+      <p>Hội thảo đã đưa ra nhiều giải pháp thiết thực, góp phần định hướng phát triển nông nghiệp bền vững cho vùng cao nguyên Đà Lạt.</p>
+    `
+  }
+};
+
+// ====== COMMUNITY DETAIL DATA ======
+const communityData = {
+  1: {
+    title: "📚 Chương Trình Đào Tạo Nông Dân",
+    date: "01/12/2025",
+    image: "assets/img/community1.jpg",
+    content: `
+      <p>HTX Lâm Đồng Đại Ngàn tổ chức khóa đào tạo miễn phí về kỹ thuật canh tác hữu cơ và quản lý nông trại bền vững cho hơn 100 nông dân thành viên.</p>
+      
+      <p><strong>Nội dung đào tạo:</strong></p>
+      <ul>
+        <li>Kỹ thuật trồng trọt hữu cơ hiện đại</li>
+        <li>Quản lý sâu bệnh không sử dụng hóa chất</li>
+        <li>Phương pháp làm đất và bón phân tự nhiên</li>
+        <li>Kỹ năng thu hoạch và bảo quản sau thu hoạch</li>
+        <li>Kiến thức về chứng nhận hữu cơ</li>
+      </ul>
+      
+      <p>Chương trình được tổ chức định kỳ hàng tháng, giúp nông dân nâng cao kiến thức, cải thiện năng suất và chất lượng sản phẩm.</p>
+      
+      <p><em>"Những kiến thức từ khóa đào tạo giúp tôi canh tác hiệu quả hơn và sản phẩm được giá cao hơn"</em> - Anh Nguyễn Văn A, thành viên HTX</p>
+    `
+  },
+  2: {
+    title: "❤️ Trao Tặng Rau Sạch Cho Cộng Đồng",
+    date: "20/11/2025",
+    image: "assets/img/community2.jpg",
+    content: `
+      <p>Trong tháng 11 vừa qua, HTX Lâm Đồng Đại Ngàn đã thực hiện chương trình trao tặng 500kg rau củ quả sạch cho các tổ chức và gia đình có hoàn cảnh khó khăn.</p>
+      
+      <p><strong>Điểm đến của chương trình:</strong></p>
+      <ul>
+        <li>Trung tâm Bảo trợ Xã hội tỉnh Lâm Đồng</li>
+        <li>Bệnh viện Đa khoa Lâm Đồng</li>
+        <li>50 hộ gia đình có hoàn cảnh khó khăn</li>
+        <li>Trường mầm non vùng cao</li>
+      </ul>
+      
+      <p>Chương trình không chỉ mang đến nguồn thực phẩm sạch, an toàn cho người dân mà còn lan tỏa thông điệp về lối sống lành mạnh và tinh thần tương thân tương ái.</p>
+      
+      <p>HTX cam kết sẽ duy trì hoạt động này thường xuyên, góp phần chăm lo sức khỏe cộng đồng.</p>
+    `
+  },
+  3: {
+    title: "🎉 Ngày Hội Nông Dân Vui Khỏe",
+    date: "10/11/2025",
+    image: "assets/img/community3.jpg",
+    content: `
+      <p>Ngày 10/11/2025, HTX Lâm Đồng Đại Ngàn đã tổ chức thành công "Ngày hội Nông dân Vui Khỏe" với sự tham gia của hơn 200 thành viên và gia đình.</p>
+      
+      <p><strong>Các hoạt động trong ngày hội:</strong></p>
+      <ul>
+        <li>Thi trồng rau nhanh và thu hoạch khéo léo</li>
+        <li>Trưng bày và trao giải sản phẩm nông sản xuất sắc</li>
+        <li>Giao lưu chia sẻ kinh nghiệm canh tác</li>
+        <li>Các trò chơi dân gian vui nhộn</li>
+        <li>Văn nghệ và gala dinner</li>
+      </ul>
+      
+      <p>Đây là dịp để các thành viên HTX gặp gỡ, giao lưu, tăng cường tinh thần đoàn kết và động viên lẫn nhau trong công việc sản xuất.</p>
+      
+      <p><strong>Kết quả đáng chú ý:</strong> 15 hộ nông dân xuất sắc đã được vinh danh và nhận phần thưởng giá trị. HTX cũng công bố kế hoạch mở rộng quy mô hoạt động trong năm tới.</p>
+    `
+  }
+};
+
+function openNewsDetail(newsId) {
+  const news = newsData[newsId];
+  if (!news) return;
+
+  document.getElementById('modalNewsTitle').textContent = news.title;
+  document.getElementById('modalNewsDate').textContent = news.date;
+  document.getElementById('modalNewsImg').src = news.image;
+  document.getElementById('modalNewsContent').innerHTML = news.content;
+
+  document.getElementById('newsModal').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeNewsDetail() {
+  document.getElementById('newsModal').classList.remove('show');
+  document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+  const productModal = document.getElementById('productModal');
+  const newsModal = document.getElementById('newsModal');
+  
+  if (event.target === productModal) {
+    closeProductDetail();
+  }
+  if (event.target === newsModal) {
+    closeNewsDetail();
+  }
+}
+
+// ====== AUTO ADD VIEW DETAIL BUTTONS ======
+function addViewDetailButtons() {
+  // Add buttons to all product items
+  const productItems = document.querySelectorAll('.product-item');
+  productItems.forEach((item, index) => {
+    // Skip if button already exists
+    if (item.querySelector('.view-detail-btn')) return;
+    
+    const productId = item.getAttribute('data-product-id') || (index + 1);
+    item.setAttribute('data-product-id', productId);
+    
+    const btn = document.createElement('button');
+    btn.className = 'view-detail-btn';
+    btn.textContent = 'Xem Chi Tiết';
+    btn.onclick = function() {
+      openProductDetail(productId);
+    };
+    
+    item.appendChild(btn);
+  });
+
+  // Add "Đọc Thêm" buttons to all news cards
+  const newsCards = document.querySelectorAll('.news-card');
+  newsCards.forEach((card, index) => {
+    // Skip if button already exists
+    if (card.querySelector('.read-more-btn')) {
+      return;
+    }
+    
+    // Check if it's a community card or news card
+    const communityId = card.getAttribute('data-community-id');
+    const newsId = card.getAttribute('data-news-id');
+    
+    if (communityId) {
+      card.setAttribute('data-community-id', communityId);
+      
+      const btn = document.createElement('button');
+      btn.className = 'read-more-btn';
+      btn.textContent = 'Đọc Thêm';
+      btn.onclick = function() {
+        openCommunityDetail(communityId);
+      };
+      
+      const newsContent = card.querySelector('.news-content');
+      if (newsContent) {
+        newsContent.appendChild(btn);
+      }
+    } else {
+      const id = newsId || (index + 1);
+      card.setAttribute('data-news-id', id);
+      
+      const btn = document.createElement('button');
+      btn.className = 'read-more-btn';
+      btn.textContent = 'Đọc Thêm';
+      btn.onclick = function() {
+        openNewsDetail(id);
+      };
+      
+      const newsContent = card.querySelector('.news-content');
+      if (newsContent) {
+        newsContent.appendChild(btn);
+      }
+    }
+  });
+}
+
+// ====== COMMUNITY DETAIL MODAL ======
+function openCommunityDetail(communityId) {
+  const community = communityData[communityId];
+  if (!community) return;
+
+  document.getElementById('modalNewsTitle').textContent = community.title;
+  document.getElementById('modalNewsDate').textContent = community.date;
+  document.getElementById('modalNewsImg').src = community.image;
+  document.getElementById('modalNewsContent').innerHTML = community.content;
+
+  document.getElementById('newsModal').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
