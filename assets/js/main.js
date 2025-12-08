@@ -19,51 +19,108 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   });
   
-  // === HERO IMAGE SLIDER ===
-  const slides = document.querySelectorAll('.hero-slide');
-  const indicators = document.querySelectorAll('.indicator');
+  // === HERO IMAGE SLIDER - MANUAL ONLY (FACTORY STYLE) ===
+  const slides = document.querySelectorAll('.hero-factory-slide');
   let currentSlide = 0;
-  const slideInterval = 4000; // Chuyển slide mỗi 4 giây
 
   function showSlide(index) {
-    // Xóa active class khỏi tất cả slides và indicators
+    // Xóa active class khỏi tất cả slides
     slides.forEach(slide => slide.classList.remove('active'));
-    indicators.forEach(indicator => indicator.classList.remove('active'));
     
-    // Thêm active class vào slide và indicator hiện tại
-    slides[index].classList.add('active');
-    indicators[index].classList.add('active');
+    // Thêm active class vào slide hiện tại
+    if (slides[index]) {
+      slides[index].classList.add('active');
+    }
   }
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
+  // Hàm chuyển slide khi click nút (được gọi từ HTML)
+  window.changeHeroSlide = function(direction) {
+    currentSlide = currentSlide + direction;
+    
+    // Xử lý vòng lặp
+    if (currentSlide >= slides.length) {
+      currentSlide = 0;
+    } else if (currentSlide < 0) {
+      currentSlide = slides.length - 1;
+    }
+    
     showSlide(currentSlide);
   }
 
-  // Tự động chuyển slide
-  let autoSlide = setInterval(nextSlide, slideInterval);
+  // === STATS COUNTER ANIMATION ===
+  function animateCounter(element) {
+    const target = parseInt(element.getAttribute('data-target'));
+    const duration = 2000; // 2 seconds
+    const increment = target / (duration / 16); // 60fps
+    let current = 0;
+    
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        element.textContent = target + '+';
+        clearInterval(timer);
+      } else {
+        element.textContent = Math.floor(current);
+      }
+    }, 16);
+  }
 
-  // Xử lý click vào indicators
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => {
-      currentSlide = index;
-      showSlide(currentSlide);
-      // Reset interval khi user click
-      clearInterval(autoSlide);
-      autoSlide = setInterval(nextSlide, slideInterval);
+  // Trigger counter animation when stats section is visible
+  const statsSection = document.querySelector('.factory-stats');
+  if (statsSection) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const statNumbers = document.querySelectorAll('.stat-number');
+          statNumbers.forEach(num => animateCounter(num));
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    
+    observer.observe(statsSection);
+  }
+
+  // === TESTIMONIALS SLIDER ===
+  let currentTestimonial = 0;
+  const testimonialItems = document.querySelectorAll('.testimonial-item');
+  
+  window.changeTestimonial = function(direction) {
+    if (testimonialItems.length === 0) return;
+    
+    testimonialItems[currentTestimonial].classList.remove('active');
+    
+    currentTestimonial += direction;
+    
+    if (currentTestimonial >= testimonialItems.length) {
+      currentTestimonial = 0;
+    } else if (currentTestimonial < 0) {
+      currentTestimonial = testimonialItems.length - 1;
+    }
+    
+    testimonialItems[currentTestimonial].classList.add('active');
+  }
+
+  // Auto-advance testimonials every 5 seconds
+  if (testimonialItems.length > 0) {
+    setInterval(() => {
+      changeTestimonial(1);
+    }, 5000);
+  }
+
+  // === SMOOTH SCROLL FOR FACTORY BUTTONS ===
+  document.querySelectorAll('.btn-factory').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const href = btn.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
     });
   });
-
-  // Dừng auto-slide khi hover vào hero section
-  const heroSection = document.querySelector('.hero');
-  if (heroSection) {
-    heroSection.addEventListener('mouseenter', () => {
-      clearInterval(autoSlide);
-    });
-    heroSection.addEventListener('mouseleave', () => {
-      autoSlide = setInterval(nextSlide, slideInterval);
-    });
-  }
 
   // Typewriter effect for hero section
   const typewriterElements = document.querySelectorAll('.typewriter, .typewriter-subtitle');
@@ -888,39 +945,27 @@ document.addEventListener('DOMContentLoaded', function() {
     showCapacitySlide(currentCapacitySlide);
   }
 
-  // Auto slide
-  let autoCapacitySlide = setInterval(nextCapacitySlide, capacitySlideInterval);
-
-  // Next button
+  // Next button - chỉ chuyển khi click
   if (capacityNext) {
     capacityNext.addEventListener('click', () => {
       nextCapacitySlide();
-      clearInterval(autoCapacitySlide);
-      autoCapacitySlide = setInterval(nextCapacitySlide, capacitySlideInterval);
     });
   }
 
-  // Previous button
+  // Previous button - chỉ chuyển khi click
   if (capacityPrev) {
     capacityPrev.addEventListener('click', () => {
       prevCapacitySlide();
-      clearInterval(autoCapacitySlide);
-      autoCapacitySlide = setInterval(nextCapacitySlide, capacitySlideInterval);
     });
   }
 
-  // Dots navigation
+  // Dots navigation - chỉ chuyển khi click
   capacityDots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
       currentCapacitySlide = index;
       showCapacitySlide(currentCapacitySlide);
-      clearInterval(autoCapacitySlide);
-      autoCapacitySlide = setInterval(nextCapacitySlide, capacitySlideInterval);
     });
   });
-
-  // Auto slide without pause - faster (3 seconds)
-  const fastSlideInterval = setInterval(nextCapacitySlide, 3000);
 });
 
 // ====== SCROLL TO TOP ======

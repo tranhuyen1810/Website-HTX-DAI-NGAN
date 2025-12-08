@@ -3,121 +3,314 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hợp Tác Xã Nông Sản - Rau Củ Quả Tươi Ngon</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>HTX Lâm Đồng Đại Ngàn - Nông Sản Sạch</title>
+    <link rel="stylesheet" href="assets/css/factory-style.css">
 </head>
 <body>
-    <!-- Header/Navigation -->
-    <header class="header-top">
-        <!-- Top Header - White Background -->
-        <div class="top-header">
-            <div class="top-header-content">
-                <div class="logo-brand-section">
-                   
-                    <h1 class="brand-name">HỢP TÁC XÃ LÂM ĐỒNG ĐẠI NGÀN</h1>
+    <!-- Header - Factory Theme Style -->
+    <header class="factory-header">
+        <!-- Top Bar -->
+        <div class="factory-top-bar">
+            <div class="factory-container">
+                <div class="top-bar-content">
+                    <div class="top-bar-left">
+                        <!-- Empty or can add social icons -->
+                    </div>
+                    <div class="top-bar-right">
+                        <a href="tel:0767333379" class="top-contact">
+                            <span class="icon">📞</span>
+                            <span>0767.333.379</span>
+                        </a>
+                        <a href="mailto:rogger.hoang@gmail.com" class="top-contact">
+                            <span class="icon">📧</span>
+                            <span>Info@htxdaingan.com</span>
+                        </a>
+                    </div>
                 </div>
-                
-                <div class="header-actions">
-                    <div class="cart-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06532A">
-                            <circle cx="9" cy="21" r="1"></circle>
-                            <circle cx="20" cy="21" r="1"></circle>
-                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                        </svg>
-                        <span class="cart-badge">0</span>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <div class="factory-main-nav">
+            <div class="factory-container">
+                <div class="nav-content">
+                    <div class="factory-logo">
+                        <img src="assets/img/logo.png" alt="HTX Logo" onerror="this.style.display='none'">
+                        <span>HTX ĐẠI NGÀN</span>
                     </div>
                     
-                    <div class="language-switcher">
-                        <button class="lang-btn active" data-lang="vi">VIE</button>
-                        <span class="lang-separator">|</span>
-                        <button class="lang-btn" data-lang="en">ENG</button>
+                    <nav class="factory-nav">
+                        <ul class="factory-menu">
+                            <li><a href="#home">TRANG CHỦ</a></li>
+                            <li><a href="#capacity">HỒ SƠ NĂNG LỰC</a></li>
+                            <li><a href="#investment">ĐẦU TƯ</a></li>
+                            <li><a href="#products">SẢN PHẨM</a></li>
+                            <li><a href="#contact">LIÊN HỆ</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="factory-header-actions">
+                        <button class="factory-search-btn">🔍</button>
+                        <button class="factory-menu-toggle">☰</button>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Logo Section - Between Top Header and Navbar -->
-        <div class="logo-center-section">
-            <img src="assets/img/logo.png" alt="Logo HTX" class="logo-center" onerror="this.style.display='none'">
-        </div>
-        
-        <!-- Navigation Bar - Green Background -->
-        <nav class="navbar">
-            <div class="nav-wrapper">
-                <ul class="nav-menu">
-                    <li><a href="#introduction">Giới thiệu</a></li>
-                    <li><a href="#capacity">Hồ sơ năng lực</a></li>
-                    <li><a href="#members">Thành viên HTX</a></li>
-                    <li><a href="#projects">Dự án & Hoạt động sản xuấtgit </a></li>
-                    <li><a href="#news">Tin tức & Sự kiện</a></li>
-                    <li><a href="#contact">Liên hệ</a></li>
-                </ul>
-            </div>
-        </nav>
-        
-        <!-- Ticker Banner - White Background -->
-        <div class="ticker-wrapper">
-            <div class="ticker">
-                <span class="ticker-text">🌱 HTX Lâm Đồng Đại Ngàn - Rau Củ Quả Sạch Đà Lạt - Chất Lượng - Uy Tín - Tận Tâm 🌱 Miễn phí giao hàng cho đơn trên 500.000đ 🌱 Cam kết 100% Tươi Ngon 🌱</span>
-            </div>
+            <!-- Red Triangle Shape -->
+            <div class="nav-shape"></div>
         </div>
     </header>
 
-    <!-- Hero Banner with Image Slider -->
-    <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="hero-slider">
-            <img src="assets/img/htx01.JPG" alt="HTX Đại Ngàn 1" class="hero-slide active">
-            <img src="assets/img/htx02.JPG" alt="Sự kiện HTX" class="hero-slide">
-            <img src="assets/img/htx01.JPG" alt="HTX Đại Ngàn 2" class="hero-slide">
-            <img src="assets/img/htx02.JPG" alt="HTX Đại Ngàn 3" class="hero-slide">
-            <img src="assets/img/htx01.JPG" alt="HTX Đại Ngàn 4" class="hero-slide">
-            <img src="assets/img/htx02.JPG" alt="HTX Đại Ngàn 5" class="hero-slide">
+    <!-- ==================== TRANG CHỦ ==================== -->
+    
+    <!-- Hero Section - Full Screen with Slideshow -->
+    <section class="factory-hero" id="home">
+        <div class="factory-hero-slideshow">
+            <div class="factory-hero-slide active" style="background-image: url('assets/test_img/Green and White Modern Fresh Vegetables Your Story (Trang web).png')"></div>
+            <div class="factory-hero-slide" style="background-image: url('assets/img/htx01.JPG')"></div>
+            <div class="factory-hero-slide" style="background-image: url('assets/img/htx02.JPG')"></div>
         </div>
         
-        <!-- Slider indicators -->
-       
+        <div class="factory-hero-overlay"></div>
+        
+        <!-- Hero Navigation Buttons -->
+        <button class="hero-nav-btn hero-prev" onclick="changeHeroSlide(-1)">❮</button>
+        <button class="hero-nav-btn hero-next" onclick="changeHeroSlide(1)">❯</button>
+        
+        <!-- About Us Label -->
+        <div class="hero-about-label">
+            <span>ABOUT US</span>
+        </div>
+        
+        <div class="factory-hero-content">
+            <div class="factory-container">
+                <div class="factory-hero-text">
+                    <h1 class="factory-hero-title">
+                        <span class="title-line">HTX LÂM ĐỒNG ĐẠI NGÀN</span>
+                    </h1>
+                    <p class="factory-hero-subtitle">Chuyên cung cấp rau củ quả sạch, hữu cơ từ cao nguyên Đà Lạt. Cam kết chất lượng - An toàn - Tươi ngon</p>
+                    <div class="factory-hero-buttons">
+                        <a href="#products" class="hero-btn hero-btn-primary">Xem Sản Phẩm</a>
+                        <a href="#contact" class="hero-btn hero-btn-secondary">Liên Hệ Ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="factory-hero-scroll">
+            <span>Cuộn xuống</span>
+            <div class="scroll-indicator"></div>
+        </div>
     </section>
 
-    <!-- Introduction Section - VN Organi Farm Style -->
-    <section id="introduction" class="introduction-section">
-        <div class="container">
-            <div class="intro-content-wrapper">
-                <div class="intro-main-image">
-                    <img src="assets/img/htx01.JPG" alt="HTX Đại Ngàn Team" class="intro-img-large">
+    <!-- About Section - GIỚI THIỆU -->
+    <section class="factory-about" id="about">
+        <div class="factory-container">
+            <div class="factory-about-wrapper">
+                <div class="factory-about-images">
+                    <img src="assets/img/htx01.JPG" alt="HTX Đại Ngàn" class="about-image-main">
+                    <img src="assets/img/htx02.JPG" alt="Trang trại" class="about-image-float">
+                    <div class="about-experience-badge">
+                        <span class="badge-years">10+</span>
+                        <span class="badge-text">NĂM KINH<br>NGHIỆM</span>
+                    </div>
                 </div>
                 
-                <div class="intro-text-content">
-                    <h2 class="intro-title">HTX Lâm Đồng Đại Ngàn</h2>
-                    <p class="intro-subtitle"> Hợp tác xã chuyên cung cấp rau củ quả. Với <strong>HTX Lâm Đồng Đại Ngàn</strong>, chúng tôi bắt đầu của chuyến cua mình từ 1 khao khát vươn lên mang tên: <strong>"Vì Nông Nghiệp Việt Nam"</strong>.</p>
-                    
-                    <p class="intro-description">
-                        HTX Lâm Đồng Đại Ngàn là tên liều hướng đi mới cho Nông Nghiệp Việt Nam theo tiếp cận những xu hướng và công nghệ của cả thế giới, chung tay phát triển trong mảng sản phẩm của mình. Mục tiêu lớn mà HTX Đại Ngàn đặt ra là vào xây dựng nền tảng cho tổng thể trong chất lượng, diễn hơn là hai với cái tốt đẹp nhất với ứng nghiệp thống trông sản phẩm.
+                <div class="factory-about-content">
+                    <span class="section-subtitle">VỀ CHÚNG TÔI</span>
+                    <h2 class="section-title">HTX LÂM ĐỒNG<br>ĐẠI NGÀN</h2>
+                    <p class="section-description">
+                        Hợp tác xã chuyên cung cấp rau củ quả sạch, an toàn. Với mục tiêu <strong>"Vì Nông Nghiệp Việt Nam"</strong>, chúng tôi cam kết mang đến sản phẩm tươi ngon, chất lượng cao nhất từ trang trại trực tiếp đến tay người tiêu dùng.
                     </p>
-                    
-                    
-                    
-                    <div class="intro-features-grid">
-                        <div class="intro-feature-card">
-                            <img src="assets/img/htx02.JPG" alt="Tinh nhận tinh túy" class="feature-img">
-                            <h3>Tinh nhận tinh túy</h3>
-                            <p>Giữ lại tinh túy của từng loại nông sản thông qua sản phẩm</p>
-                        </div>
-                        
-                        <div class="intro-feature-card">
-                            <img src="assets/img/HTX03.JPG" alt="Không chất hóa học" class="feature-img">
-                            <h3>Không chất hóa học</h3>
-                            <p>Nông sản nội thổ chuẩn sạch với quy trình có giám sát hóa học</p>
+                    <ul class="about-features-list">
+                        <li>Sản phẩm 100% hữu cơ, không hóa chất độc hại</li>
+                        <li>Chứng nhận VietGAP và tiêu chuẩn quốc tế</li>
+                        <li>Truy xuất nguồn gốc minh bạch 100%</li>
+                        <li>Giao hàng tận nơi, miễn phí đơn trên 500K</li>
+                    </ul>
+                    <a href="#capacity" class="factory-btn factory-btn-primary">
+                        <span>XEM HỒ SƠ NĂNG LỰC</span>
+                        <i class="arrow">→</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="factory-stats">
+        <div class="factory-container stats-container">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-number" data-target="150">0</span>
+                    <span class="stat-label">Thành Viên HTX</span>
+                </div>
+                
+                <div class="stat-box">
+                    <span class="stat-number" data-target="500">0</span>
+                    <span class="stat-label">Hecta Canh Tác</span>
+                </div>
+                
+                <div class="stat-box">
+                    <span class="stat-number" data-target="5000">0</span>
+                    <span class="stat-label">Tấn Sản Lượng/Năm</span>
+                </div>
+                
+                <div class="stat-box">
+                    <span class="stat-number" data-target="100">0</span>
+                    <span class="stat-label">% Hữu Cơ</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section - THÀNH VIÊN BAN LÃNH ĐẠO -->
+    <section class="factory-team" id="team">
+        <div class="factory-container">
+            <div class="section-header">
+                <span class="section-subtitle">ĐỘI NGŨ CHUYÊN GIA</span>
+                <h2 class="section-title">BAN LÃNH ĐẠO<br>HTX</h2>
+                <p class="section-description">Đội ngũ giàu kinh nghiệm và tâm huyết</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-image-wrapper">
+                        <img src="assets/img/htx01.JPG" alt="Giám đốc" class="team-image">
+                        <div class="team-social">
+                            <a href="mailto:rogger.hoang@gmail.com" class="team-social-link">📧</a>
+                            <a href="tel:0767333379" class="team-social-link">📞</a>
                         </div>
                     </div>
-                    
-                    <div class="intro-cta-wrapper">
-                        <button class="intro-cta-btn">Xem thêm</button>
-                        <a href="tel:0767333379" class="intro-phone">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                            0767.333.379
+                    <div class="team-info">
+                        <h3 class="team-name">Hoàng Tuấn Anh</h3>
+                        <p class="team-position">Giám Đốc</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="team-image-wrapper">
+                        <img src="assets/img/htx02.JPG" alt="Trưởng nhân sự" class="team-image">
+                        <div class="team-social">
+                            <a href="mailto:rogger.hoang@gmail.com" class="team-social-link">📧</a>
+                            <a href="tel:0767333379" class="team-social-link">📞</a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Lâm Nhật Linh</h3>
+                        <p class="team-position">Trưởng Nhân Sự</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="team-image-wrapper">
+                        <img src="assets/img/HTX03.JPG" alt="Kế toán" class="team-image">
+                        <div class="team-social">
+                            <a href="mailto:rogger.hoang@gmail.com" class="team-social-link">📧</a>
+                            <a href="tel:0767333379" class="team-social-link">📞</a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Trần Khánh Huyền</h3>
+                        <p class="team-position">Kế Toán Trưởng</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== HỒ SƠ NĂNG LỰC ==================== -->
+    
+    <!-- Services Section -->
+    <section class="factory-services" id="capacity">
+        <div class="factory-container">
+            <div class="section-header">
+                <span class="section-subtitle">HỒ SƠ NĂNG LỰC</span>
+                <h2 class="section-title">NHỮNG GÌ CHÚNG TÔI<br>CUNG CẤP</h2>
+                <p class="section-description">Cam kết chất lượng và dịch vụ tốt nhất cho khách hàng</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-box">
+                    <div class="service-icon-wrapper">🥬</div>
+                    <h3>Rau Xanh Tươi</h3>
+                    <p>Rau củ quả tươi ngon, thu hoạch hàng ngày từ trang trại cao nguyên Đà Lạt</p>
+                </div>
+                
+                <div class="service-box">
+                    <div class="service-icon-wrapper">🏭</div>
+                    <h3>Chế Biến Sâu</h3>
+                    <p>Công nghệ chế biến hiện đại, giữ trọn dinh dưỡng và hương vị tự nhiên</p>
+                </div>
+                
+                <div class="service-box">
+                    <div class="service-icon-wrapper">📦</div>
+                    <h3>Đóng Gói An Toàn</h3>
+                    <p>Đóng gói chuyên nghiệp, đảm bảo vệ sinh an toàn thực phẩm</p>
+                </div>
+                
+                <div class="service-box">
+                    <div class="service-icon-wrapper">🔍</div>
+                    <h3>Truy Xuất Nguồn Gốc</h3>
+                    <p>100% sản phẩm có tem truy xuất nguồn gốc rõ ràng, minh bạch</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio/Projects Section -->
+    <section class="factory-portfolio" id="portfolio">
+        <div class="factory-container">
+            <div class="section-header">
+                <span class="section-subtitle">DỰ ÁN CỦA CHÚNG TÔI</span>
+                <h2 class="section-title">HÀNH TRÌNH<br>PHÁT TRIỂN</h2>
+                <p class="section-description">Những dự án nổi bật đã và đang triển khai</p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="assets/img/htx01.JPG" alt="Vùng trồng" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Nông Nghiệp</span>
+                        <h3 class="portfolio-title">Vùng Nguyên Liệu Xanh</h3>
+                        <a href="#" class="portfolio-link">
+                            <span>XEM CHI TIẾT</span>
+                            <span>→</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="assets/test_img/Trang trại.jpg" alt="Trang trại" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Chăn Nuôi</span>
+                        <h3 class="portfolio-title">Trang Trại Hiện Đại</h3>
+                        <a href="#" class="portfolio-link">
+                            <span>XEM CHI TIẾT</span>
+                            <span>→</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="assets/test_img/IMG_8483.JPG" alt="Chế biến" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Công Nghệ</span>
+                        <h3 class="portfolio-title">Nhà Máy Chế Biến</h3>
+                        <a href="#" class="portfolio-link">
+                            <span>XEM CHI TIẾT</span>
+                            <span>→</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="assets/img/HTX05.JPG" alt="Kho lạnh" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Cơ Sở Hạ Tầng</span>
+                        <h3 class="portfolio-title">Kho Lạnh Hiện Đại</h3>
+                        <a href="#" class="portfolio-link">
+                            <span>XEM CHI TIẾT</span>
+                            <span>→</span>
                         </a>
                     </div>
                 </div>
@@ -125,528 +318,417 @@
         </div>
     </section>
 
-    <!-- Content Wrapper with Grid Layout for Vertical Banners -->
-    <div class="content-wrapper-grid">
-        <!-- Vertical Aside Banners - Left Side -->
-        <aside class="vertical-banners">
-            <div class="vertical-banner" style="background: linear-gradient(135deg, #83A656 0%, #06532A 100%);">
-                <div class="vertical-banner-content">
-                    <h3>NGUỒN CUNG ỔN ĐỊNH</h3>
-                    <p>Ưu đãi sản vật nội sinh cẩn trọng mọi thỏa thuận đáng tin cậy</p>
-                    <button class="vertical-btn">XEM NGAY</button>
-                </div>
-                <img src="assets/img/cai-thao.png" alt="Nguồn cung" class="vertical-banner-img">
+    <!-- ==================== ĐẦU TƯ ==================== -->
+    
+    <!-- Investment/Fundraising Section -->
+    <section class="factory-investment" id="investment">
+        <div class="factory-container">
+            <div class="section-header">
+                <span class="section-subtitle">KÊU GỌI ĐẦU TƯ</span>
+                <h2 class="section-title">CƠ HỘI ĐẦU TƯ<br>VÀO HTX</h2>
+                <p class="section-description">Tham gia góp vốn cùng HTX Lâm Đồng Đại Ngàn - Đầu tư vào nông nghiệp bền vững</p>
             </div>
             
-            <div class="vertical-banner" style="background: linear-gradient(135deg, #FAA519 0%, #E44D32 100%);">
-                <div class="vertical-banner-content">
-                    <h3>GIÁ CẢ BÌNH ỔN</h3>
-                    <p>Giá tốt bình ổn, kho lạnh bảo đảm linh hoạt trao đổi</p>
-                    <button class="vertical-btn">XEM NGAY</button>
-                </div>
-                <img src="assets/img/Bắp cải.jpg" alt="Giá cả" class="vertical-banner-img">
-            </div>
-            
-            <div class="vertical-banner" style="background: linear-gradient(135deg, #E44D32 0%, #AD1E26 100%);">
-                <div class="vertical-banner-content">
-                    <h3>MẪU MÃ ĐA DẠNG</h3>
-                    <p>Sản phẩm đa dạng, gia vị và trái cây tươi ngon Đà Lạt</p>
-                    <button class="vertical-btn">XEM NGAY</button>
-                </div>
-                <img src="assets/img/ot chuong.png" alt="Mẫu mã" class="vertical-banner-img">
-            </div>
-            
-            <div class="vertical-banner" style="background: linear-gradient(135deg, #FFD54E 0%, #FAA519 100%);">
-                <div class="vertical-banner-content">
-                    <h3>ĐẢM BẢO VSATTP</h3>
-                    <p>Nông sản tươi xanh an toàn vệ sinh thực phẩm chuẩn</p>
-                    <button class="vertical-btn">XEM NGAY</button>
-                </div>
-                <img src="assets/img/khoai lang.jpg" alt="VSATTP" class="vertical-banner-img">
-            </div>
-        </aside>
-
-        <!-- Main Container -->
-        <div class="container main-content-grid">
-            
-            <!-- Hồ Sơ Năng Lực -->
-            <section id="capacity" class="info-section capacity-section">
-            <h2>📋 Hồ Sơ Năng Lực</h2>
-            
-            <!-- General Information -->
-            <div class="info-grid capacity-info">
-                <div class="info-card">
-                    <h3>Giới Thiệu Chung</h3>
-                    <ul>
-                        <li><strong>Tên HTX:</strong> Hợp Tác Xã Lâm Đồng Đại Ngàn</li>
-                        <li><strong>Năm Thành Lập:</strong> 2025</li>
-                        <li><strong>Địa Chỉ:</strong> 1A Bùi Thị Xuân, Phường Xuân Hương - Đà Lạt, Thành Phố Đà Lạt, Tỉnh Lâm Đồng, Việt Nam</li>
-                        <li><strong>Thành Viên:</strong> 150+ hộ nông dân</li>
-                        <li><strong>Diện tích:</strong> 500+ hecta</li>
-                        <li><strong>Sản lượng:</strong> 5000+ tấn/năm</li>
+            <div class="investment-wrapper">
+                <div class="investment-intro">
+                    <h3>Vì Sao Nên Đầu Tư Vào HTX Đại Ngàn?</h3>
+                    <p>Với hồ sơ năng lực vững mạnh và tiềm năng phát triển lớn, HTX Lâm Đồng Đại Ngàn đang kêu gọi các nhà đầu tư, doanh nghiệp và cá nhân cùng góp vốn để:</p>
+                    <ul class="investment-benefits">
+                        <li>✓ Mở rộng vùng nguyên liệu hữu cơ lên 1000+ hecta</li>
+                        <li>✓ Xây dựng nhà máy chế biến sâu công suất lớn</li>
+                        <li>✓ Đầu tư hệ thống kho lạnh hiện đại 5000 tấn</li>
+                        <li>✓ Phát triển chuỗi phân phối toàn quốc</li>
+                        <li>✓ Tạo việc làm cho 500+ lao động địa phương</li>
                     </ul>
                 </div>
-                <div class="info-card">
-                    <h3>Về Hồ Sơ Năng Lực</h3>
-                    <p>HTX Lâm Đồng Đại Ngàn tự hào là đơn vị tiên phong trong việc ứng dụng công nghệ hiện đại vào sản xuất nông nghiệp bền vững.</p>
-                    <ul>
-                        <li>✓ Tiêu chuẩn hữu cơ quốc tế</li>
-                        <li>✓ Kiểm soát chất lượng tự động</li>
-                        <li>✓ Quy trình chuẩn hóa VietGAP</li>
-                        <li>✓ Truy xuất nguồn gốc 100%</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Banner Slider -->
-            <div class="capacity-banner-slider">
-                <div class="capacity-slider-container">
-                    <!-- Banner 1: Vùng nguyên liệu -->
-                    <div class="capacity-slide active">
-                        <div class="capacity-slide-content">
-                            <div class="capacity-slide-images">
-                                <img src="assets/img/htx01.JPG" alt="Vùng trồng trọt 1" class="capacity-img">
-                                <img src="assets/img/htx02.JPG" alt="Vùng trồng trọt 2" class="capacity-img">
-                                <img src="assets/img/HTX03.JPG" alt="Vùng trồng trọt 3" class="capacity-img">
-                            </div>
-                            <div class="capacity-slide-text">
-                                <h3>Vùng Nguyên Liệu Xanh - Bền Vững</h3>
-                                <p>Xây dựng hệ sinh thái trồng trọt đa dạng, an toàn, phát triển bền vững tại cao nguyên Đà Lạt với khí hậu lý tưởng quanh năm.</p>
-                                <ul class="capacity-features">
-                                    <li>🌱 500+ hecta đất canh tác hữu cơ</li>
-                                    <li>💧 Hệ thống tưới tiêu tự động</li>
-                                    <li>🌡️ Kiểm soát vi khí hậu chuyên nghiệp</li>
-                                </ul>
-                            </div>
+                
+                <div class="investment-packages">
+                    <h3>Gói Góp Vốn Đầu Tư</h3>
+                    <div class="packages-grid">
+                        <div class="package-card">
+                            <div class="package-icon">🌱</div>
+                            <h4>Gói Khởi Đầu</h4>
+                            <div class="package-amount">50 - 200 triệu</div>
+                            <ul class="package-features">
+                                <li>Chia lợi nhuận 8-10%/năm</li>
+                                <li>Sản phẩm ưu đãi hàng tháng</li>
+                                <li>Báo cáo tài chính định kỳ</li>
+                            </ul>
+                            <a href="#contact" class="package-btn">Tìm Hiểu Thêm</a>
                         </div>
-                    </div>
-                    
-                    <!-- Banner 2: Rau sạch -->
-                    <div class="capacity-slide">
-                        <div class="capacity-slide-content reverse">
-                            <div class="capacity-slide-text">
-                                <h3>Tinh Hoa Rau Sạch Từ Cao Nguyên</h3>
-                                <p>Những dòng rau chủ lực được cung ứng ổn định quanh năm, đảm bảo chất lượng cao nhất từ giống đến thành phẩm.</p>
-                                <ul class="capacity-features">
-                                    <li>🥬 Cải thảo, bắp cải cao cấp</li>
-                                    <li>🫑 Ớt chuông đủ màu sắc</li>
-                                    <li>🥕 Củ quả tươi ngon mỗi ngày</li>
-                                </ul>
-                            </div>
-                            <div class="capacity-slide-images multi">
-                                <img src="assets/img/cai-thao.png" alt="Cải thảo" class="capacity-img-small">
-                                <img src="assets/img/Bắp cải.jpg" alt="Bắp cải" class="capacity-img-small">
-                                <img src="assets/img/ot chuong.png" alt="Ớt chuông" class="capacity-img-small">
-                                <img src="assets/img/khoai lang.jpg" alt="Khoai lang" class="capacity-img-small">
-                            </div>
+                        
+                        <div class="package-card featured">
+                            <div class="package-badge">PHỔ BIẾN</div>
+                            <div class="package-icon">🏭</div>
+                            <h4>Gói Phát Triển</h4>
+                            <div class="package-amount">200 - 500 triệu</div>
+                            <ul class="package-features">
+                                <li>Chia lợi nhuận 12-15%/năm</li>
+                                <li>Tham gia Ban cố vấn HTX</li>
+                                <li>Quyền ưu tiên sản phẩm mới</li>
+                                <li>Báo cáo chi tiết hàng quý</li>
+                            </ul>
+                            <a href="#contact" class="package-btn">Đăng Ký Ngay</a>
                         </div>
-                    </div>
-                    
-                    <!-- Banner 3: Trang trại -->
-                    <div class="capacity-slide">
-                        <div class="capacity-slide-content">
-                            <div class="capacity-slide-images">
-                                <img src="assets/img/htx04.JPG" alt="Trang trại bò" class="capacity-img">
-                                <img src="assets/img/HTX05.JPG" alt="Trang trại cá" class="capacity-img">
-                            </div>
-                            <div class="capacity-slide-text">
-                                <h3>Hệ Thống Trang Trại Hiện Đại – Quy Trình Chuẩn Hóa</h3>
-                                <p>Trang trại chăn nuôi được vận hành theo tiêu chuẩn an toàn, đảm bảo chất lượng đầu ra ổn định và bền vững.</p>
-                                <ul class="capacity-features">
-                                    <li>🐄 Trang trại bò sữa organic</li>
-                                    <li>🐟 Nuôi cá thủy sản sạch</li>
-                                    <li>✅ Giám sát 24/7 bằng IoT</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Banner 4: Chế biến -->
-                    <div class="capacity-slide">
-                        <div class="capacity-slide-content reverse">
-                            <div class="capacity-slide-text">
-                                <h3>Công Nghệ Chế Biến Sâu – Gia Tăng Giá Trị Nông Sản</h3>
-                                <p>Nâng tầm giá trị nông sản với công nghệ chế biến sâu, từ sơ chế đến sản phẩm hoàn thiện chất lượng cao.</p>
-                                <ul class="capacity-features">
-                                    <li>❄️ Hệ thống kho lạnh hiện đại</li>
-                                    <li>🔥 Sấy nóng/lạnh công nghiệp</li>
-                                    <li>⚡ Công nghệ sấy thăng hoa</li>
-                                    <li>🏭 Nhà máy chế biến chuẩn HACCP</li>
-                                </ul>
-                            </div>
-                            <div class="capacity-slide-images multi">
-                                <img src="assets/img/tao xoan thang hoa.jpg" alt="Sấy thăng hoa" class="capacity-img-small">
-                                <img src="assets/img/chanhday1.jpg" alt="Chế biến chanh dây" class="capacity-img-small">
-                                <img src="assets/img/tinh_gung_mat_ong.jpg" alt="Chế biến tinh gừng" class="capacity-img-small">
-                                <img src="assets/img/nuoc cot rau tam.jpg" alt="Chế biến nước cốt" class="capacity-img-small">
-                            </div>
+                        
+                        <div class="package-card">
+                            <div class="package-icon">💼</div>
+                            <h4>Gói Đối Tác Chiến Lược</h4>
+                            <div class="package-amount">500 triệu - 2 tỷ</div>
+                            <ul class="package-features">
+                                <li>Chia lợi nhuận 15-20%/năm</li>
+                                <li>Tham gia Hội đồng quản trị</li>
+                                <li>Quyền phân phối độc quyền</li>
+                                <li>Họp báo cáo hàng tháng</li>
+                                <li>Gắn tên thương hiệu</li>
+                            </ul>
+                            <a href="#contact" class="package-btn">Liên Hệ Riêng</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Slider Controls -->
-                <div class="capacity-slider-controls">
-                    <button class="capacity-prev">❮</button>
-                    <div class="capacity-dots">
-                        <span class="capacity-dot active" data-slide="0"></span>
-                        <span class="capacity-dot" data-slide="1"></span>
-                        <span class="capacity-dot" data-slide="2"></span>
-                        <span class="capacity-dot" data-slide="3"></span>
+                <div class="investment-credentials">
+                    <h3>Hồ Sơ Năng Lực Chứng Minh</h3>
+                    <div class="credentials-grid">
+                        <div class="credential-item">
+                            <div class="credential-number">500+</div>
+                            <div class="credential-label">Hecta canh tác</div>
+                        </div>
+                        <div class="credential-item">
+                            <div class="credential-number">5000+</div>
+                            <div class="credential-label">Tấn sản lượng/năm</div>
+                        </div>
+                        <div class="credential-item">
+                            <div class="credential-number">150+</div>
+                            <div class="credential-label">Thành viên HTX</div>
+                        </div>
+                        <div class="credential-item">
+                            <div class="credential-number">100%</div>
+                            <div class="credential-label">Hữu cơ & An toàn</div>
+                        </div>
                     </div>
-                    <button class="capacity-next">❯</button>
+                    
+                    <div class="credentials-documents">
+                        <p><strong>Tài liệu minh chứng:</strong></p>
+                        <ul>
+                            <li>📄 Giấy phép kinh doanh HTX</li>
+                            <li>📄 Chứng nhận VietGAP & Hữu cơ quốc tế</li>
+                            <li>📄 Báo cáo tài chính 3 năm gần nhất</li>
+                            <li>📄 Hợp đồng cung ứng với các đối tác lớn</li>
+                            <li>📄 Quy hoạch phát triển 5 năm</li>
+                        </ul>
+                        <a href="#contact" class="download-btn factory-btn factory-btn-primary">Tải Hồ Sơ Đầy Đủ</a>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Thành Viên -->
-        <section id="members" class="info-section">
-            <h2>👥 Về Các Thành Viên</h2>
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3>Ban Quản Lý</h3>
-                    <ul>
-                        <li><strong>Giám đốc:</strong> Hoàng Tuấn Anh </li>
-                        <li><strong>Trưởng Nhân sự:</strong> Lâm Nhật Linh</li>
-                        <li><strong>Kế Toán:</strong> Trần Khánh Huyền </li>
-                    </ul>
-                </div>
-                <div class="info-card">
-                    <h3>Thành Viên Hợp Tác</h3>
-                    <p>150+ hộ nông dân cam kết sản xuất theo tiêu chuẩn hữu cơ, tuân thủ quy tắc ứng xử của HTX và phát triển bền vững.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sản Phẩm -->
-        <section id="products" class="products-section">
-            <h2>🛍️ Sản Phẩm & Dịch Vụ</h2>
-            <p class="section-subtitle">Các mặt hàng chính</p>
-            
-            <!-- Product Introduction Grid -->
-            <div class="product-intro-grid">
-                <div class="intro-card intro-card-text" style="background: linear-gradient(135deg, #06532A 0%, #83A656 100%);">
-                    <h3>Rau Sạch</h3>
-                    <p>Fresh & Organic</p>
-                </div>
-                <div class="intro-card intro-card-image">
-                    <img src="assets/img/cai-thao.png" alt="Rau xanh tươi">
-                </div>
-                <div class="intro-card intro-card-text" style="background: linear-gradient(135deg, #FFD54E 0%, #FAA519 100%);">
-                    <h3>Mỗi Ngày</h3>
-                    <p>Every Day</p>
-                </div>
-                <div class="intro-card intro-card-image">
-                    <img src="assets/img/Ca Chua.jpg" alt="Cà chua tươi">
-                </div>
-                <div class="intro-card intro-card-text" style="background: linear-gradient(135deg, #E44D32 0%, #AD1E26 100%);">
-                    <h3>Ưu Đãi</h3>
-                    <p>Great Deals</p>
-                </div>
-                <div class="intro-card intro-card-image">
-                    <img src="assets/img/ot chuong.png" alt="Ớt chuông">
-                </div>
+    <!-- ==================== SẢN PHẨM ==================== -->
+    
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="factory-container">
+            <div class="section-header">
+                <span class="section-subtitle">SẢN PHẨM CỦA CHÚNG TÔI</span>
+                <h2 class="section-title">🛍️ SẢN PHẨM & DỊCH VỤ</h2>
+                <p class="section-description">Các mặt hàng chính từ cao nguyên Đà Lạt</p>
             </div>
             
-            <div class="search-box">
-                <input type="text" placeholder="Tìm kiếm sản phẩm...">
-                <button>Tìm Kiếm</button>
-            </div>
-
-            <!-- Rau Xanh -->
+          
+            
+            <!-- Rau Xanh Tươi -->
             <h3 class="product-category">🥬 Rau Xanh Tươi</h3>
             <div class="products-grid">
                 <div class="product-item">
+                    <span class="product-badge">VIỆT NAM</span>
                     <img src="assets/img/HanhNgo.jpg" alt="Hành Ngò Đà Lạt" class="product-img">
-                    <h4>Hành Ngò Đà Lạt</h4>
-                    <div class="product-footer">
-                        <span class="price">10.000đ/kg</span>
-                        <button class="add-btn" onclick="event.stopPropagation();">+ Giỏ</button>
+                    <div class="product-info">
+                        <div class="product-supplier">KHÁC</div>
+                        <h4>Ngò rí Vietgap Trường Phát 30 g</h4>
+                        <div class="price">10.000đ</div>
+                        <div class="product-rating">
+                            <span class="stars">☆☆☆☆☆</span>
+                            <span>0 đánh giá</span>
+                        </div>
                     </div>
-                    <button class="detail-btn" onclick="openProductDetail('hanhngo')">Xem Chi Tiết</button>
-                </div>
-                <div class="product-item">
-                    <img src="assets/img/Bắp cải.jpg" alt="Bắp Cải Đà Lạt" class="product-img">
-                    <h4>Bắp cải Đà Lạt</h4>
                     <div class="product-footer">
-                        <span class="price">5000đ/500g</span>
-                        <button class="add-btn">+ Giỏ</button>
-                    </div>
-                    <button class="detail-btn" onclick="openProductDetail('bapcai')">Xem Chi Tiết</button>
-                </div>
-                <div class="product-item" onclick="openProductDetail('caithao')" style="cursor: pointer;">
-                    <img src="assets/img/cai-thao.png" alt="Cải Thảo Đà Lạt" class="product-img">
-                    <h4>Cải thảo Đà Lạt </h4>
-                    <div class="product-footer">
-                        <span class="price">5.000đ</span>
-                        <button class="add-btn" onclick="event.stopPropagation();">+ Giỏ</button>
+                        <button class="add-btn">
+                            <span>🛒</span>
+                            THÊM VÀO GIỎ
+                        </button>
                     </div>
                 </div>
-                  <div class="product-item" onclick="openProductDetail('caithao')" style="cursor: pointer;">
-                    <img src="assets/img/cai-thao.png" alt="Cải Thảo Đà Lạt" class="product-img">
-                    <h4>Cải thảo Đà Lạt </h4>
-                    <div class="product-footer">
-                        <span class="price">5.000đ</span>
-                        <button class="add-btn" onclick="event.stopPropagation();">+ Giỏ</button>
-                    </div>
-                </div>
-                <div class="product-item" onclick="openProductDetail('otchuong')" style="cursor: pointer;">
-                    <img src="assets/img/ot chuong.png" alt="Ớt Chuông Đà Lạt" class="product-img">
-                    <h4>Ớt chuông Đà Lạt</h4>
-                    <div class="product-footer">
-                        <span class="price">10.000đ/500g</span>
-                        <button class="add-btn" onclick="event.stopPropagation();">+ Giỏ</button>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Promotion -->
-            <div class="promo-banner">
-                <h3>🎉 Khuyến Mãi Tuần Này</h3>
-                <p>Mua 2 rau xanh tặng 1 - Chỉ áp dụng đến hết tuần!</p>
-                <button class="promo-btn">Xem Chi Tiết</button>
+                <div class="product-item">
+                    <span class="product-badge">VIỆT NAM</span>
+                    <img src="assets/img/Bắp cải.jpg" alt="Bắp Cải Đà Lạt" class="product-img">
+                    <div class="product-info">
+                        <div class="product-supplier">VIETGAP</div>
+                        <h4>Bắp cải Đà Lạt</h4>
+                        <div class="price">8.000đ/kg</div>
+                        <div class="product-rating">
+                            <span class="stars">☆☆☆☆☆</span>
+                            <span>0 đánh giá</span>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <button class="add-btn">
+                            <span>🛒</span>
+                            THÊM VÀO GIỎ
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <span class="product-badge">VIỆT NAM</span>
+                    <img src="assets/img/cai-thao.png" alt="Cải Thảo Đà Lạt" class="product-img">
+                    <div class="product-info">
+                        <div class="product-supplier">VIETGAP</div>
+                        <h4>Cải thảo Đà Lạt</h4>
+                        <div class="price">7.000đ/kg</div>
+                        <div class="product-rating">
+                            <span class="stars">☆☆☆☆☆</span>
+                            <span>0 đánh giá</span>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <button class="add-btn">
+                            <span>🛒</span>
+                            THÊM VÀO GIỎ
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <span class="product-badge">VIỆT NAM</span>
+                    <img src="assets/img/ot chuong.png" alt="Ớt Chuông Đà Lạt" class="product-img">
+                    <div class="product-info">
+                        <div class="product-supplier">KHÁC</div>
+                        <h4>Ớt chuông Đà Lạt</h4>
+                        <div class="price">15.000đ/kg</div>
+                        <div class="product-rating">
+                            <span class="stars">☆☆☆☆☆</span>
+                            <span>0 đánh giá</span>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <button class="add-btn">
+                            <span>🛒</span>
+                            THÊM VÀO GIỎ
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <span class="product-badge">VIỆT NAM</span>
+                    <img src="assets/img/cai-thao.png" alt="Xà Lách" class="product-img">
+                    <div class="product-info">
+                        <div class="product-supplier">VIETGAP</div>
+                        <h4>Xà Lách Xoăn Tươi</h4>
+                        <div class="price">12.000đ/kg</div>
+                        <div class="product-rating">
+                            <span class="stars">☆☆☆☆☆</span>
+                            <span>0 đánh giá</span>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <button class="add-btn">
+                            <span>🛒</span>
+                            THÊM VÀO GIỎ
+                        </button>
+                    </div>
+                </div>
+
+            
             </div>
 
             <!-- Củ Quả -->
-            <h3 class="product-category">Củ Quả Đà Lạt – Tươi Ngon Chuẩn Vị Tự Nhiên</h3>
+            <h3 class="product-category">🥕 Củ Quả Đà Lạt – Tươi Ngon Chuẩn Vị Tự Nhiên</h3>
             <div class="products-grid">
                 <div class="product-item">
                     <img src="assets/img/Ca Rot.jpg" alt="Cà Rốt Đà Lạt" class="product-img">
-                    <h4>Cà Rốt</h4>
-                    <div class="product-footer">
-                        <span class="price">5.000đ/kg</span>
-                        <button class="add-btn">+ Giỏ</button>
-                    </div>
-                    <button class="detail-btn" onclick="openProductDetail('carot')">Xem Chi Tiết</button>
-                </div>
-                <div class="product-item">
-                    <img src="assets/img/Ca Rot.jpg" alt="Cà Rốt Đà Lạt" class="product-img">
-                    <h4>Cà Rốt</h4>
-                    <div class="product-footer">
-                        <span class="price">5.000đ/kg</span>
-                        <button class="add-btn">+ Giỏ</button>
-                    </div>
-                    <button class="detail-btn" onclick="openProductDetail('carot')">Xem Chi Tiết</button>
-                </div>
-                <div class="product-item">
-                    <img src="assets/img/khoai tay.jpg" alt="Khoai Tây Đà Lạt" class="product-img">
-                    <h4>Khoai Tây</h4>
-                    <div class="product-footer">
-                        <span class="price">15.000đ/kg</span>
-                        <button class="add-btn">+ Giỏ</button>
-                    </div>
-                    <button class="detail-btn" onclick="openProductDetail('khoaitay')">Xem Chi Tiết</button>
-                </div>
-                <div class="product-item">
-                    <img src="assets/img/616_cu_cai.png" alt="Củ cải Đà Lạt" class="product-img">
-                    <h4>Củ cải</h4>
-                    <div class="product-footer">
-                        <span class="price">5.000đ/kg</span>
-                        <button class="add-btn">+ Giỏ</button>
-                    </div>
-                    <button class="detail-btn" onclick="openProductDetail('cucai')">Xem Chi Tiết</button>
-                </div>
-                <div class="product-item">
-                    <img src="assets/img/khoai lang.jpg" alt="Khoai Lang Đà Lạt" class="product-img">
-                    <h4>Khoai Lang Đà Lạt</h4>
-                    <div class="product-footer">
-                        <span class="price">5.000đ/kg</span>
-                        <button class="add-btn">+ Giỏ</button>
-                    </div>
-                    <button class="detail-btn" onclick="openProductDetail('khoailang')">Xem Chi Tiết</button>
-                </div>
-            </div>
-
-            <!-- Nông Sản -->
-            <h3 class="product-category">🍅 Nông sản khác</h3>
-            <div class="products-grid">
-                <div class="product-item">
-                    <img src="assets/img/chanhday1.jpg" alt="Nước cốt chanh dây Đà Lạt" class="product-img">
-                    <h4>Nước cốt chanh dây Đà Lạt</h4>
-                    <div class="product-footer">
-                        <span class="price">15.000đ/lọ</span>
-                        <button class="add-btn">+ Giỏ</button>
-                    </div>
-                    <button class="detail-btn" onclick="openProductDetail('chanhday')">Xem Chi Tiết</button>
-                </div>
-                <div class="product-item">
-                     <img src="assets/img/tao xoan thang hoa.jpg" alt="Tảo xoăn thăng hoa" class="product-img">
-                    <h4>Tảo xoăn thăng hoa</h4>
-                    <div class="product-footer">
-                        <span class uclass="price">25.000đ/500g</span>
-                        <button class="add-btn">+ Giỏ</button>
-                    </div>
-                    <button class="detail-btn" onclick="openProductDetail('taoxoan')">Xem Chi Tiết</button>
-                </div>
-                <div class="product-item">
-                    <img src ="assets/img/tinh_gung_mat_ong.jpg" alt="Tinh gừng mật ong" class="product-img">
-                    <h4>Tinh gừng mật ong</h4>
-                    <div class="product-footer">
-                        <span class="price">100.000đ</span>
-                        <button class="add-btn">+ Giỏ</button>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <img src ="assets/img/nuoc cot rau tam.jpg" alt="Nước cốt rau tằm" class="product-img">
-                    <h4>Nước cốt rau tằm</h4>
-                    <div class="product-footer">
-                        <span class="price">100.000 đ</span>
-                        <button class="add-btn">+ Giỏ</button>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <img src="assets/img/Ca Chua.jpg" alt="Cà Chua Đà Lạt" class="product-img">
-                    <h4>Cà Chua Đà Lạt</h4>
+                    <h4>Cà Rốt Đà Lạt</h4>
                     <div class="product-footer">
                         <span class="price">8.000đ/kg</span>
                         <button class="add-btn">+ Giỏ</button>
                     </div>
                 </div>
+                <div class="product-item">
+                    <img src="assets/img/khoai tay.jpg" alt="Khoai Tây Đà Lạt" class="product-img">
+                    <h4>Khoai Tây Đà Lạt</h4>
+                    <div class="product-footer">
+                        <span class="price">15.000đ/kg</span>
+                        <button class="add-btn">+ Giỏ</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="assets/img/616_cu_cai.png" alt="Củ cải Đà Lạt" class="product-img">
+                    <h4>Củ Cải Trắng</h4>
+                    <div class="product-footer">
+                        <span class="price">7.000đ/kg</span>
+                        <button class="add-btn">+ Giỏ</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="assets/img/khoai lang.jpg" alt="Khoai Lang Đà Lạt" class="product-img">
+                    <h4>Khoai Lang Đà Lạt</h4>
+                    <div class="product-footer">
+                        <span class="price">12.000đ/kg</span>
+                        <button class="add-btn">+ Giỏ</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="assets/img/616_cu_cai.png" alt="Củ Dền" class="product-img">
+                    <h4>Củ Dền Đỏ</h4>
+                    <div class="product-footer">
+                        <span class="price">18.000đ/kg</span>
+                        <button class="add-btn">+ Giỏ</button>
+                    </div>
+                </div>
+                
                
             </div>
-        </section>
 
-        <!-- Dự Án -->
-        <section id="projects" class="info-section">
-            <h2>🏗️ Dự Án</h2>
-            <div class="projects-grid">
-                <div class="project-card" onclick="openProjectDetail('project1')" style="cursor: pointer;">
-                    <h4>Nâng Cao Chất Lượng Sản Phẩm</h4>
-                    <p><strong>2023 - 2024</strong></p>
-                    <p>Đạt chứng nhận hữu cơ quốc tế, mở rộng thị trường xuất khẩu.</p>
-                    <button class="detail-btn">Xem Chi Tiết</button>
+            <!-- Nông Sản Chế Biến Khác -->
+            <h3 class="product-category">🏭 Nông Sản Chế Biến & Sản Phẩm Khác</h3>
+            <div class="products-grid">
+                
+                <div class="product-item">
+                    <img src="assets/img/chanhday1.jpg" alt="Nước cốt chanh dây" class="product-img">
+                    <h4>Nước Cốt Chanh Dây</h4>
+                    <div class="product-footer">
+                        <span class="price">15.000đ/chai</span>
+                        <button class="add-btn">+ Giỏ</button>
+                    </div>
                 </div>
-                <div class="project-card" onclick="openProjectDetail('project2')" style="cursor: pointer;">
-                    <h4>Xây Dựng Kho Lạnh</h4>
-                    <p><strong>2024 - 2025</strong></p>
-                    <p>Hệ thống kho lạnh hiện đại, bảo quản sản phẩm chất lượng cao.</p>
-                    <button class="detail-btn">Xem Chi Tiết</button>
+                <div class="product-item">
+                     <img src="assets/img/tao xoan thang hoa.jpg" alt="Tảo xoăn" class="product-img">
+                    <h4>Tảo Xoăn Thăng Hoa</h4>
+                    <div class="product-footer">
+                        <span class="price">25.000đ/500g</span>
+                        <button class="add-btn">+ Giỏ</button>
+                    </div>
                 </div>
-                <div class="project-card" onclick="openProjectDetail('project3')" style="cursor: pointer;">
-                    <h4>Phát Triển Bền Vững</h4>
-                    <p><strong>2025 - 2026</strong></p>
-                    <p>Bảo vệ môi trường, nông nghiệp bền vững cho thành viên HTX.</p>
-                    <button class="detail-btn">Xem Chi Tiết</button>
+                <div class="product-item">
+                    <img src="assets/img/tinh_gung_mat_ong.jpg" alt="Tinh gừng mật ong" class="product-img">
+                    <h4>Tinh Gừng Mật Ong</h4>
+                    <div class="product-footer">
+                        <span class="price">100.000đ/hộp</span>
+                        <button class="add-btn">+ Giỏ</button>
+                    </div>
                 </div>
+                <div class="product-item">
+                    <img src="assets/img/nuoc cot rau tam.jpg" alt="Nước cốt rau tằm" class="product-img">
+                    <h4>Nước Cốt Rau Tằm</h4>
+                    <div class="product-footer">
+                        <span class="price">100.000đ/chai</span>
+                        <button class="add-btn">+ Giỏ</button>
+                    </div>
+                </div>
+            
+                <div class="product-item">
+                    <img src="assets/img/tao xoan thang hoa.jpg" alt="Mật Ong Rừng" class="product-img">
+                    <h4>Mật Ong Rừng Nguyên Chất</h4>
+                    <div class="product-footer">
+                        <span class="price">150.000đ/kg</span>
+                        <button class="add-btn">+ Giỏ</button>
+                    </div>
+                </div>
+             
             </div>
-        </section>
-
-        <!-- Hoạt Động Cộng Đồng -->
-        <section id="community" class="info-section">
-            <h2>🤝 Hoạt Động Cộng Đồng</h2>
-            <div class="news-grid">
-                <div class="news-card" onclick="openCommunityDetail('1')" style="cursor: pointer;">
-                    <div class="news-image">
-                        <img src="assets/img/community1.jpg" alt="Chương trình đào tạo" onerror="this.style.display='none'">
-                    </div>
-                    <div class="news-content">
-                        <h4>📚 Chương Trình Đào Tạo Nông Dân</h4>
-                        <p class="date">01/12/2025</p>
-                        <p class="news-desc">Tổ chức khóa đào tạo miễn phí về kỹ thuật trồng trọt hữu cơ, quản lý cây trồng và bảo vệ môi trường cho hơn 100 nông dân địa phương.</p>
-                        <button class="detail-btn">Xem Chi Tiết</button>
-                    </div>
-                </div>
-                <div class="news-card" onclick="openCommunityDetail('2')" style="cursor: pointer;">
-                    <div class="news-image">
-                        <img src="assets/img/community2.jpg" alt="Hoạt động từ thiện" onerror="this.style.display='none'">
-                    </div>
-                    <div class="news-content">
-                        <h4>❤️ Trao Tặng Rau Sạch Cho Cộng Đồng</h4>
-                        <p class="date">20/11/2025</p>
-                        <p class="news-desc">Chương trình trao tặng 500kg rau củ quả sạch cho trung tâm bảo trợ xã hội, bệnh viện và các gia đình có hoàn cảnh khó khăn.</p>
-                        <button class="detail-btn">Xem Chi Tiết</button>
-                    </div>
-                </div>
-                <div class="news-card" onclick="openCommunityDetail('3')" style="cursor: pointer;">
-                    <div class="news-image">
-                        <img src="assets/img/community3.jpg" alt="Ngày hội nông dân" onerror="this.style.display='none'">
-                    </div>
-                    <div class="news-content">
-                        <h4>🎉 Ngày Hội Nông Dân Vui Khỏe</h4>
-                        <p class="date">10/11/2025</p>
-                        <p class="news-desc">Tổ chức ngày hội giao lưu, thi đua sản xuất và các hoạt động vui chơi giải trí nhằm gắn kết cộng đồng nông dân HTX.</p>
-                        <button class="detail-btn">Xem Chi Tiết</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tin Tức & Sự Kiện -->
-        <section id="news" class="info-section">
-            <h2>📰 Tin Tức & Sự Kiện</h2>
-            <div class="news-grid">
-                <div class="news-card" onclick="openNewsDetail('1')" style="cursor: pointer;">
-                    <div class="news-image">
-                        <img src="assets/img/news1.jpg" alt="Chứng nhận hữu cơ" onerror="this.style.display='none'">
-                    </div>
-                    <div class="news-content">
-                        <h4>HTX Đạt Chứng Nhận Hữu Cơ Quốc Tế</h4>
-                        <p class="date">02/12/2025</p>
-                        <p class="news-desc">Hợp Tác Xã Nông Sản Tươi Ngon nhận được chứng nhận hữu cơ từ tổ chức quốc tế.</p>
-                        <button class="detail-btn">Xem Chi Tiết</button>
-                    </div>
-                </div>
-                <div class="news-card" onclick="openNewsDetail('2')" style="cursor: pointer;">
-                    <div class="news-image">
-                        <img src="assets/img/news2.jpg" alt="Thị trường nông sản" onerror="this.style.display='none'">
-                    </div>
-                    <div class="news-content">
-                        <h4>Khai Mạc Thị Trường Nông Sản Sạch</h4>
-                        <p class="date">25/11/2025</p>
-                        <p class="news-desc">Thị trường nông sản sạch hàng tuần tại Thanh Hóa được khai mạc thành công.</p>
-                        <button class="detail-btn">Xem Chi Tiết</button>
-                    </div>
-                </div>
-                <div class="news-card" onclick="openNewsDetail('3')" style="cursor: pointer;">
-                    <div class="news-image">
-                        <img src="assets/img/news3.jpg" alt="Hội thảo nông nghiệp" onerror="this.style.display='none'">
-                    </div>
-                    <div class="news-content">
-                        <h4>Hội Thảo: Nông Nghiệp Bền Vững</h4>
-                        <p class="date">15/11/2025</p>
-                        <p class="news-desc">HTX tổ chức hội thảo về phát triển nông nghiệp bền vững với các chuyên gia.</p>
-                        <button class="detail-btn">Xem Chi Tiết</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         </div>
-    </div> <!-- End content-wrapper-grid -->
+    </section>
+
+    <!-- ==================== LIÊN HỆ ==================== -->
+    
+    <!-- Contact Section -->
+    <section class="factory-contact" id="contact">
+        <div class="factory-container">
+            <div class="section-header">
+                <span class="section-subtitle">LIÊN HỆ VỚI CHÚNG TÔI</span>
+                <h2 class="section-title">HÃY KẾT NỐI<br>VỚI CHÚNG TÔI</h2>
+                <p class="section-description">Chúng tôi luôn sẵn sàng hỗ trợ và tư vấn cho bạn</p>
+            </div>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Địa Chỉ</h3>
+                            <p>1A Bùi Thị Xuân, Phường Xuân Hương<br>Đà Lạt, Lâm Đồng, Việt Nam</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Điện Thoại</h3>
+                            <p>0767.333.379<br>Hỗ trợ 24/7</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>rogger.hoang@gmail.com<br>Phản hồi trong 24h</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form>
+                        <div class="form-row">
+                            <input type="text" placeholder="Họ và tên *" required>
+                            <input type="email" placeholder="Email *" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="tel" placeholder="Số điện thoại">
+                            <input type="text" placeholder="Chủ đề">
+                        </div>
+                        <textarea placeholder="Nội dung tin nhắn *" rows="5" required></textarea>
+                        <button type="submit" class="factory-btn factory-btn-primary">GỬI TIN NHẮN</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-col">
-                <h3>Về HTX</h3>
-                <p>Hợp Tác Xã Nông Sản chuyên cung cấp rau, củ, quả tươi ngon, sạch từ nông trại trực tiếp đến tay bạn.</p>
+                <h3>Về HTX Đại Ngàn</h3>
+                <p>Hợp Tác Xã Lâm Đồng Đại Ngàn chuyên cung cấp rau củ quả tươi ngon, sạch từ cao nguyên Đà Lạt. Cam kết chất lượng - An toàn - Bền vững.</p>
             </div>
             <div class="footer-col">
-                <h3>Danh Mục</h3>
+                <h3>Liên Kết Nhanh</h3>
                 <ul>
-                    <li><a href="#products">Rau Xanh</a></li>
-                    <li><a href="#products">Củ Quả</a></li>
-                    <li><a href="#products">Trái Cây</a></li>
-                    <li><a href="#news">Tin Tức</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Thông Tin</h3>
-                <ul>
+                    <li><a href="#home">Trang Chủ</a></li>
                     <li><a href="#capacity">Hồ Sơ Năng Lực</a></li>
-                    <li><a href="#members">Thành Viên</a></li>
-                    <li><a href="#projects">Dự Án</a></li>
-                    <li><a href="#community">Cộng Đồng</a></li>
+                    <li><a href="#investment">Đầu Tư</a></li>
+                    <li><a href="#products">Sản Phẩm</a></li>
                 </ul>
             </div>
-            <div class="footer-col" id="contact">
+            <div class="footer-col">
+                <h3>Sản Phẩm</h3>
+                <ul>
+                    <li><a href="#products">Rau Xanh Tươi</a></li>
+                    <li><a href="#products">Củ Quả</a></li>
+                    <li><a href="#products">Nông Sản Chế Biến</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
                 <h3>Liên Hệ</h3>
-                <p>📞 <strong>Điện thoại:</strong>0767333379</p>
-                <p>📧 <strong>Email:</strong>rogger.hoang@gmail.com</p>
-                <p>📍 <strong>Địa chỉ:</strong>1A Bùi Thị Xuân, Phường Xuân Hương - Đà Lạt</p>
+                <p>📞 <strong>Hotline:</strong> 0767.333.379</p>
+                <p>📧 <strong>Email:</strong> rogger.hoang@gmail.com</p>
+                <p>📍 <strong>Địa chỉ:</strong> 1A Bùi Thị Xuân, Xuân Hương, Đà Lạt, Lâm Đồng</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Hợp Tác Xã Nông Sản. Tất Cả Quyền Được Bảo Vệ.</p>
+            <p>&copy; 2025 HTX Lâm Đồng Đại Ngàn. Tất Cả Quyền Được Bảo Vệ.</p>
         </div>
     </footer>
 
@@ -655,96 +737,11 @@
         <a href="https://zalo.me/0767333379" target="_blank" class="social-icon zalo-icon" title="Chat Zalo">
             <img src="https://page.widget.zalo.me/static/images/2.0/Logo.svg" alt="Zalo">
         </a>
-        <a href="https://m.me/YOUR_FACEBOOK_PAGE" target="_blank" class="social-icon messenger-icon" title="Facebook Messenger">
-            <svg viewBox="0 0 24 24" fill="white" width="24" height="24">
-                <path d="M12,2C6.5,2,2,6.14,2,11.25C2,14.13,3.42,16.69,5.65,18.35V22L8.75,20.29C9.81,20.61,10.89,20.75,12,20.75C17.5,20.75,22,16.61,22,11.25C22,6.14,17.5,2,12,2M13.03,14.41L10.15,11.29L4.4,14.41L10.55,7.59L13.43,10.71L19.1,7.59L13.03,14.41Z"/>
-            </svg>
-        </a>
         <a href="tel:+84767333379" class="social-icon phone-icon" title="Gọi điện">
             <svg viewBox="0 0 24 24" fill="white" width="24" height="24">
                 <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/>
             </svg>
         </a>
-        <a href="https://www.tiktok.com/@YOUR_TIKTOK" target="_blank" class="social-icon tiktok-icon" title="TikTok">
-            <svg viewBox="0 0 24 24" fill="white" width="24" height="24">
-                <path d="M16.6,5.82C15.9,5.17,15.4,4.3,15.4,3.3H12.3V15.4C12.3,16.64,11.3,17.64,10.06,17.64C8.82,17.64,7.82,16.64,7.82,15.4C7.82,14.16,8.82,13.16,10.06,13.16C10.33,13.16,10.58,13.21,10.82,13.29V10.1C10.58,10.07,10.33,10.05,10.06,10.05C7.14,10.05,4.76,12.43,4.76,15.35C4.76,18.27,7.14,20.65,10.06,20.65C12.98,20.65,15.36,18.27,15.36,15.35V8.16C16.44,8.96,17.75,9.43,19.18,9.43V6.33C18.23,6.33,17.35,6.13,16.6,5.82Z"/>
-            </svg>
-        </a>
-    </div>
-
-    <!-- Product Detail Modal -->
-    <div id="productModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeProductDetail()">&times;</span>
-            <div class="modal-body">
-                <div class="modal-image">
-                    <img id="modalProductImg" src="" alt="">
-                </div>
-                <div class="modal-info">
-                    <h2 id="modalProductName"></h2>
-                    <p class="modal-price" id="modalProductPrice"></p>
-                    <div class="product-description">
-                        <h3>Mô tả sản phẩm</h3>
-                        <p id="modalProductDesc"></p>
-                    </div>
-                    <div class="product-features">
-                        <h3>Đặc điểm nổi bật</h3>
-                        <ul id="modalProductFeatures"></ul>
-                    </div>
-                    <div class="product-actions">
-                        <button class="add-to-cart-btn">Thêm vào giỏ hàng</button>
-                        <button class="buy-now-btn">Mua ngay</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- News Detail Modal -->
-    <div id="newsModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeNewsDetail()">&times;</span>
-            <div class="modal-body news-modal">
-                <h2 id="modalNewsTitle"></h2>
-                <p class="news-date" id="modalNewsDate"></p>
-                <img id="modalNewsImg" src="" alt="" class="news-modal-img">
-                <div class="news-content" id="modalNewsContent"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Product Detail Modal -->
-    <div id="productModal" class="modal">
-        <div class="modal-content product-modal-content">
-            <span class="close-modal" onclick="closeProductDetail()">&times;</span>
-            <div class="modal-body product-modal">
-                <div class="product-detail-grid">
-                    <div class="product-detail-image">
-                        <img id="modalProductImg" src="" alt="" class="product-modal-img">
-                    </div>
-                    <div class="product-detail-info">
-                        <h2 id="modalProductTitle"></h2>
-                        <p class="product-price-large" id="modalProductPrice"></p>
-                        <div class="product-rating">
-                            ⭐⭐⭐⭐⭐ <span>(5.0 - 150 đánh giá)</span>
-                        </div>
-                        <div class="product-description" id="modalProductDescription"></div>
-                        <div class="product-specs">
-                            <h3>Thông tin sản phẩm:</h3>
-                            <ul id="modalProductSpecs"></ul>
-                        </div>
-                        <div class="product-actions">
-                            <div class="quantity-selector">
-                                <button onclick="decreaseQuantity()">-</button>
-                                <input type="number" id="productQuantity" value="1" min="1">
-                                <button onclick="increaseQuantity()">+</button>
-                            </div>
-                            <button class="add-to-cart-btn" onclick="addToCart()">Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <!-- Scroll to Top Button -->
@@ -754,7 +751,8 @@
         </svg>
     </button>
 
-    <script src="assets/js/modals.js"></script>
+    <script src="assets/js/factory.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/modals.js"></script>
 </body>
 </html>
