@@ -81,7 +81,7 @@ a { color: inherit; text-decoration: none; }
 .top-header-content {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 20px; /* Giảm padding để sát mép hơn */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -93,6 +93,7 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   gap: 1rem;
   flex-shrink: 0;
+  margin-left: 0; /* Đảm bảo logo sát mép trái */
 }
 
 .logo-img {
@@ -113,6 +114,7 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  margin-right: 0; /* Đảm bảo language switcher sát mép phải */
 }
 
 .cart-icon {

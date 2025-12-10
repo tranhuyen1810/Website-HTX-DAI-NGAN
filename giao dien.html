@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTX Lâm Đồng Đại Ngàn - Nông Sản Sạch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/factory-style.css">
 </head>
 <body>
@@ -17,14 +20,7 @@
                         <!-- Empty or can add social icons -->
                     </div>
                     <div class="top-bar-right">
-                        <a href="tel:0767333379" class="top-contact">
-                            <span class="icon">📞</span>
-                            <span>0767.333.379</span>
-                        </a>
-                        <a href="mailto:rogger.hoang@gmail.com" class="top-contact">
-                            <span class="icon">📧</span>
-                            <span>Info@htxdaingan.com</span>
-                        </a>
+                        <!-- Language switcher moved to main nav -->
                     </div>
                 </div>
             </div>
@@ -35,17 +31,26 @@
             <div class="factory-container">
                 <div class="nav-content">
                     <div class="factory-logo">
-                        <img src="assets/img/logo.png" alt="HTX Logo" onerror="this.style.display='none'">
-                        <span>HTX ĐẠI NGÀN</span>
+                      
                     </div>
                     
                     <nav class="factory-nav">
                         <ul class="factory-menu">
-                            <li><a href="#home">TRANG CHỦ</a></li>
-                            <li><a href="#capacity">HỒ SƠ NĂNG LỰC</a></li>
-                            <li><a href="#investment">ĐẦU TƯ</a></li>
-                            <li><a href="#products">SẢN PHẨM</a></li>
-                            <li><a href="#contact">LIÊN HỆ</a></li>
+                            <li><a href="#home" data-translate="nav_home">TRANG CHỦ</a></li>
+                            <li><a href="#capacity" data-translate="nav_capacity">HỒ SƠ NĂNG LỰC</a></li>
+                            <li><a href="#partners" data-translate="nav_partners">MẠNG LƯỚI ĐỐI TÁC</a></li>
+                            <li><a href="#investment" data-translate="nav_investment">ĐẦU TƯ</a></li>
+                            <li><a href="#products" data-translate="nav_products">SẢN PHẨM</a></li>
+                            <li><a href="#news" data-translate="nav_news">TIN TỨC</a></li>
+                            <li><a href="#contact" data-translate="nav_contact">LIÊN HỆ</a></li>
+                            <li class="lang-switcher-nav">
+                                <button class="lang-btn-icon active" data-lang="vi" title="Tiếng Việt">
+                                    🇻🇳
+                                </button>
+                                <button class="lang-btn-icon" data-lang="en" title="English">
+                                    🇬🇧
+                                </button>
+                            </li>
                         </ul>
                     </nav>
                     
@@ -54,6 +59,14 @@
             </div>
             <!-- Red Triangle Shape -->
             <div class="nav-shape"></div>
+        </div>
+        
+        <!-- Ticker Banner - White Background -->
+        <div class="ticker-wrapper">
+            <div class="ticker">
+                <span class="ticker-text">🌱 HTX Lâm Đồng Đại Ngàn - Rau Củ Quả Sạch Đà Lạt - Chất Lượng - Uy Tín - Tận Tâm 🌱 Miễn phí giao hàng cho đơn trên 500.000đ 🌱 Cam kết 100% Tươi Ngon 🌱</span>
+                <span class="ticker-text">🌱 HTX Lâm Đồng Đại Ngàn - Rau Củ Quả Sạch Đà Lạt - Chất Lượng - Uy Tín - Tận Tâm 🌱 Miễn phí giao hàng cho đơn trên 500.000đ 🌱 Cam kết 100% Tươi Ngon 🌱</span>
+            </div>
         </div>
     </header>
 
@@ -85,7 +98,7 @@
             <div class="factory-about-wrapper">
                 <div class="factory-about-images">
                     <img src="assets/img/htx01.JPG" alt="HTX Đại Ngàn" class="about-image-main">
-                    <img src="assets/img/htx02.JPG" alt="Trang trại" class="about-image-float">
+                
                     <div class="about-experience-badge">
                         <span class="badge-years">10+</span>
                         <span class="badge-text">NĂM KINH<br>NGHIỆM</span>
@@ -113,33 +126,7 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="factory-stats">
-        <div class="factory-container stats-container">
-            <div class="stats-grid">
-                <div class="stat-box">
-                    <span class="stat-number" data-target="150">0</span>
-                    <span class="stat-label">Thành Viên HTX</span>
-                </div>
-                
-                <div class="stat-box">
-                    <span class="stat-number" data-target="500">0</span>
-                    <span class="stat-label">Hecta Canh Tác</span>
-                </div>
-                
-                <div class="stat-box">
-                    <span class="stat-number" data-target="5000">0</span>
-                    <span class="stat-label">Tấn Sản Lượng/Năm</span>
-                </div>
-                
-                <div class="stat-box">
-                    <span class="stat-number" data-target="100">0</span>
-                    <span class="stat-label">% Hữu Cơ</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
     <!-- Team Section - THÀNH VIÊN BAN LÃNH ĐẠO -->
     <section class="factory-team" id="team">
         <div class="factory-container">
@@ -195,6 +182,98 @@
         </div>
     </section>
 
+    <!-- ==================== MẠNG LƯỚI ĐỐI TÁC & THÀNH VIÊN HTX ==================== -->
+    
+    <!-- Partners Network Section -->
+    <section class="factory-partners" id="partners">
+        <div class="factory-container">
+            <div class="section-header">
+                <span class="section-subtitle" data-translate="partners_subtitle">ĐỐI TÁC & THÀNH VIÊN</span>
+                <h2 class="section-title" data-translate="partners_title">MẠNG LƯỚI ĐỐI TÁC<br>& THÀNH VIÊN HTX</h2>
+                <p class="section-description" data-translate="partners_desc">Hợp tác cùng phát triển - Cùng nhau tạo giá trị bền vững</p>
+            </div>
+            
+            <!-- Strategic Partners -->
+            <div class="partners-category">
+                <h3 class="category-title" data-translate="partners_strategic">🤝 Đối Tác Chiến Lược</h3>
+                <div class="partners-grid">
+                    <div class="partner-card">
+                        <div class="partner-logo">
+                            <img src="assets/img/partner-01.png" alt="Đối tác 1" onerror="this.parentElement.innerHTML='<div class=partner-placeholder>LOGO</div>'">
+                        </div>
+                        <h4>Tập đoàn Vingroup</h4>
+                        <p>Đối tác phân phối VinMart</p>
+                    </div>
+                    <div class="partner-card">
+                        <div class="partner-logo">
+                            <img src="assets/img/partner-02.png" alt="Đối tác 2" onerror="this.parentElement.innerHTML='<div class=partner-placeholder>LOGO</div>'">
+                        </div>
+                        <h4>Saigon Co.op</h4>
+                        <p>Chuỗi siêu thị Co.opmart</p>
+                    </div>
+                    <div class="partner-card">
+                        <div class="partner-logo">
+                            <img src="assets/img/partner-03.png" alt="Đối tác 3" onerror="this.parentElement.innerHTML='<div class=partner-placeholder>LOGO</div>'">
+                        </div>
+                        <h4>Big C Việt Nam</h4>
+                        <p>Nhà phân phối lớn</p>
+                    </div>
+                    <div class="partner-card">
+                        <div class="partner-logo">
+                            <img src="assets/img/partner-04.png" alt="Đối tác 4" onerror="this.parentElement.innerHTML='<div class=partner-placeholder>LOGO</div>'">
+                        </div>
+                        <h4>Lotte Mart</h4>
+                        <p>Đối tác xuất khẩu</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- HTX Members -->
+            <div class="partners-category">
+                <h3 class="category-title" data-translate="members_title">👨‍🌾 Thành Viên Hợp Tác Xã</h3>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-content">
+                            <span class="stat-num">150+</span>
+                            <span class="stat-text" data-translate="members_count">Thành viên</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">🌾</div>
+                        <div class="stat-content">
+                            <span class="stat-num">500+</span>
+                            <span class="stat-text" data-translate="members_land">Hecta canh tác</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">🏘️</div>
+                        <div class="stat-content">
+                            <span class="stat-num">25+</span>
+                            <span class="stat-text" data-translate="members_villages">Xã/Thôn tham gia</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="members-benefits">
+                    <h4 data-translate="members_benefits_title">Quyền Lợi Thành Viên HTX:</h4>
+                    <ul class="benefits-list">
+                        <li data-translate="benefit_1">✓ Hỗ trợ giống cây trồng chất lượng cao</li>
+                        <li data-translate="benefit_2">✓ Đào tạo kỹ thuật canh tác hữu cơ miễn phí</li>
+                        <li data-translate="benefit_3">✓ Thu mua sản phẩm với giá ổn định, hợp lý</li>
+                        <li data-translate="benefit_4">✓ Hỗ trợ vốn sản xuất lãi suất ưu đãi</li>
+                        <li data-translate="benefit_5">✓ Chia sẻ lợi nhuận cuối năm</li>
+                        <li data-translate="benefit_6">✓ Bảo hiểm nông nghiệp và hỗ trợ rủi ro</li>
+                    </ul>
+                    <a href="#contact" class="factory-btn factory-btn-primary">
+                        <span data-translate="join_htx">ĐĂNG KÝ THAM GIA HTX</span>
+                        <i class="arrow">→</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ==================== HỒ SƠ NĂNG LỰC ==================== -->
     
     <!-- Services Section -->
@@ -215,7 +294,7 @@
                 
                 <div class="service-box">
                     <div class="service-icon-wrapper">🏭</div>
-                    <h3>Chế Biến Sâu</h3>
+                    <h3>Nhà máy chế biến hiện đại</h3>
                     <p>Công nghệ chế biến hiện đại, giữ trọn dinh dưỡng và hương vị tự nhiên</p>
                 </div>
                 
@@ -229,6 +308,41 @@
                     <div class="service-icon-wrapper">🔍</div>
                     <h3>Truy Xuất Nguồn Gốc</h3>
                     <p>100% sản phẩm có tem truy xuất nguồn gốc rõ ràng, minh bạch</p>
+                </div>
+            </div>
+            
+            <!-- Hồ Sơ Năng Lực Chứng Minh -->
+            <div class="capacity-credentials">
+                <h3>Hồ Sơ Năng Lực Chứng Minh</h3>
+                <div class="credentials-grid">
+                    <div class="credential-item">
+                        <div class="credential-number">500+</div>
+                        <div class="credential-label">Hecta canh tác</div>
+                    </div>
+                    <div class="credential-item">
+                        <div class="credential-number">5000+</div>
+                        <div class="credential-label">Tấn sản lượng/năm</div>
+                    </div>
+                    <div class="credential-item">
+                        <div class="credential-number">150+</div>
+                        <div class="credential-label">Thành viên HTX</div>
+                    </div>
+                    <div class="credential-item">
+                        <div class="credential-number">100%</div>
+                        <div class="credential-label">Hữu cơ & An toàn</div>
+                    </div>
+                </div>
+                
+                <div class="credentials-documents">
+                    <p><strong>Tài liệu minh chứng:</strong></p>
+                    <ul>
+                        <li>📄 Giấy phép kinh doanh HTX</li>
+                        <li>📄 Chứng nhận VietGAP & Hữu cơ quốc tế</li>
+                        <li>📄 Báo cáo tài chính 3 năm gần nhất</li>
+                        <li>📄 Hợp đồng cung ứng với các đối tác lớn</li>
+                        <li>📄 Quy hoạch phát triển 5 năm</li>
+                    </ul>
+                    <a href="#contact" class="download-btn factory-btn factory-btn-primary">Tải Hồ Sơ Đầy Đủ</a>
                 </div>
             </div>
         </div>
@@ -361,40 +475,6 @@
                             </ul>
                             <a href="#contact" class="package-btn">Liên Hệ Riêng</a>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="investment-credentials">
-                    <h3>Hồ Sơ Năng Lực Chứng Minh</h3>
-                    <div class="credentials-grid">
-                        <div class="credential-item">
-                            <div class="credential-number">500+</div>
-                            <div class="credential-label">Hecta canh tác</div>
-                        </div>
-                        <div class="credential-item">
-                            <div class="credential-number">5000+</div>
-                            <div class="credential-label">Tấn sản lượng/năm</div>
-                        </div>
-                        <div class="credential-item">
-                            <div class="credential-number">150+</div>
-                            <div class="credential-label">Thành viên HTX</div>
-                        </div>
-                        <div class="credential-item">
-                            <div class="credential-number">100%</div>
-                            <div class="credential-label">Hữu cơ & An toàn</div>
-                        </div>
-                    </div>
-                    
-                    <div class="credentials-documents">
-                        <p><strong>Tài liệu minh chứng:</strong></p>
-                        <ul>
-                            <li>📄 Giấy phép kinh doanh HTX</li>
-                            <li>📄 Chứng nhận VietGAP & Hữu cơ quốc tế</li>
-                            <li>📄 Báo cáo tài chính 3 năm gần nhất</li>
-                            <li>📄 Hợp đồng cung ứng với các đối tác lớn</li>
-                            <li>📄 Quy hoạch phát triển 5 năm</li>
-                        </ul>
-                        <a href="#contact" class="download-btn factory-btn factory-btn-primary">Tải Hồ Sơ Đầy Đủ</a>
                     </div>
                 </div>
             </div>
@@ -617,6 +697,89 @@
         </div>
     </section>
 
+    <!-- ==================== TIN TỨC ==================== -->
+    
+    <!-- News Section -->
+    <section class="factory-news" id="news">
+        <div class="factory-container">
+            <div class="section-header">
+                <span class="section-subtitle" data-translate="news_subtitle">CẬP NHẬT MỚI NHẤT</span>
+                <h2 class="section-title" data-translate="news_title">TIN TỨC & SỰ KIỆN</h2>
+                <p class="section-description" data-translate="news_desc">Những thông tin mới nhất về HTX và ngành nông nghiệp</p>
+            </div>
+            
+            <div class="news-grid">
+                <div class="news-card featured">
+                    <div class="news-image">
+                        <img src="assets/img/news-01.jpg" alt="Tin tức 1" onerror="this.src='assets/img/htx01.JPG'">
+                        <span class="news-badge" data-translate="news_hot">MỚI NHẤT</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">📅 10/12/2025</span>
+                            <span class="news-category" data-translate="cat_event">Sự kiện</span>
+                        </div>
+                        <h3 data-translate="news1_title">HTX Đại Ngàn đạt chứng nhận VietGAP năm 2025</h3>
+                        <p data-translate="news1_desc">Sau quá trình kiểm định nghiêm ngặt, HTX chính thức được cấp chứng nhận VietGAP cho toàn bộ vùng canh tác 500 hecta...</p>
+                        <a href="#" class="news-link" data-translate="read_more">Đọc thêm →</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="assets/img/news-02.jpg" alt="Tin tức 2" onerror="this.src='assets/img/htx02.JPG'">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">📅 05/12/2025</span>
+                            <span class="news-category" data-translate="cat_invest">Đầu tư</span>
+                        </div>
+                        <h3 data-translate="news2_title">Khai trương nhà máy chế biến rau củ hiện đại</h3>
+                        <p data-translate="news2_desc">Nhà máy với công suất 50 tấn/ngày chính thức đi vào hoạt động, tạo việc làm cho 100 lao động địa phương...</p>
+                        <a href="#" class="news-link" data-translate="read_more">Đọc thêm →</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="assets/img/news-03.jpg" alt="Tin tức 3" onerror="this.src='assets/img/HTX03.JPG'">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">📅 01/12/2025</span>
+                            <span class="news-category" data-translate="cat_training">Đào tạo</span>
+                        </div>
+                        <h3 data-translate="news3_title">Hội thảo kỹ thuật canh tác hữu cơ cho thành viên</h3>
+                        <p data-translate="news3_desc">Chương trình đào tạo thu hút hơn 80 nông dân tham gia, học cách sản xuất rau củ an toàn theo tiêu chuẩn quốc tế...</p>
+                        <a href="#" class="news-link" data-translate="read_more">Đọc thêm →</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="assets/img/news-04.jpg" alt="Tin tức 4" onerror="this.src='assets/img/HTX05.JPG'">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">📅 25/11/2025</span>
+                            <span class="news-category" data-translate="cat_partner">Đối tác</span>
+                        </div>
+                        <h3 data-translate="news4_title">Ký kết hợp đồng cung ứng với VinMart</h3>
+                        <p data-translate="news4_desc">HTX Đại Ngàn trở thành nhà cung cấp chính thức cho hệ thống VinMart trên toàn quốc với khối lượng 100 tấn/tháng...</p>
+                        <a href="#" class="news-link" data-translate="read_more">Đọc thêm →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="news-pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">→</button>
+            </div>
+        </div>
+    </section>
+
     <!-- ==================== LIÊN HỆ ==================== -->
     
     <!-- Contact Section -->
@@ -675,46 +838,76 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-col">
-                <h3>Về HTX Đại Ngàn</h3>
-                <p>Hợp Tác Xã Lâm Đồng Đại Ngàn chuyên cung cấp rau củ quả tươi ngon, sạch từ cao nguyên Đà Lạt. Cam kết chất lượng - An toàn - Bền vững.</p>
-            </div>
-            <div class="footer-col">
-                <h3>Liên Kết Nhanh</h3>
-                <ul>
-                    <li><a href="#home">Trang Chủ</a></li>
-                    <li><a href="#capacity">Hồ Sơ Năng Lực</a></li>
-                    <li><a href="#investment">Đầu Tư</a></li>
-                    <li><a href="#products">Sản Phẩm</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Sản Phẩm</h3>
-                <ul>
-                    <li><a href="#products">Rau Xanh Tươi</a></li>
-                    <li><a href="#products">Củ Quả</a></li>
-                    <li><a href="#products">Nông Sản Chế Biến</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Liên Hệ</h3>
-                <p>📞 <strong>Hotline:</strong> 0767.333.379</p>
-                <p>📧 <strong>Email:</strong> rogger.hoang@gmail.com</p>
-                <p>📍 <strong>Địa chỉ:</strong> 1A Bùi Thị Xuân, Xuân Hương, Đà Lạt, Lâm Đồng</p>
+        <div class="factory-container">
+            <div class="footer-content">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <img src="assets/img/1.png" alt="HTX Logo" onerror="this.style.display='none'">
+                    </div>
+                    <h3>HỢP TÁC XÃ LÂM ĐỒNG ĐẠI NGÀN</h3>
+                    <p>Hợp Tác Xã Lâm Đồng Đại Ngàn chuyên cung cấp rau củ quả tươi ngon, sạch từ cao nguyên Đà Lạt. Cam kết chất lượng - An toàn - Bền vững.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                        <a href="https://zalo.me/0767333379" class="social-link" title="Zalo"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.477 2 2 6.477 2 12c0 5.523 4.477 10 10 10s10-4.477 10-10c0-5.523-4.477-10-10-10zm4.95 13.95l-1.414 1.414L12 13.828l-3.536 3.536-1.414-1.414L10.586 12 7.05 8.464l1.414-1.414L12 10.586l3.536-3.536 1.414 1.414L13.414 12l3.536 3.536z"/></svg></a>
+                        <a href="#" class="social-link" title="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Liên Kết Nhanh</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Trang Chủ</a></li>
+                        <li><a href="#capacity">Hồ Sơ Năng Lực</a></li>
+                        <li><a href="#partners">Mạng Lưới Đối Tác</a></li>
+                        <li><a href="#investment">Đầu Tư</a></li>
+                        <li><a href="#products">Sản Phẩm</a></li>
+                        <li><a href="#news">Tin Tức</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Liên Hệ</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            <span>1A Bùi Thị Xuân, Xuân Hương, Đà Lạt, Lâm Đồng</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                            <span>0767.333.379</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            <span>rogger.hoang@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
+        
         <div class="footer-bottom">
-            <p>&copy; 2025 HTX Lâm Đồng Đại Ngàn. Tất Cả Quyền Được Bảo Vệ.</p>
+            <div class="factory-container">
+                <p>&copy; 2025 HTX Lâm Đồng Đại Ngàn. Tất Cả Quyền Được Bảo Vệ.</p>
+            </div>
         </div>
     </footer>
 
     <!-- Floating Social Icons -->
     <div class="floating-social">
-        <a href="https://zalo.me/0767333379" target="_blank" class="social-icon zalo-icon" title="Chat Zalo">
+        <a href="https://zalo.me/0767333379" target="_blank" class="social-icon zalo-icon shake" title="Chat Zalo">
             <img src="https://page.widget.zalo.me/static/images/2.0/Logo.svg" alt="Zalo">
         </a>
-        <a href="tel:+84767333379" class="social-icon phone-icon" title="Gọi điện">
+        <a href="#" target="_blank" class="social-icon facebook-icon shake" title="Facebook">
+            <svg viewBox="0 0 24 24" fill="white" width="24" height="24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+        </a>
+        <a href="#" target="_blank" class="social-icon tiktok-icon shake" title="TikTok">
+            <svg viewBox="0 0 24 24" fill="white" width="24" height="24">
+                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+            </svg>
+        </a>
+        <a href="tel:+84767333379" class="social-icon phone-icon shake" title="Gọi điện">
             <svg viewBox="0 0 24 24" fill="white" width="24" height="24">
                 <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/>
             </svg>
@@ -731,5 +924,6 @@
     <script src="assets/js/factory.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/modals.js"></script>
+    <script src="assets/js/translate.js"></script>
 </body>
 </html>

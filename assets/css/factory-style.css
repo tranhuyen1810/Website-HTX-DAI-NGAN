@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    font-family: 'Inter', 'Poppins', 'Segoe UI', 'Roboto', Arial, sans-serif;
     color: #333;
     background: #fff;
     line-height: 1.6;
@@ -198,7 +198,7 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    height: 90%;
+    height: 95%;
 }
 
 .factory-hero-slide {
@@ -1550,4 +1550,774 @@ img {
     font-size: 0.75rem;
     padding: 8px 12px;
   }
+}
+
+/* ============================================
+   LANGUAGE SWITCHER
+   ============================================ */
+.language-switcher {
+    display: flex;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.lang-btn.active {
+    background: #AD1E26;
+    box-shadow: 0 2px 8px rgba(173, 30, 38, 0.3);
+}
+
+.lang-btn .flag-icon {
+    font-size: 16px;
+}
+
+/* ============================================
+   PARTNERS & MEMBERS SECTION
+   ============================================ */
+.factory-partners {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.partners-category {
+    margin-top: 60px;
+}
+
+.category-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #AD1E26;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Partners Grid */
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.partner-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(173, 30, 38, 0.2);
+}
+
+.partner-logo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.partner-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.partner-placeholder {
+    font-size: 2rem;
+    color: #ccc;
+    font-weight: bold;
+}
+
+.partner-card h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.partner-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Members Stats Row */
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.stat-icon {
+    font-size: 3rem;
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-num {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #AD1E26;
+    line-height: 1;
+}
+
+.stat-text {
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Members Benefits */
+.members-benefits {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-top: 40px;
+}
+
+.members-benefits h4 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.benefits-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.benefits-list li {
+    padding: 12px 0;
+    font-size: 1.05rem;
+    color: #555;
+    border-bottom: 1px solid #eee;
+}
+
+.benefits-list li:last-child {
+    border-bottom: none;
+}
+
+/* ============================================
+   NEWS SECTION
+   ============================================ */
+.factory-news {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.news-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.news-card.featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.news-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.news-card.featured .news-image {
+    height: 100%;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-image img {
+    transform: scale(1.1);
+}
+
+.news-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #AD1E26;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.news-content {
+    padding: 25px;
+}
+
+.news-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.news-category {
+    background: #f0f0f0;
+    padding: 3px 10px;
+    border-radius: 12px;
+    color: #666;
+}
+
+.news-content h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.news-content p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.news-link {
+    color: #AD1E26;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.news-link:hover {
+    color: #8B1820;
+    transform: translateX(5px);
+}
+
+/* News Pagination */
+.news-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.page-btn {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ddd;
+    background: #fff;
+    color: #666;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.page-btn:hover,
+.page-btn.active {
+    background: #AD1E26;
+    border-color: #AD1E26;
+    color: #fff;
+}
+
+/* ============================================
+   RESPONSIVE - PARTNERS & NEWS
+   ============================================ */
+@media (max-width: 768px) {
+    .language-switcher {
+        gap: 3px;
+        padding: 3px;
+    }
+    
+    .lang-btn {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    
+    .lang-btn .flag-icon {
+        font-size: 14px;
+    }
+    
+    .partners-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .stats-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .members-benefits {
+        padding: 25px;
+    }
+    
+    .news-card.featured {
+        grid-template-columns: 1fr;
+    }
+    
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .category-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* ============================================
+   TICKER BANNER - Running Text
+   ============================================ */
+.ticker-wrapper {
+    background: #fff;
+    border-bottom: 2px solid #AD1E26;
+    overflow: hidden;
+    padding: 12px 0;
+    position: relative;
+}
+
+.ticker {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll 30s linear infinite;
+}
+
+.ticker-text {
+    display: inline-block;
+    padding-right: 100px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #AD1E26;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ============================================
+   LANGUAGE SWITCHER ON NAV - Icon Style
+   ============================================ */
+.lang-switcher-nav {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.lang-btn-icon {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.lang-btn-icon:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.1);
+}
+
+.lang-btn-icon.active {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.15);
+}
+
+/* ============================================
+   CAPACITY CREDENTIALS IN CAPACITY SECTION
+   ============================================ */
+.capacity-credentials {
+    margin-top: 60px;
+    background: linear-gradient(135deg, #AD1E26 0%, #8B1820 100%);
+    padding: 50px 40px;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.capacity-credentials h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.capacity-credentials .credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.capacity-credentials .credential-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.capacity-credentials .credential-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.capacity-credentials .credential-label {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.capacity-credentials .credentials-documents {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.capacity-credentials .credentials-documents p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.capacity-credentials .credentials-documents ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.capacity-credentials .credentials-documents li {
+    padding: 10px 0;
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.capacity-credentials .credentials-documents li:last-child {
+    border-bottom: none;
+}
+
+.capacity-credentials .download-btn {
+    background: #fff;
+    color: #AD1E26;
+    margin-top: 20px;
+}
+
+.capacity-credentials .download-btn:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   IMPROVED FOOTER - Professional Style
+   ============================================ */
+.footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+    color: #fff;
+    padding: 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding: 60px 0 40px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.footer-about .footer-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.footer-about .footer-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer-about p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-social .social-link {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.footer-social .social-link:hover {
+    background: #AD1E26;
+    transform: translateY(-3px);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+
+.footer-contact {
+    list-style: none;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+.footer-contact svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ============================================
+   FLOATING SOCIAL ICONS - Shake Animation
+   ============================================ */
+.floating-social {
+    position: fixed;
+    left: 20px;
+    bottom: 100px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.social-icon.shake {
+    animation: shake 2s ease-in-out infinite;
+}
+
+.social-icon:hover {
+    transform: scale(1.15);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.zalo-icon {
+    background: #0068FF;
+    padding: 8px;
+}
+
+.zalo-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.facebook-icon {
+    background: #1877F2;
+}
+
+.tiktok-icon {
+    background: #000;
+}
+
+.phone-icon {
+    background: #25D366;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+/* ============================================
+   RESPONSIVE - Updated
+   ============================================ */
+@media (max-width: 768px) {
+    .ticker-wrapper {
+        padding: 8px 0;
+    }
+    
+    .ticker-text {
+        font-size: 0.85rem;
+        padding-right: 50px;
+    }
+    
+    .lang-switcher-nav {
+        margin-left: 10px;
+    }
+    
+    .lang-btn-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+    
+    .capacity-credentials {
+        padding: 30px 20px;
+    }
+    
+    .capacity-credentials h3 {
+        font-size: 1.5rem;
+    }
+    
+    .capacity-credentials .credentials-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .capacity-credentials .credential-number {
+        font-size: 2rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 0 30px;
+    }
+    
+    .floating-social {
+        left: 10px;
+        bottom: 80px;
+    }
+    
+    .social-icon {
+        width: 45px;
+        height: 45px;
+    }
 }
