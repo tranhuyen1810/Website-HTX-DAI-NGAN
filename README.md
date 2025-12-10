@@ -1,2 +1,2 @@
-# Website-HTX-DAI-NGAN
-Website thu
+# Website-Hợp tác xã-DAI-NGAN
+Lam Dong Dai Ngan Cooperative is a clean agricultural production and distribution unit based in Lam Dong Province, specializing in fresh vegetables, specialty highland products, and sustainable agricultural supply chains. The cooperative was established with the mission of connecting farmers, businesses, and consumers while building a high-quality agricultural brand for Lam Dong.
