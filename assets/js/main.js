@@ -1,5 +1,74 @@
 // Basic animation helpers: reveal product cards on scroll and smooth scroll for CTAs
 document.addEventListener('DOMContentLoaded', function(){
+  // === DROPDOWN MENU NAVIGATION ===
+  const dropdownItems = document.querySelectorAll('.dropdown');
+  const dropdownSubmenus = document.querySelectorAll('.dropdown-submenu');
+  
+  // Handle mobile click for dropdown
+  if (window.innerWidth <= 992) {
+    dropdownItems.forEach(item => {
+      const link = item.querySelector('a');
+      link.addEventListener('click', function(e) {
+        if (this.nextElementSibling && this.nextElementSibling.classList.contains('dropdown-menu')) {
+          e.preventDefault();
+          item.classList.toggle('open');
+          const menu = this.nextElementSibling;
+          if (menu.style.display === 'block') {
+            menu.style.display = 'none';
+          } else {
+            menu.style.display = 'block';
+          }
+        }
+      });
+    });
+    
+    dropdownSubmenus.forEach(item => {
+      const link = item.querySelector('a');
+      link.addEventListener('click', function(e) {
+        if (this.nextElementSibling && this.nextElementSibling.classList.contains('submenu-level-2')) {
+          e.preventDefault();
+          item.classList.toggle('open');
+          const submenu = this.nextElementSibling;
+          if (submenu.style.display === 'block') {
+            submenu.style.display = 'none';
+          } else {
+            submenu.style.display = 'block';
+          }
+        }
+      });
+    });
+  }
+  
+  // Smooth scroll for all anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href !== '#' && href.length > 1) {
+        const targetId = href.substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          e.preventDefault();
+          
+          // Close mobile menu if open
+          const dropdowns = document.querySelectorAll('.dropdown.open');
+          dropdowns.forEach(dd => {
+            dd.classList.remove('open');
+            const menu = dd.querySelector('.dropdown-menu');
+            if (menu) menu.style.display = 'none';
+          });
+          
+          // Smooth scroll to target
+          const offsetTop = targetElement.offsetTop - 120; // Account for fixed header
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  });
+  
   // === HEADER SHRINK ON SCROLL ===
   const navbar = document.querySelector('.navbar');
   const ticker = document.querySelector('.ticker-wrapper');
@@ -1168,3 +1237,34 @@ function addToCart() {
   alert(`Đã thêm ${quantity} ${productName} vào giỏ hàng!`);
   closeProductDetail();
 }
+
+// === ACTIVE STATE DETECTION FOR PARTNER PAGES ===
+document.addEventListener('DOMContentLoaded', function() {
+  const currentPath = window.location.pathname;
+  const navItems = document.querySelectorAll('.nav-menu .dropdown');
+  
+  // Check if current page is a partner page
+  if (currentPath.includes('partners')) {
+    navItems.forEach(item => {
+      const link = item.querySelector('a');
+      const submenu = item.querySelector('.dropdown-menu');
+      
+      // Check main menu item
+      if (link && link.textContent.includes('ĐỐI TÁC')) {
+        item.classList.add('active-trail');
+      }
+      
+      // Check submenu items
+      if (submenu) {
+        const submenuLinks = submenu.querySelectorAll('a');
+        submenuLinks.forEach(subLink => {
+          const href = subLink.getAttribute('href');
+          if (href && currentPath.includes(href)) {
+            subLink.classList.add('active');
+            item.classList.add('active-trail');
+          }
+        });
+      }
+    });
+  }
+});
