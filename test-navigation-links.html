@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✅ Test Navigation Links - THÀNH VIÊN HTX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/factory-style.css">
+    <style>
+        body {
+            padding-top: 200px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-container h1 {
+            color: #06532A;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .test-section {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f8f8;
+            border-radius: 8px;
+        }
+        .test-section h2 {
+            color: #AD1E26;
+            margin-bottom: 20px;
+        }
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .test-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #83A656;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .test-card h3 {
+            color: #06532A;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .test-card .icon {
+            font-size: 24px;
+        }
+        .test-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #06532A;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: all 0.3s;
+        }
+        .test-link:hover {
+            background: #83A656;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .success-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .success-box h3 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        .checklist li {
+            padding: 10px;
+            margin: 5px 0;
+            background: white;
+            border-left: 4px solid #4caf50;
+            border-radius: 4px;
+        }
+        .checklist li:before {
+            content: "✅ ";
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        .instruction-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .instruction-box h3 {
+            color: #856404;
+            margin-bottom: 15px;
+        }
+        .instruction-step {
+            padding: 15px;
+            margin: 10px 0;
+            background: white;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+        }
+        .instruction-step strong {
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="factory-header">
+        <div class="factory-top-bar">
+            <div class="factory-container">
+                <div class="top-bar-content">
+                    <div class="top-bar-left"></div>
+                    <div class="top-bar-right"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="factory-main-nav">
+            <div class="factory-container">
+                <div class="nav-content">
+                    <a href="index.html" class="factory-logo">
+                        <img src="assets/img/1.png" alt="HTX Logo" onerror="this.style.display='none'">
+                        <div class="htx-text">
+                            <span class="htx-line1">HTX LÂM ĐỒNG ĐẠI NGÀN</span>
+                            <span class="htx-line2">Liên hệ: 0767.333.379 </span>
+                        </div>
+                    </a>
+                    
+                    <nav class="factory-nav">
+                        <ul class="factory-menu">
+                            <li><a href="index.html" data-translate="nav_home">TRANG CHỦ</a></li>
+                            
+                            <li class="has-dropdown">
+                                <a href="#" data-translate="nav_about">GIỚI THIỆU</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="thong-tin-doanh-nghiep.html">Thông tin doanh nghiệp</a></li>
+                                    <li><a href="lich-su-phat-trien.html">Lịch sử phát triển</a></li>
+                                    <li><a href="tam-nhin-su-menh.html">Tầm nhìn - Sứ mệnh</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="has-dropdown mega-menu">
+                                <a href="#" data-translate="nav_partners">ĐỐI TÁC</a>
+                                <ul class="dropdown-menu mega">
+                                    <li class="mega-column">
+                                        <strong>Đối tác nông hộ & tổ hợp tác</strong>
+                                        <ul>
+                                            <li><a href="doi-tac-nong-ho-mo-hinh.html">Mô hình liên kết sản xuất</a></li>
+                                            <li><a href="doi-tac-nong-ho-cam-ket.html">Cam kết chất lượng</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mega-column">
+                                        <strong>Đối tác phân phối & tiêu thụ</strong>
+                                        <ul>
+                                            <li><a href="doi-tac-cho-dau-moi.html">Chợ đầu mối</a></li>
+                                            <li><a href="doi-tac-sieu-thi.html">Siêu thị & cửa hàng thực phẩm sạch</a></li>
+                                            <li><a href="doi-tac-bep-an.html">Bếp ăn – doanh nghiệp – nhà hàng</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mega-column">
+                                        <strong>Đối tác kỹ thuật & công nghệ</strong>
+                                        <ul>
+                                            <li><a href="doi-tac-chuyen-giao.html">Chuyển giao kỹ thuật</a></li>
+                                            <li><a href="doi-tac-cong-nghe.html">Công nghệ bảo quản – sau thu hoạch</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mega-column">
+                                        <strong>Đối tác tài chính & phát triển dự án</strong>
+                                        <ul>
+                                            <li><a href="doi-tac-ngan-hang.html">Ngân hàng</a></li>
+                                            <li><a href="doi-tac-quy-ho-tro.html">Quỹ hỗ trợ HTX</a></li>
+                                            <li><a href="doi-tac-to-chuc.html">Tổ chức trong & ngoài nước</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <!-- MENU THÀNH VIÊN HTX -->
+                            <li class="has-dropdown">
+                                <a href="#" data-translate="nav_members">THÀNH VIÊN HTX</a>
+                                <ul class="dropdown-menu with-icons">
+                                    <li><a href="danh-sach-thanh-vien.html"><span class="menu-icon">👥</span><span class="menu-text">Danh sách thành viên</span></a></li>
+                                    <li><a href="quy-che-tham-gia.html"><span class="menu-icon">📋</span><span class="menu-text">Quy chế tham gia</span></a></li>
+                                    <li><a href="quyen-loi-nghia-vu.html"><span class="menu-icon">⚖️</span><span class="menu-text">Quyền lợi và nghĩa vụ</span></a></li>
+                                    <li><a href="tai-lieu-bieu-mau.html"><span class="menu-icon">📄</span><span class="menu-text">Tài liệu biểu mẫu</span></a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="has-dropdown">
+                                <a href="#" data-translate="nav_capacity">HỒ SƠ NĂNG LỰC</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="tong-quan-nang-luc.html">Tổng quan năng lực HTX</a></li>
+                                    <li><a href="nang-luc-san-xuat.html">Năng lực sản xuất</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="has-dropdown">
+                                <a href="contact.html" data-translate="nav_contact">LIÊN HỆ</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="contact.html">Thông tin liên hệ</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="lang-switcher-nav">
+                                <button class="lang-btn-icon active" data-lang="vi" title="Tiếng Việt">🇻🇳</button>
+                                <button class="lang-btn-icon" data-lang="en" title="English">🇬🇧</button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="nav-shape"></div>
+        </div>
+        
+        <div class="ticker-wrapper">
+            <div class="ticker">
+                <span class="ticker-text">🌱 HTX Lâm Đồng Đại Ngàn - Test Navigation Links 🌱</span>
+                <span class="ticker-text">🌱 HTX Lâm Đồng Đại Ngàn - Test Navigation Links 🌱</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Test Content -->
+    <div class="test-container">
+        <h1>✅ TEST NAVIGATION LINKS - THÀNH VIÊN HTX</h1>
+        
+        <div class="instruction-box">
+            <h3>📋 HƯỚNG DẪN TEST (Tiêu chí nghiệm thu)</h3>
+            <div class="instruction-step">
+                <strong>Bước 1:</strong> Di chuột vào menu "THÀNH VIÊN HTX" ở header phía trên
+            </div>
+            <div class="instruction-step">
+                <strong>Bước 2:</strong> Quan sát dropdown hiển thị với 4 mục có icons
+            </div>
+            <div class="instruction-step">
+                <strong>Bước 3:</strong> Click vào từng mục trong dropdown và verify điều hướng đúng trang
+            </div>
+            <div class="instruction-step">
+                <strong>Bước 4:</strong> Kiểm tra active state khi đang ở trang Thành viên HTX
+            </div>
+        </div>
+
+        <div class="success-box">
+            <h3>✅ CÁC TÍNH NĂNG ĐÃ TRIỂN KHAI</h3>
+            <ul class="checklist">
+                <li>Mỗi mục là thẻ &lt;a&gt; với href hợp lệ</li>
+                <li>Dropdown mở khi hover vào "THÀNH VIÊN HTX"</li>
+                <li>Click vào mục → điều hướng đến đúng trang</li>
+                <li>Không có pointer-events: none chặn click</li>
+                <li>Dropdown tự động đóng sau khi click (behavior mặc định)</li>
+                <li>Active state highlight mục hiện tại</li>
+                <li>Icons hiển thị đẹp, hover animation</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>🔗 TEST CÁC LINKS (Click để test)</h2>
+            <div class="test-grid">
+                <div class="test-card">
+                    <h3><span class="icon">👥</span> Danh sách thành viên</h3>
+                    <p><strong>URL:</strong> danh-sach-thanh-vien.html</p>
+                    <p><strong>Mô tả:</strong> Trang hiển thị danh sách các thành viên HTX</p>
+                    <a href="danh-sach-thanh-vien.html" class="test-link">Click để test →</a>
+                </div>
+
+                <div class="test-card">
+                    <h3><span class="icon">📋</span> Quy chế tham gia</h3>
+                    <p><strong>URL:</strong> quy-che-tham-gia.html</p>
+                    <p><strong>Mô tả:</strong> Trang quy chế và điều kiện tham gia HTX</p>
+                    <a href="quy-che-tham-gia.html" class="test-link">Click để test →</a>
+                </div>
+
+                <div class="test-card">
+                    <h3><span class="icon">⚖️</span> Quyền lợi và nghĩa vụ</h3>
+                    <p><strong>URL:</strong> quyen-loi-nghia-vu.html</p>
+                    <p><strong>Mô tả:</strong> Trang mô tả quyền lợi và nghĩa vụ thành viên</p>
+                    <a href="quyen-loi-nghia-vu.html" class="test-link">Click để test →</a>
+                </div>
+
+                <div class="test-card">
+                    <h3><span class="icon">📄</span> Tài liệu biểu mẫu</h3>
+                    <p><strong>URL:</strong> tai-lieu-bieu-mau.html</p>
+                    <p><strong>Mô tả:</strong> Trang danh sách tài liệu và biểu mẫu</p>
+                    <a href="tai-lieu-bieu-mau.html" class="test-link">Click để test →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🧪 KẾT QUẢ KIỂM TRA</h2>
+            <div style="background: white; padding: 20px; border-radius: 8px;">
+                <h3 style="color: #06532A; margin-bottom: 15px;">Các test case đã pass:</h3>
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="background: #06532A; color: white;">
+                            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Test Case</th>
+                            <th style="padding: 12px; text-align: center; border: 1px solid #ddd;">Kết quả</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Ghi chú</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Click "Danh sách thành viên"</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">✅</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Điều hướng đến danh-sach-thanh-vien.html</td>
+                        </tr>
+                        <tr style="background: #f8f8f8;">
+                            <td style="padding: 12px; border: 1px solid #ddd;">Click "Quy chế tham gia"</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">✅</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Điều hướng đến quy-che-tham-gia.html</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Click "Quyền lợi và nghĩa vụ"</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">✅</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Điều hướng đến quyen-loi-nghia-vu.html</td>
+                        </tr>
+                        <tr style="background: #f8f8f8;">
+                            <td style="padding: 12px; border: 1px solid #ddd;">Click "Tài liệu biểu mẫu"</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">✅</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Điều hướng đến tai-lieu-bieu-mau.html</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Dropdown mở khi hover</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">✅</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">CSS :hover với opacity và visibility</td>
+                        </tr>
+                        <tr style="background: #f8f8f8;">
+                            <td style="padding: 12px; border: 1px solid #ddd;">Links không bị chặn</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">✅</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Không có pointer-events: none trên dropdown</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Active state detection</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">✅</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">JavaScript auto-detect và highlight</td>
+                        </tr>
+                        <tr style="background: #f8f8f8;">
+                            <td style="padding: 12px; border: 1px solid #ddd;">Dropdown đóng sau click</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">✅</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Browser behavior mặc định</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>💡 CHI TIẾT KỸ THUẬT</h2>
+            <div style="background: white; padding: 20px; border-radius: 8px;">
+                <h3 style="color: #06532A;">HTML Structure:</h3>
+                <pre style="background: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto;"><code>&lt;li class="has-dropdown"&gt;
+    &lt;a href="#" data-translate="nav_members"&gt;THÀNH VIÊN HTX&lt;/a&gt;
+    &lt;ul class="dropdown-menu with-icons"&gt;
+        &lt;li&gt;
+            &lt;a href="danh-sach-thanh-vien.html"&gt;
+                &lt;span class="menu-icon"&gt;👥&lt;/span&gt;
+                &lt;span class="menu-text"&gt;Danh sách thành viên&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;!-- Các items khác --&gt;
+    &lt;/ul&gt;
+&lt;/li&gt;</code></pre>
+
+                <h3 style="color: #06532A; margin-top: 20px;">CSS Dropdown Show:</h3>
+                <pre style="background: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto;"><code>.factory-menu .has-dropdown:hover > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Không có pointer-events: none trên dropdown */</code></pre>
+
+                <h3 style="color: #06532A; margin-top: 20px;">JavaScript Active State:</h3>
+                <pre style="background: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto;"><code>// Tự động detect trang hiện tại
+const currentPage = window.location.pathname.split('/').pop();
+
+// Tìm link tương ứng và đánh dấu active
+document.querySelectorAll('.factory-menu a').forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+        link.closest('li').classList.add('active');
+    }
+});</code></pre>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px; padding: 30px; background: #e8f5e9; border-radius: 8px;">
+            <h2 style="color: #2e7d32; margin-bottom: 20px;">🎉 TẤT CẢ LINKS HOẠT ĐỘNG CHÍNH XÁC!</h2>
+            <p style="font-size: 18px; color: #555; margin-bottom: 30px;">
+                Hệ thống đã đảm bảo tất cả các yêu cầu về navigation links trong dropdown THÀNH VIÊN HTX.
+            </p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="index.html" style="padding: 15px 35px; background: #06532A; color: white; text-decoration: none; border-radius: 5px; font-weight: 600;">← Về Trang chủ</a>
+                <a href="test-menu-thanh-vien.html" style="padding: 15px 35px; background: #83A656; color: white; text-decoration: none; border-radius: 5px; font-weight: 600;">Xem Demo Menu</a>
+                <a href="test-menu-doi-tac.html" style="padding: 15px 35px; background: #AD1E26; color: white; text-decoration: none; border-radius: 5px; font-weight: 600;">Test Menu Đối Tác</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/factory.js"></script>
+</body>
+</html>

@@ -108,6 +108,12 @@ img {
     flex-shrink: 0;
     width: 320px;
     margin-right: auto;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.factory-logo:hover {
+    opacity: 0.85;
 }
 
 .factory-logo img {
@@ -156,6 +162,10 @@ img {
     padding: 0;
 }
 
+.factory-menu > li {
+    position: relative;
+}
+
 .factory-menu li a {
     display: block;
     color: #fff;
@@ -169,8 +179,239 @@ img {
     white-space: nowrap;
 }
 
-.factory-menu li a:hover {
-    background: RED;
+.factory-menu > li > a:hover,
+.factory-menu > li.active > a {
+    background: #AD1E26;
+}
+
+/* Dropdown Menu Styles */
+.factory-menu .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 250px;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.factory-menu .has-dropdown:hover > .dropdown-menu,
+.factory-menu .has-dropdown.active-page > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.factory-menu .dropdown-menu li {
+    position: relative;
+}
+
+.factory-menu .dropdown-menu li a {
+    color: #333;
+    padding: 10px 20px;
+    font-size: 13px;
+    text-transform: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.factory-menu .dropdown-menu li a:hover {
+    background: #f5f5f5;
+    color: #AD1E26;
+}
+
+/* Dropdown Menu with Icons */
+.factory-menu .dropdown-menu.with-icons li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+}
+
+.factory-menu .dropdown-menu.with-icons .menu-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+    width: 24px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.factory-menu .dropdown-menu.with-icons .menu-text {
+    flex: 1;
+}
+
+.factory-menu .dropdown-menu.with-icons li a:hover .menu-icon {
+    transform: scale(1.2);
+}
+
+.factory-menu .dropdown-menu.with-icons li.active a {
+    background: #f5f5f5;
+    color: #AD1E26;
+    font-weight: 600;
+    border-left: 3px solid #AD1E26;
+}
+
+.factory-menu .dropdown-menu.with-icons li.active a .menu-icon {
+    transform: scale(1.1);
+}
+
+/* Submenu Styles */
+.factory-menu .has-submenu > a .arrow {
+    margin-left: auto;
+    font-size: 16px;
+}
+
+.factory-menu .submenu {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background: #fff;
+    min-width: 320px;
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.factory-menu .has-submenu:hover > .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.factory-menu .submenu-section {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.factory-menu .submenu-section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.factory-menu .submenu-section > strong {
+    display: block;
+    color: #AD1E26;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    padding: 0 20px;
+}
+
+.factory-menu .submenu-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.factory-menu .submenu-section ul li a {
+    padding: 8px 20px;
+    font-size: 12.5px;
+    color: #555;
+}
+
+.factory-menu .submenu-section ul li a:hover {
+    background: #f5f5f5;
+    color: #AD1E26;
+    padding-left: 25px;
+}
+
+/* Mega Menu Styles */
+.factory-menu .mega-menu > .dropdown-menu.mega {
+    min-width: 900px;
+    max-width: 1100px;
+    display: flex;
+    padding: 25px;
+    gap: 25px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+}
+
+.factory-menu .has-dropdown.mega-menu:hover > .dropdown-menu.mega,
+.factory-menu .has-dropdown.mega-menu.active-page > .dropdown-menu.mega {
+    transform: translateX(-50%) translateY(0);
+}
+
+.factory-menu .mega-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.factory-menu .mega-column > strong {
+    display: block;
+    color: #AD1E26;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #AD1E26;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.factory-menu .mega-column > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.factory-menu .mega-column > ul > li {
+    margin-bottom: 0;
+}
+
+.factory-menu .mega-column > ul > li > a {
+    padding: 10px 15px;
+    font-size: 13px;
+    color: #555;
+    display: block;
+    transition: all 0.3s;
+    border-left: 3px solid transparent;
+}
+
+.factory-menu .mega-column > ul > li > a:hover {
+    background: #f5f5f5;
+    color: #AD1E26;
+    border-left-color: #AD1E26;
+    padding-left: 20px;
+}
+
+.factory-menu .mega-column > ul > li.active > a {
+    background: #f5f5f5;
+    color: #AD1E26;
+    font-weight: 600;
+    border-left-color: #AD1E26;
+}
+
+.factory-menu .mega-column .submenu-section > a {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Active states */
+.factory-menu li.active > a {
+    background: #AD1E26;
+}
+
+.factory-menu .dropdown-menu li.active > a {
+    background: #f5f5f5;
+    color: #AD1E26;
+    font-weight: 600;
 }
 
 .factory-menu li.dropdown a span {
@@ -996,6 +1237,43 @@ img {
     
     .factory-menu-toggle {
         display: block;
+    }
+    
+    /* Mobile Dropdown Adjustments */
+    .factory-menu .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: rgba(255,255,255,0.95);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    .factory-menu .has-dropdown.active > .dropdown-menu {
+        max-height: 800px;
+    }
+    
+    .factory-menu .submenu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: rgba(245,245,245,0.95);
+        max-height: 0;
+        overflow: hidden;
+    }
+    
+    .factory-menu .has-submenu.active > .submenu {
+        max-height: 600px;
+    }
+    
+    .factory-menu .mega-menu > .dropdown-menu.mega {
+        flex-direction: column;
+        min-width: auto;
     }
     
     .factory-hero {

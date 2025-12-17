@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Menu Đối Tác - HTX Đại Ngàn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/factory-style.css">
+    <style>
+        body {
+            padding-top: 200px;
+            background: #f5f5f5;
+        }
+        .test-content {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-content h1 {
+            color: #06532A;
+            margin-bottom: 20px;
+        }
+        .test-content h2 {
+            color: #AD1E26;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        .test-content ul {
+            line-height: 1.8;
+        }
+        .test-content code {
+            background: #f5f5f5;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #06532A;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .highlight-box strong {
+            color: #06532A;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="factory-header">
+        <div class="factory-top-bar">
+            <div class="factory-container">
+                <div class="top-bar-content">
+                    <div class="top-bar-left"></div>
+                    <div class="top-bar-right"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="factory-main-nav">
+            <div class="factory-container">
+                <div class="nav-content">
+                    <a href="index.html" class="factory-logo">
+                        <img src="assets/img/1.png" alt="HTX Logo" onerror="this.style.display='none'">
+                        <div class="htx-text">
+                            <span class="htx-line1">HTX LÂM ĐỒNG ĐẠI NGÀN</span>
+                            <span class="htx-line2">Liên hệ: 0767.333.379 </span>
+                        </div>
+                    </a>
+                    
+                    <nav class="factory-nav">
+                        <ul class="factory-menu">
+                            <li><a href="index.html" data-translate="nav_home">TRANG CHỦ</a></li>
+                            
+                            <li class="has-dropdown">
+                                <a href="#" data-translate="nav_about">GIỚI THIỆU</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="thong-tin-doanh-nghiep.html">Thông tin doanh nghiệp</a></li>
+                                    <li><a href="lich-su-phat-trien.html">Lịch sử phát triển</a></li>
+                                    <li><a href="tam-nhin-su-menh.html">Tầm nhìn - Sứ mệnh</a></li>
+                                </ul>
+                            </li>
+                            
+                            <!-- MENU ĐỐI TÁC - MEGA MENU -->
+                            <li class="has-dropdown mega-menu">
+                                <a href="#" data-translate="nav_partners">ĐỐI TÁC</a>
+                                <ul class="dropdown-menu mega">
+                                    <li class="mega-column">
+                                        <strong>Đối tác nông hộ & tổ hợp tác</strong>
+                                        <ul>
+                                            <li><a href="doi-tac-nong-ho-mo-hinh.html">Mô hình liên kết sản xuất</a></li>
+                                            <li><a href="doi-tac-nong-ho-cam-ket.html">Cam kết chất lượng</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mega-column">
+                                        <strong>Đối tác phân phối & tiêu thụ</strong>
+                                        <ul>
+                                            <li><a href="doi-tac-cho-dau-moi.html">Chợ đầu mối</a></li>
+                                            <li><a href="doi-tac-sieu-thi.html">Siêu thị & cửa hàng thực phẩm sạch</a></li>
+                                            <li><a href="doi-tac-bep-an.html">Bếp ăn – doanh nghiệp – nhà hàng</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mega-column">
+                                        <strong>Đối tác kỹ thuật & công nghệ</strong>
+                                        <ul>
+                                            <li><a href="doi-tac-chuyen-giao.html">Chuyển giao kỹ thuật</a></li>
+                                            <li><a href="doi-tac-cong-nghe.html">Công nghệ bảo quản – sau thu hoạch</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mega-column">
+                                        <strong>Đối tác tài chính & phát triển dự án</strong>
+                                        <ul>
+                                            <li><a href="doi-tac-ngan-hang.html">Ngân hàng</a></li>
+                                            <li><a href="doi-tac-quy-ho-tro.html">Quỹ hỗ trợ HTX</a></li>
+                                            <li><a href="doi-tac-to-chuc.html">Tổ chức trong & ngoài nước</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li class="has-dropdown">
+                                <a href="#" data-translate="nav_members">THÀNH VIÊN HTX</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="danh-sach-thanh-vien.html">Danh sách thành viên</a></li>
+                                    <li><a href="quy-che-tham-gia.html">Quy chế tham gia</a></li>
+                                    <li><a href="quyen-loi-nghia-vu.html">Quyền lợi và nghĩa vụ</a></li>
+                                    <li><a href="tai-lieu-bieu-mau.html">Tài liệu biểu mẫu</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="has-dropdown">
+                                <a href="#" data-translate="nav_capacity">HỒ SƠ NĂNG LỰC</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="tong-quan-nang-luc.html">Tổng quan năng lực HTX</a></li>
+                                    <li><a href="nang-luc-san-xuat.html">Năng lực sản xuất</a></li>
+                                    <li><a href="nang-luc-so-che.html">Năng lực sơ chế/đóng gói</a></li>
+                                    <li><a href="nang-luc-kho-van.html">Năng lực kho vận/giao hàng</a></li>
+                                    <li><a href="#" target="_blank">📄 Tải hồ sơ năng lực (PDF)</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="has-dropdown">
+                                <a href="contact.html" data-translate="nav_contact">LIÊN HỆ</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="contact.html">Thông tin liên hệ</a></li>
+                                    <li><a href="cskh-phan-hoi.html">CSKH/Phản hồi</a></li>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="lang-switcher-nav">
+                                <button class="lang-btn-icon active" data-lang="vi" title="Tiếng Việt">🇻🇳</button>
+                                <button class="lang-btn-icon" data-lang="en" title="English">🇬🇧</button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="nav-shape"></div>
+        </div>
+        
+        <div class="ticker-wrapper">
+            <div class="ticker">
+                <span class="ticker-text">🌱 HTX Lâm Đồng Đại Ngàn - Rau Củ Quả Sạch Đà Lạt 🌱</span>
+                <span class="ticker-text">🌱 HTX Lâm Đồng Đại Ngàn - Rau Củ Quả Sạch Đà Lạt 🌱</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Test Content -->
+    <div class="test-content">
+        <h1>✅ Menu Đối Tác - Hướng dẫn Test</h1>
+        
+        <div class="highlight-box">
+            <strong>👆 Di chuột vào menu "ĐỐI TÁC" ở header để xem mega menu!</strong>
+        </div>
+
+        <h2>🎯 Tính năng đã triển khai:</h2>
+        <ul>
+            <li>✅ <strong>Mega Menu 4 cột</strong> - Hiển thị tất cả 4 nhóm đối tác cùng lúc</li>
+            <li>✅ <strong>Hover to Show</strong> - Menu tự động hiện khi di chuột vào "ĐỐI TÁC"</li>
+            <li>✅ <strong>Click to Navigate</strong> - Mỗi mục là link hợp lệ, click để điều hướng</li>
+            <li>✅ <strong>Active State Detection</strong> - Tự động đánh dấu menu khi ở trang đối tác</li>
+            <li>✅ <strong>Auto Open Dropdown</strong> - Dropdown tự động mở khi đang ở trang đối tác</li>
+            <li>✅ <strong>Responsive Design</strong> - Tự động điều chỉnh trên mobile</li>
+        </ul>
+
+        <h2>📋 Danh sách trang đối tác:</h2>
+        
+        <h3>1. Đối tác nông hộ & tổ hợp tác</h3>
+        <ul>
+            <li><a href="doi-tac-nong-ho-mo-hinh.html">Mô hình liên kết sản xuất</a> ✅</li>
+            <li><a href="doi-tac-nong-ho-cam-ket.html">Cam kết chất lượng</a> ✅</li>
+        </ul>
+
+        <h3>2. Đối tác phân phối & tiêu thụ</h3>
+        <ul>
+            <li><a href="doi-tac-cho-dau-moi.html">Chợ đầu mối</a> ✅</li>
+            <li><a href="doi-tac-sieu-thi.html">Siêu thị & cửa hàng thực phẩm sạch</a> ✅</li>
+            <li><a href="doi-tac-bep-an.html">Bếp ăn – doanh nghiệp – nhà hàng</a> ✅</li>
+        </ul>
+
+        <h3>3. Đối tác kỹ thuật & công nghệ</h3>
+        <ul>
+            <li><a href="doi-tac-chuyen-giao.html">Chuyển giao kỹ thuật</a> ✅</li>
+            <li><a href="doi-tac-cong-nghe.html">Công nghệ bảo quản – sau thu hoạch</a> ✅</li>
+        </ul>
+
+        <h3>4. Đối tác tài chính & phát triển dự án</h3>
+        <ul>
+            <li><a href="doi-tac-ngan-hang.html">Ngân hàng</a> ✅</li>
+            <li><a href="doi-tac-quy-ho-tro.html">Quỹ hỗ trợ HTX</a> ✅</li>
+            <li><a href="doi-tac-to-chuc.html">Tổ chức trong & ngoài nước</a> ✅</li>
+        </ul>
+
+        <h2>🧪 Cách test:</h2>
+        <ol>
+            <li><strong>Test Mega Menu:</strong> Di chuột vào menu "ĐỐI TÁC" ở header</li>
+            <li><strong>Test Navigation:</strong> Click vào bất kỳ mục nào trong dropdown</li>
+            <li><strong>Test Active State:</strong> Sau khi vào trang đối tác, quay lại và xem menu "ĐỐI TÁC" được highlight</li>
+            <li><strong>Test Auto Open:</strong> Khi đang ở trang đối tác, dropdown sẽ tự động mở sẵn</li>
+            <li><strong>Test Responsive:</strong> Thu nhỏ cửa sổ browser để xem menu trên mobile</li>
+        </ol>
+
+        <h2>💡 Lưu ý kỹ thuật:</h2>
+        <ul>
+            <li><code>mega-menu</code> class để tạo mega menu layout</li>
+            <li><code>mega-column</code> class cho mỗi cột trong mega menu</li>
+            <li><code>active-page</code> class tự động thêm khi ở trang đối tác</li>
+            <li>CSS transform để căn giữa mega menu</li>
+            <li>JavaScript auto-detect URL hiện tại</li>
+        </ul>
+
+        <div class="highlight-box">
+            <strong>🎉 Menu Đối Tác đã hoàn thiện!</strong><br>
+            Tất cả 10 trang đối tác đã được tạo với Partner Page Template thống nhất.
+        </div>
+
+        <h2>📁 Files quan trọng:</h2>
+        <ul>
+            <li><code>assets/css/factory-style.css</code> - CSS cho mega menu</li>
+            <li><code>assets/css/partner-page.css</code> - CSS cho trang đối tác</li>
+            <li><code>assets/js/navigation.js</code> - JavaScript xử lý menu</li>
+            <li><code>PARTNER_TEMPLATE_GUIDE.md</code> - Hướng dẫn chi tiết</li>
+        </ul>
+
+        <p style="text-align: center; margin-top: 50px;">
+            <a href="index.html" style="background: #06532A; color: white; padding: 15px 40px; border-radius: 5px; display: inline-block; text-decoration: none; font-weight: 600;">
+                ← Quay về Trang chủ
+            </a>
+        </p>
+    </div>
+
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/factory.js"></script>
+</body>
+</html>
