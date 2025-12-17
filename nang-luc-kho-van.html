@@ -3,21 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="FAQ - Câu hỏi thường gặp - HTX Lâm Đồng Đại Ngàn">
-    <title>FAQ - Câu Hỏi Thường Gặp - HTX Đại Ngàn</title>
+    <meta name="description" content="Năng lực kho vận giao hàng - HTX Lâm Đồng Đại Ngàn">
+    <title>Năng Lực Kho Vận/Giao Hàng - HTX Đại Ngàn</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/factory-style.css">
     <link rel="stylesheet" href="assets/css/partner-page.css">
-    <style>
-        .faq-item { margin-bottom: 20px; border: 1px solid #ddd; border-radius: 4px; }
-        .faq-question { padding: 15px; background: #f9f9f9; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; }
-        .faq-question:hover { background: #f0f0f0; }
-        .faq-answer { padding: 15px; display: none; }
-        .faq-answer.active { display: block; }
-        .faq-toggle { font-size: 18px; }
-    </style>
 </head>
 <body>
     <header class="factory-header">
@@ -48,9 +40,9 @@
         <div class="partner-banner-overlay"></div>
         <div class="partner-banner-content">
             <div class="factory-container">
-                <div class="breadcrumb"><a href="index.html">Trang chủ</a><span>/</span><span>FAQ</span></div>
-                <h1>Câu Hỏi Thường Gặp</h1>
-                <p class="partner-subtitle">Tìm câu trả lời cho các câu hỏi của bạn</p>
+                <div class="breadcrumb"><a href="index.html">Trang chủ</a><span>/</span><a href="#">Hồ sơ năng lực</a><span>/</span><span>Kho vận & Giao hàng</span></div>
+                <h1>Năng Lực Kho Vận & Giao Hàng</h1>
+                <p class="partner-subtitle">Hệ thống lưu trữ lạnh hiện đại, giao hàng nhanh chóng</p>
             </div>
         </div>
     </section>
@@ -60,99 +52,114 @@
             <div class="content-wrapper">
                 <div class="main-content">
                     <div class="content-section">
-                        <h2>Câu Hỏi Thường Gặp</h2>
-                        <p>Dưới đây là các câu hỏi thường được khách hàng đặt ra. Nhấn vào câu hỏi để xem câu trả lời.</p>
+                        <h2>Trang Thiết Bị Kho Lạnh</h2>
+                        <ul>
+                            <li><strong>Số lượng kho lạnh:</strong> 3 kho lạnh chính, tổng diện tích 5,000 m²</li>
+                            <li><strong>Dung tích lưu trữ:</strong> 1,500 tấn sản phẩm (duy trì 24/7)</li>
+                            <li><strong>Nhiệt độ kiểm soát:</strong> 0-4°C (Kho 1-2) và 8-12°C (Kho 3)</li>
+                            <li><strong>Hệ thống điều hòa:</strong> Máy lạnh tây ban nha, backup generator cho mất điện</li>
+                            <li><strong>Kiểm soát thời gian:</strong> Hệ thống quản lý kho FIFO (First In, First Out)</li>
+                        </ul>
+                    </div>
 
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFaq(this)">
-                                <span>Rau trong box có an toàn để sử dụng không?</span>
-                                <span class="faq-toggle">+</span>
+                    <div class="content-section">
+                        <h2>Hệ Thống Giao Hàng</h2>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
+                            <div style="background: #f9f9f9; padding: 15px; border-radius: 8px;">
+                                <h3 style="color: var(--primary-green); margin-bottom: 10px;">🚚 Xe Giao Hàng</h3>
+                                <ul style="font-size: 14px; line-height: 1.8;">
+                                    <li>10 xe tải lạnh (1-2 tấn)</li>
+                                    <li>5 xe van lạnh (500-800kg)</li>
+                                    <li>Tất cả có GPS tracking</li>
+                                    <li>Bảo hành lạnh 4-8°C</li>
+                                </ul>
                             </div>
-                            <div class="faq-answer">
-                                <p>Tất cả các loại rau trong box được trồng theo tiêu chuẩn hữu cơ, không sử dụng hóa chất độc hại hay thuốc trừ sâu. Chúng tôi có chứng chỉ truy xuất nguồn gốc cho từng sản phẩm.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFaq(this)">
-                                <span>Tần suất giao hàng là bao lâu?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Chúng tôi giao hàng hàng tuần vào thứ Ba hoặc thứ Tư. Khách hàng có thể chọn khung giờ giao hàng phù hợp (8:00-17:00).</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFaq(this)">
-                                <span>Có thể hủy hoặc tạm dừng gói tháng không?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Có, bạn có thể hủy hoặc tạm dừng gói tháng bất cứ lúc nào. Vui lòng liên hệ với chúng tôi ít nhất 48 giờ trước kỳ giao hàng tiếp theo.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFaq(this)">
-                                <span>Rau bảo quản được bao lâu?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Rau lá có thể bảo quản 3-4 ngày ở ngăn lạnh. Rau củ quả có thể giữ được 5-7 ngày. Chúng tôi khuyến cáo sử dụng trong 3-5 ngày để đảm bảo tươi tốt.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFaq(this)">
-                                <span>Có những khu vực nào được giao hàng?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Hiện chúng tôi giao hàng tại TP. Hồ Chí Minh và tỉnh Bình Dương. Chúng tôi đang mở rộng dịch vụ sang các tỉnh lân cận.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFaq(this)">
-                                <span>Làm thế nào để thanh toán?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Chúng tôi chấp nhận thanh toán qua chuyển khoản ngân hàng, ví điện tử, hoặc thanh toán trực tiếp khi giao hàng.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFaq(this)">
-                                <span>Nếu không hài lòng thì sao?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Nếu bạn không hài lòng với sản phẩm, vui lòng liên hệ ngay với chúng tôi. Chúng tôi sẽ giải quyết vấn đề hoặc hoàn tiền cho bạn.</p>
+                            <div style="background: #f9f9f9; padding: 15px; border-radius: 8px;">
+                                <h3 style="color: var(--primary-green); margin-bottom: 10px;">📦 Dịch Vụ Giao Hàng</h3>
+                                <ul style="font-size: 14px; line-height: 1.8;">
+                                    <li>Giao hàng hàng tuần</li>
+                                    <li>Thứ 2-7, khung giờ 8-17h</li>
+                                    <li>Toàn bộ TP.HCM & BĐ</li>
+                                    <li>Giao đúng lịch trình</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
 
+                    <div class="content-section">
+                        <h2>Quy Trình Giao Hàng</h2>
+                        <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; margin-top: 15px;">
+                            <ol style="line-height: 2;">
+                                <li><strong>Tiếp nhận đơn hàng:</strong> Từ website hoặc điện thoại 0767.333.379</li>
+                                <li><strong>Xác nhận đơn:</strong> Email xác nhận trong vòng 2 giờ</li>
+                                <li><strong>Chuẩn bị sản phẩm:</strong> Lấy sản phẩm từ kho, kiểm tra chất lượng</li>
+                                <li><strong>Đóng gói:</strong> Đóng gói bảo vệ, xốp cách nhiệt nếu cần</li>
+                                <li><strong>Lên xe & Giao hàng:</strong> Xe lạnh đón, giao tận nơi</li>
+                                <li><strong>Ký xác nhận:</strong> Khách hàng ký nhận, lấy hóa đơn</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="content-section">
+                        <h2>Khu Vực Phục Vụ Giao Hàng</h2>
+                        <ul>
+                            <li><strong>Chính:</strong> Toàn bộ TP. Hồ Chí Minh (giao trong 24-48 giờ)</li>
+                            <li><strong>Rộng:</strong> Tỉnh Bình Dương, Đồng Nai (giao trong 48-72 giờ)</li>
+                            <li><strong>Ngoài vùng:</strong> Liên hệ để thương thảo chi phí vận chuyển</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-section">
+                        <h2>Khả Năng Vận Chuyển</h2>
+                        <ul>
+                            <li><strong>Sản lượng giao/tuần:</strong> 200-300 tấn</li>
+                            <li><strong>Thời gian giao hàng:</strong> Từ lấy đơn đến giao hàng: 1-2 ngày</li>
+                            <li><strong>Hạn sử dụng sản phẩm:</strong> Được đảm bảo tối thiểu 3-5 ngày sau khi giao</li>
+                            <li><strong>Hỗ trợ đặc biệt:</strong> Có thể giao chiều tối, giao ngoài giờ hành chính (phí thêm)</li>
+                            <li><strong>Phí vận chuyển:</strong> Miễn phí cho đơn hàng từ 50kg trở lên (tại TP.HCM)</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-section">
+                        <h2>Tiêu Chuẩn Chất Lượng Giao Hàng</h2>
+                        <ul>
+                            <li>✓ Nhiệt độ bảo quản: 0-4°C hoặc 8-12°C tùy loại sản phẩm</li>
+                            <li>✓ Không vỡ, không tổn thương sản phẩm trong quá trình giao</li>
+                            <li>✓ Kiểm tra kỹ lưỡng trước khi giao, đảm bảo sản phẩm tươi sạch</li>
+                            <li>✓ Giao đúng thời gian, đúng địa chỉ, đúng sản phẩm</li>
+                            <li>✓ Nhân viên giao hàng lịch sự, chuyên nghiệp, có trang phục công ty</li>
+                            <li>✓ Hỗ trợ xử lý khiếu nại trong 24 giờ</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-section">
+                        <h2>Liên Hệ Giao Hàng</h2>
+                        <ul>
+                            <li>📞 Hotline: <strong>0767.333.379</strong> (từ 8:00 - 17:00, T2-T6)</li>
+                            <li>📧 Email: <strong>info@htxdaingand.vn</strong></li>
+                            <li>💬 Zalo/WhatsApp: <strong>0767.333.379</strong></li>
+                            <li>🌐 Website: <strong>www.htxdaingand.vn</strong></li>
+                        </ul>
+                    </div>
+
                     <div class="cta-section">
-                        <h2>Còn câu hỏi khác?</h2>
+                        <h2>Tìm Hiểu Thêm</h2>
                         <div class="cta-buttons">
-                            <a href="contact.html" class="cta-btn cta-btn-primary">Liên Hệ Chúng Tôi</a>
-                            <a href="cskh-phan-hoi.html" class="cta-btn cta-btn-secondary">Gửi Phản Hồi</a>
+                            <a href="tong-quan-nang-luc.html" class="cta-btn cta-btn-primary">Tổng Quan</a>
+                            <a href="contact.html" class="cta-btn cta-btn-secondary">Liên Hệ Chúng Tôi</a>
                         </div>
                     </div>
                 </div>
 
                 <aside class="sidebar">
                     <div class="related-products">
-                        <h3>Liên kết nhanh</h3>
+                        <h3>Hồ Sơ Năng Lực</h3>
                         <ul>
-                            <li><a href="contact.html">Thông tin liên hệ</a></li>
-                            <li><a href="cskh-phan-hoi.html">CSKH/Phản hồi</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                            <li><a href="khieu-nai.html">Khiếu nại</a></li>
-                            <li><a href="box-7kg-tuan.html">Box 7kg/tuần</a></li>
-                            <li><a href="goi-theo-thang.html">Gói theo tháng</a></li>
+                            <li><a href="tong-quan-nang-luc.html">Tổng quan</a></li>
+                            <li><a href="nang-luc-san-xuat.html">Sản xuất</a></li>
+                            <li><a href="nang-luc-so-che.html">Sơ chế/Đóng gói</a></li>
+                            <li><a href="nang-luc-kho-van.html">Kho vận/Giao hàng</a></li>
+                            <li><a href="assets/docs/ho-so-nang-luc.pdf" target="_blank">📄 Tải PDF đầy đủ</a></li>
                         </ul>
                     </div>
                 </aside>
@@ -172,8 +179,8 @@
                     <h3>Liên kết nhanh</h3>
                     <ul>
                         <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="nang-luc-kho-van.html">Kho vận & Giao hàng</a></li>
                         <li><a href="contact.html">Liên hệ</a></li>
-                        <li><a href="thong-tin-doanh-nghiep.html">Về chúng tôi</a></li>
                     </ul>
                 </div>
             </div>
@@ -186,13 +193,5 @@
     <script src="assets/js/translate.js"></script>
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-        function toggleFaq(element) {
-            const answer = element.nextElementSibling;
-            const toggle = element.querySelector('.faq-toggle');
-            answer.classList.toggle('active');
-            toggle.textContent = answer.classList.contains('active') ? '−' : '+';
-        }
-    </script>
 </body>
 </html>

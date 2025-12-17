@@ -18,20 +18,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const pageToParent = {
             // Giới thiệu
             'thong-tin-doanh-nghiep.html': 'nav_about',
-            'lich-su-phat-trien.html': 'nav_about',
-            'tam-nhin-su-menh.html': 'nav_about',
-            
-            // Đối tác
-            'doi-tac-nong-ho-mo-hinh.html': 'nav_partners',
-            'doi-tac-nong-ho-cam-ket.html': 'nav_partners',
-            'doi-tac-cho-dau-moi.html': 'nav_partners',
-            'doi-tac-sieu-thi.html': 'nav_partners',
-            'doi-tac-bep-an.html': 'nav_partners',
-            'doi-tac-chuyen-giao.html': 'nav_partners',
-            'doi-tac-cong-nghe.html': 'nav_partners',
-            'doi-tac-ngan-hang.html': 'nav_partners',
-            'doi-tac-quy-ho-tro.html': 'nav_partners',
-            'doi-tac-to-chuc.html': 'nav_partners',
+            'doi-tac-nong-ho-mo-hinh.html': 'nav_about',
+            'doi-tac-nong-ho-cam-ket.html': 'nav_about',
+            'doi-tac-cho-dau-moi.html': 'nav_about',
+            'doi-tac-sieu-thi.html': 'nav_about',
+            'doi-tac-bep-an.html': 'nav_about',
+            'doi-tac-chuyen-giao.html': 'nav_about',
+            'doi-tac-cong-nghe.html': 'nav_about',
+            'doi-tac-ngan-hang.html': 'nav_about',
+            'doi-tac-quy-ho-tro.html': 'nav_about',
+            'doi-tac-to-chuc.html': 'nav_about',
             
             // Thành viên HTX
             'danh-sach-thanh-vien.html': 'nav_members',
@@ -91,6 +87,36 @@ document.addEventListener('DOMContentLoaded', function() {
             const parentLink = document.querySelector(`[data-translate="${pageToParent[currentPage]}"]`);
             if (parentLink) {
                 parentLink.closest('li').classList.add('active');
+                
+                // Auto-open parent dropdown for partner pages
+                const parentMenu = parentLink.closest('li.has-dropdown');
+                if (parentMenu) {
+                    parentMenu.classList.add('active');
+                    
+                    // Auto-open submenu if current page is in a submenu
+                    const dropdownMenu = parentMenu.querySelector('.dropdown-menu');
+                    if (dropdownMenu) {
+                        const currentLink = dropdownMenu.querySelector(`a[href="${currentPage}"]`);
+                        if (!currentLink) {
+                            // Not in level 1, check level 2 submenus
+                            const submenus = dropdownMenu.querySelectorAll('.submenu');
+                            submenus.forEach(submenu => {
+                                const subLink = submenu.querySelector(`a[href="${currentPage}"]`);
+                                if (subLink) {
+                                    // Found it in a submenu, open the submenu parent
+                                    const submenuParent = submenu.closest('.has-submenu');
+                                    if (submenuParent) {
+                                        submenuParent.classList.add('active');
+                                        // Highlight the current link
+                                        subLink.closest('li').classList.add('active');
+                                    }
+                                }
+                            });
+                        } else {
+                            currentLink.closest('li').classList.add('active');
+                        }
+                    }
+                }
             }
         }
         

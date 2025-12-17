@@ -3,21 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="FAQ - Câu hỏi thường gặp - HTX Lâm Đồng Đại Ngàn">
-    <title>FAQ - Câu Hỏi Thường Gặp - HTX Đại Ngàn</title>
+    <meta name="description" content="Năng lực sơ chế đóng gói - HTX Lâm Đồng Đại Ngàn">
+    <title>Năng Lực Sơ Chế/Đóng Gói - HTX Đại Ngàn</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/factory-style.css">
     <link rel="stylesheet" href="assets/css/partner-page.css">
-    <style>
-        .faq-item { margin-bottom: 20px; border: 1px solid #ddd; border-radius: 4px; }
-        .faq-question { padding: 15px; background: #f9f9f9; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; }
-        .faq-question:hover { background: #f0f0f0; }
-        .faq-answer { padding: 15px; display: none; }
-        .faq-answer.active { display: block; }
-        .faq-toggle { font-size: 18px; }
-    </style>
 </head>
 <body>
     <header class="factory-header">
@@ -48,9 +40,9 @@
         <div class="partner-banner-overlay"></div>
         <div class="partner-banner-content">
             <div class="factory-container">
-                <div class="breadcrumb"><a href="index.html">Trang chủ</a><span>/</span><span>FAQ</span></div>
-                <h1>Câu Hỏi Thường Gặp</h1>
-                <p class="partner-subtitle">Tìm câu trả lời cho các câu hỏi của bạn</p>
+                <div class="breadcrumb"><a href="index.html">Trang chủ</a><span>/</span><a href="#">Hồ sơ năng lực</a><span>/</span><span>Sơ chế/Đóng gói</span></div>
+                <h1>Năng Lực Sơ Chế & Đóng Gói</h1>
+                <p class="partner-subtitle">Dây chuyền hiện đại, đảm bảo chất lượng cao nhất</p>
             </div>
         </div>
     </section>
@@ -60,99 +52,95 @@
             <div class="content-wrapper">
                 <div class="main-content">
                     <div class="content-section">
-                        <h2>Câu Hỏi Thường Gặp</h2>
-                        <p>Dưới đây là các câu hỏi thường được khách hàng đặt ra. Nhấn vào câu hỏi để xem câu trả lời.</p>
+                        <h2>Trang Thiết Bị Sơ Chế</h2>
+                        <ul>
+                            <li><strong>Nhà máy sơ chế:</strong> Diện tích 2,000 m², đạt tiêu chuẩn GMP (Good Manufacturing Practice)</li>
+                            <li><strong>Dây chuyền sơ chế:</strong> Tự động, công suất 50 tấn/ngày</li>
+                            <li><strong>Khu rửa sạch:</strong> Nước RO tinh khiết, hệ thống lọc nhiều tầng</li>
+                            <li><strong>Khu cắt, cân:</strong> Máy cắt tự động, cân điện tử chính xác 0.1g</li>
+                            <li><strong>Bảo quản tạm thời:</strong> Kho lạnh 4-8°C, 500 tấn/ngày</li>
+                        </ul>
+                    </div>
 
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFaq(this)">
-                                <span>Rau trong box có an toàn để sử dụng không?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Tất cả các loại rau trong box được trồng theo tiêu chuẩn hữu cơ, không sử dụng hóa chất độc hại hay thuốc trừ sâu. Chúng tôi có chứng chỉ truy xuất nguồn gốc cho từng sản phẩm.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFaq(this)">
-                                <span>Tần suất giao hàng là bao lâu?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Chúng tôi giao hàng hàng tuần vào thứ Ba hoặc thứ Tư. Khách hàng có thể chọn khung giờ giao hàng phù hợp (8:00-17:00).</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFaq(this)">
-                                <span>Có thể hủy hoặc tạm dừng gói tháng không?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Có, bạn có thể hủy hoặc tạm dừng gói tháng bất cứ lúc nào. Vui lòng liên hệ với chúng tôi ít nhất 48 giờ trước kỳ giao hàng tiếp theo.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFaq(this)">
-                                <span>Rau bảo quản được bao lâu?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Rau lá có thể bảo quản 3-4 ngày ở ngăn lạnh. Rau củ quả có thể giữ được 5-7 ngày. Chúng tôi khuyến cáo sử dụng trong 3-5 ngày để đảm bảo tươi tốt.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFaq(this)">
-                                <span>Có những khu vực nào được giao hàng?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Hiện chúng tôi giao hàng tại TP. Hồ Chí Minh và tỉnh Bình Dương. Chúng tôi đang mở rộng dịch vụ sang các tỉnh lân cận.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFaq(this)">
-                                <span>Làm thế nào để thanh toán?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Chúng tôi chấp nhận thanh toán qua chuyển khoản ngân hàng, ví điện tử, hoặc thanh toán trực tiếp khi giao hàng.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFaq(this)">
-                                <span>Nếu không hài lòng thì sao?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Nếu bạn không hài lòng với sản phẩm, vui lòng liên hệ ngay với chúng tôi. Chúng tôi sẽ giải quyết vấn đề hoặc hoàn tiền cho bạn.</p>
-                            </div>
+                    <div class="content-section">
+                        <h2>Quy Trình Sơ Chế</h2>
+                        <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; margin-top: 15px;">
+                            <ol style="line-height: 2;">
+                                <li><strong>Tiếp nhận & Kiểm nghiệm:</strong> Kiểm tra chất lượng sản phẩm nhập kho</li>
+                                <li><strong>Rửa sạch:</strong> Rửa bằng nước sạch RO, loại bỏ bụi bẩn</li>
+                                <li><strong>Cắt/Xẻ:</strong> Cắt theo tiêu chuẩn kích thước yêu cầu</li>
+                                <li><strong>Rửa lần 2:</strong> Rửa lần nữa bằng nước muối sinh lý 0.7%</li>
+                                <li><strong>Thoát nước:</strong> Máy thoát nước ly tâm</li>
+                                <li><strong>Cân đo:</strong> Cân chính xác theo trọng lượng đơn hàng</li>
+                                <li><strong>Đóng gói:</strong> Dùng túi PE hoặc hộp carton hiện đại</li>
+                                <li><strong>Dán nhãn & In mã:</strong> In barcode, ngày sản xuất, hạn dùng</li>
+                                <li><strong>Kiểm tra chất lượng:</strong> Kiểm tra cuối cùng trước kho lạnh</li>
+                            </ol>
                         </div>
                     </div>
 
+                    <div class="content-section">
+                        <h2>Vật Liệu Đóng Gói</h2>
+                        <ul>
+                            <li>✓ Túi PE trong suốt chính hãng, an toàn thực phẩm</li>
+                            <li>✓ Hộp Carton tái chế, bề mặt bóng mượt</li>
+                            <li>✓ Khay nhựa PET cho rau lá, trái cây</li>
+                            <li>✓ Xốp hoặc bao xốp cách nhiệt cho giao hàng</li>
+                            <li>✓ In tem nhãn đầy đủ thông tin sản phẩm, hạn sử dụng</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-section">
+                        <h2>Kiểm Định Chất Lượng</h2>
+                        <ul>
+                            <li><strong>Kiểm tra thị giác:</strong> Không có vết xước, tổn thương, nấm mốc</li>
+                            <li><strong>Kiểm tra mùi vị:</strong> Không có mùi lạ, vị đắng bất thường</li>
+                            <li><strong>Kiểm tra trọng lượng:</strong> Sai lệch không quá 5%</li>
+                            <li><strong>Kiểm tra thời hạn:</strong> Đúng với hạn sử dụng in trên bao</li>
+                            <li><strong>Kiểm tra hóa chất:</strong> Xét nghiệm dư lượng định kỳ hàng tuần</li>
+                            <li><strong>Kiểm tra vi sinh vật:</strong> Kiểm tra hàm lượng E. coli, Listeria, Salmonella</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-section">
+                        <h2>Công Suất & Năng Lực</h2>
+                        <ul>
+                            <li><strong>Công suất xử lý:</strong> 50 tấn/ngày (250 tấn/tuần)</li>
+                            <li><strong>Thời gian xử lý:</strong> Từ tiếp nhận đến kiểm tra chất lượng: 2-4 giờ</li>
+                            <li><strong>Năm suất bảo quản:</strong> Duy trì chất lượng 3-5 ngày ở kho lạnh 4-8°C</li>
+                            <li><strong>Khả năng đóng gói:</strong> Các loại kích cỡ từ 0,5kg đến 20kg tùy nhu cầu</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-section">
+                        <h2>Chứng Chỉ & Tiêu Chuẩn</h2>
+                        <ul>
+                            <li>✓ Chứng chỉ GMP (Good Manufacturing Practice)</li>
+                            <li>✓ Chứng chỉ FSCC 22000 (Food Safety Management System)</li>
+                            <li>✓ Tuân thủ TCVN 8284:2010 (Hạt điều sơ chế)</li>
+                            <li>✓ Tuân thủ TCVN 8686 (Rau sạch tiêu chuẩn)</li>
+                            <li>✓ Có đơn vị kiểm định độc lập thường xuyên</li>
+                        </ul>
+                    </div>
+
                     <div class="cta-section">
-                        <h2>Còn câu hỏi khác?</h2>
+                        <h2>Tìm Hiểu Thêm</h2>
                         <div class="cta-buttons">
-                            <a href="contact.html" class="cta-btn cta-btn-primary">Liên Hệ Chúng Tôi</a>
-                            <a href="cskh-phan-hoi.html" class="cta-btn cta-btn-secondary">Gửi Phản Hồi</a>
+                            <a href="nang-luc-san-xuat.html" class="cta-btn cta-btn-primary">Sản Xuất</a>
+                            <a href="nang-luc-kho-van.html" class="cta-btn cta-btn-secondary">Kho Vận & Giao Hàng</a>
                         </div>
                     </div>
                 </div>
 
                 <aside class="sidebar">
                     <div class="related-products">
-                        <h3>Liên kết nhanh</h3>
+                        <h3>Hồ Sơ Năng Lực</h3>
                         <ul>
-                            <li><a href="contact.html">Thông tin liên hệ</a></li>
-                            <li><a href="cskh-phan-hoi.html">CSKH/Phản hồi</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                            <li><a href="khieu-nai.html">Khiếu nại</a></li>
-                            <li><a href="box-7kg-tuan.html">Box 7kg/tuần</a></li>
-                            <li><a href="goi-theo-thang.html">Gói theo tháng</a></li>
+                            <li><a href="tong-quan-nang-luc.html">Tổng quan</a></li>
+                            <li><a href="nang-luc-san-xuat.html">Sản xuất</a></li>
+                            <li><a href="nang-luc-so-che.html">Sơ chế/Đóng gói</a></li>
+                            <li><a href="nang-luc-kho-van.html">Kho vận/Giao hàng</a></li>
+                            <li><a href="assets/docs/ho-so-nang-luc.pdf" target="_blank">📄 Tải PDF đầy đủ</a></li>
                         </ul>
                     </div>
                 </aside>
@@ -172,8 +160,8 @@
                     <h3>Liên kết nhanh</h3>
                     <ul>
                         <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="nang-luc-so-che.html">Sơ chế/Đóng gói</a></li>
                         <li><a href="contact.html">Liên hệ</a></li>
-                        <li><a href="thong-tin-doanh-nghiep.html">Về chúng tôi</a></li>
                     </ul>
                 </div>
             </div>
@@ -186,13 +174,5 @@
     <script src="assets/js/translate.js"></script>
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-        function toggleFaq(element) {
-            const answer = element.nextElementSibling;
-            const toggle = element.querySelector('.faq-toggle');
-            answer.classList.toggle('active');
-            toggle.textContent = answer.classList.contains('active') ? '−' : '+';
-        }
-    </script>
 </body>
 </html>
