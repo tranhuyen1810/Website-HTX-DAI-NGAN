@@ -46,19 +46,16 @@ document.addEventListener('DOMContentLoaded', function() {
             'nang-luc-kho-van.html': 'nav_capacity',
             
             // Sản phẩm và dịch vụ
-            'box-rau.html': 'nav_products',
             'box-7kg-tuan.html': 'nav_products',
             'goi-theo-thang.html': 'nav_products',
-            'thuc-don-tuan.html': 'nav_products',
-            'thuc-don-hien-tai.html': 'nav_products',
+            'thuc-don-tuan-hien-tai.html': 'nav_products',
             'lich-su-thuc-don.html': 'nav_products',
-            'san-pham-thanh-phan.html': 'nav_products',
-            'rau-la.html': 'nav_products',
-            'rau-cu-qua.html': 'nav_products',
-            'trai-cay.html': 'nav_products',
+            'san-pham-rau-la.html': 'nav_products',
+            'san-pham-rau-cu-qua.html': 'nav_products',
+            'san-pham-trai-cay.html': 'nav_products',
             'co-hoi-hop-tac.html': 'nav_products',
-            'du-an-keu-goi.html': 'nav_products',
-            'dang-ky-hop-tac.html': 'nav_products',
+            'du-an-keu-goi-dau-tu.html': 'nav_products',
+            'dang-ky-hop-tac-dau-tu.html': 'nav_products',
             
             // Liên hệ
             'contact.html': 'nav_contact',
@@ -120,6 +117,17 @@ document.addEventListener('DOMContentLoaded', function() {
             const membersDropdown = document.querySelector('[data-translate="nav_members"]');
             if (membersDropdown) {
                 const parentLi = membersDropdown.closest('li.has-dropdown');
+                if (parentLi) {
+                    parentLi.classList.add('active-page');
+                }
+            }
+        }
+        
+        // Tự động mở mega menu "Sản phẩm và dịch vụ" nếu đang ở trang sản phẩm
+        if (pageToParent[currentPage] === 'nav_products') {
+            const productsDropdown = document.querySelector('[data-translate="nav_products"]');
+            if (productsDropdown) {
+                const parentLi = productsDropdown.closest('li.has-dropdown.mega-menu');
                 if (parentLi) {
                     parentLi.classList.add('active-page');
                 }
@@ -237,6 +245,21 @@ document.addEventListener('DOMContentLoaded', function() {
                         behavior: 'smooth'
                     });
                 }
+            }
+        });
+    });
+    
+    // === MEGA MENU ITEM HOVER HIGHLIGHTING ===
+    // Highlight items in mega menu when hovering
+    const megaMenuLinks = document.querySelectorAll('.mega-column > ul > li:not(.mega-section-title) > a');
+    megaMenuLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            this.parentElement.classList.add('active');
+        });
+        link.addEventListener('mouseleave', function() {
+            // Only remove if not on the current page
+            if (!this.parentElement.classList.contains('active-page')) {
+                this.parentElement.classList.remove('active');
             }
         });
     });
