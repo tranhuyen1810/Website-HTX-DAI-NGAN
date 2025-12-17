@@ -488,6 +488,24 @@ img {
     color: #fff;
 }
 
+/* Keep dropdown open for active trail */
+.partner-page .dropdown.active-trail:hover > .dropdown-menu {
+    display: block;
+}
+
+/* Highlight active submenu items */
+.partner-page .dropdown-submenu.active > a,
+.partner-page .dropdown-submenu > a.active {
+    background: #f0f0f0;
+    color: #AD1E26;
+    font-weight: 600;
+}
+
+/* Show submenu for active items */
+.partner-page .dropdown-submenu.active > .submenu-level-2 {
+    display: block;
+}
+
 /* Breadcrumb */
 .breadcrumb-section {
     padding: 30px 0;
