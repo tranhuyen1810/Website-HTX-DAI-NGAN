@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Đăng ký hợp tác/đầu tư - HTX Lâm Đồng Đại Ngàn">
+    <title>Đăng Ký Hợp Tác/Đầu Tư - HTX Đại Ngàn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/factory-style.css">
+    <link rel="stylesheet" href="assets/css/partner-page.css">
+    <style>
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit;
+        }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        .form-buttons { display: flex; gap: 15px; margin-top: 30px; }
+        .form-btn { padding: 12px 30px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: 600; }
+        .btn-submit { background: var(--primary-green); color: white; }
+        .btn-reset { background: #f0f0f0; color: #333; }
+    </style>
+</head>
+<body>
+    <header class="factory-header">
+        <div class="factory-top-bar"><div class="factory-container"><div class="top-bar-content"><div class="top-bar-left"></div><div class="top-bar-right"></div></div></div></div>
+        <div class="factory-main-nav">
+            <div class="factory-container">
+                <div class="nav-content">
+                    <a href="index.html" class="factory-logo"><img src="assets/img/1.png" alt="HTX Logo" onerror="this.style.display='none'"><div class="htx-text"><span class="htx-line1">HTX LÂM ĐỒNG ĐẠI NGÀN</span><span class="htx-line2">Liên hệ: 0767.333.379 </span></div></a>
+                    <nav class="factory-nav">
+                        <ul class="factory-menu">
+                            <li><a href="index.html" data-translate="nav_home">TRANG CHỦ</a></li>
+                            <li class="has-dropdown"><a href="#" data-translate="nav_about">GIỚI THIỆU</a><ul class="dropdown-menu"><li><a href="thong-tin-doanh-nghiep.html">Thông tin doanh nghiệp</a></li><li><a href="lich-su-phat-trien.html">Lịch sử phát triển</a></li><li><a href="tam-nhin-su-menh.html">Tầm nhìn - Sứ mệnh</a></li></ul></li>
+                            <li class="has-dropdown mega-menu"><a href="#" data-translate="nav_partners">ĐỐI TÁC</a><ul class="dropdown-menu mega"><li class="mega-column"><strong>Đối tác nông hộ & tổ hợp tác</strong><ul><li><a href="doi-tac-nong-ho-mo-hinh.html">Mô hình liên kết sản xuất</a></li><li><a href="doi-tac-nong-ho-cam-ket.html">Cam kết chất lượng</a></li></ul></li><li class="mega-column"><strong>Đối tác phân phối & tiêu thụ</strong><ul><li><a href="doi-tac-cho-dau-moi.html">Chợ đầu mối</a></li><li><a href="doi-tac-sieu-thi.html">Siêu thị & cửa hàng thực phẩm sạch</a></li><li><a href="doi-tac-bep-an.html">Bếp ăn – doanh nghiệp – nhà hàng</a></li></ul></li><li class="mega-column"><strong>Đối tác kỹ thuật & công nghệ</strong><ul><li><a href="doi-tac-chuyen-giao.html">Chuyển giao kỹ thuật</a></li><li><a href="doi-tac-cong-nghe.html">Công nghệ bảo quản – sau thu hoạch</a></li></ul></li><li class="mega-column"><strong>Đối tác tài chính & phát triển dự án</strong><ul><li><a href="doi-tac-ngan-hang.html">Ngân hàng</a></li><li><a href="doi-tac-quy-ho-tro.html">Quỹ hỗ trợ HTX</a></li><li><a href="doi-tac-to-chuc.html">Tổ chức trong & ngoài nước</a></li></ul></li></ul></li>
+                            <li class="has-dropdown"><a href="#" data-translate="nav_members">THÀNH VIÊN HTX</a><ul class="dropdown-menu"><li><a href="danh-sach-thanh-vien.html">Danh sách thành viên</a></li><li><a href="quy-che-tham-gia.html">Quy chế tham gia</a></li><li><a href="quyen-loi-nghia-vu.html">Quyền lợi và nghĩa vụ</a></li><li><a href="tai-lieu-bieu-mau.html">Tài liệu biểu mẫu</a></li></ul></li>
+                            <li class="has-dropdown"><a href="#" data-translate="nav_capacity">HỒ SƠ NĂNG LỰC</a><ul class="dropdown-menu"><li><a href="tong-quan-nang-luc.html">Tổng quan năng lực HTX</a></li><li><a href="nang-luc-san-xuat.html">Năng lực sản xuất</a></li><li><a href="nang-luc-so-che.html">Năng lực sơ chế/đóng gói</a></li><li><a href="nang-luc-kho-van.html">Năng lực kho vận/giao hàng</a></li><li><a href="assets/docs/ho-so-nang-luc.pdf" target="_blank">📄 Tải hồ sơ năng lực (PDF)</a></li></ul></li>
+                            <li class="has-dropdown mega-menu"><a href="#" data-translate="nav_products">SẢN PHẨM VÀ DỊCH VỤ</a><ul class="dropdown-menu mega"><li class="mega-column"><strong>Sản phẩm</strong><ul><li class="mega-section-title"><span>Box rau</span></li><li><a href="box-7kg-tuan.html">Box 7kg/tuần</a></li><li><a href="goi-theo-thang.html">Gói theo tháng</a></li><li class="mega-section-title"><span>Thực đơn tuần</span></li><li><a href="thuc-don-tuan-hien-tai.html">Tuần hiện tại</a></li><li><a href="lich-su-thuc-don.html">Lịch sử thực đơn</a></li><li class="mega-section-title"><span>Sản phẩm thành phần</span></li><li><a href="san-pham-rau-la.html">Rau lá</a></li><li><a href="san-pham-rau-cu-qua.html">Rau củ quả</a></li><li><a href="san-pham-trai-cay.html">Trái cây</a></li></ul></li><li class="mega-column"><strong>Đầu tư</strong><ul><li><a href="co-hoi-hop-tac.html">Cơ hội hợp tác</a></li><li><a href="du-an-keu-goi-dau-tu.html">Dự án kêu gọi đầu tư</a></li><li><a href="dang-ky-hop-tac-dau-tu.html">Đăng ký hợp tác/đầu tư</a></li></ul></li></ul></li>
+                            <li class="has-dropdown"><a href="contact.html" data-translate="nav_contact">LIÊN HỆ</a><ul class="dropdown-menu"><li><a href="contact.html">Thông tin liên hệ</a></li><li><a href="cskh-phan-hoi.html">CSKH/Phản hồi</a></li><li><a href="faq.html">FAQ</a></li></ul></li>
+                            <li class="lang-switcher-nav"><button class="lang-btn-icon active" data-lang="vi">🇻🇳</button><button class="lang-btn-icon" data-lang="en">🇬🇧</button></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="nav-shape"></div>
+        </div>
+        <div class="ticker-wrapper"><div class="ticker"><span class="ticker-text">🌱 HTX Lâm Đồng Đại Ngàn - Rau Củ Quả Sạch Đà Lạt 🌱</span><span class="ticker-text">🌱 HTX Lâm Đồng Đại Ngàn - Rau Củ Quả Sạch Đà Lạt 🌱</span></div></div>
+    </header>
+
+    <section class="partner-banner">
+        <div class="partner-banner-overlay"></div>
+        <div class="partner-banner-content">
+            <div class="factory-container">
+                <div class="breadcrumb"><a href="index.html">Trang chủ</a><span>/</span><a href="#">Sản phẩm & Dịch vụ</a><span>/</span><span>Đăng ký hợp tác/đầu tư</span></div>
+                <h1>Đăng Ký Hợp Tác/Đầu Tư</h1>
+                <p class="partner-subtitle">Gửi hồ sơ đăng ký hợp tác hoặc đầu tư của bạn</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="partner-content">
+        <div class="factory-container">
+            <div class="content-wrapper">
+                <div class="main-content">
+                    <div class="content-section">
+                        <h2>Biểu mẫu đăng ký</h2>
+                        <p>Vui lòng điền đầy đủ thông tin dưới đây. Chúng tôi sẽ liên hệ với bạn trong vòng 48 giờ.</p>
+
+                        <form method="POST" action="https://formspree.io/f/YOUR_FORM_ID" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="fullname">Họ và tên / Tên doanh nghiệp *</label>
+                                <input type="text" id="fullname" name="fullname" required placeholder="Nhập họ tên hoặc tên đơn vị">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="example@email.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Số điện thoại *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="0123456789">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="organization">Tên đơn vị / Công ty</label>
+                                <input type="text" id="organization" name="organization" placeholder="(Nếu là cá nhân có thể để trống)">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="interest">Lĩnh vực quan tâm *</label>
+                                <select id="interest" name="interest" required>
+                                    <option value="">-- Chọn lĩnh vực --</option>
+                                    <option value="hop-tac-vung-trong">Hợp tác vùng trồng</option>
+                                    <option value="hop-tac-phan-phoi">Hợp tác phân phối</option>
+                                    <option value="hop-tac-ky-thuat">Hợp tác kỹ thuật</option>
+                                    <option value="dau-tu">Đầu tư</option>
+                                    <option value="khac">Khác</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="content">Nội dung đề xuất / Yêu cầu *</label>
+                                <textarea id="content" name="content" required placeholder="Mô tả chi tiết đề xuất hợp tác hoặc yêu cầu của bạn..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="attachment">Tệp đính kèm (PDF, Word, Excel)</label>
+                                <input type="file" id="attachment" name="attachment" accept=".pdf,.doc,.docx,.xls,.xlsx">
+                            </div>
+
+                            <div class="form-buttons">
+                                <button type="submit" class="form-btn btn-submit">Gửi Đăng Ký</button>
+                                <button type="reset" class="form-btn btn-reset">Xóa Dữ Liệu</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="content-section">
+                        <h2>Thông tin liên hệ trực tiếp</h2>
+                        <p>
+                            <strong>Hotline:</strong> 0767.333.379<br>
+                            <strong>Email:</strong> info@htxdaingam.vn<br>
+                            <strong>Địa chỉ:</strong> Huyện Lâm Hà, Lâm Đồng
+                        </p>
+                    </div>
+                </div>
+
+                <aside class="sidebar">
+                    <div class="related-products">
+                        <h3>Nội dung liên quan</h3>
+                        <ul>
+                            <li><a href="co-hoi-hop-tac.html">Cơ hội hợp tác</a></li>
+                            <li><a href="du-an-keu-goi-dau-tu.html">Dự án kêu gọi đầu tư</a></li>
+                            <li><a href="tong-quan-nang-luc.html">Năng lực HTX</a></li>
+                            <li><a href="thong-tin-doanh-nghiep.html">Thông tin doanh nghiệp</a></li>
+                            <li><a href="contact.html">Liên hệ</a></li>
+                            <li><a href="index.html">Trang chủ</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <footer class="factory-footer">
+        <div class="factory-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HTX Lâm Đồng Đại Ngàn</h3>
+                    <p>Chuyên cung cấp rau sạch, nông sản hữu cơ từ cao nguyên Đà Lạt</p>
+                    <p><strong>Liên hệ:</strong> 0767.333.379</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên kết nhanh</h3>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                        <li><a href="thong-tin-doanh-nghiep.html">Về chúng tôi</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HTX Lâm Đồng Đại Ngàn. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/translate.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
