@@ -60,7 +60,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // Liên hệ
             'contact.html': 'nav_contact',
             'cskh-phan-hoi.html': 'nav_contact',
-            'faq.html': 'nav_contact'
+            'faq.html': 'nav_contact',
+            'khieu-nai.html': 'nav_contact'
         };
         
         // Tìm và đánh dấu menu item active
