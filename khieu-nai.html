@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Đăng ký hợp tác/đầu tư - HTX Lâm Đồng Đại Ngàn">
-    <title>Đăng Ký Hợp Tác/Đầu Tư - HTX Đại Ngàn</title>
+    <meta name="description" content="Khiếu nại - Gửi khiếu nại của bạn - HTX Lâm Đồng Đại Ngàn">
+    <title>Khiếu Nại - HTX Đại Ngàn</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,15 +12,17 @@
     <link rel="stylesheet" href="assets/css/partner-page.css">
     <style>
         .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
-        .form-group input, .form-group textarea, .form-group select {
-            width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit;
-        }
-        .form-group textarea { resize: vertical; min-height: 100px; }
-        .form-buttons { display: flex; gap: 15px; margin-top: 30px; }
-        .form-btn { padding: 12px 30px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: 600; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #333; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; }
+        .form-group textarea { min-height: 120px; resize: vertical; }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--primary-green); }
+        .form-actions { display: flex; gap: 10px; margin-top: 20px; }
+        .btn-submit, .btn-reset { padding: 10px 20px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; }
         .btn-submit { background: var(--primary-green); color: white; }
         .btn-reset { background: #f0f0f0; color: #333; }
+        .btn-submit:hover { opacity: 0.9; }
+        .required { color: red; }
+        .form-note { font-size: 14px; color: #666; margin-top: 5px; }
     </style>
 </head>
 <body>
@@ -53,9 +55,9 @@
         <div class="partner-banner-overlay"></div>
         <div class="partner-banner-content">
             <div class="factory-container">
-                <div class="breadcrumb"><a href="index.html">Trang chủ</a><span>/</span><a href="#">Sản phẩm & Dịch vụ</a><span>/</span><span>Đăng ký hợp tác/đầu tư</span></div>
-                <h1>Đăng Ký Hợp Tác/Đầu Tư</h1>
-                <p class="partner-subtitle">Gửi hồ sơ đăng ký hợp tác hoặc đầu tư của bạn</p>
+                <div class="breadcrumb"><a href="index.html">Trang chủ</a><span>/</span><span>Khiếu nại</span></div>
+                <h1>Gửi Khiếu Nại</h1>
+                <p class="partner-subtitle">Chúng tôi rất coi trọng ý kiến của bạn</p>
             </div>
         </div>
     </section>
@@ -65,80 +67,117 @@
             <div class="content-wrapper">
                 <div class="main-content">
                     <div class="content-section">
-                        <h2>Biểu mẫu đăng ký</h2>
-                        <p>Vui lòng điền đầy đủ thông tin dưới đây. Chúng tôi sẽ liên hệ với bạn trong vòng 48 giờ.</p>
+                        <h2>Biểu Mẫu Khiếu Nại</h2>
+                        <p>Vui lòng điền đầy đủ thông tin dưới đây. Chúng tôi sẽ liên hệ với bạn trong vòng 24 giờ để xử lý khiếu nại của bạn.</p>
 
-                        <form method="POST" action="https://formspree.io/f/YOUR_FORM_ID" enctype="multipart/form-data">
+                        <form method="POST" action="https://formspree.io/f/YOUR_FORM_ID" class="complaint-form">
                             <div class="form-group">
-                                <label for="fullname">Họ và tên / Tên doanh nghiệp *</label>
-                                <input type="text" id="fullname" name="fullname" required placeholder="Nhập họ tên hoặc tên đơn vị">
+                                <label for="fullname">Họ và tên <span class="required">*</span></label>
+                                <input type="text" id="fullname" name="fullname" required placeholder="Nhập họ và tên của bạn">
+                                <span class="form-note">Bắt buộc</span>
                             </div>
 
                             <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" required placeholder="example@email.com">
+                                <label for="email">Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required placeholder="Nhập email của bạn">
+                                <span class="form-note">Chúng tôi sẽ liên hệ qua email này</span>
                             </div>
 
                             <div class="form-group">
-                                <label for="phone">Số điện thoại *</label>
-                                <input type="tel" id="phone" name="phone" required placeholder="0123456789">
+                                <label for="phone">Số điện thoại <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" required placeholder="Nhập số điện thoại của bạn">
+                                <span class="form-note">Bắt buộc</span>
                             </div>
 
                             <div class="form-group">
-                                <label for="organization">Tên đơn vị / Công ty</label>
-                                <input type="text" id="organization" name="organization" placeholder="(Nếu là cá nhân có thể để trống)">
+                                <label for="orderid">Mã đơn hàng (nếu có)</label>
+                                <input type="text" id="orderid" name="orderid" placeholder="Mã đơn hàng của bạn">
+                                <span class="form-note">Tùy chọn - giúp chúng tôi xác định đơn hàng nhanh hơn</span>
                             </div>
 
                             <div class="form-group">
-                                <label for="interest">Lĩnh vực quan tâm *</label>
-                                <select id="interest" name="interest" required>
-                                    <option value="">-- Chọn lĩnh vực --</option>
-                                    <option value="hop-tac-vung-trong">Hợp tác vùng trồng</option>
-                                    <option value="hop-tac-phan-phoi">Hợp tác phân phối</option>
-                                    <option value="hop-tac-ky-thuat">Hợp tác kỹ thuật</option>
-                                    <option value="dau-tu">Đầu tư</option>
-                                    <option value="khac">Khác</option>
+                                <label for="complainttype">Loại khiếu nại <span class="required">*</span></label>
+                                <select id="complainttype" name="complainttype" required>
+                                    <option value="">--- Chọn loại khiếu nại ---</option>
+                                    <option value="quality">Chất lượng sản phẩm</option>
+                                    <option value="delivery">Vấn đề giao hàng</option>
+                                    <option value="service">Dịch vụ khách hàng</option>
+                                    <option value="price">Vấn đề về giá</option>
+                                    <option value="other">Khác</option>
                                 </select>
+                                <span class="form-note">Vui lòng chọn một loại</span>
                             </div>
 
                             <div class="form-group">
-                                <label for="content">Nội dung đề xuất / Yêu cầu *</label>
-                                <textarea id="content" name="content" required placeholder="Mô tả chi tiết đề xuất hợp tác hoặc yêu cầu của bạn..."></textarea>
+                                <label for="complaintdate">Ngày xảy ra sự cố</label>
+                                <input type="date" id="complaintdate" name="complaintdate">
+                                <span class="form-note">Tùy chọn</span>
                             </div>
 
                             <div class="form-group">
-                                <label for="attachment">Tệp đính kèm (PDF, Word, Excel)</label>
-                                <input type="file" id="attachment" name="attachment" accept=".pdf,.doc,.docx,.xls,.xlsx">
+                                <label for="description">Mô tả chi tiết khiếu nại <span class="required">*</span></label>
+                                <textarea id="description" name="description" required placeholder="Vui lòng mô tả chi tiết vấn đề của bạn..."></textarea>
+                                <span class="form-note">Bắt buộc - Mô tả càng chi tiết càng tốt</span>
                             </div>
 
-                            <div class="form-buttons">
-                                <button type="submit" class="form-btn btn-submit">Gửi Đăng Ký</button>
-                                <button type="reset" class="form-btn btn-reset">Xóa Dữ Liệu</button>
+                            <div class="form-group">
+                                <label for="resolution">Giải pháp bạn mong muốn</label>
+                                <textarea id="resolution" name="resolution" placeholder="Bạn muốn chúng tôi giải quyết vấn đề này như thế nào?"></textarea>
+                                <span class="form-note">Tùy chọn</span>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn-submit">Gửi Khiếu Nại</button>
+                                <button type="reset" class="btn-reset">Xóa Toàn Bộ</button>
                             </div>
                         </form>
                     </div>
 
-                    <div class="content-section">
-                        <h2>Thông tin liên hệ trực tiếp</h2>
-                        <p>
-                            <strong>Hotline:</strong> 0767.333.379<br>
-                            <strong>Email:</strong> info@htxdaingam.vn<br>
-                            <strong>Địa chỉ:</strong> Huyện Lâm Hà, Lâm Đồng
-                        </p>
+                    <div class="content-section" style="margin-top: 40px; border-top: 1px solid #eee; padding-top: 40px;">
+                        <h3>Thông Tin Bổ Sung</h3>
+                        <p><strong>Quy trình xử lý khiếu nại:</strong></p>
+                        <ol style="line-height: 1.8; margin-left: 20px;">
+                            <li>Chúng tôi sẽ xác nhận nhận được khiếu nại của bạn trong vòng 24 giờ</li>
+                            <li>Bộ phận chăm sóc khách hàng sẽ liên hệ để tìm hiểu thêm chi tiết</li>
+                            <li>Chúng tôi sẽ điều tra và đưa ra giải pháp trong vòng 5 ngày làm việc</li>
+                            <li>Nếu không hài lòng, bạn có thể yêu cầu xem xét lại</li>
+                        </ol>
+
+                        <p style="margin-top: 20px;"><strong>Liên hệ trực tiếp (nếu cần xử lý khẩn cấp):</strong></p>
+                        <ul style="line-height: 1.8; margin-left: 20px;">
+                            <li>📞 Hotline: 0767.333.379</li>
+                            <li>📧 Email: info@htxdaingand.vn</li>
+                        </ul>
+                    </div>
+
+                    <div class="cta-section">
+                        <h2>Cần hỗ trợ khác?</h2>
+                        <div class="cta-buttons">
+                            <a href="contact.html" class="cta-btn cta-btn-primary">Thông Tin Liên Hệ</a>
+                            <a href="faq.html" class="cta-btn cta-btn-secondary">Xem FAQ</a>
+                        </div>
                     </div>
                 </div>
 
                 <aside class="sidebar">
                     <div class="related-products">
-                        <h3>Nội dung liên quan</h3>
+                        <h3>Liên kết nhanh</h3>
                         <ul>
-                            <li><a href="co-hoi-hop-tac.html">Cơ hội hợp tác</a></li>
-                            <li><a href="du-an-keu-goi-dau-tu.html">Dự án kêu gọi đầu tư</a></li>
-                            <li><a href="tong-quan-nang-luc.html">Năng lực HTX</a></li>
-                            <li><a href="thong-tin-doanh-nghiep.html">Thông tin doanh nghiệp</a></li>
-                            <li><a href="contact.html">Liên hệ</a></li>
-                            <li><a href="index.html">Trang chủ</a></li>
+                            <li><a href="contact.html">Thông tin liên hệ</a></li>
+                            <li><a href="cskh-phan-hoi.html">CSKH/Phản hồi</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="khieu-nai.html">Khiếu nại</a></li>
+                            <li><a href="index.html">Quay lại trang chủ</a></li>
                         </ul>
+                    </div>
+
+                    <div class="related-products" style="margin-top: 30px;">
+                        <h3>Thời gian hỗ trợ</h3>
+                        <p style="line-height: 1.8;">
+                            <strong>Thứ 2 - Thứ 6:</strong> 8:00 - 17:00<br>
+                            <strong>Thứ 7:</strong> 9:00 - 13:00<br>
+                            <strong>Chủ nhật:</strong> Đóng cửa
+                        </p>
                     </div>
                 </aside>
             </div>
