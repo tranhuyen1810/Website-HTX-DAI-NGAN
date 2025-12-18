@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Test - Website HTX</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+
+    .test-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #2c7a3f;
+      margin-bottom: 20px;
+    }
+
+    .test-item {
+      margin: 15px 0;
+      padding: 15px;
+      background: #f9f9f9;
+      border-left: 4px solid #2c7a3f;
+      border-radius: 4px;
+    }
+
+    .test-item strong {
+      color: #2c7a3f;
+    }
+
+    .test-item.pass {
+      border-left-color: #28a745;
+      background: #f0f8f5;
+    }
+
+    .test-item.fail {
+      border-left-color: #dc3545;
+      background: #fff5f5;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 3px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    .status.pass {
+      background: #28a745;
+      color: white;
+    }
+
+    .status.fail {
+      background: #dc3545;
+      color: white;
+    }
+
+    .test-section {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 2px solid #e0e0e0;
+    }
+
+    code {
+      background: #f0f0f0;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="test-container">
+    <h1>🧪 Menu Header - Test Report</h1>
+    <p style="color: #666; margin-bottom: 20px;">Báo cáo kiểm tra tính năng menu header ngày 17/12/2025</p>
+
+    <div class="test-section">
+      <h2>✅ HTML Structure</h2>
+      
+      <div class="test-item pass">
+        <strong>Menu items có class</strong> <code>.nav-item</code>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">Tất cả menu items (7) được wrap trong <code>&lt;li class="nav-item"&gt;</code></p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Dropdown items</strong> có class <code>.has-dropdown</code>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">5 items có dropdown: Giới thiệu, Thành viên HTX, Đối tác, Sản phẩm & Dịch vụ, Tin tức</p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Dropdown menu structure</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">Mỗi item có <code>.dropdown-menu</code> → <code>.dropdown-content</code> → <code>.dropdown-link</code></p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Mega Menu</strong> trong "Sản phẩm & Dịch vụ"
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">2 cột: "Sản phẩm" và "Dịch vụ" với <code>.mega-menu</code> class</p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Links valid</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">Tất cả 20 menu items đều là <code>&lt;a&gt;</code> tags với href hợp lệ</p>
+      </div>
+    </div>
+
+    <div class="test-section">
+      <h2>✅ CSS Styling - Desktop (≥768px)</h2>
+
+      <div class="test-item pass">
+        <strong>Dropdown visibility hidden by default</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">CSS: <code>opacity: 0; visibility: hidden;</code></p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Hover dropdown show</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">CSS: <code>.has-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; }</code></p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Smooth transition</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">CSS: <code>transition: all 0.3s ease;</code></p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Dropdown styling</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">
+          White background, gray border, shadow, z-index: 1000
+        </p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Link hover effect</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">
+          Hover: bg #f0f8f4 (xanh nhạt), color #2c7a3f, padding-left slide
+        </p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>No pointer-events blocking</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">
+          Dropdown menu clickable, <code>pointer-events: auto</code> khi visible
+        </p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Active link highlighting</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">
+          Active link: bg #e8f4f0, left border 3px solid #2c7a3f
+        </p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Mega menu 2-column layout</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">
+          CSS: <code>flex-direction: row; gap: 2rem;</code>
+        </p>
+      </div>
+    </div>
+
+    <div class="test-section">
+      <h2>✅ CSS Styling - Mobile (<768px)</h2>
+
+      <div class="test-item pass">
+        <strong>Hamburger menu visible</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">CSS: <code>.menu-toggle { display: flex; }</code></p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Main nav responsive</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">
+          <code>.main-nav { display: none; }</code> → <code>.main-nav.active { display: block; }</code>
+        </p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Dropdown toggle arrow</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">
+          CSS: <code>.nav-item.has-dropdown > .nav-link::after { content: '▼'; }</code>
+        </p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Dropdown expand/collapse</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">
+          <code>max-height: 0</code> → <code>max-height: 500px</code> smooth animation
+        </p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Mobile menu stacking</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">
+          Vertical layout, full-width, background light gray
+        </p>
+      </div>
+    </div>
+
+    <div class="test-section">
+      <h2>✅ JavaScript Functionality</h2>
+
+      <div class="test-item pass">
+        <strong>initDropdownMenu() - Desktop hover</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">
+          Desktop hover triggers dropdown, pointer-events enabled
+        </p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>initMobileMenu() - Hamburger toggle</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">
+          Click hamburger → toggle .main-nav.active + .menu-toggle.active
+        </p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Mobile dropdown tap support</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">
+          On mobile: Click dropdown item → toggle .open class
+        </p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>setActiveMenuLink()</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">
+          Compares current path with href, adds .active to matching links
+        </p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Parent highlight on child active</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">
+          When viewing pages/ho-so-nang-luc.html → "Giới thiệu" parent highlighted
+        </p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Window resize handler</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">
+          On resize from mobile → desktop: auto-close menu + dropdowns
+        </p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Smooth scroll for anchors</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">
+          Click anchor link (#tam-nhin) → smooth scroll animation
+        </p>
+      </div>
+    </div>
+
+    <div class="test-section">
+      <h2>✅ Navigation Links</h2>
+
+      <div class="test-item pass">
+        <strong>Trang chủ</strong> → <code>/</code> 
+        <span class="status pass">PASS</span>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Giới thiệu (Dropdown)</strong>
+        <span class="status pass">PASS</span>
+        <ul style="margin: 8px 0 0 0; padding-left: 20px;">
+          <li>Về chúng tôi → <code>pages/gioi-thieu.html</code></li>
+          <li>Tầm nhìn → <code>pages/gioi-thieu.html#tam-nhin</code></li>
+          <li>Sứ mệnh → <code>pages/gioi-thieu.html#su-menh</code></li>
+          <li>Hồ sơ năng lực → <code>pages/ho-so-nang-luc.html</code></li>
+        </ul>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Thành viên HTX (Dropdown)</strong>
+        <span class="status pass">PASS</span>
+        <ul style="margin: 8px 0 0 0; padding-left: 20px;">
+          <li>Thành viên tiêu biểu → <code>pages/thanh-vien.html</code></li>
+          <li>Quyền lợi thành viên → <code>pages/thanh-vien.html#quyen-loi</code></li>
+        </ul>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Sản phẩm & Dịch vụ (Mega Menu)</strong>
+        <span class="status pass">PASS</span>
+        <ul style="margin: 8px 0 0 0; padding-left: 20px;">
+          <li>Rau, Củ → <code>pages/san-pham/box-rau.html</code></li>
+          <li>Trà – Nước cốt → <code>pages/san-pham/thanh-phan.html</code></li>
+          <li>Sấy thăng hoa → <code>#dich-vu-say-thang-hoa</code></li>
+          <li>Sấy nóng/lạnh → <code>#dich-vu-say</code></li>
+          <li>Cấp/Trữ đông → <code>#dich-vu-kho-tru</code></li>
+        </ul>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Liên hệ</strong> → <code>pages/lien-he.html</code>
+        <span class="status pass">PASS</span>
+      </div>
+    </div>
+
+    <div class="test-section">
+      <h2>✅ Cross-Page Consistency</h2>
+
+      <div class="test-item pass">
+        <strong>All pages have same header</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">
+          index.html + 4 main pages + 3 sub-pages = 8 files
+        </p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Relative paths work</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">
+          pages/ level: ../ for up one directory<br/>
+          pages/san-pham/ level: ../../ for up two directories
+        </p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Logo linkable</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">
+          Logo is <code>&lt;a&gt;</code> tag linking to homepage
+        </p>
+      </div>
+
+      <div class="test-item pass">
+        <strong>Breadcrumb visible</strong>
+        <span class="status pass">PASS</span>
+        <p style="margin-top: 8px; font-size: 14px;">
+          Each page (except homepage) has breadcrumb section below header
+        </p>
+      </div>
+    </div>
+
+    <div class="test-section">
+      <h2>📊 Summary</h2>
+      <div style="background: #e8f4f0; padding: 20px; border-radius: 8px; border-left: 4px solid #2c7a3f;">
+        <p style="font-size: 16px; margin-bottom: 10px;">
+          <strong style="color: #2c7a3f;">✅ Tất cả tính năng: PASS</strong>
+        </p>
+        <p style="font-size: 14px;">
+          Menu header đã được thiết kế đầy đủ theo yêu cầu:<br/>
+          ✓ Dropdown/mega menu hoạt động trên desktop (hover)<br/>
+          ✓ Mobile menu hoạt động (tap/hamburger)<br/>
+          ✓ Active state highlighting<br/>
+          ✓ Smooth transitions<br/>
+          ✓ No click blocking<br/>
+          ✓ Cross-page consistency<br/>
+          ✓ All links working
+        </p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

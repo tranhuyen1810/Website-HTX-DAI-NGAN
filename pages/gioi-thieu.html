@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Giới thiệu về Hợp tác xã - Thông tin, thế mạnh và đối tác">
+  <title>Giới thiệu - Hợp tác xã</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="../" class="logo">
+        🌱 HTX
+      </a>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <!-- Trang chủ -->
+          <li class="nav-item">
+            <a href="../" class="nav-link">Trang chủ</a>
+          </li>
+
+          <!-- Giới thiệu (có dropdown) -->
+          <li class="nav-item has-dropdown">
+            <a href="gioi-thieu.html" class="nav-link">Giới thiệu</a>
+            <div class="dropdown-menu">
+              <div class="dropdown-content">
+                <a href="gioi-thieu.html" class="dropdown-link">Về chúng tôi</a>
+                <a href="gioi-thieu.html#tam-nhin" class="dropdown-link">Tầm nhìn</a>
+                <a href="gioi-thieu.html#su-menh" class="dropdown-link">Sứ mệnh</a>
+                <a href="ho-so-nang-luc.html" class="dropdown-link">Hồ sơ năng lực</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Thành viên HTX (có dropdown) -->
+          <li class="nav-item has-dropdown">
+            <a href="thanh-vien.html" class="nav-link">Thành viên HTX</a>
+            <div class="dropdown-menu">
+              <div class="dropdown-content">
+                <a href="thanh-vien.html" class="dropdown-link">Thành viên tiêu biểu</a>
+                <a href="thanh-vien.html#quyen-loi" class="dropdown-link">Quyền lợi thành viên</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Đối tác (có dropdown) -->
+          <li class="nav-item has-dropdown">
+            <a href="#doi-tac" class="nav-link">Đối tác</a>
+            <div class="dropdown-menu">
+              <div class="dropdown-content">
+                <a href="#doi-tac-cua-chung-toi" class="dropdown-link">Đối tác của chúng tôi</a>
+                <a href="#goi-dau-tu" class="dropdown-link">Các gói đầu tư</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Sản phẩm & Dịch vụ (có mega menu) -->
+          <li class="nav-item has-dropdown">
+            <a href="san-pham.html" class="nav-link">Sản phẩm & Dịch vụ</a>
+            <div class="dropdown-menu mega-menu">
+              <div class="dropdown-content">
+                <div class="mega-menu-section">
+                  <h4>Sản phẩm</h4>
+                  <a href="san-pham/box-rau.html" class="dropdown-link">Rau, Củ</a>
+                  <a href="san-pham/thanh-phan.html" class="dropdown-link">Trà – Nước cốt</a>
+                </div>
+                <div class="mega-menu-section">
+                  <h4>Dịch vụ</h4>
+                  <a href="#dich-vu-say-thang-hoa" class="dropdown-link">Sấy thăng hoa</a>
+                  <a href="#dich-vu-say" class="dropdown-link">Sấy nóng/lạnh</a>
+                  <a href="#dich-vu-kho-tru" class="dropdown-link">Cấp/Trữ đông</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Tin tức (có dropdown) -->
+          <li class="nav-item has-dropdown">
+            <a href="#tin-tuc" class="nav-link">Tin tức</a>
+            <div class="dropdown-menu">
+              <div class="dropdown-content">
+                <a href="#tin-tuc-chinh" class="dropdown-link">Tin tức</a>
+                <a href="#su-kien" class="dropdown-link">Sự kiện</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Liên hệ -->
+          <li class="nav-item">
+            <a href="lien-he.html" class="nav-link">Liên hệ</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <section style="background-color: #f8f9fa; padding: 1rem 20px;">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li><a href="../">Trang chủ</a></li>
+        <li>Giới thiệu</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <section class="hero hero-banner">
+    <div class="container">
+      <h1>Giới thiệu về Hợp tác xã</h1>
+      <p>Kết nối nông hộ, hỗ trợ phát triển bền vững</p>
+    </div>
+  </section>
+
+  <!-- Thông tin doanh nghiệp - Layout So le -->
+  <section class="bg-white" style="padding: 3rem 20px;">
+    <div class="container">
+      <h2 class="text-center mb-4" style="margin-bottom: 3rem;">VỀ CHÚNG TÔI</h2>
+      
+      <!-- Row 1: Ảnh 1 trái - Text 1 phải -->
+      <div class="alternating-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 3rem;">
+        <div>
+          <img src="../images/1.png" alt="Về chúng tôi" class="img-fluid" style="border-radius: 12px; width: 100%; height: auto;">
+        </div>
+        <div>
+          <h3 style="color: #2c7a3f; font-size: 1.8rem; margin-bottom: 1rem;">Câu chuyện hình thành </h3>
+          <p style="font-size: 1.05rem; line-height: 1.8; color: #555;">
+            Ban đầu, chúng tôi chỉ là những người làm nông ở vùng đất Tây Nguyên, nơi gió đại ngàn thổi qua những rẫy cà phê, cacao, sầu riêng và những vườn rau xanh lá. Từ tình yêu dành cho đất, cho cây, và cho con người lao động, Hợp tác xã Lâm Đồng Đại Ngàn được hình thành – như một cách để chúng tôi cùng nhau tạo nên con đường phát triển bền vững hơn cho nông nghiệp quê mình.
+
+         </p>
+         
+        </div>
+      </div>
+
+      <!-- Row 2: Text 2 trái - Ảnh 2 phải (reversed) -->
+      <div class="alternating-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 3rem;">
+        <div>
+          <h3 style="color: #2c7a3f; font-size: 1.8rem; margin-bottom: 1rem;"></h3>
+          <p style="font-size: 1.05rem; line-height: 1.8; color: #555;">
+            Chúng tôi tin rằng, khi người nông dân được liên kết, được chia sẻ kinh nghiệm, được tiếp cận khoa học kỹ thuật và có cơ hội tiêu thụ sản phẩm công bằng – thì nông nghiệp không chỉ là kế sinh nhai, mà còn là hành trình giữ gìn và nuôi dưỡng sự sống.
+          </br>
+          </br>Từ vài hecta rau, cacao và macca ban đầu, Lâm Đồng Đại Ngàn đã dần mở rộng liên kết sản xuất, xây dựng một hệ sinh thái nông nghiệp bền vững có trung tâm giống; hỗ trợ kỹ thuật và quản trị canh tác;  phát triển vùng nguyên liệu và cả chuỗi chế biến – tiêu thụ; đầu tư vào chế biến sâu và thương mại hóa sản phẩm,...
+
+          </p>
+          
+
+        </div>
+        <div>
+          <img src="../images/2.png" alt="Tầm nhìn" class="img-fluid" style="border-radius: 12px; width: 100%; height: auto;">
+        </div>
+      </div>
+
+      <!-- Row 3: Ảnh 3 trái - Text 3 phải -->
+      <div class="alternating-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+        <div>
+          <img src="../images/3.png" alt="Sứ mệnh" class="img-fluid" style="border-radius: 12px; width: 100%; height: auto;">
+        </div>
+        <div>
+          <h3 style="color: #2c7a3f; font-size: 1.8rem; margin-bottom: 1rem;"></h3>
+          <p style="font-size: 1.05rem; line-height: 1.8; color: #555;">
+            Mỗi dự án đều mang trong mình một sứ mệnh: giúp người nông dân có cuộc sống tốt hơn, giúp vùng đất được canh tác xanh hơn, giúp người tiêu dùng có những sản phẩm chất lượng và giúp thế giới biết đến nhiều hơn về nông sản Việt Nam.
+            Thông điệp tuyên ngôn (Brand Manifesto)
+          </p>
+          “Chúng tôi tin rằng mỗi hạt giống trồng xuống đất không chỉ tạo nên mùa vụ, mà tạo nên tương lai cho người nông dân và vùng đất Tây Nguyên. Đại Ngàn được sinh ra để kết nối con người, nâng chất lượng nông nghiệp và mang nông sản Việt đến gần hơn với thế giới. Tất cả bắt đầu từ sự tử tế với đất và sự trân trọng với con người.”
+          </p>
+          <p style="font-size: 1.05rem; line-height: 1.8; color: #555; margin-top: 1rem;">
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Responsive CSS cho alternating layout -->
+  <style>
+    @media (max-width: 768px) {
+      .alternating-row {
+        grid-template-columns: 1fr !important;
+      }
+      
+      .alternating-row img {
+        order: -1;
+        margin-bottom: 1.5rem;
+      }
+      
+      .alternating-row h3 {
+        margin-top: 0;
+      }
+    }
+  </style>
+
+  <!-- Năng lực & Thế mạnh -->
+  <section class="bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Năng lực & Thế mạnh</h2>
+      
+      <div class="row cols-2">
+        <div class="card">
+          <div style="background-color: #e8f5e9; padding: 2rem; text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📊</div>
+            <h4>Quy mô sản xuất</h4>
+          </div>
+          <div class="card-body">
+            <p>Với hơn 500 nông hộ thành viên, chúng tôi quản lý hơn 1.000 hectare đất nông nghiệp, sản xuất trên 10.000 tấn rau quả tươi hàng năm.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="background-color: #f3e5f5; padding: 2rem; text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🔗</div>
+            <h4>Chuỗi cung ứng</h4>
+          </div>
+          <div class="card-body">
+            <p>Hệ thống phân phối hiệu quả từ trang trại đến bàn ăn nhà bạn trong vòng 24-48 giờ, đảm bảo tươi sống và dinh dưỡng.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="background-color: #fff3e0; padding: 2rem; text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">✓</div>
+            <h4>Tiêu chuẩn chất lượng</h4>
+          </div>
+          <div class="card-body">
+            <p>Tuân thủ các tiêu chuẩn quốc tế: GlobalGAP, VietGAP, hữu cơ. Kiểm định chất lượng định kỳ bởi các tổ chức độc lập.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="background-color: #e0f2f1; padding: 2rem; text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">💪</div>
+            <h4>Lợi thế cạnh tranh</h4>
+          </div>
+          <div class="card-body">
+            <p>Giá cả hợp lý, chất lượng tốt, dịch vụ khách hàng xuất sắc, cam kết bền vững và minh bạch trong mọi hoạt động.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trách nhiệm xã hội & Phát triển bền vững -->
+  <section class="bg-white">
+    <div class="container">
+      <h2 class="text-center mb-4">Trách nhiệm xã hội & Phát triển bền vững</h2>
+      
+      <div class="row cols-3">
+        <div class="card">
+          <div style="background-color: #fce4ec; padding: 2rem; text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">👨‍🌾</div>
+            <h4>Hỗ trợ nông hộ</h4>
+          </div>
+          <div class="card-body">
+            <ul style="margin-left: 1rem;">
+              <li>Đào tạo kỹ thuật canh tác hiện đại</li>
+              <li>Cung cấp vật tư nông nghiệp chất lượng</li>
+              <li>Đảm bảo giá mua công bằng</li>
+              <li>Hỗ trợ tiếp cận thị trường</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="background-color: #e0f2f1; padding: 2rem; text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🌿</div>
+            <h4>Bảo vệ môi trường</h4>
+          </div>
+          <div class="card-body">
+            <ul style="margin-left: 1rem;">
+              <li>Không sử dụng thuốc trừ sâu hóa học</li>
+              <li>Bảo vệ đất và nước ngầm</li>
+              <li>Giảm phát thải CO2</li>
+              <li>Tái sử dụng tài nguyên</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="background-color: #f1f8e9; padding: 2rem; text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🤝</div>
+            <h4>Phát triển cộng đồng</h4>
+          </div>
+          <div class="card-body">
+            <ul style="margin-left: 1rem;">
+              <li>Tạo việc làm cho cộng đồng địa phương</li>
+              <li>Hỗ trợ giáo dục nông nghiệp</li>
+              <li>Phát triển hạ tầng địa phương</li>
+              <li>Quỹ từ thiện xã hội</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Đối tác -->
+  <section class="bg-light" id="doi-tac">
+    <div class="container">
+      <h2 class="text-center mb-4">Hệ sinh thái đối tác</h2>
+      <p class="text-center" style="margin-bottom: 3rem; color: #666;">Chúng tôi hợp tác với nhiều tổ chức để tạo giá trị tối đa cho cộng đồng</p>
+
+      <div class="row cols-2">
+        <!-- Nông hộ & Tổ hợp tác -->
+        <div class="card">
+          <div style="background-color: #c8e6c9; padding: 2rem;">
+            <h4 style="color: #1b5e20; margin-bottom: 0.5rem;">🌾 Nông hộ & Tổ hợp tác</h4>
+            <p style="color: #2e7d32; margin: 0;">500+ nông hộ sản xuất rau quả tươi theo tiêu chuẩn.</p>
+          </div>
+          <div class="card-body">
+            <ul style="margin-left: 1rem; font-size: 0.95rem;">
+              <li><strong>Mô hình liên kết:</strong> Cung cấp hạt giống, phân bón hữu cơ, tư vấn kỹ thuật</li>
+              <li><strong>Cam kết chất lượng:</strong> Kiểm định từng lô hàng trước khi thu mua</li>
+              <li><strong>Giá công bằng:</strong> Mua trực tiếp, loại bỏ trung gian</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Phân phối & Tiêu thụ -->
+        <div class="card">
+          <div style="background-color: #ffe0b2; padding: 2rem;">
+            <h4 style="color: #e65100; margin-bottom: 0.5rem;">🏪 Phân phối & Tiêu thụ</h4>
+            <p style="color: #ef6c00; margin: 0;">150+ điểm bán hàng trên thành phố.</p>
+          </div>
+          <div class="card-body">
+            <ul style="margin-left: 1rem; font-size: 0.95rem;">
+              <li><strong>Chợ đầu mối:</strong> Cung cấp sỉ cho thương lái</li>
+              <li><strong>Siêu thị & Cửa hàng:</strong> Bán lẻ trực tiếp đến người tiêu dùng</li>
+              <li><strong>Bếp ăn & Nhà hàng:</strong> Cung cấp nguyên liệu tươi</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Kỹ thuật & Công nghệ -->
+        <div class="card">
+          <div style="background-color: #b3e5fc; padding: 2rem;">
+            <h4 style="color: #01579b; margin-bottom: 0.5rem;">🔬 Kỹ thuật & Công nghệ</h4>
+            <p style="color: #0277bd; margin: 0;">Chuyển giao kỹ thuật hiện đại</p>
+          </div>
+          <div class="card-body">
+            <ul style="margin-left: 1rem; font-size: 0.95rem;">
+              <li><strong>Chuyển giao kỹ thuật:</strong> Tập huấn canh tác có hiệu quả</li>
+              <li><strong>Công nghệ bảo quản:</strong> Kho lạnh hiện đại, quy trình đóng gói tiêu chuẩn</li>
+              <li><strong>Giám sát chất lượng:</strong> Hệ thống truy xuất nguồn gốc sản phẩm</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tài chính & Phát triển -->
+        <div class="card">
+          <div style="background-color: #f8bbd0; padding: 2rem;">
+            <h4 style="color: #880e4f; margin-bottom: 0.5rem;">💰 Tài chính & Phát triển dự án</h4>
+            <p style="color: #c2185b; margin: 0;">Hỗ trợ tài chính cho phát triển.</p>
+          </div>
+          <div class="card-body">
+            <ul style="margin-left: 1rem; font-size: 0.95rem;">
+              <li><strong>Ngân hàng:</strong> Vay vốn lãi suất ưu đãi cho nông hộ</li>
+              <li><strong>Quỹ hỗ trợ HTX:</strong> Hỗ trợ phát triển hạ tầng</li>
+              <li><strong>Tổ chức trong & ngoài nước:</strong> Hỗ trợ dự án bền vững</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="lien-he.html" class="btn btn-primary">Tìm hiểu về hợp tác →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>📍 Thông tin liên hệ</h4>
+        <p style="margin-bottom: 0.5rem;"><strong>Địa chỉ:</strong> 123 Đường Nông lâm, Quận 1, TP.HCM</p>
+        <p style="margin-bottom: 0.5rem;"><strong>Hotline:</strong> 1800-0000</p>
+        <p><strong>Email:</strong> <a href="mailto:info@htx.vn">info@htx.vn</a></p>
+      </div>
+
+      <div class="footer-section">
+        <h4>🔗 Liên kết nhanh</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+          <li><a href="thanh-vien.html">Thành viên</a></li>
+          <li><a href="san-pham.html">Sản phẩm</a></li>
+          <li><a href="lien-he.html">Liên hệ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>📄 Chính sách</h4>
+        <ul>
+          <li><a href="#">Điều khoản sử dụng</a></li>
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Chính sách hoàn trả</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>🌐 Kết nối</h4>
+        <p>
+          <a href="#">Facebook</a> | 
+          <a href="#">Instagram</a> | 
+          <a href="#">YouTube</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Hợp tác xã - Sản phẩm Nông nghiệp Sạch. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
