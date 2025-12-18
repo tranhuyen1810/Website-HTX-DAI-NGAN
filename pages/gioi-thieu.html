@@ -9,11 +9,77 @@
 </head>
 <body>
   <!-- Header -->
-  <header>
-    <div class="header-container">
-      <a href="../" class="logo">
-        🌱 HTX
-      </a>
+  <header class="site-header">
+    <!-- Top Header -->
+    <div class="top-header">
+      <div class="top-header-container">
+        <!-- Logo & Slogan -->
+        <div class="logo-section">
+          <a href="../" class="logo">
+            <img class="logo-icon" src="../assets/img/1.png" alt="HTX Logo" />
+            <div class="logo-text">
+              <span class="logo-name">LÂM ĐỒNG ĐẠI NGÀN</span>
+              <span class="logo-slogan">0767333379</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Top Right: Hotline, Search, Language, Cart -->
+        <div class="top-header-right">
+          <!-- Hotline -->
+          <div class="header-hotline">
+            <span class="hotline-icon">📞</span>
+            <span class="hotline-number">091 339 3682</span>
+          </div>
+
+          <!-- Search Box -->
+          <div class="header-search">
+            <input type="text" placeholder="Tìm kiếm..." class="search-input">
+            <button class="search-btn">🔍</button>
+          </div>
+
+          <!-- Language Switcher -->
+          <div class="language-switcher">
+            <button class="lang-btn active" data-lang="vi">🇻🇳</button>
+            <button class="lang-btn" data-lang="en">🇬🇧</button>
+          </div>
+
+          <!-- Cart Icon -->
+          <div class="header-cart">
+            <a href="#" class="cart-link">
+              <span class="cart-icon">🛒</span>
+              <span class="cart-count">0</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-navigation">
+      <div class="nav-container">
+        <ul class="nav-menu">
+          <!-- Trang chủ -->
+          <li class="nav-item">
+            <a href="../" class="nav-link">
+              <span class="nav-icon">🏠</span>
+              <span class="nav-text">Trang chủ</span>
+            </a>
+          </li>
+
+          <!-- Giới thiệu -->
+          <li class="nav-item has-dropdown">
+            <a href="gioi-thieu.html" class="nav-link active">
+              <span class="nav-icon">ℹ️</span>
+              <span class="nav-text">Giới thiệu</span>
+            </a>
       <nav class="main-nav">
         <ul class="nav-menu">
           <!-- Trang chủ -->
@@ -22,83 +88,81 @@
           </li>
 
           <!-- Giới thiệu (có dropdown) -->
-          <li class="nav-item has-dropdown">
-            <a href="gioi-thieu.html" class="nav-link">Giới thiệu</a>
             <div class="dropdown-menu">
-              <div class="dropdown-content">
-                <a href="gioi-thieu.html" class="dropdown-link">Về chúng tôi</a>
-                <a href="gioi-thieu.html#tam-nhin" class="dropdown-link">Tầm nhìn</a>
-                <a href="gioi-thieu.html#su-menh" class="dropdown-link">Sứ mệnh</a>
-                <a href="ho-so-nang-luc.html" class="dropdown-link">Hồ sơ năng lực</a>
-              </div>
+              <a href="gioi-thieu.html" class="dropdown-link">Về chúng tôi</a>
+              <a href="gioi-thieu.html#tam-nhin" class="dropdown-link">Tầm nhìn</a>
+              <a href="gioi-thieu.html#su-menh" class="dropdown-link">Sứ mệnh</a>
+              <a href="ho-so-nang-luc.html" class="dropdown-link">Hồ sơ năng lực</a>
             </div>
           </li>
 
-          <!-- Thành viên HTX (có dropdown) -->
+          <!-- Sản phẩm -->
           <li class="nav-item has-dropdown">
-            <a href="thanh-vien.html" class="nav-link">Thành viên HTX</a>
-            <div class="dropdown-menu">
-              <div class="dropdown-content">
-                <a href="thanh-vien.html" class="dropdown-link">Thành viên tiêu biểu</a>
-                <a href="thanh-vien.html#quyen-loi" class="dropdown-link">Quyền lợi thành viên</a>
-              </div>
-            </div>
-          </li>
-
-          <!-- Đối tác (có dropdown) -->
-          <li class="nav-item has-dropdown">
-            <a href="#doi-tac" class="nav-link">Đối tác</a>
-            <div class="dropdown-menu">
-              <div class="dropdown-content">
-                <a href="#doi-tac-cua-chung-toi" class="dropdown-link">Đối tác của chúng tôi</a>
-                <a href="#goi-dau-tu" class="dropdown-link">Các gói đầu tư</a>
-              </div>
-            </div>
-          </li>
-
-          <!-- Sản phẩm & Dịch vụ (có mega menu) -->
-          <li class="nav-item has-dropdown">
-            <a href="san-pham.html" class="nav-link">Sản phẩm & Dịch vụ</a>
+            <a href="san-pham.html" class="nav-link">
+              <span class="nav-icon">🌾</span>
+              <span class="nav-text">Sản phẩm</span>
+            </a>
             <div class="dropdown-menu mega-menu">
-              <div class="dropdown-content">
-                <div class="mega-menu-section">
-                  <h4>Sản phẩm</h4>
-                  <a href="san-pham/box-rau.html" class="dropdown-link">Rau, Củ</a>
-                  <a href="san-pham/thanh-phan.html" class="dropdown-link">Trà – Nước cốt</a>
-                </div>
-                <div class="mega-menu-section">
-                  <h4>Dịch vụ</h4>
-                  <a href="#dich-vu-say-thang-hoa" class="dropdown-link">Sấy thăng hoa</a>
-                  <a href="#dich-vu-say" class="dropdown-link">Sấy nóng/lạnh</a>
-                  <a href="#dich-vu-kho-tru" class="dropdown-link">Cấp/Trữ đông</a>
-                </div>
+              <div class="mega-menu-section">
+                <h4>Sản phẩm</h4>
+                <a href="san-pham/box-rau.html" class="dropdown-link">Rau, Củ</a>
+                <a href="san-pham/thanh-phan.html" class="dropdown-link">Trà – Nước cốt</a>
+              </div>
+              <div class="mega-menu-section">
+                <h4>Dịch vụ</h4>
+                <a href="#dich-vu-say-thang-hoa" class="dropdown-link">Sấy thăng hoa</a>
+                <a href="#dich-vu-say" class="dropdown-link">Sấy nóng/lạnh</a>
+                <a href="#dich-vu-kho-tru" class="dropdown-link">Cấp/Trữ đông</a>
               </div>
             </div>
           </li>
 
-          <!-- Tin tức (có dropdown) -->
+          <!-- Tin tức & Sự kiện -->
           <li class="nav-item has-dropdown">
-            <a href="#tin-tuc" class="nav-link">Tin tức</a>
+            <a href="#tin-tuc" class="nav-link">
+              <span class="nav-icon">📰</span>
+              <span class="nav-text">Tin tức & Sự kiện</span>
+            </a>
             <div class="dropdown-menu">
-              <div class="dropdown-content">
-                <a href="#tin-tuc-chinh" class="dropdown-link">Tin tức</a>
-                <a href="#su-kien" class="dropdown-link">Sự kiện</a>
-              </div>
+              <a href="#tin-tuc-chinh" class="dropdown-link">Tin tức</a>
+              <a href="#su-kien" class="dropdown-link">Sự kiện</a>
+            </div>
+          </li>
+
+          <!-- Thành viên HTX -->
+          <li class="nav-item has-dropdown">
+            <a href="thanh-vien.html" class="nav-link">
+              <span class="nav-icon">👥</span>
+              <span class="nav-text">Thành viên HTX</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="thanh-vien.html" class="dropdown-link">Thành viên tiêu biểu</a>
+              <a href="thanh-vien.html#quyen-loi" class="dropdown-link">Quyền lợi thành viên</a>
+            </div>
+          </li>
+
+          <!-- Đối tác -->
+          <li class="nav-item has-dropdown">
+            <a href="#doi-tac" class="nav-link">
+              <span class="nav-icon">🤝</span>
+              <span class="nav-text">Hệ thống phân phối</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="#doi-tac-cua-chung-toi" class="dropdown-link">Đối tác của chúng tôi</a>
+              <a href="#goi-dau-tu" class="dropdown-link">Các gói đầu tư</a>
             </div>
           </li>
 
           <!-- Liên hệ -->
           <li class="nav-item">
-            <a href="lien-he.html" class="nav-link">Liên hệ</a>
+            <a href="lien-he.html" class="nav-link">
+              <span class="nav-icon">📧</span>
+              <span class="nav-text">Liên hệ</span>
+            </a>
           </li>
         </ul>
-      </nav>
-      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
+      </div>
+    </nav>
   </header>
 
   <!-- Breadcrumb -->
@@ -417,5 +481,6 @@
   </footer>
 
   <script src="../js/main.js"></script>
+  <script src="../assets/js/header.js"></script>
 </body>
 </html>
