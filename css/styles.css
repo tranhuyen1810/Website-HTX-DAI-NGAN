@@ -482,11 +482,11 @@ a:hover {
   }
   
   .nav-icon {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   
   .search-input {
-    width: 150px;
+    width: 100px;
   }
 }
 
