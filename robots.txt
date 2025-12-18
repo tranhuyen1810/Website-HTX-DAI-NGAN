@@ -1,0 +1,47 @@
+# robots.txt cho lamdongcoop.com
+# Hướng dẫn các search engine crawl website
+
+User-agent: *
+Allow: /
+
+# Cho phép tất cả các trang quan trọng
+Allow: /index.html
+Allow: /contact.html
+Allow: /san-pham*.html
+Allow: /doi-tac*.html
+Allow: /nang-luc*.html
+
+# Không cho phép crawl các file test và thư mục admin (nếu có)
+Disallow: /test*.html
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.php$
+
+# Cho phép crawl CSS và JavaScript để Google đánh giá tốt hơn
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/img/
+
+# Sitemap location - RẤT QUAN TRỌNG
+Sitemap: https://lamdongcoop.com/sitemap.xml
+
+# Crawl delay (không quá nhanh để tránh quá tải server)
+Crawl-delay: 1
+
+# Google Bot cụ thể
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Facebook Bot (cho Open Graph sharing)
+User-agent: facebookexternalhit
+Allow: /
+
+# Twitter Bot
+User-agent: Twitterbot
+Allow: /

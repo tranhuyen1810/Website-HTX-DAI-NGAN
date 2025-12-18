@@ -10,17 +10,73 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/factory-style.css">
     <link rel="stylesheet" href="assets/css/partner-page.css">
+    <link rel="stylesheet" href="assets/css/responsive-fix.css">
     <style>
         .form-group { margin-bottom: 20px; }
         .form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
         .form-group input, .form-group textarea, .form-group select {
-            width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit;
+            width: 100%; 
+            padding: 10px; 
+            border: 1px solid #ddd; 
+            border-radius: 4px; 
+            font-family: inherit;
+            font-size: 16px; /* Prevent iOS zoom */
+            max-width: 100%;
+            box-sizing: border-box;
         }
-        .form-group textarea { resize: vertical; min-height: 100px; }
-        .form-buttons { display: flex; gap: 15px; margin-top: 30px; }
-        .form-btn { padding: 12px 30px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: 600; }
-        .btn-submit { background: var(--primary-green); color: white; }
-        .btn-reset { background: #f0f0f0; color: #333; }
+        .form-group textarea { 
+            resize: vertical; 
+            min-height: 100px;
+            max-width: 100%;
+        }
+        .form-buttons { 
+            display: flex; 
+            gap: 15px; 
+            margin-top: 30px;
+            margin-bottom: 40px; /* Ensure space before footer */
+        }
+        .form-btn { 
+            padding: 12px 30px; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            font-size: 16px; 
+            font-weight: 600;
+            min-height: 44px; /* Touch target */
+        }
+        .btn-submit { 
+            background: #06532A; 
+            color: white;
+            transition: background 0.3s;
+        }
+        .btn-submit:hover {
+            background: #083f21;
+        }
+        .btn-reset { 
+            background: #f0f0f0; 
+            color: #333;
+            transition: background 0.3s;
+        }
+        .btn-reset:hover {
+            background: #e0e0e0;
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 767px) {
+            .form-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .form-btn {
+                width: 100%;
+                padding: 14px 20px;
+            }
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                padding: 12px;
+            }
+        }
     </style>
 </head>
 <body>
