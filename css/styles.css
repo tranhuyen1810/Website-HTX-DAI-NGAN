@@ -1826,6 +1826,109 @@ table tbody tr:hover {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
+/* Intro Section with Background */
+.intro-section-with-bg {
+  background-image: url('../images/NEN01.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 4rem 20px;
+}
+
+.intro-section-with-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
+.intro-section-with-bg .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Featured Product Section Enhanced */
+.featured-product-section-enhanced {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8f0e8 100%);
+  padding: 4rem 20px;
+  position: relative;
+}
+
+.featured-product-section-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(44, 122, 63, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(26, 77, 37, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.section-title-featured {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c7a3f;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 2;
+}
+
+.section-title-featured::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #2c7a3f, #1a4d25);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.featured-product-section-enhanced .featured-product-wrapper {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(44, 122, 63, 0.15);
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(44, 122, 63, 0.1);
+}
+
+.featured-product-section-enhanced .featured-product-wrapper:hover {
+  box-shadow: 0 12px 40px rgba(44, 122, 63, 0.25);
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .intro-section-with-bg {
+    padding: 2rem 20px;
+  }
+
+  .featured-product-section-enhanced {
+    padding: 2rem 20px;
+  }
+
+  .section-title-featured {
+    font-size: 1.8rem;
+  }
+
+  .featured-product-section-enhanced .featured-product-wrapper {
+    padding: 1rem;
+  }
+}
+
 /* Print Styles */
 @media print {
   header, footer, .no-print {
