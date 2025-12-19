@@ -18,7 +18,23 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: #333;
-  background-color: #fff;
+  background-image: url('../images/NEN02.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: -1;
 }
 
 /* Typography */
@@ -1484,8 +1500,12 @@ section.hero {
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
-  padding: 5rem 20px;
+  padding: 10rem 20px;
+  min-height: 600px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 section.hero h1 {
@@ -1501,11 +1521,53 @@ section.hero p {
 }
 
 section.bg-light {
-  background-color: #f8f9fa;
+  position: relative;
+  background-image: url('../images/NEN02.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+section.bg-light::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 0;
+}
+
+section.bg-light > * {
+  position: relative;
+  z-index: 1;
 }
 
 section.bg-white {
-  background-color: #fff;
+  position: relative;
+  background-image: url('../images/NEN02.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+section.bg-white::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 0;
+}
+
+section.bg-white > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Cards */
