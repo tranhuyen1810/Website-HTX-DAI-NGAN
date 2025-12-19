@@ -539,9 +539,10 @@ img {
 }
 
 /* Partner Banner */
+/* Requirement 3: Make partner banner more compact and change background */
 .partner-banner {
     position: relative;
-    height: 400px;
+    height: 300px; /* Reduced from 400px for more compact size */
     overflow: hidden;
 }
 
@@ -552,13 +553,15 @@ img {
     background-position: center;
 }
 
+/* Requirement 3: Changed background color to lighter gradient */
 .banner-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(173,30,38,0.9) 0%, rgba(0,0,0,0.7) 100%);
+    background: linear-gradient(135deg, rgba(74,206,136,0.85) 0%, rgba(173,30,38,0.75) 100%);
+    /* Changed from dark red gradient to green-to-red gradient with more transparency */
     display: flex;
     align-items: center;
 }
@@ -578,16 +581,17 @@ img {
     margin-bottom: 20px;
 }
 
+/* Requirement 3: Reduced font sizes for compact design */
 .banner-title {
-    font-size: 48px;
+    font-size: 36px; /* Reduced from 48px */
     font-weight: 900;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Reduced from 15px */
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .banner-subtitle {
-    font-size: 20px;
+    font-size: 16px; /* Reduced from 20px */
     font-weight: 400;
     opacity: 0.9;
 }
@@ -1429,12 +1433,13 @@ img {
     margin-top: 115px; /* Top bar + nav height */
 }
 
+/* Requirement 4: Make banner wider */
 .factory-hero-slideshow {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 95%;
+    height: 100%; /* Changed from 95% to 100% for wider banner */
 }
 
 .factory-hero-slide {
@@ -2296,8 +2301,36 @@ img {
     border-bottom: none;
 }
 
+/* Requirement 1: Add background image with blur effect for investment packages */
 .investment-packages {
     margin-bottom: 60px;
+    position: relative;
+    padding: 60px 40px;
+    background-image: url('/images/NEN02.avif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Blur overlay for investment packages */
+.investment-packages::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    z-index: 0;
+}
+
+/* Ensure content is above overlay */
+.investment-packages > * {
+    position: relative;
+    z-index: 1;
 }
 
 .investment-packages h3 {
@@ -2316,6 +2349,7 @@ img {
     gap: 30px;
 }
 
+/* Requirement 2: Make package sizes equal */
 .package-card {
     background: white;
     padding: 40px 30px;
@@ -2325,6 +2359,10 @@ img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 550px; /* Ensure equal height */
 }
 
 .package-card:hover {
@@ -4025,12 +4063,70 @@ img {
 }
 
 /* === PRODUCTS - SẢN PHẨM === */
+/* Requirement 1: Add background image with blur effect for products section */
+.products-section {
+    position: relative;
+    padding: 80px 0;
+    background-image: url('/images/NEN02.avif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Blur overlay for products section */
+.products-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.93);
+    backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+/* Ensure content is above overlay */
+.products-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Requirement 1: Add background image with blur effect */
 .box-rau-section,
 .weekly-menu-section {
     margin: 50px 0;
     padding: 40px;
     background: #f8f8f8;
     border-radius: 10px;
+    position: relative;
+    background-image: url('/images/NEN02.avif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/* Blur overlay for product sections */
+.box-rau-section::before,
+.weekly-menu-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(248, 248, 248, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 0;
+    border-radius: 10px;
+}
+
+/* Ensure content is above overlay */
+.box-rau-section > *,
+.weekly-menu-section > * {
+    position: relative;
+    z-index: 1;
 }
 
 .box-packages {
@@ -4040,6 +4136,7 @@ img {
     margin-top: 30px;
 }
 
+/* Requirement 2: Make box package sizes equal */
 .box-package {
     background: #fff;
     border-radius: 10px;
@@ -4047,6 +4144,9 @@ img {
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     transition: all 0.3s;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 650px; /* Ensure equal height for all boxes */
 }
 
 .box-package.featured {
