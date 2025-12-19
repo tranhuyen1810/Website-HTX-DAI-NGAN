@@ -31,20 +31,59 @@
     });
   }
 
-  // Mobile Dropdown Toggle
-  if (window.innerWidth <= 768) {
-    const hasDropdownItems = document.querySelectorAll('.has-dropdown');
+  // Desktop Dropdown Control - Only one dropdown open at a time
+  const hasDropdownItems = document.querySelectorAll('.has-dropdown');
+  
+  hasDropdownItems.forEach(item => {
+    const link = item.querySelector('.nav-link');
     
-    hasDropdownItems.forEach(item => {
-      const link = item.querySelector('.nav-link');
-      
-      link.addEventListener('click', function(e) {
-        // If on mobile and has dropdown, toggle dropdown
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          item.classList.toggle('active');
-        }
-      });
+    // Desktop hover behavior
+    item.addEventListener('mouseenter', function() {
+      if (window.innerWidth > 768) {
+        // Close all other dropdowns
+        hasDropdownItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('dropdown-active');
+          }
+        });
+        // Open current dropdown
+        item.classList.add('dropdown-active');
+      }
+    });
+    
+    // Close dropdown when mouse leaves
+    item.addEventListener('mouseleave', function() {
+      if (window.innerWidth > 768) {
+        item.classList.remove('dropdown-active');
+      }
+    });
+    
+    // Mobile dropdown toggle
+    link.addEventListener('click', function(e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        
+        // Close all other dropdowns on mobile
+        hasDropdownItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+          }
+        });
+        
+        // Toggle current dropdown
+        item.classList.toggle('active');
+      }
+    });
+  });
+  
+  // Close all dropdowns when mouse leaves navigation area
+  if (mainNavigation) {
+    mainNavigation.addEventListener('mouseleave', function() {
+      if (window.innerWidth > 768) {
+        hasDropdownItems.forEach(item => {
+          item.classList.remove('dropdown-active');
+        });
+      }
     });
   }
 

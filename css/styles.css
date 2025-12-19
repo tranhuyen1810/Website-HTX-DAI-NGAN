@@ -436,18 +436,26 @@ a:hover {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
-  transition: all 0.3s ease;
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   pointer-events: none;
   overflow: hidden;
+  max-height: 0;
 }
 
-.has-dropdown:hover .dropdown-menu {
+/* Ensure only one dropdown is visible at a time */
+.nav-item:not(.dropdown-active) .dropdown-menu {
+  display: none;
+}
+
+.has-dropdown.dropdown-active .dropdown-menu {
+  display: block;
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
   pointer-events: auto;
+  max-height: 1000px;
 }
 
 .dropdown-link {
@@ -469,6 +477,10 @@ a:hover {
 /* Mega Menu */
 .mega-menu {
   min-width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
 }
 
 .mega-menu .dropdown-content {
@@ -476,6 +488,11 @@ a:hover {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 20px;
+}
+
+.mega-menu-section {
+  flex: 1;
+  min-width: 180px;
 }
 
 .mega-menu-section h4 {
