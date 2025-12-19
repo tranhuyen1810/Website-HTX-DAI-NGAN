@@ -901,6 +901,7 @@ footer {
 /* ========================================
    FEATURED PRODUCT - Sản phẩm chủ lực
    ======================================== */
+  
 
 .featured-product-section {
   padding: 3rem 20px;
@@ -1235,9 +1236,19 @@ footer {
    ======================================== */
 
 .contact-section {
-  background-color: #f8f9fa;
-  padding: 3rem 20px;
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.85),
+      rgba(255, 255, 255, 0.85)
+    ),
+    url('../images/NEN01.avif');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 20px;
 }
+
 
 .contact-wrapper {
   display: grid;
@@ -1809,7 +1820,7 @@ table tbody tr:hover {
   color: #fff;
   padding: 4rem 20px;
   text-align: center;
-  min-height: 600px;
+  min-height: 2000 px;
   display: flex;
   align-items: center;
   justify-content: center;
