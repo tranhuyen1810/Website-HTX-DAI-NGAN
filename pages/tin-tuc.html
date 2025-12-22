@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tin tức mới nhất về Hợp tác xã Lâm Đồng Đại Ngàn - Cập nhật thông tin, hoạt động và thành tựu">
+  <meta name="keywords" content="tin tức, hợp tác xã, nông nghiệp, Lâm Đồng">
+  <meta property="og:title" content="Tin tức - HTX Lâm Đồng Đại Ngàn">
+  <meta property="og:description" content="Cập nhật tin tức mới nhất về hoạt động và phát triển của Hợp tác xã">
+  <title>Tin tức - Hợp tác xã Lâm Đồng Đại Ngàn</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    /* News Page Specific Styles */
+    .news-hero {
+      background: linear-gradient(135deg, #2c7a3f 0%, #1a4d25 100%);
+      color: white;
+      padding: 4rem 20px 3rem;
+      margin-bottom: 3rem;
+    }
+    
+    .news-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    
+    .news-hero p {
+      text-align: center;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    
+    .news-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid #e0e0e0;
+    }
+    
+    .news-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+    
+    .news-card-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background: linear-gradient(135deg, #f0f8f4, #e8f4f0);
+    }
+    
+    .news-card-content {
+      padding: 1.5rem;
+    }
+    
+    .news-card-meta {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    
+    .news-card-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    
+    .news-card-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: #333;
+      line-height: 1.4;
+    }
+    
+    .news-card-title a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .news-card-title a:hover {
+      color: #2c7a3f;
+    }
+    
+    .news-card-excerpt {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    
+    .news-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #2c7a3f;
+      font-weight: 500;
+      text-decoration: none;
+      transition: gap 0.3s;
+    }
+    
+    .news-card-link:hover {
+      gap: 0.75rem;
+    }
+    
+    .news-category {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: #e8f4f0;
+      color: #2c7a3f;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    
+    .featured-news {
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    
+    .featured-news-image {
+      border-radius: 8px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 300px;
+    }
+    
+    .featured-news-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .featured-badge {
+      display: inline-block;
+      background: #AD1E26;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      width: fit-content;
+    }
+    
+    @media (max-width: 768px) {
+      .news-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .featured-news {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+      }
+      
+      .news-hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <!-- Top Header -->
+    <div class="top-header">
+      <div class="top-header-container">
+        <!-- Logo & Slogan -->
+        <div class="logo-section">
+          <a href="../" class="logo">
+            <img class="logo-icon" src="../assets/img/1.png" alt="HTX Logo" />
+            <div class="logo-text">
+              <span class="logo-name">LÂM ĐỒNG ĐẠI NGÀN</span>
+              <span class="logo-slogan">Đồng hành cùng nông dân - chinh phục thị trường</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Top Right: Hotline, Search, Language, Cart -->
+        <div class="top-header-right">
+          <!-- Search Box -->
+          <div class="header-search">
+            <input type="text" placeholder="Tìm kiếm..." class="search-input">
+            <button class="search-btn">🔍</button>
+          </div>
+
+          <!-- Language Switcher -->
+          <div class="language-switcher">
+            <button class="lang-btn active" data-lang="vi">🇻🇳</button>
+            <button class="lang-btn" data-lang="en">🇬🇧</button>
+          </div>
+
+          <!-- Cart Icon -->
+          <div class="header-cart">
+            <a href="#" class="cart-link">
+              <span class="cart-icon">🛒</span>
+              <span class="cart-count">0</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-navigation">
+      <div class="nav-container">
+        <ul class="nav-menu">
+          <!-- Trang chủ -->
+          <li class="nav-item">
+            <a href="../" class="nav-link">
+              <span class="nav-text">TRANG CHỦ</span>
+            </a>
+          </li>
+
+          <!-- Giới thiệu -->
+          <li class="nav-item has-dropdown">
+            <a href="gioi-thieu.html" class="nav-link">
+              <span class="nav-text">GIỚI THIỆU</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="gioi-thieu.html" class="dropdown-link">Về chúng tôi</a>
+              <a href="gioi-thieu.html#tam-nhin" class="dropdown-link">Tầm nhìn - Sứ mệnh</a>
+              <a href="ho-so-nang-luc.html" class="dropdown-link">Hồ sơ năng lực</a>
+            </div>
+          </li>
+
+          <!-- Sản phẩm -->
+          <li class="nav-item has-dropdown">
+            <a href="san-pham.html" class="nav-link">
+              <span class="nav-text">SẢN PHẨM</span>
+            </a>
+            <div class="dropdown-menu mega-menu">
+              <div class="mega-menu-section">
+                <h4>Sản phẩm</h4>
+                <a href="san-pham/box-rau.html" class="dropdown-link">Rau, Củ</a>
+                <a href="san-pham/thanh-phan.html" class="dropdown-link">Trà – Nước cốt</a>
+              </div>
+              <div class="mega-menu-section">
+                <h4>Dịch vụ</h4>
+                <a href="#dich-vu-say-thang-hoa" class="dropdown-link">Sấy thăng hoa</a>
+                <a href="#dich-vu-say" class="dropdown-link">Sấy nóng/lạnh</a>
+                <a href="#dich-vu-kho-tru" class="dropdown-link">Cấp/Trữ đông</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Tin tức & Sự kiện -->
+          <li class="nav-item has-dropdown">
+            <a href="tin-tuc.html" class="nav-link active">
+              <span class="nav-text">TIN TỨC & SỰ KIỆN</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="tin-tuc.html" class="dropdown-link">Tin tức</a>
+              <a href="su-kien.html" class="dropdown-link">Sự kiện</a>
+            </div>
+          </li>
+
+          <!-- Thành viên HTX -->
+          <li class="nav-item has-dropdown">
+            <a href="thanh-vien.html" class="nav-link">
+              <span class="nav-text">THÀNH VIÊN HTX</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="thanh-vien.html" class="dropdown-link">Thành viên tiêu biểu</a>
+              <a href="thanh-vien.html#quyen-loi" class="dropdown-link">Quyền lợi thành viên</a>
+            </div>
+          </li>
+
+          <!-- Đối tác -->
+          <li class="nav-item has-dropdown">
+            <a href="#doi-tac" class="nav-link">
+              <span class="nav-text">ĐỐI TÁC</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="#doi-tac-cua-chung-toi" class="dropdown-link">Đối tác của chúng tôi</a>
+              <a href="#goi-dau-tu" class="dropdown-link">Các gói đầu tư</a>
+            </div>
+          </li>
+
+          <!-- Liên hệ -->
+          <li class="nav-item">
+            <a href="lien-he.html" class="nav-link">
+              <span class="nav-text">LIÊN HỆ</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Breadcrumb -->
+  <section style="background-color: #f8f9fa; padding: 1rem 20px;">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li><a href="../">Trang chủ</a></li>
+        <li>Tin tức</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- News Hero -->
+  <section class="news-hero">
+    <div class="container">
+      <h1>📰 Tin Tức</h1>
+      <p>Cập nhật thông tin mới nhất về hoạt động và phát triển của Hợp tác xã</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section style="padding: 2rem 20px 4rem;">
+    <div class="container">
+      
+      <!-- Featured News -->
+      <div class="featured-news">
+        <img src="../images/2.png" alt="Tin tức nổi bật" class="featured-news-image" onerror="this.style.display='none'">
+        <div class="featured-news-content">
+          <span class="featured-badge">📌 NỔI BẬT</span>
+          <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333;">HTX Lâm Đồng Đại Ngàn mở rộng vùng trồng hữu cơ</h2>
+          <p style="color: #666; line-height: 1.8; margin-bottom: 1.5rem;">
+            Hợp tác xã chúng tôi đã chính thức mở rộng vùng canh tác hữu cơ thêm 50 hecta, 
+            mang đến nguồn rau củ sạch chất lượng cao cho người tiêu dùng. Dự án này không chỉ 
+            nâng cao thu nhập cho nông dân mà còn bảo vệ môi trường sinh thái Tây Nguyên.
+          </p>
+          <div style="display: flex; gap: 1rem; color: #666; font-size: 0.9rem; margin-bottom: 1rem;">
+            <span>📅 15/12/2025</span>
+            <span>👤 Admin HTX</span>
+            <span>👁️ 1,234 lượt xem</span>
+          </div>
+          <a href="#" class="btn btn-primary">Đọc thêm →</a>
+        </div>
+      </div>
+
+      <!-- News Grid -->
+      <div class="news-grid">
+        
+        <!-- News Card 1 -->
+        <article class="news-card">
+          <img src="../images/NEN01.avif" alt="Tin tức 1" class="news-card-image">
+          <div class="news-card-content">
+            <span class="news-category">🌱 Canh tác</span>
+            <div class="news-card-meta">
+              <span>📅 10/12/2025</span>
+              <span>👁️ 856 views</span>
+            </div>
+            <h3 class="news-card-title">
+              <a href="#">Kỹ thuật trồng rau sạch theo tiêu chuẩn VietGAP</a>
+            </h3>
+            <p class="news-card-excerpt">
+              Chúng tôi đã áp dụng thành công quy trình canh tác VietGAP, đảm bảo 
+              sản phẩm an toàn và chất lượng cao cho người tiêu dùng...
+            </p>
+            <a href="#" class="news-card-link">Xem chi tiết →</a>
+          </div>
+        </article>
+
+        <!-- News Card 2 -->
+        <article class="news-card">
+          <img src="../images/NEN02.avif" alt="Tin tức 2" class="news-card-image">
+          <div class="news-card-content">
+            <span class="news-category">🤝 Hợp tác</span>
+            <div class="news-card-meta">
+              <span>📅 05/12/2025</span>
+              <span>👁️ 1,024 views</span>
+            </div>
+            <h3 class="news-card-title">
+              <a href="#">Ký kết hợp tác với siêu thị Co.op Mart</a>
+            </h3>
+            <p class="news-card-excerpt">
+              HTX đã ký kết thỏa thuận hợp tác phân phối sản phẩm tại hệ thống 
+              siêu thị Co.op Mart trên toàn quốc, mở rộng thị trường tiêu thụ...
+            </p>
+            <a href="#" class="news-card-link">Xem chi tiết →</a>
+          </div>
+        </article>
+
+        <!-- News Card 3 -->
+        <article class="news-card">
+          <div class="news-card-image" style="background: linear-gradient(135deg, #e8f4f0, #c8e6c9);"></div>
+          <div class="news-card-content">
+            <span class="news-category">🏆 Thành tựu</span>
+            <div class="news-card-meta">
+              <span>📅 01/12/2025</span>
+              <span>👁️ 742 views</span>
+            </div>
+            <h3 class="news-card-title">
+              <a href="#">Đạt chứng nhận sản phẩm OCOP 4 sao</a>
+            </h3>
+            <p class="news-card-excerpt">
+              Sản phẩm rau củ sạch của HTX đã vinh dự nhận chứng nhận OCOP 4 sao, 
+              khẳng định chất lượng và uy tín trên thị trường...
+            </p>
+            <a href="#" class="news-card-link">Xem chi tiết →</a>
+          </div>
+        </article>
+
+        <!-- News Card 4 -->
+        <article class="news-card">
+          <div class="news-card-image" style="background: linear-gradient(135deg, #fff3e0, #ffe0b2);"></div>
+          <div class="news-card-content">
+            <span class="news-category">💡 Công nghệ</span>
+            <div class="news-card-meta">
+              <span>📅 28/11/2025</span>
+              <span>👁️ 623 views</span>
+            </div>
+            <h3 class="news-card-title">
+              <a href="#">Ứng dụng công nghệ IoT trong nông nghiệp</a>
+            </h3>
+            <p class="news-card-excerpt">
+              HTX đầu tư hệ thống giám sát thông minh, tự động hóa tưới tiêu, 
+              theo dõi độ ẩm đất và dinh dưỡng cây trồng...
+            </p>
+            <a href="#" class="news-card-link">Xem chi tiết →</a>
+          </div>
+        </article>
+
+        <!-- News Card 5 -->
+        <article class="news-card">
+          <div class="news-card-image" style="background: linear-gradient(135deg, #e3f2fd, #bbdefb);"></div>
+          <div class="news-card-content">
+            <span class="news-category">📚 Đào tạo</span>
+            <div class="news-card-meta">
+              <span>📅 20/11/2025</span>
+              <span>👁️ 512 views</span>
+            </div>
+            <h3 class="news-card-title">
+              <a href="#">Chương trình đào tạo kỹ năng cho thành viên HTX</a>
+            </h3>
+            <p class="news-card-excerpt">
+              Tổ chức khóa đào tạo về kỹ thuật canh tác, quản lý dịch hại và 
+              phát triển sản phẩm bền vững cho hơn 100 thành viên...
+            </p>
+            <a href="#" class="news-card-link">Xem chi tiết →</a>
+          </div>
+        </article>
+
+        <!-- News Card 6 -->
+        <article class="news-card">
+          <div class="news-card-image" style="background: linear-gradient(135deg, #fce4ec, #f8bbd0);"></div>
+          <div class="news-card-content">
+            <span class="news-category">🌍 Môi trường</span>
+            <div class="news-card-meta">
+              <span>📅 15/11/2025</span>
+              <span>👁️ 489 views</span>
+            </div>
+            <h3 class="news-card-title">
+              <a href="#">Dự án trồng cây xanh bảo vệ Tây Nguyên</a>
+            </h3>
+            <p class="news-card-excerpt">
+              HTX khởi động dự án trồng 10,000 cây xanh nhằm bảo vệ môi trường, 
+              chống xói mòn đất và giữ nguồn nước cho vùng cao nguyên...
+            </p>
+            <a href="#" class="news-card-link">Xem chi tiết →</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Pagination -->
+      <div style="display: flex; justify-content: center; margin-top: 3rem; gap: 0.5rem;">
+        <button style="padding: 0.75rem 1.25rem; border: 1px solid #ddd; background: white; border-radius: 6px; cursor: pointer; font-weight: 500;" disabled>← Trước</button>
+        <button style="padding: 0.75rem 1.25rem; border: 1px solid #2c7a3f; background: #2c7a3f; color: white; border-radius: 6px; cursor: pointer; font-weight: 500;">1</button>
+        <button style="padding: 0.75rem 1.25rem; border: 1px solid #ddd; background: white; border-radius: 6px; cursor: pointer; font-weight: 500;">2</button>
+        <button style="padding: 0.75rem 1.25rem; border: 1px solid #ddd; background: white; border-radius: 6px; cursor: pointer; font-weight: 500;">3</button>
+        <button style="padding: 0.75rem 1.25rem; border: 1px solid #ddd; background: white; border-radius: 6px; cursor: pointer; font-weight: 500;">Sau →</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Về chúng tôi</h4>
+          <p>Hợp tác xã Lâm Đồng Đại Ngàn - Kết nối nông hộ, phát triển bền vững</p>
+        </div>
+        <div class="footer-col">
+          <h4>Liên kết</h4>
+          <ul>
+            <li><a href="../">Trang chủ</a></li>
+            <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+            <li><a href="san-pham.html">Sản phẩm</a></li>
+            <li><a href="lien-he.html">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Liên hệ</h4>
+          <p>📍 Lâm Đồng, Việt Nam</p>
+          <p>📞 0123 456 789</p>
+          <p>✉️ contact@htx.vn</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Hợp tác xã Lâm Đồng Đại Ngàn. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/header.js"></script>
+</body>
+</html>
