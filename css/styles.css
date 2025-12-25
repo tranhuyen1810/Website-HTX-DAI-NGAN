@@ -1331,7 +1331,7 @@ footer {
       rgba(255, 255, 255, 0.85),
       rgba(255, 255, 255, 0.85)
     ),
-    url('../images/NEN01.avif');
+    url('images/NEN03.webp');
 
   background-size: cover;
   background-position: center;
@@ -2120,8 +2120,8 @@ table tbody tr:hover {
   display: block;
 }
 .product-split-hero .split-content {
-  background-color: #E44D32;
-  color: #fff;
+  background-color: #FFD54E;
+  color: #FFF;
   padding: 4rem 3rem;
   display: flex;
   flex-direction: column;
@@ -2131,20 +2131,20 @@ table tbody tr:hover {
   height: 100%;
 }
 .product-split-hero .eyebrow {
-  color: rgba(255,255,255,0.85);
+  color: #AD1E26;
   font-weight: 1000;
   letter-spacing: 2px;
   margin-bottom: 0.5rem;
 }
 .product-split-hero .split-title {
-  font-size: 20.2 rem;
+  font-size: 6rem;
   margin: 0;
   letter-spacing: 2px;
   font-weight: 800;
 }
 .product-split-hero .split-sub {
   margin-top: 0.4rem;
-  font-size: 1.25rem;
+  font-size: 3.5rem;
   opacity: 0.95;
   letter-spacing: 1px;
   font-weight: 500;
@@ -2157,11 +2157,11 @@ table tbody tr:hover {
   display: inline-block;
   margin-top: 1.25rem;
   padding: 0.6rem 1rem;
-  background: #06532A;
+  background: #AD1E26;
   color: #FFFFFF;
   text-decoration: none;
   border-radius: 4px;
-  font-weight: 700;
+  font-weight: 1000;
   box-shadow: 0 6px 18px rgba(50,82,63,0.12);
 }
 
