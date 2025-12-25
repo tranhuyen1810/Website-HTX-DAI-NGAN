@@ -1272,7 +1272,7 @@ footer {
 
 .product-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 16px #FAA519;
+  box-shadow: 0 4px 16px FAA519rgba(0, 0, 0, 0.2);
 }
 
 .product-image {
@@ -2120,7 +2120,7 @@ table tbody tr:hover {
   display: block;
 }
 .product-split-hero .split-content {
-  background-color: #32523f; /* deep green */
+  background-color: #E44D32; /* deep green */
   color: #fff;
   padding: 4rem 3rem;
   display: flex;
@@ -2132,12 +2132,12 @@ table tbody tr:hover {
 }
 .product-split-hero .eyebrow {
   color: rgba(255,255,255,0.85);
-  font-weight: 700;
+  font-weight: 1000;
   letter-spacing: 2px;
   margin-bottom: 0.5rem;
 }
 .product-split-hero .split-title {
-  font-size: 2.2rem;
+  font-size: 20.2 rem;
   margin: 0;
   letter-spacing: 2px;
   font-weight: 800;
@@ -2157,10 +2157,10 @@ table tbody tr:hover {
   display: inline-block;
   margin-top: 1.25rem;
   padding: 0.6rem 1rem;
-  background: #ffffff;
-  color: #32523f;
+  background: #06532A;
+  color: #FFFFFF;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 4px
   font-weight: 700;
   box-shadow: 0 6px 18px rgba(50,82,63,0.12);
 }
