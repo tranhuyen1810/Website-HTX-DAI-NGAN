@@ -2120,7 +2120,7 @@ table tbody tr:hover {
   display: block;
 }
 .product-split-hero .split-content {
-  background-color: #E44D32; /* deep green */
+  background-color: #E44D32;
   color: #fff;
   padding: 4rem 3rem;
   display: flex;
@@ -2160,9 +2160,24 @@ table tbody tr:hover {
   background: #06532A;
   color: #FFFFFF;
   text-decoration: none;
-  border-radius: 4px
+  border-radius: 4px;
   font-weight: 700;
   box-shadow: 0 6px 18px rgba(50,82,63,0.12);
+}
+
+/* Dark variant - reverse color scheme */
+.product-split-hero.dark .split-content {
+  background: linear-gradient(135deg, #27AE60 0%, #229954 50%, #1E8449 100%); /* green gradient */
+}
+
+.product-split-hero.dark .split-btn.outline {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.product-split-hero.dark .split-btn.outline:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 900px) {
