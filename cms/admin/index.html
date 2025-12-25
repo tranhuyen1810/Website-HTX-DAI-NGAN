@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - HTX CMS</title>
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard">
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h2>HTX CMS</h2>
+      <p>Quản trị nội dung</p>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active">
+            <i class="fas fa-home"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="pages.html" class="nav-link">
+            <i class="fas fa-file"></i>
+            <span>Trang nội dung</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="posts.html" class="nav-link">
+            <i class="fas fa-newspaper"></i>
+            <span>Tin tức & Sự kiện</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="products.html" class="nav-link">
+            <i class="fas fa-box"></i>
+            <span>Sản phẩm</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="services.html" class="nav-link">
+            <i class="fas fa-concierge-bell"></i>
+            <span>Dịch vụ</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="partners.html" class="nav-link">
+            <i class="fas fa-handshake"></i>
+            <span>Đối tác</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="investments.html" class="nav-link">
+            <i class="fas fa-chart-line"></i>
+            <span>Gói đầu tư</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="media.html" class="nav-link">
+            <i class="fas fa-images"></i>
+            <span>Thư viện Media</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="settings.html" class="nav-link">
+            <i class="fas fa-cog"></i>
+            <span>Cài đặt</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <button class="menu-toggle" id="menuToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <h1 class="page-title">Dashboard</h1>
+      </div>
+      <div class="header-right">
+        <div class="user-menu">
+          <div class="user-info" id="userInfo">
+            <img src="https://via.placeholder.com/36" alt="User" class="user-avatar">
+            <span id="userName">Admin</span>
+          </div>
+        </div>
+        <button class="btn btn-sm btn-danger" onclick="CMS.logout()">
+          <i class="fas fa-sign-out-alt"></i> Đăng xuất
+        </button>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <div class="content">
+      <div class="page-header">
+        <h1 class="page-title">Chào mừng đến với HTX CMS</h1>
+        <div class="breadcrumb">
+          <span><i class="fas fa-home"></i> Trang chủ</span>
+        </div>
+      </div>
+
+      <!-- Stats Cards -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 30px;">
+        <div class="card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+          <div class="card-body" style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <div style="font-size: 2rem; font-weight: bold;" id="totalPages">0</div>
+              <div>Trang nội dung</div>
+            </div>
+            <i class="fas fa-file fa-3x" style="opacity: 0.3;"></i>
+          </div>
+        </div>
+
+        <div class="card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">
+          <div class="card-body" style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <div style="font-size: 2rem; font-weight: bold;" id="totalPosts">0</div>
+              <div>Tin tức & Sự kiện</div>
+            </div>
+            <i class="fas fa-newspaper fa-3x" style="opacity: 0.3;"></i>
+          </div>
+        </div>
+
+        <div class="card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white;">
+          <div class="card-body" style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <div style="font-size: 2rem; font-weight: bold;" id="totalProducts">0</div>
+              <div>Sản phẩm</div>
+            </div>
+            <i class="fas fa-box fa-3x" style="opacity: 0.3;"></i>
+          </div>
+        </div>
+
+        <div class="card" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color: white;">
+          <div class="card-body" style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <div style="font-size: 2rem; font-weight: bold;" id="totalServices">0</div>
+              <div>Dịch vụ</div>
+            </div>
+            <i class="fas fa-concierge-bell fa-3x" style="opacity: 0.3;"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Hoạt động gần đây</h3>
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Thời gian</th>
+                <th>Người dùng</th>
+                <th>Hành động</th>
+                <th>Nội dung</th>
+              </tr>
+            </thead>
+            <tbody id="activityTable">
+              <tr>
+                <td colspan="4" style="text-align: center; padding: 40px;">
+                  Đang tải dữ liệu...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Thao tác nhanh</h3>
+        </div>
+        <div class="card-body">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+            <a href="pages.html?action=create" class="btn btn-primary">
+              <i class="fas fa-plus"></i> Tạo trang mới
+            </a>
+            <a href="posts.html?action=create" class="btn btn-success">
+              <i class="fas fa-newspaper"></i> Đăng tin tức
+            </a>
+            <a href="products.html?action=create" class="btn btn-info">
+              <i class="fas fa-box"></i> Thêm sản phẩm
+            </a>
+            <a href="media.html" class="btn btn-warning">
+              <i class="fas fa-upload"></i> Upload media
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/auth.js"></script>
+  <script>
+    // Check authentication
+    CMS.requireAuth();
+
+    // Load user info
+    const user = CMS.getCurrentUser();
+    if (user) {
+      document.getElementById('userName').textContent = user.full_name || user.username;
+    }
+
+    // Menu toggle for mobile
+    document.getElementById('menuToggle')?.addEventListener('click', () => {
+      document.getElementById('sidebar').classList.toggle('active');
+    });
+
+    // Load dashboard stats
+    const loadStats = async () => {
+      try {
+        const [pages, posts, products, services] = await Promise.all([
+          CMS.apiRequest('/api/content/pages'),
+          CMS.apiRequest('/api/content/posts'),
+          CMS.apiRequest('/api/content/products'),
+          CMS.apiRequest('/api/content/services')
+        ]);
+
+        document.getElementById('totalPages').textContent = pages.pagination?.total || 0;
+        document.getElementById('totalPosts').textContent = posts.pagination?.total || 0;
+        document.getElementById('totalProducts').textContent = products.pagination?.total || 0;
+        document.getElementById('totalServices').textContent = services.pagination?.total || 0;
+      } catch (error) {
+        console.error('Error loading stats:', error);
+      }
+    };
+
+    loadStats();
+  </script>
+</body>
+</html>

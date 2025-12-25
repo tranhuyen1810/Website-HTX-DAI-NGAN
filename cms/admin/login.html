@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập - HTX CMS</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="login-page">
+  <div class="login-container">
+    <div class="login-box">
+      <div class="logo-section">
+        <img src="../../images/logo.png" alt="HTX Logo" class="logo" onerror="this.style.display='none'">
+        <h1>HTX LÂM ĐỒNG ĐẠI NGÀN</h1>
+        <p>Hệ thống quản trị nội dung</p>
+      </div>
+
+      <form id="loginForm" class="login-form">
+        <div class="form-group">
+          <label for="username">Tên đăng nhập</label>
+          <input type="text" id="username" name="username" required autofocus>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Mật khẩu</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="remember" name="remember">
+            <span>Ghi nhớ đăng nhập</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">
+          <span class="btn-text">Đăng nhập</span>
+          <span class="btn-loader" style="display:none;">Đang xử lý...</span>
+        </button>
+
+        <div id="errorMessage" class="error-message" style="display:none;"></div>
+      </form>
+
+      <div class="login-footer">
+        <p>© 2025 HTX Lâm Đồng Đại Ngàn. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Menu Dropdown - Tin tức & Sự kiện</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Quick test styles */
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f5f5;
+    }
+    
+    .test-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    h1 {
+      text-align: center;
+      color: #AD1E26;
+      margin-bottom: 30px;
+    }
+    
+    .test-info {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 30px;
+      border-left: 4px solid #AD1E26;
+    }
+    
+    .test-info h3 {
+      margin-top: 0;
+      color: #AD1E26;
+    }
+    
+    .test-info ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    
+    .test-info li {
+      margin: 5px 0;
+    }
+    
+    /* Override some styles for testing */
+    .site-header {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    
+    .responsive-test {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    
+    .device-view {
+      background: #fff;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+    }
+    
+    .device-view h3 {
+      margin-top: 0;
+      text-align: center;
+      color: #666;
+    }
+    
+    @media (max-width: 768px) {
+      .responsive-test {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="test-container">
+    <h1>🧪 Test Menu Dropdown: "Tin tức & Sự kiện"</h1>
+    
+    <div class="test-info">
+      <h3>📋 Hướng dẫn test:</h3>
+      <ul>
+        <li><strong>Desktop:</strong> Di chuột qua "TIN TỨC & SỰ KIỆN" để xem dropdown</li>
+        <li><strong>Mobile:</strong> Click/tap vào "TIN TỨC & SỰ KIỆN" để mở/đóng</li>
+        <li><strong>Hover Effect:</strong> Chú ý gradient background và border khi hover các mục con</li>
+        <li><strong>Animation:</strong> Menu sẽ fade in/slide down mượt mà</li>
+        <li><strong>Arrow Icon:</strong> Mũi tên (▼) sẽ xoay 180° khi menu mở</li>
+      </ul>
+    </div>
+
+    <!-- Header Test -->
+    <header class="site-header">
+      <!-- Top Header -->
+      <div class="top-header">
+        <div class="top-header-container">
+          <!-- Logo & Slogan -->
+          <div class="logo-section">
+            <a href="/" class="logo">
+              <img class="logo-icon" src="assets/img/1.png" alt="HTX Logo" onerror="this.style.display='none'" />
+              <div class="logo-text">
+                <span class="logo-name">LÂM ĐỒNG ĐẠI NGÀN</span>
+                <span class="logo-slogan">Đồng hành cùng nông dân - chinh phục thị trường</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Top Right: Hotline, Search, Language, Cart -->
+          <div class="top-header-right">
+            <!-- Search Box -->
+            <div class="header-search">
+              <input type="text" placeholder="Tìm kiếm..." class="search-input">
+              <button class="search-btn">🔍</button>
+            </div>
+
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+              <button class="lang-btn active" data-lang="vi">🇻🇳</button>
+              <button class="lang-btn" data-lang="en">🇬🇧</button>
+            </div>
+
+            <!-- Cart Icon -->
+            <div class="header-cart">
+              <a href="#" class="cart-link">
+                <span class="cart-icon">🛒</span>
+                <span class="cart-count">0</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Navigation -->
+      <nav class="main-navigation">
+        <div class="nav-container">
+          <ul class="nav-menu">
+            <!-- Trang chủ -->
+            <li class="nav-item">
+              <a href="/" class="nav-link">
+                <span class="nav-text">TRANG CHỦ</span>
+              </a>
+            </li>
+
+            <!-- Giới thiệu -->
+            <li class="nav-item has-dropdown">
+              <a href="#" class="nav-link">
+                <span class="nav-text">GIỚI THIỆU</span>
+              </a>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-link">Về chúng tôi</a>
+                <a href="#" class="dropdown-link">Tầm nhìn - Sứ mệnh</a>
+                <a href="#" class="dropdown-link">Hồ sơ năng lực</a>
+              </div>
+            </li>
+
+            <!-- ⭐ TIN TỨC & SỰ KIỆN - FOCUS ITEM -->
+            <li class="nav-item has-dropdown">
+              <a href="pages/tin-tuc.html" class="nav-link active">
+                <span class="nav-text">TIN TỨC & SỰ KIỆN</span>
+              </a>
+              <div class="dropdown-menu">
+                <a href="pages/tin-tuc.html" class="dropdown-link">Tin tức</a>
+                <a href="pages/su-kien.html" class="dropdown-link">Sự kiện</a>
+              </div>
+            </li>
+
+            <!-- Sản phẩm -->
+            <li class="nav-item has-dropdown">
+              <a href="#" class="nav-link">
+                <span class="nav-text">SẢN PHẨM</span>
+              </a>
+              <div class="dropdown-menu mega-menu">
+                <div class="mega-menu-section">
+                  <h4>Sản phẩm</h4>
+                  <a href="#" class="dropdown-link">Rau, Củ</a>
+                  <a href="#" class="dropdown-link">Trà – Nước cốt</a>
+                </div>
+                <div class="mega-menu-section">
+                  <h4>Dịch vụ</h4>
+                  <a href="#" class="dropdown-link">Sấy thăng hoa</a>
+                  <a href="#" class="dropdown-link">Sấy nóng/lạnh</a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Liên hệ -->
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="nav-text">LIÊN HỆ</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Test Results Display -->
+    <div style="background: #f0f8f4; padding: 20px; border-radius: 8px; margin-top: 30px;">
+      <h3 style="margin-top: 0; color: #2c7a3f;">✅ Features Implemented:</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+        <div style="background: white; padding: 15px; border-radius: 6px; border-left: 3px solid #2c7a3f;">
+          <strong>🎨 Visual Design</strong><br>
+          <small>Màu sắc nhẹ nhàng, bo góc mềm, đổ bóng đa tầng</small>
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 6px; border-left: 3px solid #2c7a3f;">
+          <strong>✨ Smooth Animation</strong><br>
+          <small>Fade + Slide với cubic-bezier timing</small>
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 6px; border-left: 3px solid #2c7a3f;">
+          <strong>🎯 Hover Effects</strong><br>
+          <small>Gradient background, border highlight, icon ::before</small>
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 6px; border-left: 3px solid #2c7a3f;">
+          <strong>📱 Responsive</strong><br>
+          <small>Accordion style trên mobile với animation</small>
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 6px; border-left: 3px solid #2c7a3f;">
+          <strong>🔽 Dropdown Indicator</strong><br>
+          <small>Mũi tên động với rotation animation</small>
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 6px; border-left: 3px solid #2c7a3f;">
+          <strong>♿ Accessibility</strong><br>
+          <small>Keyboard nav, ARIA labels, visual feedback</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Browser Resize Test Info -->
+    <div style="background: #fff3cd; padding: 20px; border-radius: 8px; margin-top: 20px; border-left: 4px solid #ff9800;">
+      <h3 style="margin-top: 0; color: #856404;">💡 Testing Tips:</h3>
+      <ol style="margin: 10px 0; padding-left: 20px;">
+        <li>Resize browser window để xem responsive behavior</li>
+        <li>Breakpoint mobile: 768px</li>
+        <li>Trên mobile, menu sẽ chuyển sang accordion style</li>
+        <li>Test trên cả desktop và mobile devices</li>
+        <li>Kiểm tra animation smoothness ở các frame rate khác nhau</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/header.js"></script>
+  
+  <!-- Quick test script -->
+  <script>
+    // Display current viewport width
+    function updateViewportInfo() {
+      const width = window.innerWidth;
+      const mode = width <= 768 ? 'Mobile' : 'Desktop';
+      console.log(`Viewport: ${width}px (${mode} mode)`);
+    }
+    
+    window.addEventListener('resize', updateViewportInfo);
+    updateViewportInfo();
+    
+    // Log dropdown interactions
+    document.querySelectorAll('.has-dropdown').forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        if (window.innerWidth > 768) {
+          console.log('✅ Desktop: Dropdown opened via hover');
+        }
+      });
+      
+      item.querySelector('.nav-link').addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          console.log('✅ Mobile: Dropdown toggled via click');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

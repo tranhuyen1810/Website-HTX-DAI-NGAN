@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Các gói đầu tư vào Hợp tác xã Lâm Đồng Đại Ngàn - Cơ hội đầu tư bền vững, lợi nhuận hấp dẫn">
+  <meta name="keywords" content="đầu tư, gói đầu tư, HTX, nông nghiệp, Lâm Đồng">
+  <meta property="og:title" content="Các gói đầu tư - HTX Lâm Đồng Đại Ngàn">
+  <meta property="og:description" content="Đầu tư vào nông nghiệp sạch, phát triển bền vững">
+  <title>Các gói đầu tư - Hợp tác xã Lâm Đồng Đại Ngàn</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/mobile-responsive.css">
+  <style>
+    /* Investment Page Specific Styles */
+    .investment-hero {
+      background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+      color: white;
+      padding: 4rem 20px 3rem;
+      margin-bottom: 3rem;
+    }
+    
+    .investment-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    
+    .investment-hero p {
+      text-align: center;
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .investment-intro {
+      background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+      padding: 3rem 20px;
+      margin-bottom: 3rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+    
+    .investment-intro h2 {
+      color: #2e7d32;
+      margin-bottom: 1.5rem;
+    }
+    
+    .investment-intro p {
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.8;
+      color: #555;
+      font-size: 1.05rem;
+    }
+    
+    .investment-packages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    
+    .package-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+      border: 3px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .package-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+    
+    .package-card.featured {
+      border-color: #ffd700;
+      background: linear-gradient(135deg, #fffef7, #fffff0);
+    }
+    
+    .package-card.featured::before {
+      content: '⭐ PHỔ BIẾN';
+      position: absolute;
+      top: 1rem;
+      right: -2.5rem;
+      background: #ffd700;
+      color: #333;
+      padding: 0.5rem 3rem;
+      transform: rotate(45deg);
+      font-weight: 700;
+      font-size: 0.75rem;
+    }
+    
+    .package-header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 2px solid #e0e0e0;
+    }
+    
+    .package-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+    
+    .package-name {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+    
+    .package-tagline {
+      color: #666;
+      font-size: 0.95rem;
+      font-style: italic;
+    }
+    
+    .package-price {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .price-amount {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #2e7d32;
+      display: block;
+    }
+    
+    .price-period {
+      color: #666;
+      font-size: 0.9rem;
+    }
+    
+    .package-features {
+      margin-bottom: 2rem;
+    }
+    
+    .feature-item {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    
+    .feature-item:last-child {
+      border-bottom: none;
+    }
+    
+    .feature-icon {
+      color: #2e7d32;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    
+    .feature-text {
+      color: #555;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+    
+    .package-benefits {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+    
+    .benefits-title {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    
+    .benefit-list {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .benefit-list li {
+      padding: 0.5rem 0;
+      color: #666;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .benefit-list li::before {
+      content: '💎';
+      font-size: 1rem;
+    }
+    
+    .package-cta {
+      text-align: center;
+    }
+    
+    .btn-invest {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: linear-gradient(135deg, #2e7d32, #388e3c);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+    }
+    
+    .btn-invest:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(46, 125, 50, 0.4);
+      background: linear-gradient(135deg, #388e3c, #43a047);
+    }
+    
+    .investment-process {
+      background: white;
+      padding: 3rem 20px;
+      margin: 4rem 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .process-step {
+      text-align: center;
+      padding: 1.5rem;
+      position: relative;
+    }
+    
+    .step-number {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #2e7d32, #388e3c);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 auto 1rem;
+      box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+    }
+    
+    .step-title {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    
+    .step-description {
+      color: #666;
+      line-height: 1.6;
+      font-size: 0.9rem;
+    }
+    
+    .investment-comparison {
+      margin: 4rem 0;
+    }
+    
+    .comparison-table {
+      width: 100%;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    
+    .comparison-table th {
+      background: linear-gradient(135deg, #2e7d32, #388e3c);
+      color: white;
+      padding: 1.25rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    
+    .comparison-table td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid #f0f0f0;
+      color: #555;
+    }
+    
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .comparison-table tr:hover {
+      background: #f8f9fa;
+    }
+    
+    .check-icon {
+      color: #2e7d32;
+      font-size: 1.2rem;
+    }
+    
+    .faq-section {
+      background: #f8f9fa;
+      padding: 3rem 20px;
+      margin: 4rem 0;
+      border-radius: 12px;
+    }
+    
+    .faq-item {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    
+    .faq-question {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 0.75rem;
+      font-size: 1.05rem;
+    }
+    
+    .faq-answer {
+      color: #666;
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+    
+    .risk-warning {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 3rem 0;
+    }
+    
+    .risk-warning h3 {
+      color: #856404;
+      margin-bottom: 0.75rem;
+    }
+    
+    .risk-warning p {
+      color: #856404;
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+    
+    @media (max-width: 768px) {
+      .investment-packages {
+        grid-template-columns: 1fr;
+      }
+      
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+      
+      .investment-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .price-amount {
+        font-size: 2.5rem;
+      }
+      
+      .comparison-table {
+        font-size: 0.9rem;
+      }
+      
+      .comparison-table th,
+      .comparison-table td {
+        padding: 0.75rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <!-- Top Header -->
+    <div class="top-header">
+      <div class="top-header-container">
+        <!-- Logo & Slogan -->
+        <div class="logo-section">
+          <a href="../" class="logo">
+            <img class="logo-icon" src="../assets/img/1.png" alt="HTX Logo" />
+            <div class="logo-text">
+              <span class="logo-name">LÂM ĐỒNG ĐẠI NGÀN</span>
+              <span class="logo-slogan">Đồng hành cùng nông dân - chinh phục thị trường</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Top Right: Hotline, Search, Language, Cart -->
+        <div class="top-header-right">
+          <!-- Search Box -->
+          <div class="header-search">
+            <input type="text" placeholder="Tìm kiếm..." class="search-input">
+            <button class="search-btn">🔍</button>
+          </div>
+
+          <!-- Language Switcher -->
+          <div class="language-switcher">
+            <button class="lang-btn active" data-lang="vi">🇻🇳</button>
+            <button class="lang-btn" data-lang="en">🇬🇧</button>
+          </div>
+
+          <!-- Cart Icon -->
+          <div class="header-cart">
+            <a href="#" class="cart-link">
+              <span class="cart-icon">🛒</span>
+              <span class="cart-count">0</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-navigation">
+      <div class="nav-container">
+        <ul class="nav-menu">
+          <!-- Trang chủ -->
+          <li class="nav-item">
+            <a href="../" class="nav-link">
+              <span class="nav-text">TRANG CHỦ</span>
+            </a>
+          </li>
+
+          <!-- Giới thiệu -->
+          <li class="nav-item has-dropdown">
+            <a href="gioi-thieu.html" class="nav-link">
+              <span class="nav-text">GIỚI THIỆU</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="gioi-thieu.html" class="dropdown-link">Về chúng tôi</a>
+              <a href="gioi-thieu.html#tam-nhin" class="dropdown-link">Tầm nhìn - Sứ mệnh</a>
+              <a href="ho-so-nang-luc.html" class="dropdown-link">Hồ sơ năng lực</a>
+            </div>
+          </li>
+
+          <!-- Sản phẩm -->
+          <li class="nav-item has-dropdown">
+            <a href="san-pham.html" class="nav-link">
+              <span class="nav-text">SẢN PHẨM</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="san-pham/box-rau.html" class="dropdown-link">Rau, Củ</a>
+              <a href="san-pham/thanh-phan.html" class="dropdown-link">Trà – Nước cốt</a>
+            </div>
+          </li>
+
+          <!-- Dịch vụ -->
+          <li class="nav-item has-dropdown">
+            <a href="dich-vu-say-thang-hoa.html" class="nav-link">
+              <span class="nav-text">DỊCH VỤ</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="dich-vu-say-thang-hoa.html" class="dropdown-link">Sấy thăng hoa</a>
+              <a href="dich-vu-say-nong-lanh.html" class="dropdown-link">Sấy nóng / lạnh</a>
+              <a href="dich-vu-cap-tru-dong.html" class="dropdown-link">Cấp / Trữ đông</a>
+            </div>
+          </li>
+
+          <!-- Tin tức & Sự kiện -->
+          <li class="nav-item has-dropdown">
+            <a href="tin-tuc.html" class="nav-link">
+              <span class="nav-text">TIN TỨC & SỰ KIỆN</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="tin-tuc.html" class="dropdown-link">Tin tức</a>
+              <a href="su-kien.html" class="dropdown-link">Sự kiện</a>
+            </div>
+          </li>
+
+          <!-- Thành viên HTX -->
+          <li class="nav-item has-dropdown">
+            <a href="thanh-vien.html" class="nav-link">
+              <span class="nav-text">THÀNH VIÊN HTX</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="thanh-vien.html" class="dropdown-link">Thành viên tiêu biểu</a>
+              <a href="thanh-vien.html#quyen-loi" class="dropdown-link">Quyền lợi thành viên</a>
+            </div>
+          </li>
+
+          <!-- Đối tác -->
+          <li class="nav-item has-dropdown">
+            <a href="doi-tac.html" class="nav-link active">
+              <span class="nav-text">ĐỐI TÁC</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="doi-tac.html" class="dropdown-link">Đối tác của chúng tôi</a>
+              <a href="goi-dau-tu.html" class="dropdown-link">Các gói đầu tư</a>
+            </div>
+          </li>
+
+          <!-- Liên hệ -->
+          <li class="nav-item">
+            <a href="lien-he.html" class="nav-link">
+              <span class="nav-text">LIÊN HỆ</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Breadcrumb -->
+  <section style="background-color: #f8f9fa; padding: 1rem 20px;">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li><a href="../">Trang chủ</a></li>
+        <li><a href="doi-tac.html">Đối tác</a></li>
+        <li>Các gói đầu tư</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Investment Hero -->
+  <section class="investment-hero">
+    <div class="container">
+      <h1>💰 Các Gói Đầu Tư</h1>
+      <p>Đầu tư vào nông nghiệp sạch, phát triển bền vững cùng HTX Lâm Đồng Đại Ngàn</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section style="padding: 2rem 20px 4rem;">
+    <div class="container">
+      
+      <!-- Investment Intro -->
+      <div class="investment-intro">
+        <h2>Cơ Hội Đầu Tư Hấp Dẫn & Bền Vững</h2>
+        <p>
+          HTX Lâm Đồng Đại Ngàn mời gọi các nhà đầu tư cùng tham gia phát triển nông nghiệp sạch, 
+          công nghệ cao tại Tây Nguyên. Với mô hình kinh doanh minh bạch, hiệu quả đã được chứng minh 
+          và tiềm năng tăng trưởng mạnh mẽ, chúng tôi cam kết mang lại lợi nhuận bền vững cho các nhà đầu tư.
+        </p>
+      </div>
+
+      <!-- Investment Packages -->
+      <h2 style="text-align: center; margin-bottom: 2rem; color: #333;">Các Gói Đầu Tư</h2>
+      <div class="investment-packages">
+        
+        <!-- Package 1: Starter -->
+        <div class="package-card">
+          <div class="package-header">
+            <div class="package-icon">🌱</div>
+            <h3 class="package-name">Gói Khởi Đầu</h3>
+            <p class="package-tagline">Dành cho nhà đầu tư cá nhân</p>
+          </div>
+
+          <div class="package-price">
+            <span class="price-amount">100 triệu</span>
+            <span class="price-period">VNĐ / 12 tháng</span>
+          </div>
+
+          <div class="package-features">
+            <div class="feature-item">
+              <span class="feature-icon">✅</span>
+              <span class="feature-text">Lợi nhuận dự kiến: <strong>12-15%/năm</strong></span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✅</span>
+              <span class="feature-text">Thời gian đầu tư tối thiểu: 12 tháng</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✅</span>
+              <span class="feature-text">Sở hữu 5ha vùng trồng rau sạch</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✅</span>
+              <span class="feature-text">Báo cáo định kỳ 3 tháng/lần</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✅</span>
+              <span class="feature-text">Hỗ trợ tư vấn và theo dõi</span>
+            </div>
+          </div>
+
+          <div class="package-benefits">
+            <h4 class="benefits-title">Quyền lợi bổ sung:</h4>
+            <ul class="benefit-list">
+              <li>Sản phẩm ưu đãi giá thành viên</li>
+              <li>Tham quan vùng trồng 2 lần/năm</li>
+              <li>Chứng chỉ thành viên đầu tư</li>
+            </ul>
+          </div>
+
+          <div class="package-cta">
+            <a href="lien-he.html" class="btn-invest">Đăng ký ngay</a>
+          </div>
+        </div>
+
+        <!-- Package 2: Growth (Featured) -->
+        <div class="package-card featured">
+          <div class="package-header">
+            <div class="package-icon">🌿</div>
+            <h3 class="package-name">Gói Phát Triển</h3>
+            <p class="package-tagline">Phổ biến nhất, lợi nhuận tốt</p>
+          </div>
+
+          <div class="package-price">
+            <span class="price-amount">500 triệu</span>
+            <span class="price-period">VNĐ / 24 tháng</span>
+          </div>
+
+          <div class="package-features">
+            <div class="feature-item">
+              <span class="feature-icon">✅</span>
+              <span class="feature-text">Lợi nhuận dự kiến: <strong>15-20%/năm</strong></span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✅</span>
+              <span class="feature-text">Thời gian đầu tư tối thiểu: 24 tháng</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✅</span>
+              <span class="feature-text">Sở hữu 20ha vùng trồng + Nhà kính</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✅</span>
+              <span class="feature-text">Báo cáo định kỳ hàng tháng</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✅</span>
+              <span class="feature-text">Quyền biểu quyết tại Đại hội</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✅</span>
+              <span class="feature-text">Chia sẻ doanh thu từ xuất khẩu</span>
+            </div>
+          </div>
+
+          <div class="package-benefits">
+            <h4 class="benefits-title">Quyền lợi VIP:</h4>
+            <ul class="benefit-list">
+              <li>Ưu tiên rút vốn trước hạn (phí 2%)</li>
+              <li>Tham gia hội nghị đầu tư</li>
+              <li>Quà tặng sản phẩm cao cấp</li>
+              <li>Hỗ trợ marketing cho doanh nghiệp</li>
+            </ul>
+          </div>
+
+          <div class="package-cta">
+            <a href="lien-he.html" class="btn-invest">Đăng ký ngay</a>
+          </div>
+        </div>
+
+        <!-- Package 3: Premium -->
+        <div class="package-card">
+          <div class="package-header">
+            <div class="package-icon">🌳</div>
+            <h3 class="package-name">Gói Cao Cấp</h3>
+            <p class="package-tagline">Dành cho tổ chức, doanh nghiệp</p>
+          </div>
+
+          <div class="package-price">
+            <span class="price-amount">2+ tỷ</span>
+            <span class="price-period">VNĐ / 36 tháng</span>
+          </div>
+
+          <div class="package-features">
+            <div class="feature-item">
+              <span class="feature-icon">✅</span>
+              <span class="feature-text">Lợi nhuận dự kiến: <strong>18-25%/năm</strong></span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✅</span>
+              <span class="feature-text">Thời gian đầu tư: 36 tháng trở lên</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✅</span>
+              <span class="feature-text">Sở hữu 100ha+ vùng trồng</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✅</span>
+              <span class="feature-text">Hệ thống chế biến riêng</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✅</span>
+              <span class="feature-text">Thương hiệu riêng (OEM/ODM)</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✅</span>
+              <span class="feature-text">Quyền điều hành chiến lược</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✅</span>
+              <span class="feature-text">Ưu tiên kênh phân phối</span>
+            </div>
+          </div>
+
+          <div class="package-benefits">
+            <h4 class="benefits-title">Quyền lợi đặc biệt:</h4>
+            <ul class="benefit-list">
+              <li>Ghế Ban Quản Trị HTX</li>
+              <li>Tài trợ R&D công nghệ mới</li>
+              <li>Độc quyền thị trường khu vực</li>
+              <li>Hỗ trợ pháp lý & thuế toàn diện</li>
+            </ul>
+          </div>
+
+          <div class="package-cta">
+            <a href="lien-he.html" class="btn-invest">Liên hệ tư vấn</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Investment Process -->
+      <div class="investment-process">
+        <h2 style="text-align: center; color: #333; margin-bottom: 1rem;">Quy Trình Đầu Tư</h2>
+        <p style="text-align: center; color: #666; max-width: 700px; margin: 0 auto 2rem;">
+          Đơn giản, minh bạch và chuyên nghiệp trong từng bước
+        </p>
+
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3 class="step-title">Tư vấn & Đánh giá</h3>
+            <p class="step-description">
+              Liên hệ để được tư vấn chi tiết về các gói đầu tư phù hợp
+            </p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3 class="step-title">Tham quan thực địa</h3>
+            <p class="step-description">
+              Khảo sát vùng trồng, nhà máy chế biến và hệ thống phân phối
+            </p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3 class="step-title">Ký kết hợp đồng</h3>
+            <p class="step-description">
+              Hoàn thiện thủ tục pháp lý, ký hợp đồng đầu tư chính thức
+            </p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h3 class="step-title">Triển khai dự án</h3>
+            <p class="step-description">
+              Bắt đầu hoạt động sản xuất, theo dõi tiến độ và hiệu quả
+            </p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">5</div>
+            <h3 class="step-title">Nhận lợi nhuận</h3>
+            <p class="step-description">
+              Nhận báo cáo và chi trả lợi nhuận định kỳ theo hợp đồng
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparison Table -->
+      <div class="investment-comparison">
+        <h2 style="text-align: center; margin-bottom: 2rem; color: #333;">So Sánh Các Gói</h2>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Tiêu chí</th>
+              <th>Gói Khởi Đầu</th>
+              <th>Gói Phát Triển</th>
+              <th>Gói Cao Cấp</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mức đầu tư tối thiểu</td>
+              <td>100 triệu VNĐ</td>
+              <td>500 triệu VNĐ</td>
+              <td>2 tỷ VNĐ</td>
+            </tr>
+            <tr>
+              <td>Lợi nhuận dự kiến/năm</td>
+              <td>12-15%</td>
+              <td>15-20%</td>
+              <td>18-25%</td>
+            </tr>
+            <tr>
+              <td>Thời gian cam kết</td>
+              <td>12 tháng</td>
+              <td>24 tháng</td>
+              <td>36 tháng</td>
+            </tr>
+            <tr>
+              <td>Diện tích sở hữu</td>
+              <td>5 ha</td>
+              <td>20 ha + Nhà kính</td>
+              <td>100+ ha</td>
+            </tr>
+            <tr>
+              <td>Báo cáo định kỳ</td>
+              <td>3 tháng/lần</td>
+              <td>Hàng tháng</td>
+              <td>Hàng tuần</td>
+            </tr>
+            <tr>
+              <td>Quyền biểu quyết</td>
+              <td>-</td>
+              <td><span class="check-icon">✓</span></td>
+              <td><span class="check-icon">✓✓</span></td>
+            </tr>
+            <tr>
+              <td>Rút vốn trước hạn</td>
+              <td>Phí 5%</td>
+              <td>Phí 2%</td>
+              <td>Linh hoạt</td>
+            </tr>
+            <tr>
+              <td>Hỗ trợ marketing</td>
+              <td>-</td>
+              <td><span class="check-icon">✓</span></td>
+              <td><span class="check-icon">✓✓</span></td>
+            </tr>
+            <tr>
+              <td>Thương hiệu riêng</td>
+              <td>-</td>
+              <td>-</td>
+              <td><span class="check-icon">✓</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="faq-section">
+        <h2 style="text-align: center; color: #333; margin-bottom: 2rem;">Câu Hỏi Thường Gặp</h2>
+
+        <div class="faq-item">
+          <h3 class="faq-question">❓ Lợi nhuận đầu tư được tính như thế nào?</h3>
+          <p class="faq-answer">
+            Lợi nhuận được tính dựa trên doanh thu từ sản xuất, chế biến và xuất khẩu sản phẩm, 
+            sau khi trừ chi phí vận hành. Mức lợi nhuận dự kiến đã bao gồm các yếu tố rủi ro 
+            và được đảm bảo bằng hợp đồng pháp lý.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">❓ Có thể rút vốn trước hạn không?</h3>
+          <p class="faq-answer">
+            Có thể rút vốn trước hạn với phí từ 2-5% tùy gói đầu tư. Gói Cao Cấp có chính sách 
+            linh hoạt hơn. Tuy nhiên, chúng tôi khuyến khích đầu tư đủ kỳ hạn để tối ưu lợi nhuận.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">❓ Rủi ro đầu tư là gì?</h3>
+          <p class="faq-answer">
+            Rủi ro chính bao gồm: biến động giá thị trường, thiên tai, dịch bệnh. HTX có bảo hiểm 
+            nông nghiệp, hệ thống tưới tự động và đa dạng hóa sản phẩm để giảm thiểu rủi ro. 
+            Lợi nhuận thực tế có thể dao động ±3% so với dự kiến.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">❓ Nhà đầu tư có được quyền gì?</h3>
+          <p class="faq-answer">
+            Tùy gói đầu tư, bạn có quyền: nhận báo cáo định kỳ, tham quan vùng trồng, 
+            biểu quyết tại Đại hội (gói từ 500tr), tham gia Ban Quản Trị (gói 2 tỷ+). 
+            Tất cả được quy định rõ trong hợp đồng.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">❓ Làm thế nào để bắt đầu đầu tư?</h3>
+          <p class="faq-answer">
+            Liên hệ với chúng tôi qua hotline hoặc form đăng ký. Đội ngũ tư vấn sẽ sắp xếp 
+            buổi tham quan, giải đáp thắc mắc và hỗ trợ hoàn thiện thủ tục đầu tư trong 5-7 ngày làm việc.
+          </p>
+        </div>
+      </div>
+
+      <!-- Risk Warning -->
+      <div class="risk-warning">
+        <h3>⚠️ Thông Báo Quan Trọng</h3>
+        <p>
+          Đầu tư vào nông nghiệp luôn có rủi ro. Mức lợi nhuận nêu trên là dự kiến dựa trên 
+          hiệu quả kinh doanh giai đoạn 2022-2024 và không phải là cam kết chắc chắn. 
+          Nhà đầu tư cần đọc kỹ hợp đồng, hiểu rõ các điều khoản và rủi ro trước khi quyết định. 
+          Chúng tôi khuyến nghị tư vấn với chuyên gia tài chính độc lập.
+        </p>
+      </div>
+
+      <!-- Final CTA -->
+      <div style="text-align: center; margin-top: 4rem;">
+        <h2 style="color: #333; margin-bottom: 1rem;">Sẵn Sàng Bắt Đầu?</h2>
+        <p style="color: #666; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Đội ngũ tư vấn của chúng tôi luôn sẵn sàng hỗ trợ bạn tìm hiểu và lựa chọn gói đầu tư phù hợp nhất.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="lien-he.html" class="btn btn-primary" style="padding: 1rem 2.5rem;">Liên hệ tư vấn</a>
+          <a href="doi-tac.html" class="btn btn-secondary" style="padding: 1rem 2.5rem;">Xem đối tác</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Về chúng tôi</h4>
+          <p>Hợp tác xã Lâm Đồng Đại Ngàn - Kết nối nông hộ, phát triển bền vững</p>
+        </div>
+        <div class="footer-col">
+          <h4>Liên kết</h4>
+          <ul>
+            <li><a href="../">Trang chủ</a></li>
+            <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+            <li><a href="san-pham.html">Sản phẩm</a></li>
+            <li><a href="lien-he.html">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Liên hệ</h4>
+          <p>📍 Lâm Đồng, Việt Nam</p>
+          <p>📞 0123 456 789</p>
+          <p>✉️ contact@htx.vn</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Hợp tác xã Lâm Đồng Đại Ngàn. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/header.js"></script>
+</body>
+</html>

@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Đối tác của Hợp tác xã Lâm Đồng Đại Ngàn - Hệ thống phân phối và đối tác chiến lược">
+  <meta name="keywords" content="đối tác, hợp tác, phân phối, HTX, Lâm Đồng">
+  <meta property="og:title" content="Đối tác - HTX Lâm Đồng Đại Ngàn">
+  <meta property="og:description" content="Hệ thống đối tác và kênh phân phối của Hợp tác xã">
+  <title>Đối tác của chúng tôi - Hợp tác xã Lâm Đồng Đại Ngàn</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/mobile-responsive.css">
+  <style>
+    /* Partners Page Specific Styles */
+    .partners-hero {
+      background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+      color: white;
+      padding: 4rem 20px 3rem;
+      margin-bottom: 3rem;
+    }
+    
+    .partners-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    
+    .partners-hero p {
+      text-align: center;
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .partners-intro {
+      background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+      padding: 3rem 20px;
+      margin-bottom: 3rem;
+      border-radius: 12px;
+    }
+    
+    .partners-intro h2 {
+      text-align: center;
+      color: #1565c0;
+      margin-bottom: 1.5rem;
+    }
+    
+    .partners-intro p {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.8;
+      color: #555;
+      font-size: 1.05rem;
+    }
+    
+    .partners-categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+    
+    .partner-category {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-top: 4px solid #1565c0;
+      transition: all 0.3s;
+    }
+    
+    .partner-category:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+    
+    .partner-category-icon {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    
+    .partner-category h3 {
+      text-align: center;
+      color: #1565c0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .partner-category p {
+      text-align: center;
+      color: #666;
+      line-height: 1.6;
+    }
+    
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    
+    .partner-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s;
+      border: 2px solid transparent;
+      text-align: center;
+    }
+    
+    .partner-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+      border-color: #1565c0;
+    }
+    
+    .partner-logo {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+      border-radius: 12px;
+      font-size: 4rem;
+      color: #1565c0;
+    }
+    
+    .partner-name {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 0.75rem;
+    }
+    
+    .partner-type {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      background: #e3f2fd;
+      color: #1565c0;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    
+    .partner-description {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    
+    .partner-location {
+      color: #999;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    
+    .partner-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin: 3rem 0;
+      padding: 2rem;
+      background: linear-gradient(135deg, #1565c0, #0d47a1);
+      border-radius: 12px;
+      color: white;
+    }
+    
+    .stat-item {
+      text-align: center;
+    }
+    
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    .stat-label {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+    
+    .partnership-benefits {
+      background: #f8f9fa;
+      padding: 3rem 20px;
+      margin: 3rem 0;
+      border-radius: 12px;
+    }
+    
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .benefit-item {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    
+    .benefit-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .benefit-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+    
+    .benefit-description {
+      color: #666;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, #e8f4f0, #c8e6c9);
+      padding: 3rem 20px;
+      border-radius: 12px;
+      text-align: center;
+      margin: 3rem 0;
+    }
+    
+    .cta-section h2 {
+      color: #2c7a3f;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-section p {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      color: #555;
+      line-height: 1.8;
+    }
+    
+    @media (max-width: 768px) {
+      .partners-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .partner-stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .partners-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .stat-number {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <!-- Top Header -->
+    <div class="top-header">
+      <div class="top-header-container">
+        <!-- Logo & Slogan -->
+        <div class="logo-section">
+          <a href="../" class="logo">
+            <img class="logo-icon" src="../assets/img/1.png" alt="HTX Logo" />
+            <div class="logo-text">
+              <span class="logo-name">LÂM ĐỒNG ĐẠI NGÀN</span>
+              <span class="logo-slogan">Đồng hành cùng nông dân - chinh phục thị trường</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Top Right: Hotline, Search, Language, Cart -->
+        <div class="top-header-right">
+          <!-- Search Box -->
+          <div class="header-search">
+            <input type="text" placeholder="Tìm kiếm..." class="search-input">
+            <button class="search-btn">🔍</button>
+          </div>
+
+          <!-- Language Switcher -->
+          <div class="language-switcher">
+            <button class="lang-btn active" data-lang="vi">🇻🇳</button>
+            <button class="lang-btn" data-lang="en">🇬🇧</button>
+          </div>
+
+          <!-- Cart Icon -->
+          <div class="header-cart">
+            <a href="#" class="cart-link">
+              <span class="cart-icon">🛒</span>
+              <span class="cart-count">0</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-navigation">
+      <div class="nav-container">
+        <ul class="nav-menu">
+          <!-- Trang chủ -->
+          <li class="nav-item">
+            <a href="../" class="nav-link">
+              <span class="nav-text">TRANG CHỦ</span>
+            </a>
+          </li>
+
+          <!-- Giới thiệu -->
+          <li class="nav-item has-dropdown">
+            <a href="gioi-thieu.html" class="nav-link">
+              <span class="nav-text">GIỚI THIỆU</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="gioi-thieu.html" class="dropdown-link">Về chúng tôi</a>
+              <a href="gioi-thieu.html#tam-nhin" class="dropdown-link">Tầm nhìn - Sứ mệnh</a>
+              <a href="ho-so-nang-luc.html" class="dropdown-link">Hồ sơ năng lực</a>
+            </div>
+          </li>
+
+          <!-- Sản phẩm -->
+          <li class="nav-item has-dropdown">
+            <a href="san-pham.html" class="nav-link">
+              <span class="nav-text">SẢN PHẨM</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="san-pham/box-rau.html" class="dropdown-link">Rau, Củ</a>
+              <a href="san-pham/thanh-phan.html" class="dropdown-link">Trà – Nước cốt</a>
+            </div>
+          </li>
+
+          <!-- Dịch vụ -->
+          <li class="nav-item has-dropdown">
+            <a href="dich-vu-say-thang-hoa.html" class="nav-link">
+              <span class="nav-text">DỊCH VỤ</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="dich-vu-say-thang-hoa.html" class="dropdown-link">Sấy thăng hoa</a>
+              <a href="dich-vu-say-nong-lanh.html" class="dropdown-link">Sấy nóng / lạnh</a>
+              <a href="dich-vu-cap-tru-dong.html" class="dropdown-link">Cấp / Trữ đông</a>
+            </div>
+          </li>
+
+          <!-- Tin tức & Sự kiện -->
+          <li class="nav-item has-dropdown">
+            <a href="tin-tuc.html" class="nav-link">
+              <span class="nav-text">TIN TỨC & SỰ KIỆN</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="tin-tuc.html" class="dropdown-link">Tin tức</a>
+              <a href="su-kien.html" class="dropdown-link">Sự kiện</a>
+            </div>
+          </li>
+
+          <!-- Thành viên HTX -->
+          <li class="nav-item has-dropdown">
+            <a href="thanh-vien.html" class="nav-link">
+              <span class="nav-text">THÀNH VIÊN HTX</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="thanh-vien.html" class="dropdown-link">Thành viên tiêu biểu</a>
+              <a href="thanh-vien.html#quyen-loi" class="dropdown-link">Quyền lợi thành viên</a>
+            </div>
+          </li>
+
+          <!-- Đối tác -->
+          <li class="nav-item has-dropdown">
+            <a href="doi-tac.html" class="nav-link active">
+              <span class="nav-text">ĐỐI TÁC</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="doi-tac.html" class="dropdown-link">Đối tác của chúng tôi</a>
+              <a href="goi-dau-tu.html" class="dropdown-link">Các gói đầu tư</a>
+            </div>
+          </li>
+
+          <!-- Liên hệ -->
+          <li class="nav-item">
+            <a href="lien-he.html" class="nav-link">
+              <span class="nav-text">LIÊN HỆ</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Breadcrumb -->
+  <section style="background-color: #f8f9fa; padding: 1rem 20px;">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li><a href="../">Trang chủ</a></li>
+        <li>Đối tác của chúng tôi</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Partners Hero -->
+  <section class="partners-hero">
+    <div class="container">
+      <h1>🤝 Đối Tác Của Chúng Tôi</h1>
+      <p>Xây dựng mạng lưới phân phối rộng khắp, mang sản phẩm nông nghiệp sạch đến mọi người tiêu dùng</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section style="padding: 2rem 20px 4rem;">
+    <div class="container">
+      
+      <!-- Partners Intro -->
+      <div class="partners-intro">
+        <h2>Hệ Thống Phân Phối Đa Kênh</h2>
+        <p>
+          Hợp tác xã Lâm Đồng Đại Ngàn tự hào hợp tác với hệ thống đối tác uy tín trên toàn quốc. 
+          Chúng tôi không ngừng mở rộng kênh phân phối để đảm bảo sản phẩm nông nghiệp sạch, 
+          chất lượng cao được tiếp cận dễ dàng đến người tiêu dùng Việt Nam và quốc tế.
+        </p>
+      </div>
+
+      <!-- Partner Stats -->
+      <div class="partner-stats">
+        <div class="stat-item">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Đối tác chiến lược</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">200+</div>
+          <div class="stat-label">Điểm phân phối</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">30+</div>
+          <div class="stat-label">Tỉnh thành</div>
+        </div>
+      </div>
+
+      <!-- Partner Categories -->
+      <h2 style="text-align: center; margin-bottom: 2rem; color: #333;">Các Kênh Phân Phối</h2>
+      <div class="partners-categories">
+        
+        <div class="partner-category">
+          <div class="partner-category-icon">🏪</div>
+          <h3>Hệ Thống Siêu Thị</h3>
+          <p>Hợp tác với các chuỗi siêu thị lớn như Co.op Mart, VinMart, BigC, Lotte Mart trên toàn quốc</p>
+        </div>
+
+        <div class="partner-category">
+          <div class="partner-category-icon">🛒</div>
+          <h3>Thương Mại Điện Tử</h3>
+          <p>Có mặt trên các sàn TMĐT hàng đầu: Shopee, Lazada, Tiki, Sendo với hàng nghìn đơn hàng mỗi tháng</p>
+        </div>
+
+        <div class="partner-category">
+          <div class="partner-category-icon">🏨</div>
+          <h3>Khách Sạn & Nhà Hàng</h3>
+          <p>Cung cấp nguyên liệu tươi sống cho hơn 100 khách sạn, resort và nhà hàng cao cấp</p>
+        </div>
+
+        <div class="partner-category">
+          <div class="partner-category-icon">🏢</div>
+          <h3>Doanh Nghiệp</h3>
+          <p>Đối tác cung cấp suất ăn công nghiệp cho các công ty, nhà máy, trường học</p>
+        </div>
+
+        <div class="partner-category">
+          <div class="partner-category-icon">✈️</div>
+          <h3>Xuất Khẩu</h3>
+          <p>Xuất khẩu sản phẩm đến các thị trường quốc tế: Nhật Bản, Hàn Quốc, Singapore</p>
+        </div>
+
+        <div class="partner-category">
+          <div class="partner-category-icon">🌾</div>
+          <h3>Cửa Hàng Organic</h3>
+          <p>Hợp tác với hơn 50 cửa hàng thực phẩm hữu cơ trên toàn quốc</p>
+        </div>
+
+      </div>
+
+      <!-- Featured Partners -->
+      <h2 style="text-align: center; margin: 4rem 0 2rem; color: #333;">Đối Tác Tiêu Biểu</h2>
+      <div class="partners-grid">
+        
+        <!-- Partner 1 -->
+        <div class="partner-card">
+          <div class="partner-logo">🏪</div>
+          <div class="partner-name">Co.op Mart</div>
+          <span class="partner-type">Siêu thị</span>
+          <p class="partner-description">
+            Chuỗi siêu thị Co.op Mart với hơn 100 cửa hàng trên toàn quốc, 
+            phân phối đa dạng sản phẩm rau củ sạch của HTX.
+          </p>
+          <p class="partner-location">📍 Toàn quốc</p>
+        </div>
+
+        <!-- Partner 2 -->
+        <div class="partner-card">
+          <div class="partner-logo">🛒</div>
+          <div class="partner-name">Shopee Mall</div>
+          <span class="partner-type">Thương mại điện tử</span>
+          <p class="partner-description">
+            Đối tác chính thức trên Shopee Mall, đạt huy hiệu "Yêu thích" 
+            với hơn 10,000 đơn hàng mỗi tháng.
+          </p>
+          <p class="partner-location">📍 Online</p>
+        </div>
+
+        <!-- Partner 3 -->
+        <div class="partner-card">
+          <div class="partner-logo">🏨</div>
+          <div class="partner-name">Dalat Palace Hotel</div>
+          <span class="partner-type">Khách sạn cao cấp</span>
+          <p class="partner-description">
+            Cung cấp rau củ tươi sống, hữu cơ cho nhà hàng 5 sao, 
+            đáp ứng tiêu chuẩn quốc tế.
+          </p>
+          <p class="partner-location">📍 Đà Lạt, Lâm Đồng</p>
+        </div>
+
+        <!-- Partner 4 -->
+        <div class="partner-card">
+          <div class="partner-logo">🏬</div>
+          <div class="partner-name">VinMart</div>
+          <span class="partner-type">Siêu thị</span>
+          <p class="partner-description">
+            Hệ thống VinMart với 80+ cửa hàng, đưa sản phẩm HTX 
+            đến gần hơn với người tiêu dùng đô thị.
+          </p>
+          <p class="partner-location">📍 Hà Nội, TP.HCM</p>
+        </div>
+
+        <!-- Partner 5 -->
+        <div class="partner-card">
+          <div class="partner-logo">🌏</div>
+          <div class="partner-name">Japan Import Co.</div>
+          <span class="partner-type">Xuất khẩu</span>
+          <p class="partner-description">
+            Đối tác xuất khẩu chính, đưa sản phẩm hữu cơ Việt Nam 
+            đến thị trường Nhật Bản khó tính.
+          </p>
+          <p class="partner-location">📍 Tokyo, Nhật Bản</p>
+        </div>
+
+        <!-- Partner 6 -->
+        <div class="partner-card">
+          <div class="partner-logo">🍽️</div>
+          <div class="partner-name">Central Food</div>
+          <span class="partner-type">Phân phối công nghiệp</span>
+          <p class="partner-description">
+            Cung cấp nguyên liệu cho hơn 200 bếp ăn công nghiệp, 
+            trường học và bệnh viện.
+          </p>
+          <p class="partner-location">📍 Miền Nam</p>
+        </div>
+
+        <!-- Partner 7 -->
+        <div class="partner-card">
+          <div class="partner-logo">🌿</div>
+          <div class="partner-name">Organic Market</div>
+          <span class="partner-type">Cửa hàng hữu cơ</span>
+          <p class="partner-description">
+            Chuỗi cửa hàng thực phẩm hữu cơ cao cấp, 
+            đối tượng khách hàng là người tiêu dùng có thu nhập cao.
+          </p>
+          <p class="partner-location">📍 Hà Nội</p>
+        </div>
+
+        <!-- Partner 8 -->
+        <div class="partner-card">
+          <div class="partner-logo">📦</div>
+          <div class="partner-name">Lazada Fresh</div>
+          <span class="partner-type">Thương mại điện tử</span>
+          <p class="partner-description">
+            Kênh phân phối thực phẩm tươi sống, giao hàng nhanh 2h, 
+            phủ sóng các thành phố lớn.
+          </p>
+          <p class="partner-location">📍 Online</p>
+        </div>
+
+        <!-- Partner 9 -->
+        <div class="partner-card">
+          <div class="partner-logo">🏭</div>
+          <div class="partner-name">Samsung Vietnam</div>
+          <span class="partner-type">Doanh nghiệp</span>
+          <p class="partner-description">
+            Cung cấp suất ăn công nhân cho nhà máy Samsung, 
+            đảm bảo chất lượng và an toàn thực phẩm.
+          </p>
+          <p class="partner-location">📍 Bắc Ninh</p>
+        </div>
+
+      </div>
+
+      <!-- Partnership Benefits -->
+      <div class="partnership-benefits">
+        <h2 style="text-align: center; color: #333; margin-bottom: 1rem;">Lợi Ích Khi Hợp Tác</h2>
+        <p style="text-align: center; color: #666; max-width: 700px; margin: 0 auto 2rem;">
+          Trở thành đối tác phân phối của HTX Lâm Đồng Đại Ngàn mang lại nhiều giá trị bền vững
+        </p>
+        
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <div class="benefit-icon">✅</div>
+            <div class="benefit-title">Sản phẩm chất lượng cao</div>
+            <p class="benefit-description">
+              Đảm bảo nguồn gốc rõ ràng, chứng nhận VietGAP, OCOP 4 sao
+            </p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">💰</div>
+            <div class="benefit-title">Giá cả cạnh tranh</div>
+            <p class="benefit-description">
+              Giá trực tiếp từ nguồn, không qua trung gian, lợi nhuận hợp lý
+            </p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">📦</div>
+            <div class="benefit-title">Giao hàng ổn định</div>
+            <p class="benefit-description">
+              Vùng nguyên liệu rộng lớn, đảm bảo cung cấp đều đặn quanh năm
+            </p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">🤝</div>
+            <div class="benefit-title">Hỗ trợ marketing</div>
+            <p class="benefit-description">
+              Cùng xây dựng thương hiệu, tài liệu truyền thông, đào tạo nhân viên
+            </p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">🔄</div>
+            <div class="benefit-title">Chính sách linh hoạt</div>
+            <p class="benefit-description">
+              Thanh toán, đổi trả linh hoạt, phù hợp với từng đối tác
+            </p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">📈</div>
+            <div class="benefit-title">Tăng trưởng bền vững</div>
+            <p class="benefit-description">
+              Cùng phát triển, mở rộng thị trường và nâng cao giá trị
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="cta-section">
+        <h2>Trở Thành Đối Tác Của Chúng Tôi</h2>
+        <p>
+          Chúng tôi luôn tìm kiếm các đối tác có cùng tầm nhìn về phát triển bền vững 
+          và mong muốn mang sản phẩm nông nghiệp sạch, chất lượng đến người tiêu dùng.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="lien-he.html" class="btn btn-primary" style="padding: 1rem 2.5rem;">Liên hệ hợp tác</a>
+          <a href="goi-dau-tu.html" class="btn btn-secondary" style="padding: 1rem 2.5rem;">Xem các gói đầu tư</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Về chúng tôi</h4>
+          <p>Hợp tác xã Lâm Đồng Đại Ngàn - Kết nối nông hộ, phát triển bền vững</p>
+        </div>
+        <div class="footer-col">
+          <h4>Liên kết</h4>
+          <ul>
+            <li><a href="../">Trang chủ</a></li>
+            <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+            <li><a href="san-pham.html">Sản phẩm</a></li>
+            <li><a href="lien-he.html">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Liên hệ</h4>
+          <p>📍 Lâm Đồng, Việt Nam</p>
+          <p>📞 0123 456 789</p>
+          <p>✉️ contact@htx.vn</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Hợp tác xã Lâm Đồng Đại Ngàn. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/header.js"></script>
+</body>
+</html>
