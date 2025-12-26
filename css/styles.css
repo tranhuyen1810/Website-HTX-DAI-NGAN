@@ -1097,6 +1097,9 @@ footer {
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 0.95rem;
+  position: sticky;
+  bottom: 20px;
+  z-index: 10;
 }
 
 .info-btn:hover {
@@ -2009,7 +2012,7 @@ table tbody tr:hover {
 
 /* Featured Product Section Enhanced */
 .featured-product-section-enhanced {
-  background: linear-gradient(135deg, #f5f7fa 0%, #e8f0e8 100%);
+
   padding: 4rem 20px;
   position: relative;
 }
@@ -2063,6 +2066,19 @@ table tbody tr:hover {
   box-shadow: 0 12px 40px rgba(44, 122, 63, 0.25);
   transform: translateY(-4px);
   transition: all 0.3s ease;
+}
+
+/* Full-height on large screens for featured product section */
+@media (min-width: 1200px) {
+  .featured-product-section-enhanced {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .featured-product-section-enhanced .container {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
