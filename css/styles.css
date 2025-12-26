@@ -1329,10 +1329,10 @@ footer {
 .contact-section {
   background:
     linear-gradient(
-      rgba(255, 255, 255, 0.85),
-      rgba(255, 255, 255, 0.85)
+      rgba(234, 230, 230, 0.85),
+     
     ),
-    url('images/NEN03.webp');
+    url('images\NEN02.webp');
 
   background-size: cover;
   background-position: center;
@@ -1647,7 +1647,7 @@ section.bg-white > * {
 
 /* Background cho section sản phẩm khác */
 section.bg-product-section {
-  background-color: #FAA519;
+  background-color: #eeb559;
   padding: 3rem 20px;
 }
 
