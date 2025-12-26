@@ -1569,7 +1569,7 @@ section {
 }
 
 section.hero {
-  background: linear-gradient(rgba(44, 122, 63, 0.7), rgba(26, 77, 37, 0.7)), url('../assets/img/htx01.JPG');
+  background: url('../assets/img/htx01.JPG');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1949,7 +1949,7 @@ table tbody tr:hover {
 
 /* Common Hero Banner with Background Image */
 .hero-banner {
-  background: linear-gradient(rgba(44, 122, 63, 0.7), rgba(26, 77, 37, 0.7)), url('../assets/img/htx01.JPG');
+  background:url('../assets/img/htx01.JPG');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2099,7 +2099,7 @@ table tbody tr:hover {
 }
 .product-split-hero .split-hero-inner {
   display: grid;
-  grid-template-columns: 45% 55%;
+  grid-template-columns: 50% 50%;
   gap: 0;
   align-items: stretch;
   background: transparent;
@@ -2122,29 +2122,29 @@ table tbody tr:hover {
 .product-split-hero .split-content {
   background-color: #FFD54E;
   color: #FFF;
-  padding: 4rem 3rem;
+  padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
-  min-height: 75vh;
+  gap: 0.5rem;
+  min-height: 25vh;
   height: 100%;
 }
 .product-split-hero .eyebrow {
   color: #AD1E26;
-  font-weight: 1000;
+  font-weight: 800px;
   letter-spacing: 2px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 .product-split-hero .split-title {
-  font-size: 6rem;
-  margin: 0;
+  font-size: 2rem;
+  margin: 10 0 0.2rem 0;
   letter-spacing: 2px;
   font-weight: 800;
 }
 .product-split-hero .split-sub {
-  margin-top: 0.4rem;
-  font-size: 3.5rem;
+  margin-top: 0.2rem;
+  font-size: 1.75rem;
   opacity: 0.95;
   letter-spacing: 1px;
   font-weight: 500;
@@ -2155,13 +2155,13 @@ table tbody tr:hover {
 }
 .product-split-hero .split-btn {
   display: inline-block;
-  margin-top: 1.25rem;
+  margin-top: 0.625rem;
   padding: 0.6rem 1rem;
   background: #AD1E26;
   color: #FFFFFF;
   text-decoration: none;
   border-radius: 4px;
-  font-weight: 1000;
+  font-weight: 1000PX;
   box-shadow: 0 6px 18px rgba(50,82,63,0.12);
 }
 
@@ -2187,7 +2187,7 @@ table tbody tr:hover {
     width: 100%;
   }
   .product-split-hero .split-content {
-    padding: 2rem;
+    padding: 1rem;
     text-align: left;
   }
   .product-split-hero .split-title {
@@ -2198,15 +2198,15 @@ table tbody tr:hover {
 /* Ensure the split takes full-height on large screens */
 @media (min-width: 1200px) {
   .product-split-hero .split-hero-inner {
-    min-height: 100vh;
+    min-height: 50vh;
     align-items: stretch;
   }
   .product-split-hero .split-image img {
-    height: 100vh;
+    height: 50vh;
     object-position: center right;
   }
   .product-split-hero .split-content {
-    min-height: 100vh;
+    min-height: 50vh;
     justify-content: center;
   }
 }
