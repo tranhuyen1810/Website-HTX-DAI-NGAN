@@ -1112,7 +1112,7 @@
   .product-split-hero .split-hero-inner {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
-    width: 100vw !important;
+    width: 50vw !important;
     margin: 0 !important;
     margin-left: calc(50% - 50vw) !important;
     gap: 0 !important;
