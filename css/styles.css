@@ -2071,7 +2071,7 @@ table tbody tr:hover {
   background-position: center;
   background-repeat: no-repeat;
   z-index: 0;
-  animation: fadeInOut1 3s ease-in-out infinite;
+  animation: fadeInOut1 9s ease-in-out infinite;
 }
 
 /* Second image layer */
@@ -2088,23 +2088,53 @@ table tbody tr:hover {
   background-repeat: no-repeat;
   z-index: 0;
   opacity: 0;
-  animation: fadeInOut2 3s ease-in-out infinite;
+  animation: fadeInOut2 9s ease-in-out infinite;
 }
 
+/* Third image layer */
+.hero-banner-slider .banner-slide-3 {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 128%;
+  background-image: url('../assets/img/2 (1).png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  opacity: 0;
+  animation: fadeInOut3 7s ease-in-out infinite;
+}
+
+/* Animation keyframes for 3 images (9s total cycle) */
 @keyframes fadeInOut1 {
-  0%, 45% {
+  0%, 30% {
     opacity: 1;
   }
-  50%, 100% {
+  33%, 100% {
     opacity: 0;
   }
 }
 
 @keyframes fadeInOut2 {
-  0%, 45% {
+  0%, 30% {
     opacity: 0;
   }
-  50%, 95% {
+  33%, 63% {
+    opacity: 1;
+  }
+  66%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInOut3 {
+  0%, 63% {
+    opacity: 0;
+  }
+  66%, 97% {
     opacity: 1;
   }
   100% {
