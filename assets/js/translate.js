@@ -13,6 +13,10 @@ const translations = {
         nav_partners: "ĐỐI TÁC",
         nav_contact: "LIÊN HỆ",
         
+        // Logo
+        logo_tax_code: "Mã số thuế: 5801555669",
+        logo_address: "Địa chỉ: Số 1A, Bùi Thị Xuân, Phường Xuân Hương, TP. Đà Lạt, Lâm Đồng",
+        
         // Hero & Intro
         hero_story_title: "CÂU CHUYỆN VỀ CHÚNG TÔI",
         intro_cooperative_name: "Hợp tác xã Lâm Đồng Đại Ngàn",
@@ -115,6 +119,10 @@ const translations = {
         nav_members: "MEMBERS",
         nav_partners: "PARTNERS",
         nav_contact: "CONTACT",
+        
+        // Logo
+        logo_tax_code: "Tax Code: 5801555669",
+        logo_address: "Address: 1A Bui Thi Xuan Street, Xuan Huong Ward, Da Lat City, Lam Dong",
         
         // Hero & Intro
         hero_story_title: "OUR STORY",

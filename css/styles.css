@@ -209,6 +209,26 @@ a:hover {
   font-family: Georgia, serif;
 }
 
+.logo-tax-code {
+  font-size: 0.7rem;
+  font-style: normal;
+  color: #AD1E26;
+  font-family: Arial, sans-serif;
+  display: block;
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+.logo-address {
+  font-size: 0.7rem;
+  font-style: normal;
+  color: #AD1E26;
+  font-family: Arial, sans-serif;
+  display: block;
+  margin-top: 0;
+  line-height: 1.2;
+}
+
 /* Top Header Right Section */
 .top-header-right {
   display: flex;
@@ -2035,7 +2055,7 @@ table tbody tr:hover {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  padding: 4rem 20px;
+  padding: 3rem 20px 2rem;
 }
 
 .intro-section-with-bg::before {
@@ -2057,9 +2077,11 @@ table tbody tr:hover {
 
 /* Featured Product Section Enhanced */
 .featured-product-section-enhanced {
-
-  padding: 4rem 20px;
+  min-height: 100vh;
+  padding: 2rem 20px 4rem;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .featured-product-section-enhanced::before {
@@ -2111,6 +2133,12 @@ table tbody tr:hover {
   box-shadow: 0 12px 40px rgba(44, 122, 63, 0.25);
   transform: translateY(-4px);
   transition: all 0.3s ease;
+}
+
+.featured-product-section-enhanced .container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 /* Full-height on large screens for featured product section */

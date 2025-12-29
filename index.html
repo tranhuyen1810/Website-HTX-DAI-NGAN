@@ -26,7 +26,8 @@
             <img class="logo-icon" src="assets/img/1.png" alt="HTX Logo" />
             <div class="logo-text">
               <span class="logo-name">LÂM ĐỒNG ĐẠI NGÀN</span>
-              <span class="logo-slogan"> Đại Ngàn Cao Nguyên - Rau Việt Vươn Xa </span>
+              <span class="logo-tax-code" data-translate="logo_tax_code">Mã số thuế: 5801555669</span>
+              <span class="logo-address" data-translate="logo_address">Địa chỉ: Số 1A, Bùi Thị Xuân, Phường Xuân Hương, TP. Đà Lạt, Lâm Đồng</span>
             </div>
           </a>
         </div>
@@ -193,90 +194,43 @@
     </div>2
   </section>
 
-  <!-- Product split hero (new) -->
-  <section class="product-split-hero">
-    <div class="split-hero-inner">
-      <div class="split-image">
-        <img src="images\anh_chi linh\1 (3).png" alt="Product showcase">
-      </div>
-      <div class="split-content">
-  
    
-        <div class="split-sub split-divider"></div>
- 
-       <p><i data-translate="split_vision_text">Chúng tôi hướng đến việc hình thành một mô hình nông nghiệp bền vững, gắn sản xuất – chế biến – tiêu thụ theo chuỗi giá trị, hướng tới kinh tế xanh và kinh tế tuần hoàn.
-             Lâm Đồng Đại Ngàn mong muốn trở thành cầu nối giữa người nông dân và thị trường trong nước, quốc tế – nơi mỗi sản phẩm làm ra đều chứa đựng giá trị của thiên nhiên và bàn tay lao động Việt Nam.</i></p>
-         <div class="split-sub split-divider"></div>
-        <a href="pages\gioi-thieu.html" class="btn split-btn" data-translate="view_more">XEM THÊM</a>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Dark variant: THE LANDMARK (match typography of split hero) -->
-  <section class="product-split-hero dark">
-    <div class="split-hero-inner">
-      <div class="split-content">
-   
-        <div class="split-sub split-divider"></div>
-        <p><i data-translate="split_mission_text">Liên kết các tổ chức, cá nhân hoạt động trong lĩnh vực nông nghiệp và chế biến nhằm phát huy sức mạnh hợp tác; đồng thời phát triển mô hình sản xuất nông nghiệp bền vững gắn với chuỗi giá trị từ sản xuất, chế biến đến tiêu thụ, hướng tới mục tiêu xây dựng nền kinh tế xanh và kinh tế tuần hoàn. Qua đó, từng bước nâng cao kỹ thuật canh tác, chế biến và tiêu thụ sản phẩm cho vùng kinh tế nông nghiệp trọng điểm phía Tây tỉnh Lâm Đồng, góp phần nâng cao hiệu quả sản xuất và giá trị nông sản địa phương.</i></p>
-        
-        <a href="pages\gioi-thieu.html" class="btn split-btn outline" data-translate="view_more">XEM THÊM</a>
-      </div>
-      <div class="split-image">
-        <img src="images\anh_chi linh\2.png" alt="Sứ mệnh">
-      </div>
-    </div>
-  </section>
-
   <!-- Sản phẩm chủ lực -->
-  <section class="featured-product-section-enhanced">
+  <section class="intro-section-with-bg">
     <div class="container">
-      <h2 class="section-title-featured" data-translate="product_title">SẢN PHẨM CHỦ LỰC</h2>
-      <div class="featured-product-wrapper">
-        <!-- Image Gallery -->
-        <div class="product-gallery">
+      <h2 class="section-title" data-translate="product_title">SẢN PHẨM CHỦ LỰC</h2>
+      
+      <div class="row cols-2" style="grid-template-columns: 1fr 1fr; align-items: center;">
+        <!-- Gallery bên trái -->
+        <div class="product-gallery-simple">
           <div class="main-image">
-            <button class="gallery-nav prev" aria-label="Previous image">‹</button>
-            <img src="images\anh_chi linh\7.png" alt="Cải Radicchio – Rau lá cao cấp từ vùng cao nguyên" id="mainProductImage">
-            <button class="gallery-nav next" aria-label="Next image">›</button>
+            <img src="images/anh_chi linh/7.png" alt="Cải Radicchio" id="mainProductImage" style="width: 100%; border-radius: 8px;">
           </div>
-          <div class="thumbnail-gallery">
-            <img src="images\anh_chi linh\5.png" alt="Thumbnail 1" class="thumbnail active" onclick="changeMainImage(this)">
-            <img src="images\anh_chi linh\7.png" alt="Thumbnail 2" class="thumbnail" onclick="changeMainImage(this)">
+          <div class="thumbnail-gallery" style="display: flex; gap: 10px; margin-top: 15px;">
+            <img src="images/anh_chi linh/5.png" alt="Thumbnail 1" class="thumbnail" onclick="changeMainImage(this)" style="width: 80px; height: 80px; object-fit: cover; border-radius: 6px; cursor: pointer; border: 2px solid transparent;">
+            <img src="images/anh_chi linh/7.png" alt="Thumbnail 2" class="thumbnail active" onclick="changeMainImage(this)" style="width: 80px; height: 80px; object-fit: cover; border-radius: 6px; cursor: pointer; border: 2px solid #AD1E26;">
           </div>
-          <button class="info-btn" data-translate="product_info_btn"> Thông tin sản phẩm</button>
         </div>
 
-        <!-- Product Details -->
-        <div class="product-details">
-          <h2 class="product-title" data-translate="product_radicchio_title">CẢI RADICCHIO – RAU DIẾP XOĂN ĐỎ TỪ Ý</h2>
-          <div class="product-title-underline"></div>
+        <!-- Content bên phải -->
+        <div>
+          <p><strong data-translate="product_radicchio_title" style="font-size: 1.2rem; color: #333;">CẢI RADICCHIO – RAU DIẾP XOĂN ĐỎ TỪ Ý</strong></p>
+          
+          <p data-translate="product_feature_text" style="margin-bottom: 1rem;">Radicchio là một loại rau diếp xoăn đỏ có nguồn gốc từ Ý, nổi bật với màu đỏ tím đậm cùng gân lá trắng rõ nét. Nhiều người thường nhầm lẫn radicchio với bắp cải đỏ, tuy nhiên điểm khác biệt dễ nhận thấy nhất chính là vị đắng đặc trưng – một hương vị tinh tế được yêu thích trong ẩm thực châu Âu.</p>
+          
+          <p><strong data-translate="product_benefit_label">Giá trị dinh dưỡng & Công dụng:</strong></p>
+          
+          <ul style="margin: 1rem 0;">
+            <li>Hỗ trợ tim mạch: Giúp giảm nguy cơ mắc bệnh tim, ngăn ngừa sự tích tụ mảng bám trong động mạch</li>
+            <li>Hỗ trợ kiểm soát lượng đường trong máu, phù hợp cho người cần chế độ ăn lành mạnh</li>
+            <li>Giàu vitamin K, giúp điều chỉnh quá trình hấp thụ canxi, tăng cường sức khỏe xương khớp</li>
+            <li>Cải thiện hệ tiêu hóa, hỗ trợ sức khỏe đường ruột</li>
+            <li>Chống oxy hóa – chống lão hóa, bảo vệ tế bào khỏi tổn thương</li>
+            <li>Hỗ trợ phòng ngừa các bệnh về mắt, tim phổi, ung thư và xơ vữa động mạch</li>
+          </ul>
 
-          <div class="product-specs">
-            <div class="spec-item">
-             
-              <div class="spec-content">
-                <strong data-translate="product_feature_label">Đặc điểm </strong> <span data-translate="product_feature_text">Radicchio là một loại rau diếp xoăn đỏ có nguồn gốc từ Ý, nổi bật với màu đỏ tím đậm cùng gân lá trắng rõ nét. Nhiều người thường nhầm lẫn radicchio với bắp cải đỏ, tuy nhiên điểm khác biệt dễ nhận thấy nhất chính là vị đắng đặc trưng – một hương vị tinh tế được yêu thích trong ẩm thực châu Âu. Khi được nấu chín, radicchio sẽ trở nên dịu vị và dễ ăn hơn.
-Không chỉ hấp dẫn về hình thức và hương vị, rau diếp xoăn Radicchio chứa rất ít calo nhưng lại giàu vitamin và khoáng chất quan trọng, đặc biệt phù hợp cho người thừa cân – béo phì, người ăn kiêng và theo đuổi lối sống lành mạnh.</span>
-              </div>
-            </div>
-
-  
-
-            <div class="spec-item">
-           
-              <div class="spec-content">
-                <strong data-translate="product_benefit_label">Giá trị dinh dưỡng & Công dụng</strong> <span data-translate="product_benefit_text">Radicchio được đánh giá cao nhờ hàm lượng chất chống oxy hóa mạnh mẽ, mang lại nhiều lợi ích cho sức khỏe:
-- Hỗ trợ tim mạch: Giúp giảm nguy cơ mắc bệnh tim, ngăn ngừa sự tích tụ mảng bám trong động mạch
-- Hỗ trợ kiểm soát lượng đường trong máu, phù hợp cho người cần chế độ ăn lành mạnh
-- Giàu vitamin K, giúp điều chỉnh quá trình hấp thụ canxi, tăng cường sức khỏe xương khớp
-- Cải thiện hệ tiêu hóa, hỗ trợ sức khỏe đường ruột
-- Chống oxy hóa – chống lão hóa, bảo vệ tế bào khỏi tổn thương
-- Hỗ trợ phòng ngừa và hỗ trợ điều trị các bệnh về mắt, tim phổi, ung thư và xơ vữa động mạch
-- Nhiều nghiên cứu cho thấy, các hợp chất chống oxy hóa trong radicchio có hiệu quả cao trong việc ức chế tế bào ung thư gan Hep-G2, đồng thời bảo vệ tế bào hồng cầu, hạn chế quá trình tán huyết và tổn thương tế bào.</span></span>
-            </div>
-
-            
+          <div>
+            <a href="pages/san-pham/box-rau.html" class="btn btn-primary" data-translate="product_info_btn">Thông tin sản phẩm →</a>
           </div>
         </div>
       </div>
@@ -403,7 +357,8 @@ Không chỉ hấp dẫn về hình thức và hương vị, rau diếp xoăn Ra
         <h4 data-translate="footer_contact_title">📍 Thông tin liên hệ</h4>
         <p style="margin-bottom: 0.5rem;"><strong data-translate="footer_address_label">Địa chỉ:</strong> <span data-translate="contact_address">Số 1A, Bùi Thị Xuân, Phường Xuân Hương, TP. Đà Lạt, Lâm Đồng</span></p>
         <p style="margin-bottom: 0.5rem;"><strong data-translate="footer_hotline_label">Hotline:</strong> 0767333379</p>
-        <p><strong data-translate="footer_email_label">Email:</strong> <a href="mailto:nsc@vinaseed.com.vn">AdminHTXDaiNgan@gmail.</a></p>
+        <p style="margin-bottom: 0.5rem;"><strong data-translate="footer_email_label">Email:</strong> <a href="mailto:nsc@vinaseed.com.vn">AdminHTXDaiNgan@gmail.</a></p>
+        <p style="margin-bottom: 0.5rem; font-size: 0.85rem;"><strong>Mã số thuế:</strong> 5801555669</p>
       </div>
 
       <div class="footer-section">
@@ -436,7 +391,7 @@ Không chỉ hấp dẫn về hình thức và hương vị, rau diếp xoăn Ra
     </div>
 
     <div class="footer-bottom">
-      <p data-translate="footer_copyright">&copy; 2024 Lâm Đồng Đại Ngàn - Sản phẩm Nông nghiệp Sạch. All rights reserved.</p>
+      <p data-translate="footer_copyright">&copy; 2025 Lâm Đồng Đại Ngàn - Sản phẩm Nông nghiệp Sạch. All rights reserved.</p>
     </div>
   </footer>
 

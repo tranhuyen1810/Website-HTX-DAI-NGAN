@@ -460,3 +460,30 @@ window.HTXWebsite = {
   setActiveMenuLink,
   initDropdownMenu,
 };
+
+/* ========================================
+   PRODUCT GALLERY - Change Main Image
+   ======================================== */
+function changeMainImage(thumbnail) {
+  // Lấy ảnh chính
+  const mainImage = document.getElementById('mainProductImage');
+  if (!mainImage) return;
+  
+  // Đổi src của ảnh chính
+  mainImage.src = thumbnail.src;
+  mainImage.alt = thumbnail.alt;
+  
+  // Xóa class active từ tất cả thumbnails
+  const thumbnails = document.querySelectorAll('.thumbnail');
+  thumbnails.forEach(thumb => {
+    thumb.classList.remove('active');
+    thumb.style.border = '2px solid transparent';
+  });
+  
+  // Thêm class active cho thumbnail được click
+  thumbnail.classList.add('active');
+  thumbnail.style.border = '2px solid #AD1E26';
+}
+
+// Đảm bảo function có thể gọi từ onclick
+window.changeMainImage = changeMainImage;
