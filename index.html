@@ -10,7 +10,7 @@
   <meta property="og:url" content="https://example.com">
   <title>Hợp tác xã - Sản phẩm Nông nghiệp Sạch</title>
   <link rel="stylesheet" href="css/styles.css">
-  <!-- <link rel="stylesheet" href="css/mobile-responsive.css"> -->
+  <link rel="stylesheet" href="css/mobile-responsive.css">
   <link rel="stylesheet" href="css/desktop-only.css">
   <meta name="viewport" content="width=1400, initial-scale=0.3, minimum-scale=0.3, maximum-scale=5.0, user-scalable=yes">
 </head>
@@ -42,8 +42,8 @@
 
           <!-- Language Switcher -->
           <div class="language-switcher">
-            <button class="lang-btn active" data-lang="vi">🇻🇳</button>
-            <button class="lang-btn" data-lang="en">🇬🇧</button>
+            <button class="lang-btn" data-lang="vi">🇻🇳</button>
+            <button class="lang-btn active" data-lang="en">🇬🇧</button>
           </div>
 
           <!-- Cart Icon -->
@@ -72,14 +72,14 @@
           <li class="nav-item">
             <a href="/" class="nav-link active">
     
-              <span class="nav-text">TRANG CHỦ</span>
+              <span class="nav-text" data-translate="nav_home">TRANG CHỦ</span>
             </a>
           </li>
 
           <!-- Giới thiệu -->
           <li class="nav-item has-dropdown">
             <a href="pages/gioi-thieu.html" class="nav-link">
-              <span class="nav-text">GIỚI THIỆU</span>
+              <span class="nav-text" data-translate="nav_intro">GIỚI THIỆU</span>
             </a>
             <div class="dropdown-menu">
               <a href="pages/gioi-thieu.html" class="dropdown-link">Về chúng tôi</a>
@@ -92,7 +92,7 @@
            
           <li class="nav-item has-dropdown">
             <a href="pages/san-pham/box-rau.html" class="nav-link">
-              <span class="nav-text">SẢN PHẨM</span>
+              <span class="nav-text" data-translate="nav_products">SẢN PHẨM</span>
             </a>
             <div class="dropdown-menu">
               <a href="pages/san-pham/box-rau.html" class="dropdown-link">Rau, Củ</a>
@@ -103,7 +103,7 @@
           <!-- Dịch vụ -->
           <li class="nav-item has-dropdown">
             <a href="pages/dich-vu-say-thang-hoa.html" class="nav-link">
-              <span class="nav-text">DỊCH VỤ</span>
+              <span class="nav-text" data-translate="nav_services">DỊCH VỤ</span>
             </a>
             <div class="dropdown-menu">
               <a href="pages/dich-vu-say-thang-hoa.html" class="dropdown-link">Sấy thăng hoa</a>
@@ -115,7 +115,7 @@
           <!-- Tin tức & Sự kiện -->
           <li class="nav-item has-dropdown">
             <a href="pages/tin-tuc.html" class="nav-link">
-              <span class="nav-text">TIN TỨC & SỰ KIỆN</span>
+              <span class="nav-text" data-translate="nav_news_events">TIN TỨC & SỰ KIỆN</span>
             </a>
             <div class="dropdown-menu">
               <a href="pages/tin-tuc.html" class="dropdown-link">Tin tức</a>
@@ -126,7 +126,7 @@
           <!-- Thành viên HTX -->
           <li class="nav-item has-dropdown">
             <a href="pages/thanh-vien.html" class="nav-link">
-              <span class="nav-text">THÀNH VIÊN HTX</span>
+              <span class="nav-text" data-translate="nav_members">THÀNH VIÊN HTX</span>
             </a>
             <div class="dropdown-menu">
               <a href="pages/thanh-vien.html" class="dropdown-link">Thành viên tiêu biểu</a>
@@ -137,7 +137,7 @@
           <!-- Đối tác -->
           <li class="nav-item has-dropdown">
             <a href="pages/doi-tac.html" class="nav-link">
-              <span class="nav-text">ĐỐI TÁC</span>
+              <span class="nav-text" data-translate="nav_partners">ĐỐI TÁC</span>
             </a>
             <div class="dropdown-menu">
               <a href="pages/doi-tac.html" class="dropdown-link">Đối tác của chúng tôi</a>
@@ -148,7 +148,7 @@
           <!-- Liên hệ -->
           <li class="nav-item">
             <a href="pages/lien-he.html" class="nav-link">
-              <span class="nav-text">LIÊN HỆ</span>
+              <span class="nav-text" data-translate="nav_contact">LIÊN HỆ</span>
             </a>
           </li>
         </ul>
@@ -169,21 +169,21 @@
   <!-- Giới thiệu nhanh -->
   <section class="intro-section-with-bg">
     <div class="container">
-      <h2 class="section-title">CÂU CHUYỆN VỀ CHÚNG TÔI</h2>
+      <h2 class="section-title" data-translate="hero_story_title">CÂU CHUYỆN VỀ CHÚNG TÔI</h2>
       
       <div class="row cols-2" style="grid-template-columns: 1fr 1fr; align-items: center;">
         <div>
-          <p> <strong>Hợp tác xã Lâm Đồng Đại Ngàn</strong> được hình thành từ những người nông dân Tây Nguyên với mong muốn liên kết sản xuất, nâng cao giá trị nông nghiệp và phát triển bền vững. Chúng tôi xây dựng hệ sinh thái từ vùng trồng, kỹ thuật canh tác đến chế biến và tiêu thụ, hướng tới mang nông sản chất lượng, tử tế với đất và trân trọng con người đến người tiêu dùng và thị trường rộng lớn hơn.</p>
+          <p> <strong data-translate="intro_cooperative_name">Hợp tác xã Lâm Đồng Đại Ngàn</strong> <span data-translate="intro_desc">được hình thành từ những người nông dân Tây Nguyên với mong muốn liên kết sản xuất, nâng cao giá trị nông nghiệp và phát triển bền vững. Chúng tôi xây dựng hệ sinh thái từ vùng trồng, kỹ thuật canh tác đến chế biến và tiêu thụ, hướng tới mang nông sản chất lượng, tử tế với đất và trân trọng con người đến người tiêu dùng và thị trường rộng lớn hơn.</span></p>
           
           <ul style="margin: 1rem 0;">
           
-            <li>Hỗ trợ trực tiếp nông hộ nhỏ và vừa</li>
-            <li>Cam kết bền vững với môi trường</li>
-            <li>Phân phối công khai, giá cả hợp lý</li>
+            <li data-translate="intro_support">Hỗ trợ trực tiếp nông hộ nhỏ và vừa</li>
+            <li data-translate="intro_sustainable">Cam kết bền vững với môi trường</li>
+            <li data-translate="intro_distribution">Phân phối công khai, giá cả hợp lý</li>
           </ul>
 
           <div>
-            <a href="pages/gioi-thieu.html" class="btn btn-primary">Tìm hiểu thêm →</a>
+            <a href="pages/gioi-thieu.html" class="btn btn-primary" data-translate="learn_more">Tìm hiểu thêm →</a>
           </div>
         </div>
         <div style="text-align: center;">
@@ -204,10 +204,10 @@
    
         <div class="split-sub" style="width:800px; height:2px; background:WHITE; margin:30px 0;"></div>
  
-       <p><i>Chúng tôi hướng đến việc hình thành một mô hình nông nghiệp bền vững, gắn sản xuất – chế biến – tiêu thụ theo chuỗi giá trị, hướng tới kinh tế xanh và kinh tế tuần hoàn.
+       <p><i data-translate="split_vision_text">Chúng tôi hướng đến việc hình thành một mô hình nông nghiệp bền vững, gắn sản xuất – chế biến – tiêu thụ theo chuỗi giá trị, hướng tới kinh tế xanh và kinh tế tuần hoàn.
              Lâm Đồng Đại Ngàn mong muốn trở thành cầu nối giữa người nông dân và thị trường trong nước, quốc tế – nơi mỗi sản phẩm làm ra đều chứa đựng giá trị của thiên nhiên và bàn tay lao động Việt Nam.</i></p>
          <div class="split-sub" style="width:800px; height:2px; background:WHITE; margin:30px 0;"></div>
-        <a href="pages\gioi-thieu.html" class="btn split-btn">XEM THÊM</a>
+        <a href="pages\gioi-thieu.html" class="btn split-btn" data-translate="view_more">XEM THÊM</a>
       </div>
     </div>
   </section>
@@ -218,9 +218,9 @@
       <div class="split-content">
    
         <div class="split-sub" style="width:800px; height:2px; background:WHITE; margin:30px 0;"></div>
-        <p><i>Liên kết các tổ chức, cá nhân hoạt động trong lĩnh vực nông nghiệp và chế biến nhằm phát huy sức mạnh hợp tác; đồng thời phát triển mô hình sản xuất nông nghiệp bền vững gắn với chuỗi giá trị từ sản xuất, chế biến đến tiêu thụ, hướng tới mục tiêu xây dựng nền kinh tế xanh và kinh tế tuần hoàn. Qua đó, từng bước nâng cao kỹ thuật canh tác, chế biến và tiêu thụ sản phẩm cho vùng kinh tế nông nghiệp trọng điểm phía Tây tỉnh Lâm Đồng, góp phần nâng cao hiệu quả sản xuất và giá trị nông sản địa phương.</i></p>
+        <p><i data-translate="split_mission_text">Liên kết các tổ chức, cá nhân hoạt động trong lĩnh vực nông nghiệp và chế biến nhằm phát huy sức mạnh hợp tác; đồng thời phát triển mô hình sản xuất nông nghiệp bền vững gắn với chuỗi giá trị từ sản xuất, chế biến đến tiêu thụ, hướng tới mục tiêu xây dựng nền kinh tế xanh và kinh tế tuần hoàn. Qua đó, từng bước nâng cao kỹ thuật canh tác, chế biến và tiêu thụ sản phẩm cho vùng kinh tế nông nghiệp trọng điểm phía Tây tỉnh Lâm Đồng, góp phần nâng cao hiệu quả sản xuất và giá trị nông sản địa phương.</i></p>
         
-        <a href="pages\gioi-thieu.html" class="btn split-btn outline">XEM THÊM</a>
+        <a href="pages\gioi-thieu.html" class="btn split-btn outline" data-translate="view_more">XEM THÊM</a>
       </div>
       <div class="split-image">
         <img src="images\anh_chi linh\2.png" alt="Sứ mệnh">
@@ -231,7 +231,7 @@
   <!-- Sản phẩm chủ lực -->
   <section class="featured-product-section-enhanced">
     <div class="container">
-      <h2 class="section-title-featured">SẢN PHẨM CHỦ LỰC</h2>
+      <h2 class="section-title-featured" data-translate="product_title">SẢN PHẨM CHỦ LỰC</h2>
       <div class="featured-product-wrapper">
         <!-- Image Gallery -->
         <div class="product-gallery">
@@ -244,20 +244,20 @@
             <img src="images\anh_chi linh\5.png" alt="Thumbnail 1" class="thumbnail active" onclick="changeMainImage(this)">
             <img src="images\anh_chi linh\7.png" alt="Thumbnail 2" class="thumbnail" onclick="changeMainImage(this)">
           </div>
-          <button class="info-btn"> Thông tin sản phẩm</button>
+          <button class="info-btn" data-translate="product_info_btn"> Thông tin sản phẩm</button>
         </div>
 
         <!-- Product Details -->
         <div class="product-details">
-          <h2 class="product-title">CẢI RADICCHIO – RAU DIẾP XOĂN ĐỎ TỪ Ý</h2>
+          <h2 class="product-title" data-translate="product_radicchio_title">CẢI RADICCHIO – RAU DIẾP XOĂN ĐỎ TỪ Ý</h2>
           <div class="product-title-underline"></div>
 
           <div class="product-specs">
             <div class="spec-item">
              
               <div class="spec-content">
-                <strong>Đặc điểm </strong> Radicchio là một loại rau diếp xoăn đỏ có nguồn gốc từ Ý, nổi bật với màu đỏ tím đậm cùng gân lá trắng rõ nét. Nhiều người thường nhầm lẫn radicchio với bắp cải đỏ, tuy nhiên điểm khác biệt dễ nhận thấy nhất chính là vị đắng đặc trưng – một hương vị tinh tế được yêu thích trong ẩm thực châu Âu. Khi được nấu chín, radicchio sẽ trở nên dịu vị và dễ ăn hơn.
-Không chỉ hấp dẫn về hình thức và hương vị, rau diếp xoăn Radicchio chứa rất ít calo nhưng lại giàu vitamin và khoáng chất quan trọng, đặc biệt phù hợp cho người thừa cân – béo phì, người ăn kiêng và theo đuổi lối sống lành mạnh.
+                <strong data-translate="product_feature_label">Đặc điểm </strong> <span data-translate="product_feature_text">Radicchio là một loại rau diếp xoăn đỏ có nguồn gốc từ Ý, nổi bật với màu đỏ tím đậm cùng gân lá trắng rõ nét. Nhiều người thường nhầm lẫn radicchio với bắp cải đỏ, tuy nhiên điểm khác biệt dễ nhận thấy nhất chính là vị đắng đặc trưng – một hương vị tinh tế được yêu thích trong ẩm thực châu Âu. Khi được nấu chín, radicchio sẽ trở nên dịu vị và dễ ăn hơn.
+Không chỉ hấp dẫn về hình thức và hương vị, rau diếp xoăn Radicchio chứa rất ít calo nhưng lại giàu vitamin và khoáng chất quan trọng, đặc biệt phù hợp cho người thừa cân – béo phì, người ăn kiêng và theo đuổi lối sống lành mạnh.</span>
               </div>
             </div>
 
@@ -266,14 +266,14 @@ Không chỉ hấp dẫn về hình thức và hương vị, rau diếp xoăn Ra
             <div class="spec-item">
            
               <div class="spec-content">
-                <strong>Giá trị dinh dưỡng & Công dụng</strong> Radicchio được đánh giá cao nhờ hàm lượng chất chống oxy hóa mạnh mẽ, mang lại nhiều lợi ích cho sức khỏe:
+                <strong data-translate="product_benefit_label">Giá trị dinh dưỡng & Công dụng</strong> <span data-translate="product_benefit_text">Radicchio được đánh giá cao nhờ hàm lượng chất chống oxy hóa mạnh mẽ, mang lại nhiều lợi ích cho sức khỏe:
 - Hỗ trợ tim mạch: Giúp giảm nguy cơ mắc bệnh tim, ngăn ngừa sự tích tụ mảng bám trong động mạch
 - Hỗ trợ kiểm soát lượng đường trong máu, phù hợp cho người cần chế độ ăn lành mạnh
 - Giàu vitamin K, giúp điều chỉnh quá trình hấp thụ canxi, tăng cường sức khỏe xương khớp
 - Cải thiện hệ tiêu hóa, hỗ trợ sức khỏe đường ruột
 - Chống oxy hóa – chống lão hóa, bảo vệ tế bào khỏi tổn thương
 - Hỗ trợ phòng ngừa và hỗ trợ điều trị các bệnh về mắt, tim phổi, ung thư và xơ vữa động mạch
-- Nhiều nghiên cứu cho thấy, các hợp chất chống oxy hóa trong radicchio có hiệu quả cao trong việc ức chế tế bào ung thư gan Hep-G2, đồng thời bảo vệ tế bào hồng cầu, hạn chế quá trình tán huyết và tổn thương tế bào.
+- Nhiều nghiên cứu cho thấy, các hợp chất chống oxy hóa trong radicchio có hiệu quả cao trong việc ức chế tế bào ung thư gan Hep-G2, đồng thời bảo vệ tế bào hồng cầu, hạn chế quá trình tán huyết và tổn thương tế bào.</span></span>
             </div>
 
             
@@ -288,7 +288,7 @@ Không chỉ hấp dẫn về hình thức và hương vị, rau diếp xoăn Ra
   
   <section class="bg-product-section">
     <div class="container">
-      <h2 class="section-title">SẢN PHẨM KHÁC</h2>
+      <h2 class="section-title" data-translate="other_products_title">SẢN PHẨM KHÁC</h2>
       <div class="product-grid">
         
         <div class="product-card">
@@ -296,7 +296,7 @@ Không chỉ hấp dẫn về hình thức và hương vị, rau diếp xoăn Ra
             <img src="images\anh_chi linh\8.png" alt="Bắp cải Đà Lạt">
           </div>
           <div class="product-info">
-            <h3>Bắp cải Đà Lạt</h3>
+            <h3 data-translate="product_cabbage">Bắp cải Đà Lạt</h3>
           </div>
         </div>
 
@@ -305,7 +305,7 @@ Không chỉ hấp dẫn về hình thức và hương vị, rau diếp xoăn Ra
             <img src="images\anh_chi linh\9.png" alt="Khoai lang Đà Lạt">
           </div>
           <div class="product-info">
-            <h3>Ớt chuông Đà Lạt</h3>
+            <h3 data-translate="product_pepper">Ớt chuông Đà Lạt</h3>
           </div>
         </div>
 
@@ -314,7 +314,7 @@ Không chỉ hấp dẫn về hình thức và hương vị, rau diếp xoăn Ra
             <img src="images\anh_chi linh\10.png" alt="Cà chua Đà Lạt">
           </div>
           <div class="product-info">
-            <h3>Cải Thảo Đà Lạt</h3>
+            <h3 data-translate="product_bokchoy">Cải Thảo Đà Lạt</h3>
           </div>
         </div>
 
@@ -323,7 +323,7 @@ Không chỉ hấp dẫn về hình thức và hương vị, rau diếp xoăn Ra
             <img src="images\anh_chi linh\11.png" alt="Cà chua Đà Lạt">
           </div>
           <div class="product-info">
-            <h3>Cà rốt Đà Lạt</h3>
+            <h3 data-translate="product_carrot">Cà rốt Đà Lạt</h3>
           </div>
         </div>
 
@@ -343,7 +343,7 @@ Không chỉ hấp dẫn về hình thức và hương vị, rau diếp xoăn Ra
           <div class="info-icon">
             <span>☰</span>
           </div>
-          <h3 class="contact-title">THÔNG TIN LIÊN LẠC</h3>
+          <h3 class="contact-title" data-translate="contact_info_title">THÔNG TIN LIÊN LẠC</h3>
           
           <div class="contact-item">
             <span class="contact-icon">📞</span>
@@ -356,7 +356,7 @@ Không chỉ hấp dẫn về hình thức và hương vị, rau diếp xoăn Ra
           </div>
           <div class="contact-item">
             <span class="contact-icon">📍</span>
-            <span>Số 1A, Bùi Thị Xuân, Phường Xuân Hương, TP. Đà Lạt, Lâm Đồng</span>
+            <span data-translate="contact_address">Số 1A, Bùi Thị Xuân, Phường Xuân Hương, TP. Đà Lạt, Lâm Đồng</span>
           </div>
 
           <!-- Google Map -->
@@ -375,7 +375,7 @@ Không chỉ hấp dẫn về hình thức và hương vị, rau diếp xoăn Ra
 
         <!-- Form đăng ký -->
         <div class="register-form">
-          <h3 class="form-title">ĐĂNG KÝ NHẬN THÔNG TIN</h3>
+          <h3 class="form-title" data-translate="register_title">ĐĂNG KÝ NHẬN THÔNG TIN</h3>
           
           <form class="contact-form">
             <div class="form-row">
@@ -388,7 +388,7 @@ Không chỉ hấp dẫn về hình thức và hương vị, rau diếp xoăn Ra
               <input type="text" placeholder="Sản phẩm quan tâm" class="form-input">
             </div>
 
-            <button type="submit" class="btn-submit">XÁC NHẬN</button>
+            <button type="submit" class="btn-submit" data-translate="form_submit">XÁC NHẬN</button>
           </form>
         </div>
       </div>
@@ -400,33 +400,33 @@ Không chỉ hấp dẫn về hình thức và hương vị, rau diếp xoăn Ra
   <footer>
     <div class="footer-content">
       <div class="footer-section">
-        <h4>📍 Thông tin liên hệ</h4>
-        <p style="margin-bottom: 0.5rem;"><strong>Địa chỉ:</strong> Số 1A, Bùi Thị Xuân, Phường Xuân Hương, TP. Đà Lạt, Lâm Đồng</p>
-        <p style="margin-bottom: 0.5rem;"><strong>Hotline:</strong> 0767333379</p>
-        <p><strong>Email:</strong> <a href="mailto:nsc@vinaseed.com.vn">AdminHTXDaiNgan@gmail.</a></p>
+        <h4 data-translate="footer_contact_title">📍 Thông tin liên hệ</h4>
+        <p style="margin-bottom: 0.5rem;"><strong data-translate="footer_address_label">Địa chỉ:</strong> <span data-translate="contact_address">Số 1A, Bùi Thị Xuân, Phường Xuân Hương, TP. Đà Lạt, Lâm Đồng</span></p>
+        <p style="margin-bottom: 0.5rem;"><strong data-translate="footer_hotline_label">Hotline:</strong> 0767333379</p>
+        <p><strong data-translate="footer_email_label">Email:</strong> <a href="mailto:nsc@vinaseed.com.vn">AdminHTXDaiNgan@gmail.</a></p>
       </div>
 
       <div class="footer-section">
-        <h4>🔗 Liên kết nhanh</h4>
+        <h4 data-translate="footer_links_title">🔗 Liên kết nhanh</h4>
         <ul>
-          <li><a href="pages/gioi-thieu.html">Giới thiệu</a></li>
-          <li><a href="pages/thanh-vien.html">Thành viên</a></li>
-          <li><a href="pages/san-pham/box-rau.html">Sản phẩm</a></li>
-          <li><a href="pages/lien-he.html">Liên hệ</a></li>
+          <li><a href="pages/gioi-thieu.html" data-translate="footer_intro">Giới thiệu</a></li>
+          <li><a href="pages/thanh-vien.html" data-translate="footer_members">Thành viên</a></li>
+          <li><a href="pages/san-pham/box-rau.html" data-translate="footer_products">Sản phẩm</a></li>
+          <li><a href="pages/lien-he.html" data-translate="footer_contact">Liên hệ</a></li>
         </ul>
       </div>
 
       <div class="footer-section">
-        <h4>📄 Chính sách</h4>
+        <h4 data-translate="footer_policy_title">📄 Chính sách</h4>
         <ul>
-          <li><a href="#">Điều khoản sử dụng</a></li>
-          <li><a href="#">Chính sách bảo mật</a></li>
-          <li><a href="#">Chính sách hoàn trả</a></li>
+          <li><a href="#" data-translate="footer_terms">Điều khoản sử dụng</a></li>
+          <li><a href="#" data-translate="footer_privacy">Chính sách bảo mật</a></li>
+          <li><a href="#" data-translate="footer_return">Chính sách hoàn trả</a></li>
         </ul>
       </div>
 
       <div class="footer-section">
-        <h4>🌐 Kết nối</h4>
+        <h4 data-translate="footer_social_title">🌐 Kết nối</h4>
         <p>
           <a href="#">Facebook</a> | 
           <a href="#">Instagram</a> | 
@@ -436,12 +436,13 @@ Không chỉ hấp dẫn về hình thức và hương vị, rau diếp xoăn Ra
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2024 Lâm Đồng Đại Ngàn - Sản phẩm Nông nghiệp Sạch. All rights reserved.</p>
+      <p data-translate="footer_copyright">&copy; 2024 Lâm Đồng Đại Ngàn - Sản phẩm Nông nghiệp Sạch. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
   <script src="assets/js/header.js"></script>
   <script src="assets/js/product-gallery.js"></script>
+  <script src="assets/js/translate.js"></script>
 </body>
 </html>

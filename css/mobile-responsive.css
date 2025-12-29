@@ -40,6 +40,54 @@
     box-sizing: border-box;
   }
   
+  /* Language Switcher - Critical for mobile */
+  .language-switcher {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    position: relative !important;
+    z-index: 9999 !important;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 6px;
+    gap: 6px;
+  }
+  
+  .lang-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem !important;
+    padding: 8px 12px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    border-radius: 6px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    position: relative;
+    z-index: 10000;
+  }
+  
+  .lang-btn:active {
+    transform: scale(0.92);
+    background-color: #e9ecef;
+  }
+  
+  .lang-btn.active {
+    background-color: #AD1E26 !important;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  .lang-btn.active:active {
+    transform: scale(0.98);
+  }
+  
   /* Typography */
   h1 {
     font-size: 1.5rem !important;
