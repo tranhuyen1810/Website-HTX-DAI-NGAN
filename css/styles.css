@@ -624,11 +624,10 @@ a:hover {
   /* Show language switcher on mobile */
   .language-switcher {
     display: flex !important;
-    order: -1; /* Place before menu toggle */
   }
   
   .mobile-menu-toggle {
-    display: flex;
+    display: none !important;
   }
   
   /* Mobile Top Header */

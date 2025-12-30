@@ -237,6 +237,7 @@
     transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1000;
     padding-top: 70px;
+    padding-bottom: 20px;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   }
   
@@ -275,14 +276,15 @@
     background: white;
     transition: all 0.3s ease;
     width: 100%;
-    min-height: 56px; /* Touch-friendly size */
+    min-height: 56px;
   }
   
   .nav-link:active {
     background-color: #f5f5f5;
   }
   
-  .nav-link.active {
+  .nav-link.active,
+  .nav-item.active > .nav-link {
     background: linear-gradient(90deg, #AD1E26, #c41e29);
     color: white;
   }
@@ -308,11 +310,12 @@
   
   .has-dropdown.active > .nav-link::after {
     transform: rotate(180deg);
+    color: white;
   }
   
   .has-dropdown.active > .nav-link {
-    background-color: #f8f8f8;
-    color: #AD1E26;
+    background: linear-gradient(90deg, #AD1E26, #c41e29);
+    color: white;
   }
   
   /* Mobile Dropdown (Accordion Style) */
@@ -335,7 +338,7 @@
   
   .has-dropdown.active .dropdown-menu {
     display: block;
-    max-height: 500px;
+    max-height: 600px;
     border-left: 3px solid #AD1E26;
   }
   
@@ -355,12 +358,14 @@
   
   .dropdown-link:active {
     background-color: #f0f0f0;
+    transform: translateX(4px);
   }
   
   .dropdown-link.active {
-    background-color: #e3f2e9;
+    background-color: #e8f5e9;
     color: #2e7d32;
     font-weight: 600;
+    border-left: 4px solid #4caf50;
   }
   
   .dropdown-link::before {
@@ -370,28 +375,48 @@
     color: #AD1E26;
   }
   
-  /* Mega Menu on Mobile */
-  .mega-menu {
-    flex-direction: column;
-    min-width: auto;
-    padding: 0;
-    gap: 0;
+  /* Home icon for Trang chủ */
+  .nav-item:first-child .nav-link .nav-icon {
+    font-size: 1.3rem;
   }
   
-  .mega-menu-section {
-    min-width: auto;
-    border-bottom: 1px solid #e0e0e0;
-    padding: 10px 0;
+  /* Visual feedback for active section */
+  .nav-item.current-page > .nav-link {
+    background-color: #fff5f5;
+    color: #AD1E26;
+    font-weight: 700;
   }
   
-  .mega-menu-section h4 {
-    padding: 10px 20px;
-    margin: 0;
-    font-size: 0.85rem;
-    color: #888;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border-bottom: none;
+  .nav-item.current-page > .nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #AD1E26;
+  }
+  
+  /* Close button in navigation */
+  .nav-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    color: #AD1E26;
+    cursor: pointer;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav-close-btn:active {
+    transform: scale(0.9);
   }
   
   /* ========== HERO SECTION ========== */

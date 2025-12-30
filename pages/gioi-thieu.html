@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=1400, initial-scale=0.3, minimum-scale=0.3, maximum-scale=5.0, user-scalable=yes">
   <meta name="description" content="Giới thiệu về Hợp tác xã - Thông tin, thế mạnh và đối tác">
   <title>Giới thiệu - Hợp tác xã</title>
   <link rel="stylesheet" href="../css/styles.css">
@@ -48,13 +48,6 @@
             </a>
           </div>
         </div>
-
-        <!-- Mobile Menu Toggle -->
-        <button class="mobile-menu-toggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </div>
     </div>
 
@@ -221,9 +214,8 @@
             Mỗi dự án đều mang trong mình một sứ mệnh: giúp người nông dân có cuộc sống tốt hơn, giúp vùng đất được canh tác xanh hơn, giúp người tiêu dùng có những sản phẩm chất lượng và giúp thế giới biết đến nhiều hơn về nông sản Việt Nam.
             Thông điệp tuyên ngôn (Brand Manifesto)
           </p>
-          “Chúng tôi tin rằng mỗi hạt giống trồng xuống đất không chỉ tạo nên mùa vụ, mà tạo nên tương lai cho người nông dân và vùng đất Tây Nguyên. Đại Ngàn được sinh ra để kết nối con người, nâng chất lượng nông nghiệp và mang nông sản Việt đến gần hơn với thế giới. Tất cả bắt đầu từ sự tử tế với đất và sự trân trọng với con người.”
-          </p>
           <p style="font-size: 1.05rem; line-height: 1.8; color: #555; margin-top: 1rem;">
+            "Chúng tôi tin rằng mỗi hạt giống trồng xuống đất không chỉ tạo nên mùa vụ, mà tạo nên tương lai cho người nông dân và vùng đất Tây Nguyên. Đại Ngàn được sinh ra để kết nối con người, nâng chất lượng nông nghiệp và mang nông sản Việt đến gần hơn với thế giới. Tất cả bắt đầu từ sự tử tế với đất và sự trân trọng với con người."
           </p>
         </div>
       </div>
@@ -232,22 +224,199 @@
 
   <!-- Responsive CSS cho alternating layout -->
   <style>
+    /* Desktop styles remain as default */
+    .alternating-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    /* Tablet and below */
+    @media (max-width: 992px) {
+      .alternating-row {
+        gap: 2rem;
+      }
+      
+      .alternating-row h3 {
+        font-size: 1.5rem !important;
+      }
+      
+      .alternating-row p {
+        font-size: 1rem !important;
+      }
+    }
+
+    /* Mobile styles */
     @media (max-width: 768px) {
+      body {
+        overflow-x: hidden;
+      }
+
       .alternating-row {
         grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+      }
+      
+      .alternating-row > div:first-child {
+        order: 1;
+      }
+      
+      .alternating-row > div:last-child {
+        order: 2;
       }
       
       .alternating-row img {
-        order: -1;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
       }
       
       .alternating-row h3 {
         margin-top: 0;
+        font-size: 1.3rem !important;
+      }
+      
+      .alternating-row p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+      }
+
+      /* Container padding adjustment */
+      .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        max-width: 100% !important;
+      }
+
+      /* Section padding */
+      section.bg-white[style*="padding: 3rem"] {
+        padding: 2rem 15px !important;
+      }
+
+      section.bg-light {
+        padding: 2rem 15px !important;
+      }
+
+      /* Heading adjustments */
+      h2.text-center {
+        font-size: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+      }
+
+      /* Cards responsive */
+      .row.cols-3,
+      .row.cols-2 {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem;
+      }
+
+      .row.cols-3 .card,
+      .row.cols-2 .card {
+        margin-bottom: 0;
+        width: 100%;
+      }
+
+      .card {
+        overflow: hidden;
+      }
+
+      .card img {
+        max-width: 100% !important;
+        height: auto !important;
+      }
+
+      .card-body {
+        padding: 1rem !important;
+      }
+
+      /* Vision and Mission cards */
+      .row.cols-2 .card > div[style*="padding: 2rem"] {
+        padding: 1.5rem !important;
+      }
+
+      .row.cols-2 .card h4 {
+        font-size: 1.2rem;
+      }
+
+      .row.cols-2 .card-body p,
+      .row.cols-2 .card-body ul {
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+
+      .row.cols-2 .card-body ul {
+        padding-left: 1.2rem;
+      }
+
+      .row.cols-2 .card-body ul li {
+        margin-bottom: 0.8rem;
+      }
+
+      /* Breadcrumb */
+      section[style*="background-color: #f8f9fa"] {
+        padding: 0.8rem 15px !important;
+      }
+
+      .breadcrumb {
+        font-size: 0.85rem;
+        padding: 0;
+        margin: 0;
+      }
+
+      /* Footer responsive */
+      footer {
+        padding: 2rem 15px 1rem;
+      }
+
+      .footer-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .footer-section {
+        width: 100%;
+      }
+
+      .footer-section h4 {
+        font-size: 1.1rem;
+      }
+
+      .footer-section p,
+      .footer-section ul li {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Extra small devices */
+    @media (max-width: 480px) {
+      .alternating-row h3 {
+        font-size: 1.2rem !important;
+      }
+
+      .alternating-row p {
+        font-size: 0.9rem !important;
+      }
+
+      h2.text-center {
+        font-size: 1.3rem !important;
+      }
+
+      section.bg-white[style*="padding: 3rem"] {
+        padding: 1.5rem 10px !important;
+      }
+
+      .card-body {
+        padding: 0.8rem !important;
+      }
+
+      .container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
       }
     }
   </style>
-
   <!-- THÔNG ĐIỆP TRUYỀN THÔNG -->
   <section class="bg-white">
     <div class="container">
