@@ -247,7 +247,119 @@
       line-height: 1.8;
     }
     
+    /* Partners Banner Slider */
+    .partners-banner-slider {
+      position: relative;
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto 3rem;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+    
+    .slider-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .slider-track {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+      will-change: transform;
+    }
+    
+    .slide {
+      min-width: 100%;
+      height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    }
+    
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      font-size: 2rem;
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.3s;
+      border-radius: 4px;
+    }
+    
+    .slider-btn:hover {
+      background: rgba(0,0,0,0.8);
+    }
+    
+    .slider-btn.prev {
+      left: 20px;
+    }
+    
+    .slider-btn.next {
+      right: 20px;
+    }
+    
+    .slider-dots {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+    }
+    
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.5);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .dot:hover {
+      background: rgba(255,255,255,0.8);
+    }
+    
+    .dot.active {
+      background: white;
+      width: 30px;
+      border-radius: 6px;
+    }
+    
     @media (max-width: 768px) {
+      .slide {
+        height: 400px;
+      }
+      
+      .slider-btn {
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+      }
+      
+      .slider-btn.prev {
+        left: 10px;
+      }
+      
+      .slider-btn.next {
+        right: 10px;
+      }
       .partners-grid {
         grid-template-columns: 1fr;
       }
@@ -409,11 +521,37 @@
     </div>
   </section>
 
-  <!-- Partners Hero -->
-  <section class="partners-hero">
-    <div class="container">
-      <h1>🤝 Đối Tác Của Chúng Tôi</h1>
-      <p>Xây dựng mạng lưới phân phối rộng khắp, mang sản phẩm nông nghiệp sạch đến mọi người tiêu dùng</p>
+
+  <!-- Partners Banner Slider -->
+  <section class="partners-banner-slider">
+    <div class="slider-container">
+      <div class="slider-track">
+        <div class="slide">
+          <img src="../assets/img/doitac1.png" alt="Đối tác 1">
+        </div>
+        <div class="slide">
+          <img src="../assets/img/doitac2.png" alt="Đối tác 2">
+        </div>
+        <div class="slide">
+          <img src="../images/doitac3.png" alt="Đối tác 3">
+        </div>
+        <div class="slide">
+          <img src="../assets/img/doitac1.png" alt="Đối tác 1">
+        </div>
+        <div class="slide">
+          <img src="../assets/img/doitac2.png" alt="Đối tác 2">
+        </div>
+        <div class="slide">
+          <img src="../images/doitac3.png" alt="Đối tác 3">
+        </div>
+      </div>
+    </div>
+    <button class="slider-btn prev" onclick="moveSlider(-1)">❮</button>
+    <button class="slider-btn next" onclick="moveSlider(1)">❯</button>
+    <div class="slider-dots">
+      <span class="dot active" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
     </div>
   </section>
 
@@ -421,15 +559,7 @@
   <section style="padding: 2rem 20px 4rem;">
     <div class="container">
       
-      <!-- Partners Intro -->
-      <div class="partners-intro">
-        <h2>Hệ Thống Phân Phối Đa Kênh</h2>
-        <p>
-          Hợp tác xã Lâm Đồng Đại Ngàn tự hào hợp tác với hệ thống đối tác uy tín trên toàn quốc. 
-          Chúng tôi không ngừng mở rộng kênh phân phối để đảm bảo sản phẩm nông nghiệp sạch, 
-          chất lượng cao được tiếp cận dễ dàng đến người tiêu dùng Việt Nam và quốc tế.
-        </p>
-      </div>
+     
 
       <!-- Partner Stats -->
       <div class="partner-stats">
@@ -453,7 +583,7 @@
         
         <div class="partner-category">
           <div class="partner-category-icon">🏪</div>
-          <h3>Hệ Thống Siêu Thị</h3>
+          <h3>XUẤT KHẨU</h3>
           <p>Hợp tác với các chuỗi siêu thị lớn như Co.op Mart, VinMart, BigC, Lotte Mart trên toàn quốc</p>
         </div>
 
@@ -529,78 +659,9 @@
           <p class="partner-location">📍 Đà Lạt, Lâm Đồng</p>
         </div>
 
-        <!-- Partner 4 -->
-        <div class="partner-card">
-          <div class="partner-logo">🏬</div>
-          <div class="partner-name">VinMart</div>
-          <span class="partner-type">Siêu thị</span>
-          <p class="partner-description">
-            Hệ thống VinMart với 80+ cửa hàng, đưa sản phẩm HTX 
-            đến gần hơn với người tiêu dùng đô thị.
-          </p>
-          <p class="partner-location">📍 Hà Nội, TP.HCM</p>
-        </div>
+     
 
-        <!-- Partner 5 -->
-        <div class="partner-card">
-          <div class="partner-logo">🌏</div>
-          <div class="partner-name">Japan Import Co.</div>
-          <span class="partner-type">Xuất khẩu</span>
-          <p class="partner-description">
-            Đối tác xuất khẩu chính, đưa sản phẩm hữu cơ Việt Nam 
-            đến thị trường Nhật Bản khó tính.
-          </p>
-          <p class="partner-location">📍 Tokyo, Nhật Bản</p>
-        </div>
-
-        <!-- Partner 6 -->
-        <div class="partner-card">
-          <div class="partner-logo">🍽️</div>
-          <div class="partner-name">Central Food</div>
-          <span class="partner-type">Phân phối công nghiệp</span>
-          <p class="partner-description">
-            Cung cấp nguyên liệu cho hơn 200 bếp ăn công nghiệp, 
-            trường học và bệnh viện.
-          </p>
-          <p class="partner-location">📍 Miền Nam</p>
-        </div>
-
-        <!-- Partner 7 -->
-        <div class="partner-card">
-          <div class="partner-logo">🌿</div>
-          <div class="partner-name">Organic Market</div>
-          <span class="partner-type">Cửa hàng hữu cơ</span>
-          <p class="partner-description">
-            Chuỗi cửa hàng thực phẩm hữu cơ cao cấp, 
-            đối tượng khách hàng là người tiêu dùng có thu nhập cao.
-          </p>
-          <p class="partner-location">📍 Hà Nội</p>
-        </div>
-
-        <!-- Partner 8 -->
-        <div class="partner-card">
-          <div class="partner-logo">📦</div>
-          <div class="partner-name">Lazada Fresh</div>
-          <span class="partner-type">Thương mại điện tử</span>
-          <p class="partner-description">
-            Kênh phân phối thực phẩm tươi sống, giao hàng nhanh 2h, 
-            phủ sóng các thành phố lớn.
-          </p>
-          <p class="partner-location">📍 Online</p>
-        </div>
-
-        <!-- Partner 9 -->
-        <div class="partner-card">
-          <div class="partner-logo">🏭</div>
-          <div class="partner-name">Samsung Vietnam</div>
-          <span class="partner-type">Doanh nghiệp</span>
-          <p class="partner-description">
-            Cung cấp suất ăn công nhân cho nhà máy Samsung, 
-            đảm bảo chất lượng và an toàn thực phẩm.
-          </p>
-          <p class="partner-location">📍 Bắc Ninh</p>
-        </div>
-
+       
       </div>
 
       <!-- Partnership Benefits -->
@@ -634,32 +695,10 @@
               Vùng nguyên liệu rộng lớn, đảm bảo cung cấp đều đặn quanh năm
             </p>
           </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon">🤝</div>
-            <div class="benefit-title">Hỗ trợ marketing</div>
-            <p class="benefit-description">
-              Cùng xây dựng thương hiệu, tài liệu truyền thông, đào tạo nhân viên
-            </p>
-          </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon">🔄</div>
-            <div class="benefit-title">Chính sách linh hoạt</div>
-            <p class="benefit-description">
-              Thanh toán, đổi trả linh hoạt, phù hợp với từng đối tác
-            </p>
-          </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon">📈</div>
-            <div class="benefit-title">Tăng trưởng bền vững</div>
-            <p class="benefit-description">
-              Cùng phát triển, mở rộng thị trường và nâng cao giá trị
-            </p>
-          </div>
         </div>
-      </div>
+
+
+
 
       <!-- CTA Section -->
       <div class="cta-section">
@@ -723,5 +762,63 @@
 
   <!-- Scripts -->
   <script src="../assets/js/header.js"></script>
+  <script>
+    // Partners Banner Slider
+    let currentSlideIndex = 0;
+    const totalSlides = 3;
+    let autoSlideInterval;
+
+    function showSlide(index) {
+      const track = document.querySelector('.slider-track');
+      const dots = document.querySelectorAll('.dot');
+      
+      if (index >= totalSlides) {
+        currentSlideIndex = 0;
+      } else if (index < 0) {
+        currentSlideIndex = totalSlides - 1;
+      } else {
+        currentSlideIndex = index;
+      }
+      
+      track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+      
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentSlideIndex);
+      });
+    }
+
+    function moveSlider(direction) {
+      clearInterval(autoSlideInterval);
+      showSlide(currentSlideIndex + direction);
+      startAutoSlide();
+    }
+
+    function currentSlide(index) {
+      clearInterval(autoSlideInterval);
+      showSlide(index);
+      startAutoSlide();
+    }
+
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(() => {
+        showSlide(currentSlideIndex + 1);
+      }, 5000);
+    }
+
+    // Initialize slider
+    document.addEventListener('DOMContentLoaded', () => {
+      showSlide(0);
+      startAutoSlide();
+      
+      // Pause on hover
+      const slider = document.querySelector('.partners-banner-slider');
+      slider.addEventListener('mouseenter', () => {
+        clearInterval(autoSlideInterval);
+      });
+      slider.addEventListener('mouseleave', () => {
+        startAutoSlide();
+      });
+    });
+  </script>
 </body>
 </html>
