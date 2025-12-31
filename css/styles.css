@@ -976,6 +976,9 @@ footer {
   color: #fff;
   padding: 3rem 20px 1rem;
   margin-top: 4rem;
+  clear: both;
+  position: relative;
+  width: 100%;
 }
 
 .footer-content {
